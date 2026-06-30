@@ -1,0 +1,6 @@
+<root>
+	<Panel class="GoldDisplay" hittest="false">
+		<Label id="gold_amount" text="0" />
+		<Image id="gold_icon" src="file://{images}/custom_game/icons_18px/gold_mini.png" />
+	</Panel>
+</root>

@@ -1,0 +1,102 @@
+"itembuilds"
+{
+	"author"		"Valve"
+	"hero"			"npc_dota_hero_alchemist"
+	"Title"			"Recommended items"
+	
+	"Items"
+	{
+		"STARTING ITEMS MELEE"
+		{	
+			"item"		"item_quelling_blade"
+			"item"		"item_damned_eye"
+			"item"		"item_fury_shield"
+			"item"		"item_wraith_band"
+			"item"		"item_bracer"
+			"item"		"item_vampire_claw"
+			"item"		"item_tango"
+		}
+		
+		"STARTING ITEMS RANGED"
+		{
+		    "item"		"item_quelling_blade"
+			"item"		"item_vampire_claw"
+			"item"		"item_fury_shield"
+			"item"		"item_vampire_claw"
+			"item"		"item_damned_eye"
+			"item"		"item_wraith_band"
+			"item"		"item_tango"
+		}
+		"GANG"
+		{
+			"item"		"item_tango"
+			"item"		"item_chest_of_midas"
+			"item"		"item_talisman_of_mastery"
+			"item"		"item_life_catcher"
+			"item"		"item_soul_stone"
+			"item"		"item_fury_shield"
+		}
+				"MID GAME ITEMS MELEE"
+		{
+	        "item"      "item_bfury"
+			"item"		"item_amaliels_cuirass"
+			"item"		"item_angels_desolators"
+			"item"		"item_dimensional_predictor"
+			"item"		"item_skadi_2"
+			"item"		"item_sacred_butterfly"
+			"item"		"item_mjollnir_2"
+			"item"		"item_tango"
+
+			
+		}
+				"MID GAME ITEMS RANGED"
+		{
+			"item"		"item_holy_book"
+			"item"		"item_amaliels_cuirass"
+			"item"		"item_angels_desolators"
+			"item"		"item_heavy_crossbow"
+			"item"		"item_dimensional_predictor"
+			"item"		"item_skadi_2"
+			"item"		"item_sacred_butterfly"
+			"item"		"item_mjollnir_2"
+
+			
+		}
+						"LATE GAME ITEMS MELEE"
+		{
+	        "item"      "item_demons_fury"
+			"item"		"item_spiked_armor"
+			"item"		"item_double_crit"
+			"item"		"item_deaths_mask"
+			"item"		"item_kings_bar"
+			"item"		"item_rebels_sword"
+			
+		}
+
+						"LATE GAME ITEMS RANGED"
+		{
+			"item"		"item_burning_book"
+			"item"		"item_spiked_armor"
+			"item"		"item_double_crit"
+			"item"		"item_deaths_mask"
+			"item"		"item_kings_bar"
+			"item"		"item_rebels_sword"
+			
+		}
+						"SITUATIONALLY"
+		{
+			"item"		"item_potion_immune"
+			"item"		"item_advanced_midas"
+			"item"		"item_angels_shard"
+			"item"		"item_burning_butterfly"
+			"item"		"item_dark_edge"
+			"item"		"item_storm_edge"
+			"item"		"item_shivas_guard_2"
+			"item"		"item_manta_3"
+			"item"		"item_abyssal_blade_2"
+			"item"		"item_snake_boots"
+			"item"		"item_devour_helm"
+		    "item"		"item_polar_spear"
+		}
+	}
+}

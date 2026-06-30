@@ -1,0 +1,7 @@
+﻿require('items/generic_datadriven_item')
+
+item_dead_boots_dummy = item_dead_boots_dummy or class({})
+
+function item_dead_boots_dummy:GetIntrinsicModifierName()
+    return "modifier_generic_datadriven_item"
+end
