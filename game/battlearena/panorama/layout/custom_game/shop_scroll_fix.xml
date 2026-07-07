@@ -1,8 +1,0 @@
-<root>
-  <scripts>
-    <include src="file://{resources}/scripts/custom_game/shop_scroll_fix.js" />
-  </scripts>
-
-  <Panel>
-  </Panel>
-</root>

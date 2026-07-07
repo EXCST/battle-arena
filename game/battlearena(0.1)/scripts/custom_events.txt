@@ -1,9 +1,0 @@
-"CustomEvents"
-{
-    "player_say_config"
-    {
-        "pid"           "short"
-        "allowTeam"     "bool"
-        "allowAll"      "bool"
-    }
-}
