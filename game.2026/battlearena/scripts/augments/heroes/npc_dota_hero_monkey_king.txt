@@ -1,0 +1,138 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Monkey King hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_monkey_king"
+{
+	// ---- Boundless Strike ---------------------------------------------------
+	"monkey_king_boundless_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more crit (was 15)
+		"strike_crit_mult"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider strike (was 20)
+		"strike_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"strike_cast_range" "60"
+			}
+		}
+	}
+
+	// ---- Primal Spring ------------------------------------------------------
+	"monkey_king_primal_spring"
+	{
+		// more damage (was 60/6)
+		"impact_damage"
+		{
+			"base" "65"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"monkey_king_tree_dance"
+				{
+					"impact_damage_tooltip"
+					{
+						"base" "65"
+						"step"		"7"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider impact (was 35)
+		"impact_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"monkey_king_tree_dance"
+				{
+					"perched_jump_distance" "60"
+					"ground_jump_distance" "60"
+					"give_up_distance" "60"
+					"perched_day_vision" "120"
+					"perched_night_vision" "90"
+				}
+				"monkey_king_boundless_strike"
+				{
+					"spring_channel_pct" "6"
+				}
+			}
+		}
+	}
+
+	// ---- Jingu Mastery ------------------------------------------------------
+	"monkey_king_jingu_mastery"
+	{
+		// fewer hits (rare, was -0.5)
+		"required_hits"
+		{
+			"base" "-0.5"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "2"
+		}
+		// more damage (was 35/5)
+		"bonus_damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more lifesteal (was 12)
+		"lifesteal"
+		{
+			"base" "15"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Wukong's Command ---------------------------------------------------
+	"monkey_king_wukongs_command"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// faster attacks (epic, was -0.05)
+		"attack_rate"
+		{
+			"base" "-0.06"
+			"mode" "ADD"
+
+			"floor"	"epic"
+			"cap"		"4"
+		}
+		// more armor (was 8)
+		"bonus_armor"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

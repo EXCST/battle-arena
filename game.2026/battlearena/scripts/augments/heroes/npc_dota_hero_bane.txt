@@ -1,0 +1,113 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Bane hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_bane"
+{
+	// ---- Enfeeble -----------------------------------------------------------
+	"bane_enfeeble"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage reduction (was 3, rare)
+		"damage_reduction"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"floor"		"rare"
+			"cap" 		"4"
+			"bundle"
+			{
+				"cast_reduction" "4"
+			}
+		}
+		// more tick damage (was 8/2)
+		"enfeeble_tick_damage"
+		{
+			"base" 		"10"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Brain Sap ----------------------------------------------------------
+	"bane_brain_sap"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 35/3)
+		"brain_sap_damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider shard radius (was 20)
+		"shard_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shard_secondary_target_heal_pct" "3"
+			}
+		}
+	}
+
+	// ---- Nightmare ----------------------------------------------------------
+	"bane_nightmare"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// nightmare moves faster (was 15)
+		"walk_speed"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// NEW: longer nightmare duration (epic only)
+		"duration"
+		{
+			"base" "0.25"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+
+	// ---- Fiend's Grip -------------------------------------------------------
+	"bane_fiends_grip"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more grip damage (was 25/2)
+		"fiend_grip_damage"
+		{
+			"base" "30"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

@@ -1,0 +1,129 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Pangolier hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_pangolier"
+{
+	// ---- Swashbuckle --------------------------------------------------------
+	"pangolier_swashbuckle"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 20/4)
+		"damage"
+		{
+			"base" "25"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider swashbuckle (was 20)
+		"start_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"end_radius" "25"
+			}
+		}
+	}
+
+	// ---- Shield Crash -------------------------------------------------------
+	"pangolier_shield_crash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "7"
+			"bundle"
+			{
+				"slow" "6"
+			}
+		}
+		// more damage (was 45/4)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more shield (was 50/5)
+		"hero_shield"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider crash (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Lucky Shot ---------------------------------------------------------
+	"pangolier_lucky_shot"
+	{
+		// more chance (was 4)
+		"chance_pct"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more armor (was 1.5/0.2)
+		"armor"
+		{
+			"base" "2"
+			"step"		"0.25"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"attack_slow" "30"
+			}
+		}
+	}
+
+	// ---- Rolling Thunder ----------------------------------------------------
+	"pangolier_gyroshell"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"pangolier_rollup"
+				{
+					"cd_mana"
+					{
+						"base" "12"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage % (was 20)
+		"damage_pct"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

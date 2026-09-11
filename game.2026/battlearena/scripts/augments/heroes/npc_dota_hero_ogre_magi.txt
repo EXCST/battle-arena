@@ -1,0 +1,129 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Ogre Magi hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_ogre_magi"
+{
+	// ---- Fireblast ----------------------------------------------------------
+	"ogre_magi_fireblast"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"ogre_magi_unrefined_fireblast"
+				{
+					"cd_mana"
+					{
+						"base" "6"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 35/2)
+		"fireblast_damage"
+		{
+			"base" "40"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"ogre_magi_unrefined_fireblast"
+				{
+					"base_damage"
+					{
+						"base" "40"
+						"step"		"3"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Ignite -------------------------------------------------------------
+	"ogre_magi_ignite"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more burn (was 15/3)
+		"burn_damage"
+		{
+			"base" "18"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Smash --------------------------------------------------------------
+	"ogre_magi_smash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 50/5)
+		"damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more attacks (rare, was 0.5)
+		"attacks"
+		{
+			"base" "0.5"
+			"floor"	"rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Bloodlust ----------------------------------------------------------
+	"ogre_magi_bloodlust"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more move speed (was 3)
+		"bonus_movement_speed"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more attack speed (was 25/5)
+		"bonus_attack_speed"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"self_bonus"
+				{
+					"base" "33"
+					"step"		"7"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

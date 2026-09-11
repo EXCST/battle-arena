@@ -1,0 +1,134 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Enigma hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_enigma"
+{
+	// ---- Malefice -----------------------------------------------------------
+	"enigma_malefice"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more stun instances (was 1)
+		"stun_instances"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "3"
+		}
+		// more damage (was 20/2.5)
+		"damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Demonic Conversion -------------------------------------------------
+	"enigma_demonic_conversion"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// tankier eidolons (was 200/20)
+		"eidelon_max_health"
+		{
+			"base" 		"220"
+			"step"		"25"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"eidolon_magic_resist"
+				{
+					"base" "3"
+					"mode" "MULT"
+
+					"limit"			"100"
+					"limit_base"		"60"
+				}
+				"current_health_pct"
+				{
+					"base"		"3"
+					"mode" 	"ADD"
+				}
+			}
+		}
+		// more eidolon damage (was 10)
+		"eidelon_base_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Midnight Pulse -----------------------------------------------------
+	"enigma_midnight_pulse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// wider pulse (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 15/5)
+		"base_damage"
+		{
+			"base" "18"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Black Hole ---------------------------------------------------------
+	"enigma_black_hole"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 45/5)
+		"damage"
+		{
+			"base" "50"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider hole (rare, was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "4"
+			"floor" "rare"
+			"bundle"
+			{
+				"vision_radius" "50"
+				"scepter_radius" "50"
+			}
+		}
+	}
+}

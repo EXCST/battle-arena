@@ -1,0 +1,110 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Elder Titan hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_elder_titan"
+{
+	// ---- Echo Stomp ---------------------------------------------------------
+	"elder_titan_echo_stomp"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider stomp (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 40/4)
+		"stomp_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// higher wake limit (was 50/5)
+		"wake_damage_limit"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Ancestral Spirit ---------------------------------------------------
+	"elder_titan_ancestral_spirit"
+	{
+		// more move steal (was 1)
+		"move_pct_heroes"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"move_pct_cap" "5"
+				"armor_heroes"	"1.5"
+			}
+		}
+		// more damage (was 5/0.5)
+		"damage_heroes"
+		{
+			"base" "6"
+			"step"		"0.6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"damage_creeps"
+				{
+					"base" "0.6"
+					"step"		"0.06"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Natural Order ------------------------------------------------------
+	"elder_titan_natural_order"
+	{
+		// wider aura (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Earth Splitter -----------------------------------------------------
+	"elder_titan_earth_splitter"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider crack (was 25)
+		"crack_width"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"vision_width" "40"
+			}
+		}
+	}
+}

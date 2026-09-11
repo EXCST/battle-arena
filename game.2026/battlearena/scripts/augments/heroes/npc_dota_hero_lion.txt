@@ -1,0 +1,99 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lion hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_lion"
+{
+	// ---- Impale -------------------------------------------------------------
+	"lion_impale"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"35"
+		}
+		// more damage (was 50/4)
+		"damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Voodoo -------------------------------------------------------------
+	"lion_voodoo"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"35"
+		}
+	}
+
+	// ---- Mana Drain ---------------------------------------------------------
+	"lion_mana_drain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more mana per second (was 30/4)
+		"mana_per_second"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer break distance (was 120)
+		"break_distance"
+		{
+			"base" "140"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more ally pct
+		"ally_pct"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap"	"5"
+		}
+	}
+
+	// ---- Finger of Death ----------------------------------------------------
+	"lion_finger_of_death"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 60/5)
+		"damage"
+		{
+			"base" "70"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage per kill (was 4/1)
+		"damage_per_kill"
+		{
+			"base" "5"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

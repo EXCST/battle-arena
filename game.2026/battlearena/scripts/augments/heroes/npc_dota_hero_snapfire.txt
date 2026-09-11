@@ -1,0 +1,159 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Snapfire hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_snapfire"
+{
+	// ---- Scatterblast -------------------------------------------------------
+	"snapfire_scatterblast"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 35/4)
+		"damage"
+		{
+			"base" "40"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more point blank bonus (was 15)
+		"point_blank_dmg_bonus_pct"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Firesnap Cookie ----------------------------------------------------
+	"snapfire_firesnap_cookie"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "7"
+		}
+		// wider cookie (was 50)
+		"impact_radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 55/5)
+		"impact_damage"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Lil' Shredder ------------------------------------------------------
+	"snapfire_lil_shredder"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 15/5)
+		"damage"
+		{
+			"base" "18"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"armor_reduction_per_attack"
+				{
+					"base" "0.25"
+					"step"		"0.06"
+					"mode" "ADD"
+				}
+			}
+		}
+		// more buffed attacks
+		"buffed_attacks"
+		{
+			"base"		"1"
+			"cap" "4"
+		}
+	}
+
+	// ---- Mortimer Kisses ----------------------------------------------------
+	"snapfire_mortimer_kisses"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"snapfire_gobble_up"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider kisses (was 35)
+		"impact_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"snapfire_spit_creep"
+				{
+					"impact_radius" "40"
+				}
+			}
+
+			"bundle"
+			{
+				"burn_ground_duration" "0.6"
+			}
+		}
+		// more damage (was 55/5)
+		"damage_per_impact"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more burn (was 25/5)
+		"burn_damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle_abilities"
+			{
+				"snapfire_spit_creep"
+				{
+					"burn_damage" "25"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Wraith King hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_skeleton_king"
+{
+	// ---- Hellfire Blast -----------------------------------------------------
+	"skeleton_king_hellfire_blast"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"blast_speed" "110"
+			}
+		}
+		// longer dot (was 1)
+		"blast_dot_duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "3"
+		}
+		// more dot damage (was 20/1)
+		"blast_dot_damage"
+		{
+			"base" "22"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_wraith_king_3"	"x1.2"
+			}
+		}
+		// more damage (was 35/3)
+		"damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_wraith_king_3"	"x1.2"
+			}
+		}
+	}
+
+	// ---- Bone Guard ---------------------------------------------------------
+	"skeleton_king_bone_guard"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// tankier skeletons (was 200/40)
+		"skeleton_health"
+		{
+			"base" "220"
+			"step"		"45"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// stronger skeletons (was 15/3)
+		"skeleton_damage_tooltip"
+		{
+			"base"	"18"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Mortal Strike ------------------------------------------------------
+	"skeleton_king_mortal_strike"
+	{
+		"cd_mana"
+		{
+			"base" "15"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"75"
+		}
+		// more crit mult (was 15)
+		"crit_mult"
+		{
+			"base" 			"18"
+			"mode" 			"ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Reincarnation ------------------------------------------------------
+	"skeleton_king_reincarnation"
+	{
+		// wider slow (was 50)
+		"slow_radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

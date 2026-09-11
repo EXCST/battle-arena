@@ -1,0 +1,160 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Terrorblade hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_terrorblade"
+{
+	// ---- Reflection ---------------------------------------------------------
+	"terrorblade_reflection"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"terrorblade_terror_wave"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 10)
+		"damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider reflection (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more attack slow (was 30)
+		"attack_slow"
+		{
+			"base"		"35"
+			"cap" "5"
+		}
+	}
+
+	// ---- Conjure Image ------------------------------------------------------
+	"terrorblade_conjure_image"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more outgoing (was 5)
+		"illusion_outgoing_damage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"illusion_outgoing_tooltip" "6"
+			}
+		}
+		// less incoming (was -17.5)
+		"illusion_incoming_damage"
+		{
+			"base" "-20"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"illusion_incoming_damage_total_tooltip"
+				{
+					"base" "-20"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Metamorphosis ------------------------------------------------------
+	"terrorblade_metamorphosis"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"terrorblade_demon_zeal"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+					"berserk_bonus_movement_speed" "25"
+				}
+			}
+		}
+		// more damage (was 35/5)
+		"bonus_damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"terrorblade_demon_zeal"
+				{
+					"berserk_bonus_attack_speed" "60"
+					"hp_regen"
+					{
+						"base"		"45"
+						"step"	"18"
+					}
+				}
+			}
+		}
+		// more attack range (was 20)
+		"tooltip_attack_range"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"bonus_range" "25"
+				"metamorph_aura_tooltip" "120"
+			}
+			"bundle_abilities"
+			{
+				"terrorblade_dark_unity"
+				{
+					"radius" "120"
+				}
+			}
+		}
+	}
+
+	// ---- Sunder -------------------------------------------------------------
+	"terrorblade_sunder"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+	}
+}

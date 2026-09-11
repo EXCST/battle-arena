@@ -1,0 +1,131 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Spirit Breaker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_spirit_breaker"
+{
+	// ---- Charge of Darkness ------------------------------------------------
+	"spirit_breaker_charge_of_darkness"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more charge speed (was 20)
+		"movement_speed"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider bash (was 20)
+		"bash_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Bulldoze -----------------------------------------------------------
+	"spirit_breaker_bulldoze"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"spirit_breaker_planar_pocket"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more move speed (was 4)
+		"movement_speed"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"spirit_breaker_planar_pocket"
+				{
+					"radius" "45"
+				}
+			}
+		}
+		// more status resistance (was 3)
+		"status_resistance"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"90"
+			"limit_base"		"70"
+
+			"bundle_abilities"
+			{
+				"spirit_breaker_planar_pocket"
+				{
+					"magic_resistance"
+					{
+						"base" "2"
+						"mode" "MULT"
+
+						"limit"			"90"
+						"limit_base"		"75"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Greater Bash -------------------------------------------------------
+	"spirit_breaker_greater_bash"
+	{
+		// more chance (was 2)
+		"chance_pct"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 2)
+		"damage"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Nether Strike ------------------------------------------------------
+	"spirit_breaker_nether_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 50/5)
+		"damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

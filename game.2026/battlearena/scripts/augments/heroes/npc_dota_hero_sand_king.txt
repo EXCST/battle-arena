@@ -1,0 +1,115 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Sand King hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_sand_king"
+{
+	// ---- Burrowstrike -------------------------------------------------------
+	"sandking_burrowstrike"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "8"
+		}
+		// wider burrow (was 40)
+		"burrow_width"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 45/4)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Sand Storm ---------------------------------------------------------
+	"sandking_sand_storm"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider storm (was 20)
+		"sand_storm_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 25/3)
+		"sand_storm_damage"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Scorpion Strike ----------------------------------------------------
+	"sandking_scorpion_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 30/5)
+		"attack_damage"
+		{
+			"base" "35"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider strike (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Epicenter ----------------------------------------------------------
+	"sandking_epicenter"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider epicenter (was 20)
+		"epicenter_radius_base"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shard_radius" "18"
+			}
+		}
+		// more damage (was 60/5)
+		"epicenter_damage"
+		{
+			"base" "65"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

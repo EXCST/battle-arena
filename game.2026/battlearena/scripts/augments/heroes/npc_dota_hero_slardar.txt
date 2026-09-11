@@ -1,0 +1,223 @@
+﻿// ============================================================
+// BATTLE ARENA hero augments
+// Own balance, own schema.
+//
+// FIELDS:
+//   base            per-pick value (rolled +-25% at pick time)
+//   step            extra per additional stack (arithmetic progression)
+//   mode            ADD (default) / MULT (growth toward ability base)
+//   cap             hard cap on picks
+//   floor/roof      lowest/highest orb tier that can offer this
+//   unlock_at       only available after N game seconds
+//   bundle          also augments other stats of the SAME ability
+//   bundle_abilities also augments stats of ANOTHER ability
+//   perks           hero talents affecting the calculation ("x1.3" or "+5")
+//
+// SPECIAL NAMES:
+//   cd_mana         cooldown + manacost (use MULT)
+//   damage          = #AbilityDamage
+//   duration        = AbilityDuration
+// ============================================================
+
+
+"npc_dota_hero_slardar"
+{
+	// ---- Guardian Sprint -------------------------------------------------
+	"slardar_sprint"
+	{
+		// less cooldown + manacost per stack
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+
+		// more movement speed per stack
+		"bonus_speed"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+
+		// NEW: longer active sprint
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// NEW: stronger river passive (only from rare orbs onward)
+		"river_health_regen"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "8"
+		}
+	}
+
+	// ---- Slithereen Crush -------------------------------------------------
+	"slardar_slithereen_crush"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+
+		// more damage per stack (was 70/4)
+		"crush_damage"
+		{
+			"base" "80"
+			"step" "5"
+			"mode" "ADD"
+			"cap" "12"
+		}
+
+		// wider stun radius
+		"crush_radius"
+		{
+			"base" "50"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"puddle_radius" "50"
+			}
+		}
+
+		// NEW: longer stun (rare only, capped hard)
+		"stun_duration"
+		{
+			"base" "0.1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+
+		// NEW: longer slow after the stun
+		"slow_duration"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"cap" "4"
+		}
+
+		// puddles live longer (also feeds sprint river bonuses)
+		"puddle_duration"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shard_amp_duration" "1"
+			}
+		}
+	}
+
+	// ---- Bash of the Deep -------------------------------------------------
+	"slardar_bash"
+	{
+		// more bash damage (was 60/7) - keeps creeps/heroes split untouched
+		"bonus_damage"
+		{
+			"base" "55"
+			"step" "8"
+			"mode" "ADD"
+			"cap" "12"
+		}
+
+		// NEW: bash after fewer hits (rare+epic only)
+		"bash_required_hits"
+		{
+			"base" "-1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "2"
+		}
+
+		// NEW: longer bash stun (epic only)
+		"bash_duration"
+		{
+			"base" "0.2"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "3"
+		}
+
+		// NEW: water attack damage bonus up (rare only)
+		"river_bonus_damage"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "6"
+		}
+	}
+
+	// ---- Corrosive Haze ---------------------------------------------------
+	"slardar_amplify_damage"
+	{
+		// more armor shred (was -1.5/-0.2)
+		"armor_reduction"
+		{
+			"base" "-2"
+			"mode" "ADD"
+			"step" "-0.25"
+			"cap" "8"
+		}
+
+		// longer reveal/debuff
+		"duration"
+		{
+			"base" "7"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"puddle_duration" "2.4"
+				"puddle_radius" "60"
+			}
+		}
+
+		// NEW: longer cast range (late game, rare)
+		"cast_range"
+		{
+			"base" "100"
+			"mode" "ADD"
+			"floor" "rare"
+			"unlock_at" "900"
+			"cap" "4"
+		}
+	}
+
+	// ---- Seaborn Sentinel (innate) ----------------------------------------
+	"slardar_seaborn_sentinel"
+	{
+		// more river damage
+		"river_damage_pct"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// more puddle regen (was 10/3)
+		"puddle_regen"
+		{
+			"base" "12"
+			"step" "3"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"puddle_armor" "1.5"
+			}
+		}
+	}
+}

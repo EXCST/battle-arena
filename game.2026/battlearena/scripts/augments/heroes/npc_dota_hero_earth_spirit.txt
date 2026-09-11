@@ -1,0 +1,172 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Earth Spirit hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_earth_spirit"
+{
+	// ---- Boulder Smash ------------------------------------------------------
+	"earth_spirit_boulder_smash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"earth_spirit_petrify"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider smash (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"rock_search_aoe" "35"
+			}
+			"bundle_abilities"
+			{
+				"earth_spirit_petrify"
+				{
+					"aoe" "35"
+				}
+			}
+		}
+		// more rock damage (was 40/3)
+		"rock_damage"
+		{
+			"base" "45"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"earth_spirit_petrify"
+				{
+					"damage" "80"
+				}
+			}
+		}
+	}
+
+	// ---- Rolling Boulder ----------------------------------------------------
+	"earth_spirit_rolling_boulder"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"speed" "110"
+				"rock_speed" "180"
+				"delay" "-0.1"
+			}
+		}
+		// more damage (was 40/3)
+		"damage"
+		{
+			"base" "45"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more str damage (was 10)
+		"damage_str"
+		{
+			"base"		"12"
+			"cap"	"5"
+		}
+	}
+
+	// ---- Geomagnetic Grip ---------------------------------------------------
+	"earth_spirit_geomagnetic_grip"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"earth_spirit_stone_caller"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider grip (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 30/3)
+		"rock_damage"
+		{
+			"base" "35"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Magnetize ----------------------------------------------------------
+	"earth_spirit_magnetize"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider cast (was 35)
+		"cast_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"rock_search_radius" "40"
+				"rock_explosion_radius" "40"
+			}
+			"bundle_abilities"
+			{
+				"earth_spirit_stone_caller"
+				{
+					"vision_radius" "40"
+				}
+			}
+		}
+		// more dps (was 35/3)
+		"damage_per_second"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_earth_spirit_8"		"x1.3"
+			}
+		}
+	}
+}

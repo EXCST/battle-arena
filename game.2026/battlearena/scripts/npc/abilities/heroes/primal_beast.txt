@@ -1,0 +1,313 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Primal Beast: Onslaught
+	//=================================================================================================================
+	"primal_beast_onslaught"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"992"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.15"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		//"AbilityCastRange"			"2000"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"charge_speed"				"1200"
+			"chargeup_time"				"2"
+			"knockback_radius"			"190"
+			"max_distance"				"2000"
+			"knockback_distance"		"200"
+			"knockback_damage"
+			{
+				"value"					"110 200 290 380 420 480 520"
+				"special_bonus_unique_primal_beast_onslaught_damage"	"+120"
+			}
+			"knockback_duration"		"0.2"
+			"max_charge_time"			"1.5"
+			"turn_rate"					"70"
+			"base_power"				"0.15"
+			"movement_turn_rate"		"50"
+			"stun_duration"				"1 1.2 1.4 1.6 1.8 2 2.2"
+		}
+	}
+
+	
+
+	//=================================================================================================================
+	//Primal Beast: Trample
+	//=================================================================================================================
+	"primal_beast_trample"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"994"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 85 80 75 60 55 50"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastGestureSlot"		"ABSOLUTE"
+		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"effect_radius"				"230"
+			"step_distance"				"140"
+			"base_damage"				"12 28 44 60 80 100 120"
+			"duration"					"5.5"
+			"attack_damage"
+			{
+				"value"					"35"
+				"special_bonus_unique_primal_beast_trample_attack_damage"	"+25"
+			}
+			"bonus_magic_resistance"
+			{
+				"value"					"0"
+				"special_bonus_unique_primal_beast_trample_magic_resist"		"+20"
+			}
+			
+			"AbilityCooldown"				
+			{
+				"value"				"21"
+				"special_bonus_unique_primal_beast_trample_cooldown"	"-5"
+
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Primal Beast: Uproar
+	//=================================================================================================================
+	"primal_beast_uproar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"995"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"				"10 15 20 25 30 35 40"
+			"bonus_damage_per_stack"	"10 15 20 25 30 35 40"
+			"stack_limit"				
+			{
+				"value"						"5 5 5 5 5 6 6"
+	
+			}
+			"damage_limit"				"50"
+			"stack_duration"			"20"
+			"move_slow_per_stack"		"8"
+			"slow_duration"				"3.0"
+			"damage_min"				"20"
+			"damage_max"				"2000"
+			"radius"					"900"
+			"roared_bonus_attack_speed"	"0"
+			"roared_bonus_armor"
+			{
+				"value"					"1 2 3 4"
+				"special_bonus_unique_primal_beast_uproar_armor"	"+4"
+			}
+			"roar_duration"				"7"
+			"should_dispell"
+			{
+				"value"					"0"
+				"special_bonus_unique_primal_beast_roar_dispells"	"+1"
+			}
+			"projectiles_per_stack"			
+			{
+				"value"		"2"
+				"RequiresScepter"		"1"
+			}
+            "projectile_distance"        
+            {
+				"value"		"1400"
+				"RequiresScepter"		"1"
+			}
+            "projectile_width"           
+            {
+				"value"		"75"
+				"RequiresScepter"		"1"
+			}
+            "projectile_damage"          
+            {
+				"value"		"100 150 200 250 300 350 400"
+				"RequiresScepter"		"1"
+			}
+            "projectile_speed"           
+            {
+				"value"		"500"
+				"RequiresScepter"		"1"
+			}
+            "splinter_angle"                      
+            {
+				"value"		"30"
+				"RequiresScepter"		"1"
+			}
+            "max_split_amount"                  
+            {
+				"value"		"2"
+				"RequiresScepter"		"1"
+			}
+            "split_delay"                	  
+            {
+				"value"		"1.25"
+				"RequiresScepter"		"1"
+			}
+            "projectile_break_duration"			
+            {
+				"value"		"2.5"
+				"RequiresScepter"		"1"
+			}
+			"projectile_waves"
+			{
+				"value"		"3"
+				"RequiresScepter"		"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Pulverize
+	//=================================================================================================================
+	"primal_beast_pulverize"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"996"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// "MaxLevel"						"7"
+
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.25"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityChannelAnimation"	"ACT_DOTA_CHANNEL_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCooldown"				"30"
+		"AbilityDamage"					"200 300 400 500 600 700 800" //"150 225 300 375 450 525 600"
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145 160 175 200"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"splash_radius"				
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"interval"					"0.75"
+			"ministun"					"0.2"
+			"cast_range"				"200"
+			"animation_rate"			"1.5"			// FLAIL MULTIPLIER ON ENEMY UNITS
+			"damage"
+			{
+				"value"						"125 175 225 275 325 375 425"
+			}
+			"channel_time"
+			{
+				"value"					"2.3"
+				"special_bonus_unique_primal_beast_pulverize_duration"	"+100%"
+			}
+            "pierce_immunity"
+            {
+            	"value"						"0"
+            	"special_bonus_unique_primal_beast_pulverize_pierces_magic_immunity"		"+1"
+            }
+			"bonus_damage_per_hit"				"20 40 60 80 100 120 140"
+		}
+	}
+	//=================================================================================================================
+    // Primal Beast: Rock Throw (Shard)
+    //=================================================================================================================
+    "primal_beast_rock_throw"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"							"7739"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+						
+
+
+
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "25"
+        "AbilityManaCost"               "150"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCastRange"              "1800"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "base_damage"             "350"
+            "impact_radius"             "225"
+            "fragment_impact_distance"    "600"
+            "min_range"               "550"
+            "min_travel_time"                 "0.45"
+            "max_travel_time"                  "1.7"
+            "bounce_travel_time"                  "0.6"
+            "fragment_impact_radius"                  "150"
+            "stun_duration"                  "1.75"
+            "fragment_impact_distance"    "600"
+            "fragment_impact_radius"                  "150"
+        }
+    } 
+}

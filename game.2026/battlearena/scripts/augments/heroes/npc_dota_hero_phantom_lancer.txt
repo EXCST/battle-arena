@@ -1,0 +1,149 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Phantom Lancer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_phantom_lancer"
+{
+	// ---- Spirit Lance -------------------------------------------------------
+	"phantom_lancer_spirit_lance"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 30/4)
+		"lance_damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tooltip_illusion_damage" "8"
+				"illusion_damage_out_pct" "8"
+			}
+		}
+		// less incoming illusion damage (was -60)
+		"tooltip_illusion_total_damage_in_pct"
+		{
+			"base" "-65"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"illusion_damage_in_pct"
+				{
+					"base" "-65"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Doppelwalk ---------------------------------------------------------
+	"phantom_lancer_doppelwalk"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// less incoming damage (was -10)
+		"illusion_1_damage_in_pct"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"illusion_2_damage_out_pct" "25"
+				"illusion_2_damage_in_pct"
+				{
+					"base" "-55"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Phantom Edge -------------------------------------------------------
+	"phantom_lancer_phantom_edge"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// shorter min distance (was -20)
+		"min_distance"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"bonus_speed" "100"
+			}
+		}
+		// more agility (was 12/4)
+		"bonus_agility"
+		{
+			"base" "15"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Juxtapose ----------------------------------------------------------
+	"phantom_lancer_juxtapose"
+	{
+		// more proc chance (was 5)
+		"proc_chance_pct"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"illusion_proc_chance_pct" "1.5"
+			}
+		}
+		// more illusion damage (was 5)
+		"tooltip_illusion_damage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"illusion_damage_out_pct"
+				{
+					"base" "6"
+					"mode" "ADD"
+				}
+			}
+		}
+		// less incoming damage (was -52.5)
+		"tooltip_total_illusion_damage_in_pct"
+		{
+			"base" "-57.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"illusion_damage_in_pct"
+				{
+					"base" "-57.5"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

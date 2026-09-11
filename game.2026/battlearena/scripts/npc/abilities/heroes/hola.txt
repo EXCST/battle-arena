@@ -1,0 +1,162 @@
+"DOTAAbilities"
+{
+"hola_stunhammer"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero/hola/hola_stunhammer"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET| DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"4"
+	"AbilityTextureName"			"custom/hola_stunhammer"
+
+	"AbilityCastRange"				"800"
+	"AbilityCastPoint"				"0.1"
+	"AbilityCooldown"				"12.0"
+	"AbilityManaCost"				"250"
+
+	"AbilityValues"
+	{
+		"bolt_damage"	            	"250 375 475 520"
+		"bolt_aoe"	       		 		"275"
+		"bolt_speed"	           		"1400"
+		"bolt_stun_duration"	        "1.5"
+
+		"bounce_count"
+		{
+			"value"						"0"
+			"special_bonus_unique_hola_stunhammer_bounces"	"+2"
+		}
+		"bounce_radius"
+		{
+			"value"						"0"
+			"special_bonus_unique_hola_stunhammer_bounces"		"+650"
+		}
+	}
+}
+
+"hola_grace"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero/hola/hola_grace"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"MaxLevel"						"4"
+	"AbilityTextureName"			"custom/hola_grace"
+
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"				"16.0"
+	"AbilityManaCost"				"100 120 140 160"
+
+	"AbilityValues"
+	{
+		"heal"	           				"500 1000 1400 1850"
+		"hp_regen"						"120"
+		"heal_duration"					"2.5"
+
+		"heal_amp"
+		{
+			"value"						"0"
+			"special_bonus_unique_hola_grace_heal_amplify"		"+50"
+		}
+	}
+}
+
+"hola_stomp"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero/hola/hola_stomp"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"custom/hola_stomp"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"MaxLevel"						"4"
+
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"20.0"
+	"AbilityManaCost"				"400 500 600 700"
+
+	"AbilityValues"
+	{
+		"radius"					"700"
+		"heal"						"400 500 600 700"
+		"damage"					"400 500 600 700"
+		"heal_percent"				"350"
+
+		"heal_from_damage"
+		{
+			"value"					"0"
+			"special_bonus_unique_hola_stomp_heals_from_damage"	"+1"
+		}
+	}
+}
+
+"hola_rescue"
+{
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"abilities/hero/hola/hola_rescue"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"			"custom/hola_rescue"
+	"MaxLevel"						"3"
+
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"40 38 34"
+	"AbilityManaCost"				"400 500 600"
+
+	"AbilityValues"
+	{
+		"duration"				"0.8"
+		"radius"				"1000"
+
+		"apply_grace"
+		{
+			"value"				"0"
+			"special_bonus_unique_hola_ultimate_applies_grace"		"+1"
+		}
+	}
+}
+
+"special_bonus_unique_hola_stunhammer_bounces"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"special_bonus_unique_hola_grace_heal_amplify"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"special_bonus_unique_hola_stomp_heals_from_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+
+"special_bonus_unique_hola_ultimate_applies_grace"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+}
+}
+
+
+

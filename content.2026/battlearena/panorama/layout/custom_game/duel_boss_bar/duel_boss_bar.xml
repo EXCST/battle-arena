@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/layout/custom_game/duel_boss_bar/duel_boss_bar.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/layout/custom_game/duel_boss_bar/duel_boss_bar.vjs_c" />
+	</scripts>
+	<Panel class="DBB_Root" hittest="false">
+		<Panel id="DBBBar" hittest="false">
+			<Label id="DBB_Name" text="#duel_boss_beast" hittest="false" />
+			<Panel class="DBB_Track">
+				<Panel id="DBB_HpGhost" class="DBB_HpGhost" />
+				<Panel id="DBB_HpFill" class="DBB_Fill" />
+				<Panel class="DBB_Gloss" />
+			</Panel>
+			<Panel id="DBB_CastTrack" class="DBB_Track">
+				<Panel id="DBB_CastFill" class="DBB_Fill" />
+				<Panel id="DBB_CastZone" class="DBB_CastZone" />
+			</Panel>
+			<Panel id="DBB_PostTrack" class="DBB_Track DBB_PostTrack">
+				<Panel id="DBB_PostFill" class="DBB_Fill" />
+			</Panel>
+			<Label id="DBB_Broken" text="#duel_boss_broken" />
+		</Panel>
+	</Panel>
+</root>

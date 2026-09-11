@@ -1,0 +1,97 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Omniknight hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_omniknight"
+{
+	// ---- Purification -------------------------------------------------------
+	"omniknight_purification"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal (was 45/4)
+		"heal"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider heal (was 50)
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Martyr -------------------------------------------------------------
+	"omniknight_martyr"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more regen (was 10/4)
+		"base_hpregen"
+		{
+			"base" "12"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more magic resist (was 5)
+		"magic_resist"
+		{
+			"base" "6"
+			"cap"	"4"
+			"mode" "ADD"
+		}
+	}
+
+	// ---- Hammer of Purity ---------------------------------------------------
+	"omniknight_hammer_of_purity"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap"	"4"
+		}
+		// more base damage (was 4)
+		"base_damage"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more bonus damage (was 15/3)
+		"bonus_damage"
+		{
+			"base" "18"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Guardian Angel -----------------------------------------------------
+	"omniknight_guardian_angel"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"30"
+		}
+	}
+}

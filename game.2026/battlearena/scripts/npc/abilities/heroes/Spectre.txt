@@ -1,0 +1,264 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Spectre: Spectral Dagger
+	//=================================================================================================================
+	"spectre_spectral_dagger"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5334"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Spectre.DaggerCast"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 19 18 17 16 15 14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"130 140 150 160 170 180 190"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier has no support value
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"				
+				{
+					"value"			"70 120 170 220 350 425 600"
+					"LinkedSpecialBonus"		"special_bonus_unique_spectre_6"
+				}
+				"bonus_movespeed"		
+				{
+					"value"			"10 14 18 22 24 26 30"
+					"LinkedSpecialBonus"		"special_bonus_unique_spectre_3"
+				}
+				"dagger_path_duration"	"12.0 12.0 12.0 12.0"
+				"hero_path_duration"	"7.0 7.0 7.0 7.0"
+				"buff_persistence"		"4.0 4.0 4.0 4.0"
+				"dagger_radius"			
+				{
+					"value"			"125"
+					"affected_by_aoe_increase"	"1"
+				}
+				"path_radius"			
+				{
+					"value"	"175"
+					"affected_by_aoe_increase"	"1"
+				}
+				"vision_radius"			
+				{
+					"value"			"200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"speed"					"800"
+				"dagger_grace_period"	"1.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Spectre: Desolate
+	//=================================================================================================================
+	"spectre_desolate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5335"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Spectre.Desolate"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"
+			{
+				"value"									"20 25 30 35 40 45 50"
+				"special_bonus_unique_spectre_2"		"+15"
+			}
+			"radius"
+			{
+				"value"				"400"
+				"special_bonus_unique_spectre_desolate_radius"			"-100"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+
+	}
+
+	//=================================================================================================================
+	// Spectre: Dispersion
+	//=================================================================================================================
+	"spectre_dispersion"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5336"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        "HasShardUpgrade"               "1"
+
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reflection_pct"
+			{
+				"value"		"8 12 16 20 21 22 24"
+				"special_bonus_unique_spectre_5"		"+5"
+			}
+			"min_radius"			"400"
+			"max_radius"			"800"
+			"activation_cooldown"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+25"
+			}
+			"activation_manacost"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+50"
+			}
+			"activation_bonus_pct"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+100"
+			}
+			"activation_duration"
+			{
+				"value"				"0"
+				"special_bonus_shard"				"+5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Spectre: Haunt
+	//=================================================================================================================
+	"spectre_haunt"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5337"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Spectre.Haunt"
+		"IsGrantedByScepter"			"1"
+		"MaxLevel"						"1"
+
+		"AbilityDraftPreAbility"		"spectre_reality"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"90"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"					"7.0"
+				"illusion_damage_outgoing"	"-20"
+				"tooltip_outgoing"	"80"
+				"illusion_damage_incoming"	"100"
+				"tooltip_illusion_total_damage_incoming"	"200"
+				"attack_delay"				"0"
+		}
+	}
+
+	//=================================================================================================================
+	// Spectre: Haunt Single
+	//=================================================================================================================
+	"spectre_haunt_single"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7851"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"7"
+		"AbilitySound"					"Hero_Spectre.Haunt"
+		
+
+		"AbilityDraftPreAbility"		"spectre_reality"
+		"AbilityDraftUltScepterAbility"		"spectre_haunt"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"80 60 40 35 30 25 20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"					"5.0 6.0 7.0 7.2 7.5 8 8.5"
+				"illusion_damage_outgoing"	"-60 -40 -20 -10 -7.5 -5 0"
+				"tooltip_outgoing"	"40 60 80 95 90 95 100"
+				"illusion_damage_incoming"	"100 100 100 105 110 115 120"
+				"tooltip_illusion_total_damage_incoming"	"200 200 200 210 220 230 240"
+				"attack_delay"				"0"
+		}
+	}
+
+	//=================================================================================================================
+	// Spectre: Reality
+	//=================================================================================================================
+	"spectre_reality"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5338"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"MaxLevel"						"1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3"
+	}
+}

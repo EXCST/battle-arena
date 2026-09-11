@@ -1,0 +1,24 @@
+.ManaOvercapRoot
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ManaOvercapText
+{
+	font-family: "MonoNumbersFont";
+	font-size: 16px;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000cc;
+	letter-spacing: 1px;
+	horizontal-align: left;
+	vertical-align: top;
+	/* Стартовая позиция (фолбэк, если ванильную панель не нашли):
+	   под мана-орбом героя. Уточняется по скриншоту в игре. */
+	position: 23% 93% 0px 0px;
+	transform: translateX(-50%);
+	background-color: #00000080;
+	padding: 1px 4px;
+	border-radius: 3px;
+	z-index: 1000;
+}

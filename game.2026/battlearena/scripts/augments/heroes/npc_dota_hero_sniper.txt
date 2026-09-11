@@ -1,0 +1,132 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Sniper hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_sniper"
+{
+	// ---- Shrapnel -----------------------------------------------------------
+	"sniper_shrapnel"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"sniper_concussive_grenade"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider shrapnel (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"sniper_concussive_grenade"
+				{
+					"radius" "25"
+				}
+			}
+		}
+		// more damage (was 20/2)
+		"shrapnel_damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+
+			"perks"
+			{
+				"special_bonus_unique_sniper_shrapnel_damage"		"x1.3"
+			}
+
+			"bundle_abilities"
+			{
+				"sniper_concussive_grenade"
+				{
+					"damage"
+					{
+						"base" "35"
+						"step"		"4"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Headshot -----------------------------------------------------------
+	"sniper_headshot"
+	{
+		// more proc chance (was 12)
+		"proc_chance"
+		{
+			"base" "14"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 80/3)
+		"damage"
+		{
+			"base" "90"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Take Aim -----------------------------------------------------------
+	"sniper_take_aim"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more slow (was -10)
+		"slow"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more attack range (was 15)
+		"active_attack_range_bonus"
+		{
+			"base" 	"20"
+			"cap" "10"
+		}
+	}
+
+	// ---- Assassinate --------------------------------------------------------
+	"sniper_assassinate"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 75/6)
+		"damage"
+		{
+			"base" "85"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

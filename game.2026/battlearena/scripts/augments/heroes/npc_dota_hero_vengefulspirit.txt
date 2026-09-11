@@ -1,0 +1,113 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Vengeful Spirit hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_vengefulspirit"
+{
+	// ---- Magic Missile ------------------------------------------------------
+	"vengefulspirit_magic_missile"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 35/4)
+		"magic_missile_damage"
+		{
+			"base" "40"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Wave of Terror -----------------------------------------------------
+	"vengefulspirit_wave_of_terror"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider wave (was 25)
+		"wave_width"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"vision_aoe" "30"
+			}
+		}
+		// more armor shred (was -1/-0.2)
+		"armor_reduction"
+		{
+			"base" "-1.5"
+			"step"		"-0.25"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage" "25"
+			}
+		}
+		// more attack reduction (was 4)
+		"attack_reduction"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap"	"4"
+		}
+	}
+
+	// ---- Command Aura -------------------------------------------------------
+	"vengefulspirit_command_aura"
+	{
+		// more base damage (was 5)
+		"bonus_base_damage"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "6"
+			"limit"		"200"
+		}
+		// wider aura (was 180)
+		"aura_radius"
+		{
+			"base" "200"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Nether Swap --------------------------------------------------------
+	"vengefulspirit_nether_swap"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 70/5)
+		"damage"
+		{
+			"base" "80"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer damage reduction (was 2)
+		"damage_reduction_duration"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

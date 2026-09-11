@@ -1,0 +1,117 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Legion Commander hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_legion_commander"
+{
+	// ---- Overwhelming Odds --------------------------------------------------
+	"legion_commander_overwhelming_odds"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider odds (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 50/4)
+		"damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"damage_per_hero" "12"
+				"damage_per_unit" "6"
+				"armor_per_hero" "0.6"
+				"armor_per_creep" "0.12"
+			}
+		}
+		// more attack speed
+		"bonus_attack_speed"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Press the Attack ---------------------------------------------------
+	"legion_commander_press_the_attack"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more move speed (was 15)
+		"move_speed"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more regen (was 35/10)
+		"hp_regen"
+		{
+			"base" "40"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Moment of Courage --------------------------------------------------
+	"legion_commander_moment_of_courage"
+	{
+		"cd_mana"
+		{
+			"base" "15"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more lifesteal (was 35)
+		"hp_leech_percent"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more triggers (rare, was -0.5)
+		"trigger_attacks"
+		{
+			"base" "-0.6"
+			"floor"	"rare"
+			"cap"	"2"
+		}
+	}
+
+	// ---- Duel ---------------------------------------------------------------
+	"legion_commander_duel"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more reward damage (was 8/4)
+		"reward_damage"
+		{
+			"base" "10"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

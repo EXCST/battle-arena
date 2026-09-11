@@ -1,0 +1,12 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/topbar_custom_icons.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/topbar_custom_icons.js" />
+	</scripts>
+	<Panel class="TopBarCustomIconsRoot" hittest="false">
+		<Panel id="MinimapOverlay" class="MinimapOverlay" hittest="false" />
+	</Panel>
+</root>

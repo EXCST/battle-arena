@@ -1,0 +1,200 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Shadow Fiend (Nevermore) hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_nevermore"
+{
+	// ---- Necromastery -------------------------------------------------------
+	"nevermore_necromastery"
+	{
+		// more damage per soul (rare, was 1)
+		"necromastery_damage_per_soul"
+		{
+			"base" 			"1.5"
+			"mode" 			"ADD"
+			"floor"		"rare"
+			"cap" "8"
+		}
+	}
+
+	// ---- Shadowraze (all 3) -------------------------------------------------
+	"nevermore_shadowraze1"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"nevermore_shadowraze2"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"nevermore_shadowraze3"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 50/3)
+		"shadowraze_damage"
+		{
+			"base"			"55"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"nevermore_shadowraze2"
+				{
+					"shadowraze_damage"
+					{
+						"base"			"55"
+						"step"		"4"
+					}
+				}
+				"nevermore_shadowraze3"
+				{
+					"shadowraze_damage"
+					{
+						"base"			"55"
+						"step"		"4"
+					}
+				}
+			}
+		}
+		// wider raze (was 20)
+		"shadowraze_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"nevermore_shadowraze2"
+				{
+					"shadowraze_radius" "25"
+				}
+				"nevermore_shadowraze3"
+				{
+					"shadowraze_radius" "25"
+				}
+			}
+		}
+		// more stack bonus (was 20/2)
+		"stack_bonus_damage"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"step"		"3"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"nevermore_shadowraze2"
+				{
+					"stack_bonus_damage"
+					{
+						"base"			"25"
+						"step"		"3"
+					}
+				}
+				"nevermore_shadowraze3"
+				{
+					"stack_bonus_damage"
+					{
+						"base"			"25"
+						"step"		"3"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Frenzy -------------------------------------------------------------
+	"nevermore_frenzy"
+	{
+		"cd_mana"
+		{
+			"base" "11"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more attack speed (was 30)
+		"bonus_attack_speed"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"bonus_move_speed" "4"
+			}
+		}
+		// longer frenzy (was 1)
+		"duration"
+		{
+			"base"		"1.5"
+			"mode"	"ADD"
+			"cap"	"4"
+		}
+	}
+
+	// ---- Dark Lord (presence) -----------------------------------------------
+	"nevermore_dark_lord"
+	{
+		// more armor shred (was -1)
+		"presence_armor_reduction"
+		{
+			"base" "-1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider presence (was 30)
+		"presence_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Requiem ------------------------------------------------------------
+	"nevermore_requiem"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "6"
+		}
+		// wider requiem (was 40)
+		"requiem_radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"requiem_line_speed" "28"
+			}
+		}
+		// more damage (was 35/2)
+		"damage"
+		{
+			"base" "40"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

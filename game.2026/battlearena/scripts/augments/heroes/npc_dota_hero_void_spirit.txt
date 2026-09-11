@@ -1,0 +1,137 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Void Spirit hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_void_spirit"
+{
+	// ---- Aether Remnant -----------------------------------------------------
+	"void_spirit_aether_remnant"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"limit"		"35"
+		}
+		// more damage (was 40/3)
+		"impact_damage"
+		{
+			"base" "45"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer watch distance (was 35)
+		"remnant_watch_distance"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Dissimilate --------------------------------------------------------
+	"void_spirit_dissimilate"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"limit"		"35"
+		}
+		// more damage (was 35/3)
+		"damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Resonant Pulse -----------------------------------------------------
+	"void_spirit_resonant_pulse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"limit"		"35"
+		}
+		// wider pulse (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more barrier (was 45/3)
+		"base_absorb_amount"
+		{
+			"base" "50"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_void_spirit_resonant_pulse_barrier"		"x1.2"
+			}
+			"bundle"
+			{
+				"absorb_per_hero_hit"
+				{
+					"base" "45"
+					"step"		"5"
+					"mode" "ADD"
+					"perks"
+					{
+						"special_bonus_unique_void_spirit_resonant_pulse_barrier"		"x1.2"
+					}
+				}
+			}
+		}
+		// more damage (was 30/2)
+		"damage"
+		{
+			"base" "35"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Astral Step --------------------------------------------------------
+	"void_spirit_astral_step"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+
+			"limit"		"35"
+		}
+		// wider step (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 55/4)
+		"pop_damage"
+		{
+			"base" "60"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

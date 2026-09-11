@@ -1,0 +1,29 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/repick_item.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/repick_item.js" />
+	</scripts>
+	<Panel class="Root" hittest="false">
+		<Panel id="RepickItemRoot" class="Root" hittest="true" onactivate="OnClose()" oncontextmenu="OnClose()">
+			<Panel id="RepickItemMain" hittest="true" onactivate="" oncontextmenu="">
+				<Panel id="RepickItemHeader" class="Header">
+					<Label id="RepickItemTitle" text="#AA_REPICK_ITEM_TITLE" hittest="false"/>
+					<Panel id="RepickItemClose" class="CloseButton" hittest="true" onactivate="OnClose()">
+						<Label text="X" hittest="false"/>
+					</Panel>
+				</Panel>
+				<Panel id="RepickItemGridHolder" class="GridHolder" hittest="true">
+					<Panel id="RepickItemGrid" class="Grid" hittest="true"/>
+				</Panel>
+				<Panel id="RepickItemFooter" class="Footer" hittest="false">
+					<Label id="RepickItemHint" text="#AA_REPICK_ITEM_HINT" hittest="false"/>
+					<Panel id="RepickItemButton" class="RepickButton CantPick" hittest="true" onactivate="PickHero()">
+						<Label id="RepickItemButtonLabel" text="#AA_REPICK_ITEM_PICK" hittest="false"/>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

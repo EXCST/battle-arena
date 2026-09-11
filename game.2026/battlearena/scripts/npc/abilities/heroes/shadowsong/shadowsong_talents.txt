@@ -1,0 +1,82 @@
+﻿"DOTAAbilities"
+{
+"shadowsong_talent_magic_fire_aoe"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	"AbilityValues"
+	{
+		"value"		"1"
+	}
+}
+
+"shadowsong_talent_magic_fire_cd_decrease"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	"AbilityValues"
+	{
+		"value"		"4"
+	}
+}
+
+"shadowsong_special_bonus_absorbtion"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"value"						"125"
+	}
+}
+
+"shadowsong_special_bonus_absorbtion_kill_bonus"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"value"						"50"
+	}
+}
+
+"shadowsong_special_bonus_reflection_magic_immune"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"value"						"5"
+	}
+}
+
+"shadowsong_special_bonus_reflection_teammate"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"value"						"1"
+	}
+}
+}

@@ -1,0 +1,111 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Winter Wyvern hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_winter_wyvern"
+{
+	// ---- Arctic Burn --------------------------------------------------------
+	"winter_wyvern_arctic_burn"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+			"bundle"
+			{
+				"movement_scepter" "6"
+				"mana_cost_scepter" "-2"
+			}
+		}
+		// more attack range (was 10)
+		"attack_range_bonus"
+		{
+			"base" 	"12"
+			"cap" "10"
+		}
+	}
+
+	// ---- Splinter Blast -----------------------------------------------------
+	"winter_wyvern_splinter_blast"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider split (was 30)
+		"split_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 40/5)
+		"damage"
+		{
+			"base" "45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Cold Embrace -------------------------------------------------------
+	"winter_wyvern_cold_embrace"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal (was 40/5)
+		"heal_additive"
+		{
+			"base" 		"45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"heal_percentage" "0.9"
+			}
+		}
+	}
+
+	// ---- Winter's Curse -----------------------------------------------------
+	"winter_wyvern_winters_curse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider curse (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"damage_reduction" "-25"
+			}
+		}
+		// more damage amp (was 5)
+		"damage_amplification"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"bonus_attack_speed" "30"
+			}
+		}
+	}
+}

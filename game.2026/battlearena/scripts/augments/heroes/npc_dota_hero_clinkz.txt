@@ -1,0 +1,119 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Clinkz hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_clinkz"
+{
+	// ---- Strafe -------------------------------------------------------------
+	"clinkz_strafe"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle_abilities"
+			{
+				"clinkz_burning_barrage"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more attack speed (was 30/15)
+		"attack_speed_bonus"
+		{
+			"base" "35"
+			"step"	"18"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Searing Arrows -----------------------------------------------------
+	"clinkz_searing_arrows"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more arrow damage (was 25/5)
+		"damage_bonus"
+		{
+			"base"		"30"
+			"step"	"6"
+			"cap" "8"
+		}
+		// more skeleton damage (was 8)
+		"skeleton_damage_pct"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap"	"10"
+		}
+	}
+
+	// ---- Death Pact ---------------------------------------------------------
+	"clinkz_death_pact"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more health gain (was 150/30)
+		"health_gain"
+		{
+			"base" 		"170"
+			"step"		"35"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Wind Walk ----------------------------------------------------------
+	"clinkz_wind_walk"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"clinkz_burning_army"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more move speed (was 10)
+		"move_speed_bonus_pct"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// NEW: longer wind walk duration (rare)
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+}

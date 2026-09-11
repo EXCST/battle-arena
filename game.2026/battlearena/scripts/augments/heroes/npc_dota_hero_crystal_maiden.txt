@@ -1,0 +1,125 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Crystal Maiden hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_crystal_maiden"
+{
+	// ---- Crystal Nova -------------------------------------------------------
+	"crystal_maiden_crystal_nova"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider nova (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 45/5)
+		"nova_damage"
+		{
+			"base" "50"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Frostbite ----------------------------------------------------------
+	"crystal_maiden_frostbite"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle_abilities"
+			{
+				"crystal_maiden_crystal_clone"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more dps (was 20/2)
+		"damage_per_second"
+		{
+			"base" "22"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"creep_damage_per_second"
+				{
+					"base"			"45"
+					"step"		"12"
+				}
+			}
+		}
+	}
+
+	// ---- Brilliance Aura ----------------------------------------------------
+	"crystal_maiden_brilliance_aura"
+	{
+		// more mana regen (was 3/1.5)
+		"base_mana_regen"
+		{
+			"base" "3.5"
+			"step"	"1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"proximity_mana_regen_tooltip" "9"
+			}
+		}
+	}
+
+	// ---- Freezing Field -----------------------------------------------------
+	"crystal_maiden_freezing_field"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 35/5)
+		"damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more attack slow (was -40/-10)
+		"attack_slow"
+		{
+			"base"		"-45"
+			"step"	"-12"
+			"cap" "6"
+
+			"bundle"
+			{
+				"shard_self_movement_speed_slow_pct"
+				{
+					"base"			"5"
+					"mode" "MULT"
+					"limit"		"40"
+				}
+			}
+		}
+	}
+}

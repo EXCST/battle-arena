@@ -1,0 +1,118 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Storm Spirit hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_storm_spirit"
+{
+	// ---- Static Remnant -----------------------------------------------------
+	"storm_spirit_static_remnant"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider remnant (was 25)
+		"static_remnant_damage_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"static_remnant_radius" "30"
+			}
+		}
+		// more damage (was 20/2)
+		"static_remnant_damage"
+		{
+			"base" "25"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer cast range (was 120)
+		"AbilityCastRange"
+		{
+			"base" "140"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"static_remnant_travel_speed" "55"
+			}
+		}
+	}
+
+	// ---- Electric Vortex ----------------------------------------------------
+	"storm_spirit_electric_vortex"
+	{
+		"cd_mana"
+		{
+			"base" 				"7"
+			"mode" 				"MULT"
+			"cap" "4"
+			"limit" "40"
+		}
+	}
+
+	// ---- Overload -----------------------------------------------------------
+	"storm_spirit_overload"
+	{
+		// wider overload (was 25)
+		"overload_aoe"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shard_activation_radius" "30"
+			}
+		}
+		// more damage (was 10/0.5)
+		"overload_damage"
+		{
+			"base" "12"
+			"step"		"0.7"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more attack slow (was -20)
+		"overload_attack_slow"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"shard_attack_speed_bonus" "12"
+			}
+		}
+	}
+
+	// ---- Ball Lightning -----------------------------------------------------
+	"storm_spirit_ball_lightning"
+	{
+		// wider ball (was 30)
+		"ball_lightning_aoe"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"ball_lightning_vision_radius" "35"
+			}
+		}
+		// more damage (was 3)
+		"damage"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

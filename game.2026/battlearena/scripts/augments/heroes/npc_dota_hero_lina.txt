@@ -1,0 +1,124 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lina hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_lina"
+{
+	// ---- Dragon Slave -------------------------------------------------------
+	"lina_dragon_slave"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4.5)
+		"dragon_slave_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider end (was 35)
+		"dragon_slave_width_end"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"dragon_slave_width_initial" "30"
+			}
+		}
+	}
+
+	// ---- Light Strike Array -------------------------------------------------
+	"lina_light_strike_array"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider array (was 30)
+		"light_strike_array_aoe"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 50/4.5)
+		"light_strike_array_damage"
+		{
+			"base" "55"
+			"step"		"5.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Fiery Soul ---------------------------------------------------------
+	"lina_fiery_soul"
+	{
+		// more attack speed (was 5/2)
+		"fiery_soul_attack_speed_bonus"
+		{
+			"base" 		"6"
+			"step"		"2.5"
+			"mode" 		"ADD"
+			"cap" "10"
+
+			"bundle_abilities"
+			{
+				"lina_flame_cloak"
+				{
+					"spell_amp" "6"
+				}
+			}
+		}
+		// more move speed (was 3)
+		"fiery_soul_move_speed_bonus"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle_abilities"
+			{
+				"lina_flame_cloak"
+				{
+					"magic_resistance"
+					{
+						"base" "3"
+						"mode" "MULT"
+
+						"limit"			"50"
+						"limit_base"		"35"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Laguna Blade -------------------------------------------------------
+	"lina_laguna_blade"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 120/8)
+		"damage"
+		{
+			"base" "130"
+			"step"		"10"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

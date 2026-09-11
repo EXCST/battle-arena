@@ -1,0 +1,118 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Puck hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_puck"
+{
+	// ---- Illusory Orb -------------------------------------------------------
+	"puck_illusory_orb"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"30"
+		}
+		// wider orb (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"orb_vision" "40"
+			}
+		}
+		// more damage (was 45/4)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Waning Rift --------------------------------------------------------
+	"puck_waning_rift"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"30"
+		}
+		// wider rift (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 60/4)
+		"damage"
+		{
+			"base" "65"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer range (was 60)
+		"max_distance"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Phase Shift --------------------------------------------------------
+	"puck_phase_shift"
+	{
+		// more attack range (was 40)
+		"shard_attack_range_bonus"
+		{
+			"base" "50"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Dream Coil ---------------------------------------------------------
+	"puck_dream_coil"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 80/5)
+		"coil_initial_damage"
+		{
+			"base" "90"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"coil_break_damage" "45"
+			}
+		}
+		// wider coil (was 50)
+		"coil_radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"coil_duration" "1"
+			}
+		}
+	}
+}

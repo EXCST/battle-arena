@@ -1,0 +1,104 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Tinker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_tinker"
+{
+	// ---- Laser --------------------------------------------------------------
+	"tinker_laser"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 35/3)
+		"laser_damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- March of the Machines ---------------------------------------------
+	"tinker_march_of_the_machines"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 5/1)
+		"damage"
+		{
+			"base"			"6"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"heal_per_second"
+				{
+					"base" 	"12"
+					"step"	"3"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider march (was 25)
+		"splash_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Deploy Turrets -----------------------------------------------------
+	"tinker_deploy_turrets"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more turrets (epic, was 0.25)
+		"turrets_per_drop"
+		{
+			"base"		"0.3"
+			"cap"	"4"
+			"floor"	"epic"
+		}
+		// more missile damage (was 25/4)
+		"missile_damage"
+		{
+			"base"			"30"
+			"step"		"5"
+			"cap" "8"
+		}
+		// tankier turrets (was 150/50)
+		"turret_hp"
+		{
+			"base"			"180"
+			"step"		"60"
+			"cap" "6"
+		}
+	}
+
+	// ---- Rearm --------------------------------------------------------------
+	"tinker_rearm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+	}
+}

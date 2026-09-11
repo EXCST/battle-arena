@@ -1,0 +1,131 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Razor hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_razor"
+{
+	// ---- Plasma Field -------------------------------------------------------
+	"razor_plasma_field"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 30/5)
+		"damage_max"
+		{
+			"base" "35"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"damage_min" "35"
+			}
+		}
+		// wider field (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"speed" "36"
+			}
+		}
+	}
+
+	// ---- Static Link --------------------------------------------------------
+	"razor_static_link"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer drain range (was 2.5)
+		"drain_length"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"drain_duration" "5"
+			}
+		}
+		// more drain rate (was 10/3)
+		"drain_rate"
+		{
+			"base" "12"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Storm Surge --------------------------------------------------------
+	"razor_storm_surge"
+	{
+		// more chance (was 2)
+		"strike_pct_chance"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 60/4)
+		"strike_damage"
+		{
+			"base" "65"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+
+			"perks"
+			{
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"	"x1.25"
+			}
+		}
+	}
+
+	// ---- Eye of the Storm ---------------------------------------------------
+	"razor_eye_of_the_storm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider storm (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// faster strikes (rare, was -0.03)
+		"strike_interval"
+		{
+			"base" "-0.04" // x4 on epic so -0.16 per epic
+			"mode" "ADD"
+			"floor" "rare"
+
+			"cap"		"6"
+		}
+		// more damage (was 45/3)
+		"damage"
+		{
+			"base" "50"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

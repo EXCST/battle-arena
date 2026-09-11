@@ -1,0 +1,392 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Morphling: Waveform
+	//=================================================================================================================
+	"morphling_waveform"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5052"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.25"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"125 205 325 425 480 540 620"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 95 115 125 135 145 150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"speed"					"1250"
+				"width"					"200"
+				"AbilityCharges"		
+				{
+					"value"	"0"
+					"special_bonus_unique_morphling_6"	"+2"
+				}
+				"AbilityCastRange"
+				{
+					"value"				"700 800 900 1000"
+					"special_bonus_unique_morphling_1"	"+250"
+				}			
+		}
+	}
+	
+	//=================================================================================================================
+	// Morphling: Adaptive Strike
+	//=================================================================================================================
+	"morphling_adaptive_strike_agi"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5053"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.25"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage_base"					"70 105 140 175 210 245 280"
+				"damage_min"					
+				{
+					"value"					"1"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"damage_max"					
+				{
+					"value"				"3"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"projectile_speed"					"1150"
+				"shared_cooldown"					"3"
+		}
+	}
+	
+	//=================================================================================================================
+	// Morphling: Adaptive Strike
+	//=================================================================================================================
+	"morphling_adaptive_strike_str"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"7000"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.25"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"stun_min"						
+				{
+					"value" "1.25"
+					"special_bonus_unique_morphling_10" "+1"
+				}
+				"stun_max"						
+				{
+					"value"	"1.25 1.5 1.75 2.0 2.5 3.0 3.5"
+					"special_bonus_unique_morphling_10"	"+1"
+				}
+				"knockback_min"					"100"
+				"knockback_max"					"450"
+				"projectile_speed"					"1150"
+				"shared_cooldown"					"3"
+		}
+	}
+	
+	//=================================================================================================================
+	// Morphling: Morph (Attribute Shift)
+	//=================================================================================================================
+	"morphling_morph"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5054"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attributes"		
+			{
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Morphling: Morph (Agility Gain)
+	//=================================================================================================================
+	"morphling_morph_agi"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5055"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"points_per_tick"		"1"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+			"bonus_attributes"		
+			{
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
+			}
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+			"mana_cost"				"15"
+			"castable_while_stunned"
+			{
+				"value"	"0"
+				"special_bonus_shard"	"+1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Morphling: Morph (Strength Gain)
+	//=================================================================================================================
+	"morphling_morph_str"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5056"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"points_per_tick"		"1"
+			"morph_cooldown"		"0.5 0.3 0.25 0.15 0.1 0.07 0.04"
+			"bonus_attributes"		
+			{
+				"value"					"10 12 14 16 18 20 22"
+				"special_bonus_shard"					"+6"
+			}
+			"morph_rate_tooltip"	"2 3 4 6 10 14 25"
+			"mana_cost"				"15"
+			"castable_while_stunned"
+			{
+				"value"	"0"
+				"special_bonus_shard"	"+1"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Morphling: Replicate
+	//=================================================================================================================
+	"morphling_replicate"
+	{
+		// General
+		//-----------------------------------------------------------------
+		"ID"					"5057"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+        "HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700 850 1000"
+		"AbilityCastPoint"				"0.25"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60" // "90 85 80 75 70 65 60"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 75 100 125 150 175 200"			
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value"						"20"
+				"LinkedSpecialBonus"		"special_bonus_unique_morphling_8"
+			}
+            "scepter_stat_steal"
+			{
+				"value"						"20 22 24 26 28 30 32"
+				"RequiresScepter"			"1"
+			}
+			"scepter_spell_amplify"	
+			{
+				"value"						"20"
+				"RequiresScepter"			"1"
+			}
+			"scepter_attack_speed"	
+			{
+				"value"						"50"
+				"RequiresScepter"			"1"
+			}
+			"scepter_status_resist"	
+			{
+				"value"						"35"
+				"RequiresScepter"			"1"
+			}
+			"scepter_cooldown_reduction"	
+			{
+				"value"			"20"
+				"RequiresScepter"			"1"
+			}
+		}		
+	}
+	
+	//=================================================================================================================
+	// Morphling: Morph Replicate
+	//=================================================================================================================
+	"morphling_morph_replicate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5058"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"
+	}
+
+	//=================================================================================================================
+	// Morphling: Hybrid ( scepter ability )
+	//=================================================================================================================
+	"morphling_hybrid"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5674"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.25"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200"
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"illusion_damage_out_pct"		"-50 -50 -50"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"tooltip_illusion_damage_out_pct"		"50 50 50"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"illusion_incoming_dmg_pct_tooltip"		"100 100 100"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"illusion_damage_in_pct"		"0 0 0"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"illusion_damage_out_pct_scepter"	"-20"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"duration"						"20.0"
+			}
+		}
+	}
+	
+}

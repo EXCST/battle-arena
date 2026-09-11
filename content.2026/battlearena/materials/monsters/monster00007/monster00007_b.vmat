@@ -1,0 +1,47 @@
+// THIS FILE IS AUTO-GENERATED (monster00007_b material)
+
+Layer0
+{
+	shader "hero.vfx"
+
+	F_USE_HERO_EFFECTS_PROXY 1
+	F_USE_STATUS_EFFECTS_PROXY 1
+
+	g_flEnvMapBlendToFull "0.000"
+	g_flMetalnessBlendToFull "0.000"
+	g_flReflectionsTintByBaseBlendToNone "0.000"
+	g_flSelfIllumBlendToFull "0.000"
+	g_flSpecularBlendToFull "0.000"
+	g_flSpecularExponentBlendToFull "0.000"
+
+	g_flCloakBlurAmount "0.005"
+	g_flCloakIntensity "0.850"
+	g_flCloakRefractAmount "0.100"
+	g_flMaterialCloakFactor "0.000"
+	g_vCloakColorTint "[1.000 1.000 1.000]"
+
+	g_flDiffuseModulationAmount "1.000"
+	g_flTexCoordRotation "0.000"
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+	TextureColor "materials/monsters/monster00007/monster00007_color.png"
+
+	TextureFresnelWarpRim "materials/default/default_fresnelwarprim.tga"
+
+	g_flAmbientScale "1.000"
+	g_flBloomScale "0.000"
+	g_flBloomShift "0.000"
+	g_vBloomColor "[1.000000 1.000000 1.000000 0.000000]"
+
+	TextureNormal "materials/monsters/monster00007/monster00007_normal.png"
+
+	g_flRimLightScale "1.000"
+	g_vRimLightColor "[1.000000 1.000000 1.000000 0.000000]"
+
+	g_flSpecularExponent "32.000"
+	g_flSpecularScale "1.000"
+	g_vSpecularColor "[1.000000 1.000000 1.000000 0.000000]"
+
+	g_tMasks1 "materials/monsters/monster00007/monster00007_b_masks1.png"
+	g_tMasks2 "materials/monsters/monster00007/monster00007_b_masks2.png"
+}

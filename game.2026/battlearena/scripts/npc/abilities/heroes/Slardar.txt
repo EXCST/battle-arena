@@ -1,0 +1,248 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Ability: Slardar Guardian Sprint
+	//=================================================================================================================
+	"slardar_sprint"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5114"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17"
+		
+			"AbilityValues"
+		{			
+				"bonus_speed"					"15 20 22 28 32 36 44"
+				"duration"						"16"
+				"river_speed"					"30"
+				"puddle_regen"				
+				{
+					"value"						"10 15 20 25 30 35 40"
+					"special_bonus_scepter"		"+22"
+				}
+				"puddle_armor"				
+				{
+					"value"						"15 18 21 24 27 30 35"
+					"special_bonus_scepter"		"+11"
+				}
+				"puddle_status_resistance"			
+				{
+					"value"						"40"
+					"RequiresScepter"			"1"
+				}
+                "river_speed_tooltip"			"45 50 52 58 62 66 74"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+	
+
+	//=================================================================================================================
+	// Slardar Scepter
+	//=================================================================================================================
+	"slardar_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7864"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		}
+	}
+	
+	//=================================================================================================================
+	// Ability: Slardar Slithereen Crush
+	//=================================================================================================================
+	"slardar_slithereen_crush"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5115"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.35 0.35 0.35 0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 95 105 115 135 145 155"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"crush_radius"				"350"
+				"crush_extra_slow"				
+				{
+					"value"	"-20"
+					"LinkedSpecialBonus"	"special_bonus_unique_slardar_8"
+					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+				}
+				"crush_attack_slow_tooltip"		"-20"
+				"crush_extra_slow_duration"		"6"
+				"stun_duration"					
+				{
+					"value"															"1"
+					"special_bonus_unique_slardar_slithereen_crush_stun"			"+0.2"
+				}
+				"puddle_duration"		
+				{
+					"value"					"6"
+					"special_bonus_scepter"	"+19"
+				}
+				"puddle_radius"		
+				{
+					"value"				"250"
+					"special_bonus_scepter"	"+350"
+				}
+				"crush_damage"			
+				{
+					"value"					"100 145 215 245 345 425 525"
+					"LinkedSpecialBonus"	"special_bonus_unique_slardar"
+				}
+				"shard_amp_duration"			
+				{
+					"value"				"5.0"
+					"RequiresShard"					"1"
+				}
+				"shard_bonus_radius"			
+				{
+					"value"				"75"
+					"RequiresShard"					"1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+
+"slardar_bash"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+   
+    "MaxLevel"                      "7"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "bonus_damage"			"30 50 70 90 110 130 150" //"75 125 175 225 275 325 400"
+            "LinkedSpecialBonus"	"special_bonus_unique_slardar_2"
+        }
+        "02"
+        {
+            "var_type"				"FIELD_FLOAT"
+            "duration"				"0.4" //"0.4 0.45 0.5 0.55 0.6 0.65 0.75"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "attack_count"			"3"
+        }
+    }
+    "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+}
+
+//=================================================================================================================
+	// Ability: Slardar Amplify Damage (corrosive haze)
+	//=================================================================================================================
+	"slardar_amplify_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5117"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25 50 75 125 150 225 250"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"6.0"	// Very valuable compared to cost.
+
+		
+		"AbilityValues"
+		{
+			"armor_reduction"		
+			{ 
+				"value"				"-10 -12 -16 -18 -22 -28 -30"
+				"special_bonus_unique_slardar_5"	"-4"
+			}
+			"duration"
+			{
+				"value"			"15"
+			}
+			"undispellable"
+			{
+				"value"			"0"
+				"special_bonus_unique_slardar_3"	"+1"
+			}
+			"puddle_radius"
+			{
+				"value"			"100"
+			}
+			"puddle_duration"
+			{
+				"value"			"8"
+			}
+		}
+	}
+}

@@ -1,0 +1,188 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Night Stalker: Void
+	//=================================================================================================================
+	"night_stalker_void"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5275"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"						"7"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"525"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"8"
+		"AbilityManaCost"				"50 60 70 80 90 100 110"
+			
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// applies 2 modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"			
+			{
+				"value"		"120 180 255 300 400 450 520"
+				"special_bonus_unique_night_stalker_4"	"+50"
+			}
+			"duration_day"			"2.0 2.2 2.4 2.6 2.8 3.0 3.2"
+			"duration_night"		"4.0 4.5 5.0 5.5 6.0 6.5 7.0"
+			"movespeed_slow"		"-50"
+			"attackspeed_slow"		"-50"
+			"radius_scepter"		
+			{
+				"value"			"900"			
+				"RequiresScepter"		"1"
+			}
+			"scepter_ministun"		
+			{
+				"value"			"0.6"
+				"RequiresScepter"		"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Night Stalker: Crippling Fear
+	//=================================================================================================================
+	"night_stalker_crippling_fear"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5276"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"14" // 13
+		"AbilityManaCost"				"100"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastGestureSlot"		"DEFAULT"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration_day"			"3.0"
+			"duration_night"		"4 4.5 5.0 5.2 5.4 5.8 6.0" //"5.0 5.2 5.6 6.2 6.5 6.8 7.0"
+			"radius"	"375"
+		}
+		
+	}
+	
+	//=================================================================================================================
+	// Night Stalker: Hunter in the Night
+	//=================================================================================================================
+	"night_stalker_hunter_in_the_night"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5277"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"									"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_movement_speed_pct_night"	
+			{
+				"value"			"20 25 30 35 40 45 50"
+				"special_bonus_unique_night_stalker_5" "+0"
+			}
+			"bonus_attack_speed_night"			
+			{
+				"value"			"40 60 80 100 120 140 160"	//"45 60 75 90 120 140 160" 
+				"special_bonus_unique_night_stalker_2"	"+100"
+			}
+				"bonus_status_resist_night"			
+			{
+				"value"			"0"
+				"special_bonus_unique_night_stalker_hunter_status_resist"	"+15"
+			}
+			"shard_hp_restore_pct"
+			{
+				"value"				"35"
+				"RequiresShard"		"1"
+			}
+			"shard_mana_restore_pct"
+			{
+				"value"				"25"
+				"RequiresShard"		"1"
+			}
+			"shard_cooldown"
+			{
+				"value"				"20"
+				"RequiresShard"		"1"
+			}
+			"shard_cast_range"
+			{
+				"value"				"400" // 125
+				"RequiresShard"		"1"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}
+	
+	//=================================================================================================================
+	// Night Stalker: Darkness
+	//=================================================================================================================
+	"night_stalker_darkness"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5278"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"75 70 65 60 55 50 50" // 50
+		"AbilityManaCost"				"100 125 150 175 200 225 250"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				
+			{
+				"value"			"20.0"
+				"special_bonus_unique_night_stalker_7"	"+8"
+			}
+			"bonus_damage"			
+			{
+				"value"			"70 140 210 250 300 350 400"  //"60 100 140 200 250 300 350"
+				"special_bonus_unique_night_stalker_3"	"+35"
+			}
+		}
+	}
+
+}

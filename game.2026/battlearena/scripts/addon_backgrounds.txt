@@ -1,0 +1,8 @@
+"Backgrounds"
+{
+	"background1"
+	{
+		"image"		"file://{images}/custom_game/loading_screen/custom_bg_png"
+		"loadingscreen"	"1"
+	}
+}

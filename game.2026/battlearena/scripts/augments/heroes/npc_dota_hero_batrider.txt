@@ -1,0 +1,129 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Batrider hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_batrider"
+{
+	// ---- Sticky Napalm ------------------------------------------------------
+	"batrider_sticky_napalm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more napalm damage per stack (was 2.5/0.2)
+		"damage"
+		{
+			"base" "3"
+			"step"		"0.25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"application_damage"
+				{
+					"base" "2.5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider napalm (was 15)
+		"radius"
+		{
+			"base" "20"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Flamebreak ---------------------------------------------------------
+	"batrider_flamebreak"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more impact damage (was 15/2.5)
+		"damage_impact"
+		{
+			"base" "18"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage_per_second"
+				{
+					"base" "7"
+					"step"	"0.8"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider explosion (was 20)
+		"explosion_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Firefly ------------------------------------------------------------
+	"batrider_firefly"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more fire dps (was 15/2.5)
+		"damage_per_second"
+		{
+			"base" "18"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider trail (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Flaming Lasso ------------------------------------------------------
+	"batrider_flaming_lasso"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more lasso damage (was 60/6)
+		"damage"
+		{
+			"base" "70"
+			"step"	"8"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// NEW: longer lasso duration (epic only)
+		"duration"
+		{
+			"base" "0.2"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "3"
+		}
+	}
+}

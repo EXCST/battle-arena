@@ -1,0 +1,248 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+// Pugna: Nether Blast
+//=================================================================================================================
+	"pugna_nether_blast"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5186"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Pugna.NetherBlast"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 105 125 145 165 185 205"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"structure_damage_mod"		"0.5"
+				"delay"						"0.8"
+				"radius"					
+				{
+					"value"			"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"blast_damage"
+				{
+					"value"	"100 180 260 340 420 460 500"
+					"LinkedSpecialBonus"		"special_bonus_unique_pugna_2"
+				}
+				"damage_pct" "7"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+//=================================================================================================================
+// Pugna: Decrepify
+//=================================================================================================================
+	"pugna_decrepify"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5187"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK |  DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Pugna.Decrepify"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400 475 550 625 650 700 750"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_heal_amp_pct_allies"			"5 10 15 20 25 30 35"
+			"bonus_movement_speed_allies"		"0"
+			"bonus_spell_damage_pct"	
+			{
+				"value"		"-30 -40 -50 -60 -63 -66 -70"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+			}
+			"bonus_movement_speed"		"-30 -40 -50 -60 -63 -66 -70"
+			"AbilityDuration"				
+			{
+				"value"				"3.5"
+				"special_bonus_unique_pugna_5" "+1.0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	
+	//=================================================================================================================
+	// Pugna: Nether Ward
+	//=================================================================================================================
+	"pugna_nether_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5188"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT "		
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Pugna.NetherWard"
+		"HasShardUpgrade"			"1"
+		"LevelsBetweenUpgrades"			"7"		
+		"MaxLevel" "4"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40.0"
+		"AbilityDuration"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80"		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					
+			{
+				"value"		"1400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"base_damage"				"50 100 250 350"
+			"mana_multiplier"
+			{
+				"value"			"1 2 3 4"
+				"special_bonus_unique_pugna_3"		"+1.75"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+			}
+			"mana_regen"				"0"
+
+			"attacks_to_destroy"
+			{
+				"value"				"4 6 8 10"
+				"special_bonus_unique_pugna_6"		"+3"
+			}
+			"spell_damage_reduction"
+			{
+				"value"						"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+			"AbilityCastRange"
+			{
+				"value"									"150"
+				"special_bonus_shard"					"=350"
+			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Pugna: Life Drain
+	//=================================================================================================================
+	"pugna_life_drain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5189"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900 950 1000 1050 1100 1150 1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityChannelTime"			"12.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 175 225 325 425 525 625"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// All about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"health_drain"
+			{
+				"value"					"200 225 250 300 325 375 400"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"tick_rate"					"0.25"
+			"drain_buffer"				"200"
+			"shard_damage_pct_from_ward"
+			{
+				"value"				"70"
+				"RequiresShard"		"1"
+			}
+			"bonus_heal_pct"
+			{
+				"value"					"0"
+				"special_bonus_unique_pugna_1"			"+20"
+			}
+			"spell_amp_drain_rate"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+8"
+			}
+			"spell_amp_drain_max"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+75"
+			}
+			"spell_amp_drain_rate_ward"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+4"
+			}
+			"spell_amp_drain_duration"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+8"
+			}			
+			"max_spell_amp_drain_pct"
+			{
+				"value"						"0"
+				"special_bonus_scepter"		"+100"
+			}	
+			"AbilityCooldown"				
+			{
+				"value"						"7"		
+				"special_bonus_scepter"		"-50%"
+			}
+		}
+	}
+}

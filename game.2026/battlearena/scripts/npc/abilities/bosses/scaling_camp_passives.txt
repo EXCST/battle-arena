@@ -1,0 +1,22 @@
+"DOTAAbilities"
+{
+"scaling_camp_passive_bear"
+{
+	"ID"							"16110"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"elder_titan_natural_order"
+	"ScriptFile"					"abilities/scaling_camp_passive"
+	"MaxLevel"						"1"
+}
+
+"scaling_camp_passive_boss"
+{
+	"ID"							"16111"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"elder_titan_natural_order"
+	"ScriptFile"					"abilities/scaling_camp_passive"
+	"MaxLevel"						"1"
+}
+}

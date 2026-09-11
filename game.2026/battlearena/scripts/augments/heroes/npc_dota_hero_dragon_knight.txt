@@ -1,0 +1,143 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Dragon Knight hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_dragon_knight"
+{
+	// ---- Breathe Fire -------------------------------------------------------
+	"dragon_knight_breathe_fire"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"dragon_knight_fireball"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage reduction (was 8)
+		"reduction"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// wider fire (was 20)
+		"start_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"end_radius" "25"
+			}
+			"bundle_abilities"
+			{
+				"dragon_knight_fireball"
+				{
+					"radius" "25"
+				}
+			}
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"dragon_knight_fireball"
+				{
+					"damage"
+					{
+						"base" "12"
+						"step"		"1.5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Dragon Tail --------------------------------------------------------
+	"dragon_knight_dragon_tail"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 70/7)
+		"damage"
+		{
+			"base" "80"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Wyrm's Wrath -------------------------------------------------------
+	"dragon_knight_wyrms_wrath"
+	{
+		// more magic damage (was 20/5)
+		"magic_damage"
+		{
+			"base" "25"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more aoe (was 10)
+		"bonus_aoe"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Elder Dragon Form --------------------------------------------------
+	"dragon_knight_elder_dragon_form"
+	{
+		"cd_mana"
+		{
+			"base" 	"8"
+			"mode" 	"MULT"
+			"cap" "3"
+		}
+		// wider splash (was 20)
+		"ranged_splash_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more corrosive dps (was 25/4)
+		"corrosive_damage_per_second"
+		{
+			"base" "30"
+			"step"		"5"
+			"cap" "8"
+
+			"bundle"
+			{
+				"frost_bonus_attack_speed"		"30"
+			}
+		}
+	}
+}

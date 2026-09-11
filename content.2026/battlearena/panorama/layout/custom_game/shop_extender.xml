@@ -1,0 +1,10 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/utils.js" />
+		<include src="file://{resources}/scripts/custom_game/shop_extender.js" />
+	</scripts>
+	<Panel class="ShopExtenderRoot" hittest="false" />
+</root>

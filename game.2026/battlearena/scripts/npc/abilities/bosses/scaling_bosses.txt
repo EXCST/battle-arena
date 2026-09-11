@@ -1,0 +1,96 @@
+﻿"DOTAAbilities"
+{
+"scaling_boss_crit"
+{
+	"ID"							"16100"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_crit"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"chance"			"20"
+		"crit_mult"			"2.5"
+	}
+}
+
+"scaling_boss_bash"
+{
+	"ID"							"16101"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_bash"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"chance"				"25"
+		"duration"				"1.5"
+		"bonus_damage_pct"		"15"
+	}
+}
+
+"scaling_boss_lifesteal"
+{
+	"ID"							"16102"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_lifesteal"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"lifesteal_pct"			"20"
+	}
+}
+
+"scaling_boss_split"
+{
+	"ID"							"16103"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_split"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"radius"				"250"
+		"split_pct"				"40"
+	}
+}
+
+"scaling_boss_evasion"
+{
+	"ID"							"16104"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_evasion"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"evasion_pct"			"30"
+	}
+}
+
+"scaling_boss_mr"
+{
+	"ID"							"16105"
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/boss_mr"
+	"ScriptFile"					"abilities/boss_passives_shared.lua"
+	"MaxLevel"						"1"
+
+	"AbilityValues"
+	{
+		"magic_resist"			"40"
+	}
+}
+}

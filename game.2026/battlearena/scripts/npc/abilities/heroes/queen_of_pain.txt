@@ -1,0 +1,200 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Queen of Pain: Shadow Strike
+	//=================================================================================================================
+	"queenofpain_shadow_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5173"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// "MaxLevel"						"7"
+
+			"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10 9 8 7"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110"
+	
+		
+		"MaxLevel" "7"	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"strike_damage"			
+			{
+				"value"								"80 125 175 250 300 350 400"
+				"special_bonus_scepter"				"+100"
+			}
+			"duration_damage"		"35 45 55 70 85 105 130"
+			"damage_pct" "3"
+			"movement_slow"			"-20 -25 -30 -35"
+			"projectile_speed"		"900"
+			"damage_interval"		
+			{
+				"value"					"1.7"
+				"special_bonus_unique_queen_of_pain_4"		"-0.7"
+			}
+			"duration_heal"		"10 15 20 30 40 50 65"
+			"generate_scream"
+			{
+				"value"								"0"
+				"special_bonus_scepter"				"+1"
+			}
+			"aoe_radius"
+			{
+				"value"								"0"
+				"special_bonus_scepter"				"+375"
+			}
+			"duration"						"15"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	
+	//=================================================================================================================
+	// Queen of Pain: Blink
+	//=================================================================================================================
+	"queenofpain_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5174"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilitySound"					"Hero_QueenOfPain.Blink_in"
+
+        "HasShardUpgrade"               "1"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange"				"1075 1150 1225 1300 1375 1450 1525"
+		"AbilityCastPoint"				"0.33 0.33 0.33 0.33"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0 10.0 8.0 6.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"65"
+		
+		"MaxLevel" "7"	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"min_blink_range"				"200"
+				"shard_damage"			
+				{
+					"RequiresShard"				"1"
+					"value"						"125"
+				}
+
+				"shard_duration"
+				{
+					"RequiresShard"				"1"
+					"value"						"1.75"
+				}	
+				"shard_aoe"
+				{
+					"RequiresShard"				"1"
+					"value"						"300"
+					"affected_by_aoe_increase"	"1"
+				}									
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Queen of Pain: Scream of Pain
+	//=================================================================================================================
+	"queenofpain_scream_of_pain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5175"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140 150 160 170"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"area_of_effect"									"475"
+			"projectile_speed"									"900"
+			"damage"										
+			{
+				"value"											"120 215 295 380 500 600 700"
+				"special_bonus_unique_queen_of_pain_2" 			"+120"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Sonic Wave
+	//=================================================================================================================
+	"queenofpain_sonic_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5176"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// "MaxLevel"						"7"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.452"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"250 360 420 530 580 620 630"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"starting_aoe"		"100"
+				"distance"			"900"
+				"final_aoe"			"450"
+				"speed"				"1100"
+				"damage"			
+				{
+					"value"											"400 525 625 825 925 1000 1250"
+					"special_bonus_unique_queen_of_pain_7"			"+200"
+				}
+				"knockback_distance"	"350"
+				"knockback_duration" "1.4"
+				"AbilityCooldown"
+				{	
+					"value"											"110 95 80 75 70 65 60"
+					"special_bonus_unique_queen_of_pain_3"			"-20"
+				}
+		}
+	}
+}

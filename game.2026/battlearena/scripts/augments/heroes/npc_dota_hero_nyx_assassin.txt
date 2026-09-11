@@ -1,0 +1,90 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Nyx Assassin hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_nyx_assassin"
+{
+	// ---- Impale -------------------------------------------------------------
+	"nyx_assassin_impale"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 40/5)
+		"impale_damage"
+		{
+			"base" "45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Jolt ---------------------------------------------------------------
+	"nyx_assassin_jolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more mana damage (was 1.5)
+		"max_mana_as_damage_pct"
+		{
+			"base" "2"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more echo damage (rare, was 2)
+		"damage_echo_pct"
+		{
+			"base" 		"2.5"
+			"floor"	"rare"
+			"mode" 		"ADD"
+			"cap" 	"6"
+		}
+	}
+
+	// ---- Spiked Carapace ----------------------------------------------------
+	"nyx_assassin_spiked_carapace"
+	{
+		// more reflect (was 8)
+		"damage_reflect_pct"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Vendetta -----------------------------------------------------------
+	"nyx_assassin_vendetta"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more move speed (was 6)
+		"movement_speed"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more damage (was 60/5)
+		"bonus_damage"
+		{
+			"base" "70"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

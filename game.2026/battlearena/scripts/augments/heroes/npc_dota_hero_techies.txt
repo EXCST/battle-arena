@@ -1,0 +1,137 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Techies hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_techies"
+{
+	// ---- Sticky Bomb --------------------------------------------------------
+	"techies_sticky_bomb"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider bomb (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"explosion_radius" "35"
+				"countdown" "-0.18"
+			}
+		}
+		// more damage (was 55/5)
+		"damage"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"speed" "60"
+			}
+		}
+	}
+
+	// ---- Reactive Tazer -----------------------------------------------------
+	"techies_reactive_tazer"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider tazer (was 30)
+		"explosion_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 25/3)
+		"damage"
+		{
+			"base" "30"
+			"step"	"4"
+			"cap" "8"
+		}
+	}
+
+	// ---- Suicide Squad Attack ----------------------------------------------
+	"techies_suicide"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider suicide (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 90/7)
+		"damage"
+		{
+			"base" "100"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Land Mines ---------------------------------------------------------
+	"techies_land_mines"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"techies_minefield_sign"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more mres reduction (was 2.5)
+		"mres_reduction"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 50/5)
+		"damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"techies_minefield_sign"
+				{
+					"scepter_move_damage" "50"
+				}
+			}
+		}
+	}
+}

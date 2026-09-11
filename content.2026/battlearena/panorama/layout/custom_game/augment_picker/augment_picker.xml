@@ -1,0 +1,85 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/layout/custom_game/augment_picker/augment_picker.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/utils.js" />
+		<include src="file://{resources}/scripts/custom_game/augments_favorites.js" />
+		<include src="file://{resources}/scripts/custom_game/augment_format.js" />
+		<include src="s2r://panorama/layout/custom_game/augment_picker/augment_picker.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="AugCard">
+			<Button class="AugCard">
+				<Panel class="AugCardWrap">
+					<Panel class="AugCardBody">
+						<Panel class="AugCardMain">
+							<DOTAAbilityImage id="AugIcon">
+								<Panel class="AugIconShadow" />
+								<Panel class="AugIconBorder" />
+								<Panel class="AugIconTier" />
+							</DOTAAbilityImage>
+							<Panel class="AugTextBlock">
+								<Label class="AugAbilityName" html="true" text="{s:main_ability_name}" />
+								<Label class="AugDesc" html="true" text="{s:base_value_desc}" />
+								<Label class="AugCounter" text="#augment_count" html="true" />
+								<Panel id="AugLevelsRoot" />
+								<Label class="AugLevels" text="#augment_levels" html="true" />
+							</Panel>
+						</Panel>
+						<Button id="AugFavBtn" onactivate="">
+							<Panel class="StarBorder" />
+							<Panel class="StarColor" />
+						</Button>
+						<Label class="AugStep" text="{s:upgrade_increment}" onmouseover="DOTAShowTextTooltip(&apos;#augments_step_hint&apos;)" onmouseout="DOTAHideTextTooltip()" />
+						<Panel class="AugFavOverlay" hittest="false" />
+					</Panel>
+				</Panel>
+				<Panel id="AugSubValues" />
+			</Button>
+		</snippet>
+		<snippet name="AugSubValue">
+			<Panel class="AugSubValue">
+				<Image src="s2r://panorama/images/custom_game/augment_picker/chain_icon_png.vtex" />
+				<DOTAAbilityImage id="LinkedAbilityIcon" />
+				<Label text="{s:value}" html="true" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" class="Augments_Root">
+		<Panel class="Augments_Controls">
+			<Button class="AugLaterBtn" onactivate="ToggleVisibility()">
+				<Panel class="AugLaterArrow" />
+				<Label text="#augments_later" />
+			</Button>
+		</Panel>
+		<Panel class="Augments_Content">
+			<Button id="AugReroll" onactivate="RequestReroll()" onmouseover="DOTAShowTextTooltip({s:tooltip})" onmouseout="DOTAHideTextTooltip()">
+				<Panel>
+					<Label class="AugRerollText" text="#augments_reroll" />
+					<Panel class="AugRerollIcon">
+						<Panel />
+					</Panel>
+					<Label class="AugRerollCount" text="x{s:reroll_count}" />
+				</Panel>
+			</Button>
+			<Panel class="AugHeaderRoot">
+				<Label class="AugHeader" text="{s:upgrades_header}" />
+			</Panel>
+			<Panel id="Augments_Cards" />
+			<Panel class="AP_ContentBox">
+				<Panel class="AP_TimerBackground">
+					<Panel id="AP_Timer" />
+				</Panel>
+				<Panel class="AP_Content">
+					<ToggleButton id="AP_Toggle" text="#auto_pick_header" html="true" onactivate="ToggleAutoPickFavs()" onmouseover="DOTAShowTextTooltip(#settings_entry_tooltip_auto_pick_favorites)" onmouseout="DOTAHideTextTooltip()" />
+					<TextButton class="AP_Button" text="#auto_pick_minus" onactivate="UpdateAutoPickTime(&apos;-&apos;)" />
+					<Label class="AP_Current" text="#auto_pick_current_time" />
+					<TextButton class="AP_Button" text="#auto_pick_plus" onactivate="UpdateAutoPickTime(&apos;+&apos;)" />
+					<Image class="AP_Star" src="s2r://panorama/images/custom_game/augments/fav_star_8_png.vtex" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

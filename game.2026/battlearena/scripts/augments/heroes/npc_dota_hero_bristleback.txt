@@ -1,0 +1,139 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Bristleback hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_bristleback"
+{
+	// ---- Viscous Nasal Goo --------------------------------------------------
+	"bristleback_viscous_nasal_goo"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"bristleback_hairball"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more base armor shred (was 0.5)
+		"base_armor"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"armor_per_stack" "0.6"
+			}
+		}
+		// more stacks (was 1)
+		"stack_limit"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Quill Spray --------------------------------------------------------
+	"bristleback_quill_spray"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"85"
+		}
+		// wider quills (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more quill damage (was 15/3)
+		"quill_base_damage"
+		{
+			"base" "18"
+			"step"		"3.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"quill_stack_damage"
+				{
+					"base" 		"9"
+					"step"		"1.8"
+				}
+				"max_damage"
+				{
+					"base" 		"90"
+					"step"		"11"
+				}
+			}
+		}
+	}
+
+	// ---- Bristleback --------------------------------------------------------
+	"bristleback_bristleback"
+	{
+		// more side reduction (was 3.5)
+		"side_damage_reduction"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "6"
+
+			"limit"			"100"
+			"limit_base"		"24"
+		}
+		// more back reduction (was 2.5)
+		"back_damage_reduction"
+		{
+			"base" "3"
+			"mode" "MULT"
+			"cap" "6"
+
+			"limit"			"100"
+			"limit_base"		"48"
+		}
+	}
+
+	// ---- Warpath ------------------------------------------------------------
+	"bristleback_warpath"
+	{
+		// more damage per stack (was 3/0.4)
+		"damage_per_stack"
+		{
+			"base" "3.5"
+			"step"		"0.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more move speed per stack
+		"move_speed_per_stack"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more stacks
+		"max_stacks"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+}

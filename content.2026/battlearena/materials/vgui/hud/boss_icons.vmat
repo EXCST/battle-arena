@@ -1,0 +1,6 @@
+"Layer0"
+{
+	"Shader"	"ui.vfx"
+	"F_TRANSLUCENT"	"1"
+	"Texture"	"materials/vgui/hud/boss_icons.png"
+}

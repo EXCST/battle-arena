@@ -1,0 +1,161 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Dark Seer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_dark_seer"
+{
+	// ---- Vacuum -------------------------------------------------------------
+	"dark_seer_vacuum"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider vacuum (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 45/5)
+		"damage"
+		{
+			"base" "50"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Ion Shell ----------------------------------------------------------
+	"dark_seer_ion_shell"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider shell (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more dps (was 25/2)
+		"damage_per_second"
+		{
+			"base" "28"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Surge --------------------------------------------------------------
+	"dark_seer_surge"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer surge (was 1)
+		"duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more trail damage
+		"trail_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle_abilities"
+			{
+				"dark_seer_normal_punch"
+				{
+					"max_damage" "80"
+				}
+			}
+		}
+	}
+
+	// ---- Wall of Replica ----------------------------------------------------
+	"dark_seer_wall_of_replica"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"dark_seer_normal_punch"
+				{
+					"cd_mana"
+					{
+						"base" "4"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more replica damage (was 8)
+		"replica_damage_outgoing"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"tooltip_outgoing" "10"
+				"wall_damage" "25"
+			}
+			"bundle_abilities"
+			{
+				// link to vanilla hidden ability for Normal Punch illusions to work with
+				"dark_seer_wall_of_replica"
+				{
+					"replica_damage_outgoing"	"10"
+					"tooltip_outgoing"			"10"
+				}
+			}
+		}
+		// replicas take less damage (was -20)
+		"replica_damage_incoming"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"tooltip_replica_total_damage_incoming"
+				{
+					"base" "-25"
+					"mode" "ADD"
+				}
+			}
+
+			"bundle_abilities"
+			{
+				"dark_seer_wall_of_replica"
+				{
+					"replica_damage_incoming"
+					{
+						"base" "-25"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+}

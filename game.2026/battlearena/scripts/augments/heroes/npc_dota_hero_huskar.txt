@@ -1,0 +1,126 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Huskar hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_huskar"
+{
+	// ---- Inner Fire ---------------------------------------------------------
+	"huskar_inner_fire"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 45/4.5)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider fire (was 45)
+		"radius"
+		{
+			"base" "50"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Burning Spear ------------------------------------------------------
+	"huskar_burning_spear"
+	{
+		// less health cost (rare, was -0.15)
+		"max_health_cost"
+		{
+			"base" "-0.2"
+			"mode" "ADD"
+			"floor"	"rare"
+			"cap" "6"
+		}
+		// more burn (was 7/1)
+		"burn_damage"
+		{
+			"base" "8"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer burn (rare, was 0.5)
+		"duration"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "6"
+		}
+	}
+
+	// ---- Berserker's Blood --------------------------------------------------
+	"huskar_berserkers_blood"
+	{
+		// more attack speed (was 55)
+		"maximum_attack_speed"
+		{
+			"base" "65"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more regen (was 12)
+		"maximum_health_regen"
+		{
+			"base" "15"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more magic resist (was 9)
+		"maximum_magic_resist"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"100"
+			"limit_base"		"30"
+		}
+	}
+
+	// ---- Life Break ---------------------------------------------------------
+	"huskar_life_break"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"40"
+		}
+		// more health damage (rare, was 0.025)
+		"health_damage"
+		{
+			"base" "0.03"
+			"mode" "ADD"
+			"cap" "4"
+			"floor" "rare"
+			"bundle"
+			{
+				"tooltip_health_damage" "3"
+			}
+		}
+		// more self slow (was -10)
+		"movespeed"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"attack_speed" "60"
+			}
+		}
+	}
+}

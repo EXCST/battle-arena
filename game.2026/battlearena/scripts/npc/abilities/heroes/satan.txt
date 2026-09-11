@@ -1,0 +1,242 @@
+﻿"DOTAAbilities"
+{
+	"satan_breath"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero/satan/satan_breath.lua"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"custom/satan_breath"
+		"MaxLevel"						"4"
+
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"22.0"
+
+		"AbilityManaCost"				"250 300 350 400"
+
+		"AbilityValues"
+		{
+			"start_radius"			"150"
+			"end_radius"			"250"
+			"range"					"650"
+			"speed"					"1050"
+			"damage"
+			{
+				"value"				"40 50 60 65"
+				"special_bonus_unique_satan_breath_damage"		"+150"
+			}
+			"creep_multiplier"
+			{
+				"value"				"10"
+				"special_bonus_unique_satan_breath_damage"		"+10"
+			}
+			"damage_from_str"		"5"
+
+			"flame_count"			"30"
+			"think_time"			"0.1"
+		}
+	}
+
+
+	"satan_might"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"abilities/hero/satan/satan_might.lua"
+
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"custom/satan_might"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"MaxLevel"				"4"
+
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"			"10 9 8 7"
+				"special_bonus_unique_satan_might_no_cd"		"-100%"
+			}
+			"chance"			"10 12 16 20"
+			"stun_duration"		"0.5"
+			"radius"			"300"
+
+			"overpain_bonus"
+			{
+				"value"			"0"
+				"special_bonus_unique_satan_overpain_improves_might"	"+1"
+			}
+		}
+	}
+
+	"satan_bloody_trade"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero/satan/satan_bloody_trade.lua"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityTextureName"			"custom/satan_trade"
+		"MaxLevel"						"4"
+
+		"AbilityCastPoint"				"0.4"
+		"AbilityCooldown"				"60.0"
+		"AbilityManaCost"				"250"
+
+		"AbilityValues"
+		{
+			"health_cost_pct"			"20"
+			"damage_from_health_lost_pct"
+			{
+				"value"				"30 40 50 55"
+				"special_bonus_unique_satan_trade_amp"	"+100%"
+				"CalculateSpellDamageTooltip"				"0"
+			}
+			"duration"
+			{
+				"value"				"12"
+				"special_bonus_unique_satan_trade_amp"	"+100%"
+			}
+
+			"on_kill_chance"
+			{
+				"value"				"0"
+				"special_bonus_unique_satan_trade_on_kill_chance"		"+5"
+			}
+		}
+	}
+
+	"satan_overpain"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero/satan/satan_overpain.lua"
+
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"custom/satan_overpain"
+		"MaxLevel"						"4"
+
+		"AbilityCastPoint"				"0.2"
+		"AbilityCooldown"				"30.0 28.0 26.0 24.0"
+		"AbilityManaCost"				"200 300 400 500"
+
+		"AbilityValues"
+		{
+			"duration"			"2.8"
+			"damage_decrease"	"-50"
+			"hp_regen"			"5"
+
+			"can_cast_on_allies"
+			{
+				"value"			"0"
+				"special_bonus_unique_satan_overpain_cast_on_allies"	"+1"
+			}
+			"AbilityCastRange"
+			{
+				"value"			"0"
+				"special_bonus_unique_satan_overpain_cast_on_allies"	"+750"
+			}
+		}
+	}
+
+
+	"satan_curse"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero/satan/satan_curse.lua"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"custom/satan_curse"
+		"MaxLevel"						"3"
+
+		"AbilityCastRange"				"720"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"200 400 600"
+
+		"AbilityValues"
+		{
+			"duration"		"3 3.5 4"
+			"slow"			"-10000"
+		}
+	}
+
+	"satan_blood_magic"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hero/satan/satan_blood_magic.lua"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"health_cost_as_damage"			"25"
+			"radius"						"450"
+		}
+	}
+
+
+	"special_bonus_unique_satan_breath_damage"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+
+	"special_bonus_unique_satan_might_no_cd"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+
+	"special_bonus_unique_satan_trade_amp"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+	"special_bonus_unique_satan_overpain_improves_might"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+
+	"special_bonus_unique_satan_trade_on_kill_chance"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+
+	"special_bonus_unique_satan_overpain_cast_on_allies"
+	{
+		"BaseClass"						"special_bonus_base"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
+}

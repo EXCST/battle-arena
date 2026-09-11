@@ -1,0 +1,152 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Necrophos hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_necrolyte"
+{
+	// ---- Sadist -------------------------------------------------------------
+	"necrolyte_sadist"
+	{
+		// more regen (was 1/1)
+		"regen"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"step"		"1"
+			"cap" "8"
+		}
+	}
+
+	// ---- Death Pulse --------------------------------------------------------
+	"necrolyte_death_pulse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"necrolyte_death_seeker"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider pulse (was 40)
+		"area_of_effect"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"projectile_speed"	"60"
+			}
+		}
+		// more heal (was 55/10)
+		"heal"
+		{
+			"base" "60"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage"
+				{
+					"base" 		"40"
+					"step"		"5"
+				}
+			}
+		}
+	}
+
+	// ---- Ghost Shroud -------------------------------------------------------
+	"necrolyte_ghost_shroud"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"heal_bonus"
+				{
+					"base" 		"2.5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider shroud (was 40)
+		"slow_aoe"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more bonus damage (rare, was 2.5)
+		"bonus_damage"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "10"
+		}
+	}
+
+	// ---- Heartstopper Aura --------------------------------------------------
+	"necrolyte_heartstopper_aura"
+	{
+		// wider aura (was 30)
+		"aura_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Reaper's Scythe ----------------------------------------------------
+	"necrolyte_reapers_scythe"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage per health (was 0.1)
+		"damage_per_health"
+		{
+			"base" "0.12"
+			"mode" "ADD"
+
+			"cap"	"10"
+		}
+		// more hp per kill (was 2/0.5)
+		"hp_per_kill"
+		{
+			"base" "2.5"
+			"step"		"0.6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"mana_per_kill"
+				{
+					"base" "1.5"
+					"step"		"0.4"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

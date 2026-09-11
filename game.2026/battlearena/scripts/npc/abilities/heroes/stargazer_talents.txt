@@ -1,0 +1,143 @@
+"DOTAAbilities"
+{
+// ============================================================
+// STARGAZER — дерево талантов (4 тира x 2, AbilityTalentStart 10)
+// В BS у stargazer талантов НЕТ — дерево составлено нами по паттерну
+// arthas/stegius (8x special_bonus_base, без KV-модификаторов).
+// Тиры: 10 = Ability10/11, 15 = Ability12/13, 20 = Ability14/15, 25 = Ability16/17
+// Стат-таланты (урон/HP/AS) читает modifier_stargazer_talent_stats
+// (значения хардкодом — AbilityKV:Get(talent, "value") = 0, держать
+// синхронно с KV). Флаг-таланты (инт-урон/дальность варпа/отражение/
+// статы цикла/скорость цикла) читаются через HasTalent в скиллах.
+// Движковый авто-аттач "modifier_<имя таланта>" для кастомных имён
+// НЕ работает (проверено 2026-08-10 на stegius).
+// ============================================================
+
+"stargazer_special_bonus_attack_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"40"
+		}
+	}
+}
+
+"stargazer_special_bonus_health"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"300"
+		}
+	}
+}
+
+"stargazer_special_bonus_gamma_int"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"30"
+		}
+	}
+}
+
+"stargazer_special_bonus_warp_range"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"500"
+		}
+	}
+}
+
+"stargazer_special_bonus_attack_speed"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"50"
+		}
+	}
+}
+
+"stargazer_special_bonus_reflection"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"5"
+		}
+	}
+}
+
+"stargazer_special_bonus_cosmic_stats"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"3"
+		}
+	}
+}
+
+"stargazer_special_bonus_cosmic_interval"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"25"
+		}
+	}
+}
+}

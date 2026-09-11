@@ -1,0 +1,183 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Abyssal Underlord hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_abyssal_underlord"
+{
+	// ---- Raid Boss (innate) -------------------------------------------------
+	"abyssal_underlord_raid_boss"
+	{
+		// more damage reduction + move speed per stack
+		"damage_reduction"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"bonus_ms" "6"
+			}
+		}
+	}
+
+	// ---- Firestorm ----------------------------------------------------------
+	"abyssal_underlord_firestorm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+
+		// wider firestorm
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// more wave damage (was 30/3)
+		"wave_damage"
+		{
+			"base" "35"
+			"step" "4"
+			"mode" "ADD"
+			"cap" "12"
+		}
+
+		// NEW: more waves per second (rare only, capped hard)
+		"wave_interval"
+		{
+			"base" "-0.05"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+
+		// NEW: burn damage % of max hp (epic)
+		"burn_damage_max_hp"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "3"
+		}
+	}
+
+	// ---- Pit of Malice ------------------------------------------------------
+	"abyssal_underlord_pit_of_malice"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+
+		// more pit damage (was 35/5)
+		"pit_damage"
+		{
+			"base" "40"
+			"step" "6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+
+		// longer ensnare (epic only, was 0.025)
+		"ensnare_duration"
+		{
+			"base" "0.05"
+			"cap" "4"
+			"floor" "epic"
+			"mode" "ADD"
+		}
+
+		// NEW: bigger pit radius
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Atrophy Aura -------------------------------------------------------
+	"abyssal_underlord_atrophy_aura"
+	{
+		// wider aura
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// more damage reduction (was 3)
+		"damage_reduction_pct"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "6"
+
+			"perks"
+			{
+				"special_bonus_unique_underlord_3"	"x1.1"
+			}
+		}
+
+		// more bonus damage from heroes (was 15/1.5)
+		"bonus_damage_from_hero"
+		{
+			"base" "18"
+			"step" "2"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"bonus_damage_from_creep"
+				{
+					"base" "1.5"
+					"step" "0.15"
+					"mode" "ADD"
+				}
+			}
+
+			"perks"
+			{
+				"special_bonus_unique_underlord_3"	"x1.1"
+			}
+		}
+	}
+
+	// ---- Dark Portal --------------------------------------------------------
+	"abyssal_underlord_dark_portal"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "3"
+		}
+
+		// NEW: portal duration longer (rare only)
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+
+		// NEW: wider cast range for allies (rare)
+		"cast_range"
+		{
+			"base" "150"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+}

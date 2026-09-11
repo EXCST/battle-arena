@@ -1,0 +1,87 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/layout/custom_game/augment_book/augment_book.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/utils.js" />
+		<include src="file://{resources}/scripts/custom_game/augments_favorites.js" />
+		<include src="file://{resources}/scripts/custom_game/augment_format.js" />
+		<include src="s2r://panorama/layout/custom_game/augment_book/augment_book.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="AugCard">
+			<Button class="AugCard">
+				<DOTAAbilityImage class="PressScaleAnimation" />
+				<Panel class="AbiltiyBorder PressScaleAnimation" />
+				<Label class="PressScaleAnimation" text="{d:total_u_count}" />
+			</Button>
+		</snippet>
+		<snippet name="AB_List">
+			<Panel class="AB_List">
+				<Panel class="AB_ListHeader">
+					<Label class="TotalAugs" text="{d:total_u_count}" />
+					<Label class="AugLineHeader" text="{s:ability_name}" />
+				</Panel>
+				<Panel id="AugLines" />
+			</Panel>
+		</snippet>
+		<snippet name="AugLine">
+			<Panel class="AugLine">
+				<Panel class="AugCountBox">
+					<Panel>
+						<Label text="{d:augments_count}" />
+						<Label class="AugCountLimit" text="/" />
+						<Label class="AugCountLimit" text="{s:u_max_count}" />
+					</Panel>
+				</Panel>
+				<Panel class="AugTree" />
+				<DOTAAbilityImage id="LinkedAbilityIcon" />
+				<DOTAAbilityImage id="AugIconImg" scaling="stretch-to-fit-y-preserve-aspect">
+					<Panel />
+				</DOTAAbilityImage>
+				<Label class="AugName" text="{s:special_name}" html="true" />
+				<Label class="AugValue" text="{s:total_value}" />
+			</Panel>
+		</snippet>
+		<snippet name="AugLinesBox">
+			<Panel class="AugLinesBox">
+				<Panel class="AL_Content">
+					<Panel id="AL_Main" />
+					<Panel id="AL_Linked" />
+				</Panel>
+				<Button id="FavBtn" onactivate="">
+					<Panel class="StarBorder" />
+					<Panel class="StarColor" />
+				</Button>
+				<Panel class="FavOverlay" hittest="false" />
+			</Panel>
+		</snippet>
+		<snippet name="AugTierBox">
+			<Panel class="AugTierBox">
+				<Panel id="ATB_Header">
+					<Label class="ATB_Title" text="{s:grc_header_rarity}" />
+					<Panel class="ATB_Minimize" />
+				</Panel>
+				<Panel id="ATB_List" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="Augments_Root" hittest="false">
+		<Panel id="AugBook">
+			<Panel id="AugBook_Lists" onactivate="" />
+			<Panel id="AB_List" onactivate="">
+				<Panel id="AB_Header">
+					<Label text="#selected_augments_tooltip" />
+				</Panel>
+				<Panel id="AB_Buttons">
+					<Panel id="AB_Line1" />
+					<Panel id="AB_Line2" />
+				</Panel>
+			</Panel>
+		</Panel>
+		<Button id="AugBookBtn" onactivate="ShowDefaultBook()">
+			<Panel />
+		</Button>
+	</Panel>
+</root>

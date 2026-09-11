@@ -1,0 +1,127 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Leshrac hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_leshrac"
+{
+	// ---- Split Earth --------------------------------------------------------
+	"leshrac_split_earth"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider split (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 45/4)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Diabolic Edict -----------------------------------------------------
+	"leshrac_diabolic_edict"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider edict (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 4/0.2)
+		"damage"
+		{
+			"base" "5"
+			"step"	"0.3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more explosions (was 1.5)
+		"num_explosions"
+		{
+			"base"			"2"
+			"cap"		"10"
+		}
+	}
+
+	// ---- Lightning Storm ----------------------------------------------------
+	"leshrac_lightning_storm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"leshrac_greater_lightning_storm"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 20/5)
+		"damage"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider storm (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"jump_count"	"1.5"
+			}
+		}
+	}
+
+	// ---- Pulse Nova ---------------------------------------------------------
+	"leshrac_pulse_nova"
+	{
+		// wider nova (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 25/5)
+		"damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

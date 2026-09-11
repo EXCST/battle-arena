@@ -1,0 +1,145 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Primal Beast hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_primal_beast"
+{
+	// ---- Onslaught ----------------------------------------------------------
+	"primal_beast_onslaught"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 35/2.5)
+		"knockback_damage"
+		{
+			"base" "40"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider knockback (was 35)
+		"knockback_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// faster charge (was -0.2)
+		"max_charge_time"
+		{
+			"base"		"-0.25"
+			"cap"	"3"
+		}
+	}
+
+	// ---- Trample ------------------------------------------------------------
+	"primal_beast_trample"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider trample (was 25)
+		"effect_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 10/2)
+		"base_damage"
+		{
+			"base" "12"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer trample (epic, was 0.25)
+		"duration"
+		{
+			"base"		"0.3"
+			"cap"	"8"
+			"floor"	"epic"
+		}
+	}
+
+	// ---- Uproar -------------------------------------------------------------
+	"primal_beast_uproar"
+	{
+		// more damage per stack (was 3/0.3)
+		"bonus_damage_per_stack"
+		{
+			"base" "4"
+			"step"		"0.4"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"projectile_damage"
+				{
+					"base" 		"12"
+					"step"		"1.5"
+				}
+			}
+		}
+		// more armor (was 1)
+		"roared_bonus_armor"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Pulverize ----------------------------------------------------------
+	"primal_beast_pulverize"
+	{
+		"cd_mana"
+		{
+			"base" 	"5"
+			"mode" 	"MULT"
+			"cap"	"5"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"primal_beast_rock_throw"
+				{
+					"base_damage"
+					{
+						"base" 		"35"
+						"step"		"4"
+					}
+				}
+			}
+		}
+		// wider splash (was 30)
+		"splash_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"primal_beast_rock_throw"
+				{
+					"impact_radius" "35"
+					"fragment_impact_radius" "35"
+				}
+			}
+		}
+	}
+}

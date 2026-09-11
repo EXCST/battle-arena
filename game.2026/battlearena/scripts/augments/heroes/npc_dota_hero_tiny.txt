@@ -1,0 +1,145 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Tiny hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_tiny"
+{
+	// ---- Avalanche ----------------------------------------------------------
+	"tiny_avalanche"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider avalanche (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 35/6)
+		"avalanche_damage"
+		{
+			"base" "40"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Toss ---------------------------------------------------------------
+	"tiny_toss"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider toss (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"grab_radius" "35"
+			}
+		}
+		// more damage (was 35/5)
+		"toss_damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Tree Grab ----------------------------------------------------------
+	"tiny_tree_grab"
+	{
+		// more damage (was 18/4)
+		"bonus_damage"
+		{
+			"base" "22"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider splash (was 20)
+		"splash_range"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"splash_width" "35"
+			}
+			"bundle_abilities"
+			{
+				"tiny_tree_channel"
+				{
+					"splash_radius" "35"
+				}
+				"tiny_toss_tree"
+				{
+					"splash_radius" "35"
+				}
+			}
+		}
+		// more splash pct (was 10)
+		"splash_pct"
+		{
+			"base" "12"
+			"cap"		"6"
+
+			"mode" "ADD"
+			"bundle_abilities"
+			{
+				"tiny_tree_channel"
+				{
+					"splash_pct" "6"
+				}
+				"tiny_toss_tree"
+				{
+					"splash_pct" "6"
+				}
+			}
+		}
+	}
+
+	// ---- Grow ---------------------------------------------------------------
+	"tiny_grow"
+	{
+		// more armor (was 8/1)
+		"bonus_armor"
+		{
+			"base" "9"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 25/3)
+		"bonus_damage"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more attack speed reduction (was 4.5)
+		"attack_speed_reduction"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

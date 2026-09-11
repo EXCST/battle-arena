@@ -1,0 +1,100 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Shadow Shaman hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_shadow_shaman"
+{
+	// ---- Ether Shock --------------------------------------------------------
+	"shadow_shaman_ether_shock"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 45/5)
+		"damage"
+		{
+			"base" "50"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more targets (was 1)
+		"targets"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"end_radius" "35"
+				"start_radius" "35"
+				"end_distance" "35"
+			}
+		}
+	}
+
+	// ---- Voodoo -------------------------------------------------------------
+	"shadow_shaman_voodoo"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+	}
+
+	// ---- Shackles -----------------------------------------------------------
+	"shadow_shaman_shackles"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 75/10)
+		"total_damage"
+		{
+			"base" "85"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Mass Serpent Ward --------------------------------------------------
+	"shadow_shaman_mass_serpent_ward"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "3"
+
+			"bundle_abilities"
+			{
+				"shadow_shaman_urnaconda"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 35/7)
+		"bonus_damage"
+		{
+			"base" "40"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

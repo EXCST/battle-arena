@@ -1,0 +1,21 @@
+﻿"DOTAAbilities"
+{
+"pet_ancient_wolf_vampire"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"ScriptFile"					"creeps/pet_wolf_vampire"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"custom/pet_ancient_wolf_vampire"
+	
+	"MaxLevel"						"1"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"lifesteal"					"10"
+	}
+}
+}

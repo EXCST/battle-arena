@@ -1,0 +1,211 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Kez hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_kez"
+{
+	// ---- Echo Slash ---------------------------------------------------------
+	"kez_echo_slash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"kez_falcon_rush"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more echo damage (was 5)
+		"katana_echo_damage"
+		{
+			"base" "7"
+			"mode" "ADD"
+			"cap"	"10"
+			"bundle"
+			{
+				"echo_hero_damage"
+				{
+					"base" "12"
+					"step"		"2.5"
+					"mode" "ADD"
+				}
+			}
+			"bundle_abilities"
+			{
+				"kez_falcon_rush"
+				{
+					"echo_damage" "7"
+				}
+			}
+		}
+		// wider slash (was 25)
+		"katana_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"kez_falcon_rush"
+				{
+					"rush_range" "55"
+				}
+			}
+		}
+	}
+
+	// ---- Grappling Claw -----------------------------------------------------
+	"kez_grappling_claw"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"kez_talon_toss"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// longer debuff (was 0.1)
+		"debuff_duration"
+		{
+			"base" "0.15"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"kez_talon_toss"
+				{
+					"damage"
+					{
+						"base" "40"
+						"step"		"4"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Kazurai Katana -----------------------------------------------------
+	"kez_kazurai_katana"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"kez_shodo_sai"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more bleed damage (rare, was 0.5)
+		"katana_bleed_attack_damage_pct"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"cap" "10"
+
+			"floor"	"rare"
+
+			"bundle_abilities"
+			{
+				"kez_shodo_sai"
+				{
+					"base_crit_pct" "4"
+				}
+			}
+		}
+		// more bleed as rupture (was 10)
+		"bleed_as_rupture_pct"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"kez_shodo_sai"
+				{
+					"sai_proc_vuln_chance" "1.5"
+				}
+			}
+		}
+	}
+
+	// ---- Raptor Dance -------------------------------------------------------
+	"kez_raptor_dance"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"kez_ravens_veil"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more base damage (was 15)
+		"base_damage"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"kez_ravens_veil"
+				{
+					"bonus_ms" "6"
+				}
+			}
+		}
+		// wider dance (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"kez_ravens_veil"
+				{
+					"blast_radius" "25"
+					"blast_speed" "25"
+				}
+			}
+		}
+	}
+}

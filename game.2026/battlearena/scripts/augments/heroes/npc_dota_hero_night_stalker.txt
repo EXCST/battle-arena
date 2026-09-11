@@ -1,0 +1,117 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Night Stalker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_night_stalker"
+{
+	// ---- Void ---------------------------------------------------------------
+	"night_stalker_void"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 60/5)
+		"damage"
+		{
+			"base" "65"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more attack slow (was 30/10)
+		"attackspeed_slow"
+		{
+			"base" "35"
+			"step"	"12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Crippling Fear -----------------------------------------------------
+	"night_stalker_crippling_fear"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider fear (was 45)
+		"radius"
+		{
+			"base" "50"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more dps (was 25/4)
+		"dps"
+		{
+			"base" "30"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Hunter in the Night ------------------------------------------------
+	"night_stalker_hunter_in_the_night"
+	{
+		// more night movespeed (was 8)
+		"bonus_movement_speed_pct_night"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more night attack speed (was 40/20)
+		"bonus_attack_speed_night"
+		{
+			"base" "45"
+			"step"		"25"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Midnight Feast -----------------------------------------------------
+	"night_stalker_midnight_feast"
+	{
+		// more attack heal (was 25/10)
+		"attack_heal"
+		{
+			"base" "30"
+			"step"	"12"
+			"cap" "8"
+		}
+	}
+
+	// ---- Darkness -----------------------------------------------------------
+	"night_stalker_darkness"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 30/5)
+		"bonus_damage"
+		{
+			"base" "35"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer darkness (was 2.5)
+		"duration"
+		{
+			"base"		"3"
+			"cap"	"4"
+		}
+	}
+}

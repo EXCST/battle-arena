@@ -1,0 +1,119 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Dark Willow hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_dark_willow"
+{
+	// ---- Bramble Maze -------------------------------------------------------
+	"dark_willow_bramble_maze"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"35"
+		}
+		// more damage per tick (was 20/2)
+		"damage_per_tick"
+		{
+			"base" "22"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Shadow Realm -------------------------------------------------------
+	"dark_willow_shadow_realm"
+	{
+		// more damage (was 20/3)
+		"damage"
+		{
+			"base" "25"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Cursed Crown -------------------------------------------------------
+	"dark_willow_cursed_crown"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"25"
+		}
+		// wider stun (was 20)
+		"stun_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Bedlam -------------------------------------------------------------
+	"dark_willow_bedlam"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"35"
+			"bundle_abilities"
+			{
+				"dark_willow_terrorize"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+			"bundle"
+			{
+				"roaming_duration"	"0.25"
+			}
+		}
+		// wider bedlam (was 30)
+		"attack_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"roaming_radius" "25"
+			}
+			"bundle_abilities"
+			{
+				"dark_willow_terrorize"
+				{
+					"destination_radius" "35"
+				}
+			}
+		}
+		// more attack damage (was 15/3)
+		"attack_damage"
+		{
+			"base" "18"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more targets (rare, was 0.5)
+		"target_count"
+		{
+			"base"		"0.5"
+			"cap"	"2"
+			"floor"	"rare"
+		}
+	}
+}

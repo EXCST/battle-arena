@@ -1,0 +1,552 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Tusk: Ice Shards
+	//=================================================================================================================
+	"tusk_ice_shards"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5565"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"HasShardUpgrade"               "1"
+		"AbilitySound"					"Hero_Tusk.IceShards"
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1400"
+		"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 19 18 17 16 15 14"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"shard_width"				"200"
+				"shard_damage"
+				{
+					"value"					"75 150 225 300 400 550 700"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"shard_count"				"7"
+				"shard_speed"				"1200.0"
+				"shard_duration"			"4 5 6 7 7.1 7.2 7.3"
+				"shard_angle_step"			"40.0"
+				"shard_distance"			"200"
+				"turn_rate_slow"			"0"
+				"aghs_shard_move_slow"	
+				{
+					"value"					"40"
+					"RequiresShard"			"1"
+				}
+				"aghs_shard_damage"			
+				{
+					"value"					"60"
+					"RequiresShard"			"1"
+				}
+				"aghs_shard_depth"			
+				{
+					"value"						"300"
+					"RequiresShard"				"1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Tusk: Ice Shards Stop
+	//=================================================================================================================
+	"tusk_ice_shards_stop"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5668"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		// "MaxLevel"						"7"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	}
+
+
+	
+	//=================================================================================================================
+	// Tusk: Snowball
+	//=================================================================================================================
+	"tusk_snowball"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5566"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tusk.Snowball.Cast"
+                "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1150"
+		"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"21 19 17 15 14 13 12"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 75 75 75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"snowball_damage"			
+				{
+					"value"		"80 140 200 260 320 380 440"
+					"LinkedSpecialBonus"		"special_bonus_unique_tusk_2"
+				}
+				"snowball_speed"			"575 600 625 650 675 700 725"
+				"snowball_damage_bonus"		"40 65 90 115 135 155 175"
+				"stun_duration"				"0.6 0.8 1.0 1.2 1.5 1.7 2"
+				"snowball_windup_radius"	
+				{
+					"value"	"100"
+					"affected_by_aoe_increase"	"1"
+
+				}
+				"snowball_duration"			"3.0"
+				"snowball_radius"			
+				{
+					"value"		"200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"snowball_grow_rate"		
+				{
+					"value"		"40"
+					"affected_by_aoe_increase"	"1"
+				}
+				"snowball_windup"			"3.0"
+				"snowball_grab_radius"		
+				{
+					"value"			"350"
+					"affected_by_aoe_increase"	"1"
+				}
+				"snowball_speed_bonus"		"50"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Tusk: Launch Snowball
+	//=================================================================================================================
+	"tusk_launch_snowball"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5641"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityTextureName"		"tusk_snowball"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+	}
+
+	//=================================================================================================================
+	// Tusk: Frozen Sigil
+	//=================================================================================================================
+	"tusk_frozen_sigil"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5567"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Tusk.FrozenSigil"
+
+		// "MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"sigil_radius"				"650"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"sigil_duration"			"25.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"move_slow"					"25"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_slow"				"65"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_6"
+	}
+
+	//=================================================================================================================
+	// Tusk: Tag Team
+	//=================================================================================================================
+	"tusk_tag_team"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Tusk.FrozenSigil"
+        "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"24 21 18 15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"
+			{
+				"value"						"20 45 70 95 120 145 170"		
+				"special_bonus_unique_tusk_3"		"+25"
+			}
+			"movement_slow"				"75"
+			"slow_duration"				"0.5"
+			"debuff_duration"			"5"
+			"radius"				
+			{
+				"value"	"350"
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_speed_slow"		"20 30 40 50 60 70 80"
+		}
+	}
+
+	//=================================================================================================================
+	// Tusk: special_bonus_unique_tusk_6
+	//=================================================================================================================
+	"tusk_walrus_punch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tusk.WalrusPunch.Target"
+
+		"AbilityDraftUltScepterAbility"		"tusk_walrus_kick"
+
+        "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastRange"				"150"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_damage"			"50"
+				"crit_multiplier"			
+				{
+					"value"				"250 325 400 425 450 500 550"
+					"LinkedSpecialBonus"		"special_bonus_unique_tusk"
+				}
+				"air_time"					
+				{
+					"value"				"0.5"
+					"LinkedSpecialBonus"		"special_bonus_unique_tusk_7"
+				}
+				"slow_duration"				"4.0"
+				"move_slow"					"40"
+				"push_length"				"1000"
+		}
+	}
+
+	//=================================================================================================================
+	// Tusk: Walrus Kick
+	//=================================================================================================================
+	"tusk_walrus_kick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5672"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"			"1"
+		"AbilitySound"					"Hero_Tusk.WalrusKick.Target"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"250"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"air_time"					"1.0"
+				"push_length"				"1400"
+				"move_slow"					"40"
+				"slow_duration"				"4"
+				"damage"					
+				{
+					"value"					"350"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"search_radius"					"250"
+				"creep_cooldown_reduction_pct"	"50"
+		}
+	}
+
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6194"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"75"
+				"ad_linked_abilities"			"tusk_walrus_punch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6411"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"120"
+				"ad_linked_abilities"			"tusk_snowball"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6961"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"25"
+				"ad_linked_abilities"			"tusk_tag_team"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6962"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"8"
+				"ad_linked_abilities"			"tusk_walrus_punch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6963"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"6"
+				"ad_linked_abilities"			"tusk_ice_shards"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"7891"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"7"
+				"ad_linked_abilities"			"tusk_snowball"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tusk_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"414"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0.5"
+				"ad_linked_abilities"			"tusk_walrus_punch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+}

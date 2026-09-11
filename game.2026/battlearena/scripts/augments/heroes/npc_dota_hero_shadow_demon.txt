@@ -1,0 +1,160 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Shadow Demon hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_shadow_demon"
+{
+	// ---- Disruption ---------------------------------------------------------
+	"shadow_demon_disruption"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"	"30"
+		}
+		// more illusion outgoing (was 10)
+		"illusion_outgoing_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"illusion_outgoing_tooltip" "12"
+			}
+		}
+		// less incoming (was -20)
+		"illusion_incoming_damage"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tooltip_total_illusion_incoming_damage"
+				{
+					"base" "-25"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Disseminate --------------------------------------------------------
+	"shadow_demon_disseminate"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage reflection (was 3)
+		"damage_reflection_pct"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// wider disseminate (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Shadow Poison ------------------------------------------------------
+	"shadow_demon_shadow_poison"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more stack damage (was 10/1)
+		"stack_damage"
+		{
+			"base" "12"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"hit_damage"
+				{
+					"base" "12"
+					"step"		"1.5"
+					"mode" "ADD"
+				}
+				"bonus_stack_damage"
+				{
+					"base" "12"
+					"step"		"1.5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider poison (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// faster poison (was 100)
+		"speed"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Demonic Purge ------------------------------------------------------
+	"shadow_demon_demonic_purge"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"shadow_demon_demonic_cleanse"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 50/5)
+		"purge_damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"shadow_demon_demonic_cleanse"
+				{
+					"purge_damage"
+					{
+						"base"		"55"
+						"step"	"12"
+					}
+				}
+			}
+		}
+	}
+}

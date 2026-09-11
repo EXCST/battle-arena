@@ -1,0 +1,122 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Earthshaker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_earthshaker"
+{
+	// ---- Fissure ------------------------------------------------------------
+	"earthshaker_fissure"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider fissure (was 30)
+		"fissure_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 60/6)
+		"fissure_damage"
+		{
+			"base" "65"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Enchant Totem ------------------------------------------------------
+	"earthshaker_enchant_totem"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+
+			"bundle"
+			{
+				"scepter_leap_duration"		"-0.1"
+			}
+		}
+		// more totem damage (was 60)
+		"totem_damage_percentage"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more cleave (was 6)
+		"scepter_cleave_pct"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"scepter_cleave_distance" "40"
+				"scepter_cleave_ending_width" "35"
+				"scepter_cleave_starting_width" "35"
+			}
+		}
+	}
+
+	// ---- Aftershock ---------------------------------------------------------
+	"earthshaker_aftershock"
+	{
+		// more damage (was 30/3)
+		"aftershock_damage"
+		{
+			"base" "35"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Echo Slam ----------------------------------------------------------
+	"earthshaker_echo_slam"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider echo (was 30)
+		"echo_slam_damage_range"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"echo_slam_echo_search_range" "35"
+				"echo_slam_echo_range" "35"
+			}
+		}
+		// more initial damage (was 50/5)
+		"echo_slam_initial_damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"echo_slam_echo_damage"
+				{
+					"base" "25"
+					"step"		"3"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

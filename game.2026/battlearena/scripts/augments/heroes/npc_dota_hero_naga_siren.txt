@@ -1,0 +1,121 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Naga Siren hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_naga_siren"
+{
+	// ---- Mirror Image -------------------------------------------------------
+	"naga_siren_mirror_image"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more illusion damage (was 5)
+		"outgoing_damage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"outgoing_damage_tooltip" "6"
+			}
+		}
+		// less incoming damage (was -20)
+		"incoming_damage"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tooltip_incoming_damage_total_pct"
+				{
+					"base" "-25"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Ensnare ------------------------------------------------------------
+	"naga_siren_ensnare"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"naga_siren_reel_in"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Reel In ------------------------------------------------------------
+	"naga_siren_reel_in"
+	{
+		// stronger pull (was 100)
+		"pull_strength"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"radius" "300"
+			}
+		}
+	}
+
+	// ---- Rip Tide -----------------------------------------------------------
+	"naga_siren_rip_tide"
+	{
+		// fewer hits (epic, was -0.25)
+		"hits"
+		{
+			"base" "-0.3"
+			"mode" "ADD"
+			"cap" "12"
+			"floor" "epic"
+		}
+		// more armor shred (was -1.5)
+		"armor_reduction"
+		{
+			"base" "-1.8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 20/1)
+		"damage"
+		{
+			"base" "22"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_naga_siren_2"		"x1.3"
+			}
+		}
+		// wider rip tide (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

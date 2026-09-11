@@ -1,0 +1,109 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Muerta hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_muerta"
+{
+	// ---- Dead Shot ----------------------------------------------------------
+	"muerta_dead_shot"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider shot (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"ricochet_radius_start"		"30"
+				"ricochet_radius_end"		"30"
+			}
+		}
+	}
+
+	// ---- The Calling --------------------------------------------------------
+	"muerta_the_calling"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 20/2)
+		"damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider dead zone (was 20)
+		"dead_zone_distance"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"hit_radius" "6"
+			}
+		}
+		// more slow (was -5)
+		"aura_movespeed_slow"
+		{
+			"base" "-6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Gunslinger ---------------------------------------------------------
+	"muerta_gunslinger"
+	{
+		// more double shot chance (rare, was 1.5)
+		"double_shot_chance"
+		{
+			"base" 			"2"
+			"floor"		"rare"
+			"mode" 			"ADD"
+			"cap" 		"10"
+		}
+		// more target range (was 25)
+		"target_search_bonus_range"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Pierce the Veil ----------------------------------------------------
+	"muerta_pierce_the_veil"
+	{
+		// more damage % (epic, was 2.5)
+		"base_damage_percent"
+		{
+			"base" 		"3"
+			"floor"	"epic"
+			"cap" 	"8"
+			"mode"		"ADD"
+		}
+	}
+}

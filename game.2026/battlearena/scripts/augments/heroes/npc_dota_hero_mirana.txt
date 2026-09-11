@@ -1,0 +1,126 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Mirana hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_mirana"
+{
+	// ---- Starfall -----------------------------------------------------------
+	"mirana_starfall"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider starfall (was 35)
+		"starfall_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"starfall_secondary_radius" "40"
+			}
+			"bundle_abilities"
+			{
+				"mirana_arrow"
+				{
+					"scepter_radius" "40"
+				}
+			}
+		}
+		// more damage (was 35/3)
+		"damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Sacred Arrow -------------------------------------------------------
+	"mirana_arrow"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 65/8)
+		"arrow_bonus_damage"
+		{
+			"base" "70"
+			"step"		"10"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// shorter max stun range (was -50)
+		"arrow_max_stunrange"
+		{
+			"base" "-60"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Leap ---------------------------------------------------------------
+	"mirana_leap"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer buff (was 1)
+		"leap_bonus_duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "4"
+
+			"bundle_abilities"
+			{
+				"mirana_celestial_quiver"
+				{
+					"quiver_restore"		"2"
+				}
+			}
+		}
+		// more attack speed (was 40/10)
+		"leap_speedbonus_as"
+		{
+			"base" "45"
+			"step"	"12"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"leap_speedbonus" "10"
+			}
+		}
+	}
+
+	// ---- Moonlight Shadow ---------------------------------------------------
+	"mirana_invis"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more move speed (was 15)
+		"bonus_movement_speed"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+}

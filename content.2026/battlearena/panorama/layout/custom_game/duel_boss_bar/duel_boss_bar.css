@@ -1,0 +1,118 @@
+.DBB_Root {
+	width: 100%;
+	height: 100%;
+}
+
+#DBBBar {
+	flow-children: down;
+	horizontal-align: center;
+	width: 520px;
+	y: 92px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+}
+
+/* ─── имя (паттерн китайцев: белый, тень, без декораций) ─── */
+
+#DBB_Name {
+	align: center center;
+	width: 100%;
+	height: 30px;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: bold;
+	text-shadow: 0px 0px 3px 1.6 #860a0a;
+	text-align: center center;
+}
+
+/* ─── треки ─── */
+
+.DBB_Track {
+	width: 100%;
+	height: 12px;
+	background-color: #0c1013e6;
+	border: 1px solid #000000cc;
+	border-radius: 2px;
+}
+
+.DBB_Fill {
+	height: 100%;
+	width: 0%;
+	border-radius: 1px;
+	transition-property: width;
+	transition-duration: 0.1s;
+	transition-timing-function: linear;
+}
+
+#DBB_HpFill {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#e0524a), to(#7a1a16) );
+}
+
+.DBB_HpGhost {
+	height: 100%;
+	width: 0%;
+	background-color: #d8c08a88;
+	transition-property: width;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-out;
+}
+
+.DBB_Gloss {
+	width: 100%;
+	height: 5px;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#ffffff33), to(#ffffff00) );
+}
+
+/* ─── кастбар ─── */
+
+#DBB_CastTrack {
+	height: 7px;
+	margin-top: 3px;
+	opacity: 0;
+}
+
+#DBB_CastFill {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#6fc0ff), to(#2a6ea8) );
+}
+
+#DBB_CastFill.InWindow {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#ff5a3a), to(#a01a10) );
+}
+
+.DBB_CastZone {
+	horizontal-align: right;
+	height: 100%;
+	width: 10%;
+	background-color: #ff2a2a44;
+}
+
+/* ─── поствура ─── */
+
+.DBB_PostTrack {
+	height: 5px;
+	margin-top: 2px;
+	opacity: 0;
+}
+
+#DBB_PostFill {
+	background-color: #c9952a;
+}
+
+#DBB_PostFill.NearBreak {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#ffe14a), to(#b8801a) );
+}
+
+/* ─── слом ─── */
+
+#DBB_Broken {
+	horizontal-align: center;
+	margin-top: 3px;
+	color: #ffd23a;
+	font-weight: bold;
+	font-size: 19px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 3px #000000;
+	opacity: 0;
+}

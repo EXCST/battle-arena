@@ -1,0 +1,112 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Pudge hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_pudge"
+{
+	// ---- Meat Hook ----------------------------------------------------------
+	"pudge_meat_hook"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 60/4)
+		"damage"
+		{
+			"base" "65"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// faster hook (was 250)
+		"hook_speed"
+		{
+			"base" "280"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Rot ----------------------------------------------------------------
+	"pudge_rot"
+	{
+		// wider rot (was 40)
+		"rot_radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 20/2)
+		"rot_damage"
+		{
+			"base" "22"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Flesh Heap ---------------------------------------------------------
+	"pudge_flesh_heap"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage block (was 10/4)
+		"damage_block"
+		{
+			"base"			"12"
+			"step"			"5"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_pudge_1"	"x1.5"
+			}
+			"mode" "ADD"
+		}
+	}
+
+	// ---- Dismember ----------------------------------------------------------
+	"pudge_dismember"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more str damage (was 0.2)
+		"strength_damage"
+		{
+			"base"				"0.25"
+			"cap" "6"
+			"perks"
+			{
+				"special_bonus_unique_pudge_3"	"x1.5"
+			}
+
+			"mode" "ADD"
+		}
+		// more damage (was 40/4)
+		"dismember_damage"
+		{
+			"base"				"45"
+			"step"			"5"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_pudge_3"	"x1.5"
+			}
+
+			"mode" "ADD"
+		}
+	}
+}

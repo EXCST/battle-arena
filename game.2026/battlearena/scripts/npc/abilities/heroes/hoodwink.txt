@@ -1,0 +1,352 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+// Hoodwink: Acorn Shot
+//=================================================================================================================
+"hoodwink_acorn_shot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8429"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ALT_CASTABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+                "MaxLevel" "7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 13 12 11 10 9 8"
+		"AbilityCastRange"				"575"
+		"AbilityCastPoint"				"0.2"
+		"AbilityManaCost"				"70 75 80 85 90 95 100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{		
+				"bonus_range"			"100 125 150 175 200 225 250"
+				"acorn_shot_damage"		
+				{
+					"value"		"55 90 125 160 180 200 230"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"base_damage_pct"		
+				{
+					"value"		"75"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"bounce_count"			
+				{
+					"value"			"3 3 4 5 6 7 8"
+					"LinkedSpecialBonus"		"special_bonus_unique_hoodwink_acorn_shot_bounces"
+				}
+				"bounce_range"			
+				{
+					"value"		"500 475 450 400 350 250 200"
+					"affected_by_aoe_increase"	"0"	
+				}
+				"debuff_duration"		"0.45"
+				"slow"					"100"
+				"bounce_delay"			"0.1"
+				"projectile_speed"			"2200"
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+//=================================================================================================================
+// Hoodwink: Bushwhack
+//=================================================================================================================
+"hoodwink_bushwhack"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8158"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120 130 140 150"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"trap_radius"		
+			{
+				"value"		"325"
+				"special_bonus_unique_hoodwink_bushwhack_radius"	"+135"
+			}
+			"debuff_duration"		"1.3 1.6 1.9 2.2 2.3 2.4 2.5"
+			"projectile_speed"	"1000"
+			"total_damage"		"110 180 270 360 420 520 600"
+			"animation_rate"	"0.3"
+			"visual_height"		"50"
+		}
+	}
+
+
+//=================================================================================================================
+// Hoodwink: Scurry
+//=================================================================================================================
+"hoodwink_scurry"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"275"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0"
+	"AbilityCharges"				"2"
+	"AbilityChargeRestoreTime"		"30 27 25 22 20 17 15"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"35"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+		{
+			"radius"						"275"
+			"movement_speed_pct"			"25 30 35 40 45 50 55"
+			"duration"						"4.0"
+			"evasion"						"16 20 24 28 32 36 40"
+			"bonus_active_evasion"
+			{
+				"value"			"0"
+				"special_bonus_unique_hoodwink_scurry_evasion"			"+40"
+			}
+			"decoy_duration"					"6.0"
+			"decoy_detonate_radius"				"250"
+			"decoy_stun_duration"				"2.0"
+			"images_do_damage_percent"			"0"
+			"images_take_damage_percent"		"100"
+			"projectile_speed"					"1200"
+			"movement_speed"					"15"
+
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+//=================================================================================================================
+// Hoodwink: Sharpshooter
+//=================================================================================================================
+"hoodwink_sharpshooter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8106"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Mirana.ArrowCast"
+		"AbilityDraftUltScepterAbility"	"hoodwink_hunters_boomerang"
+		"AbilityDraftUltShardAbility"	"hoodwink_decoy"
+		"HasScepterUpgrade"				"1"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 175 225"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"arrow_speed"		
+			{
+				"value"			"2200"
+				"special_bonus_scepter"		"+25%"
+
+			}
+			"arrow_width"		
+			{
+				"value"	"125"
+				"affected_by_aoe_increase"	"1"	
+
+			}
+			"arrow_range"		"3000"
+			"arrow_vision"		
+			{
+				"value"		"350"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"max_charge_time"
+			{
+				"value"						"3.0"
+				"special_bonus_scepter"		"-25%"
+			}			
+			"max_damage"
+			{
+				"value"				"550 900 1250 1600 1950 2300 2650"
+				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+125"
+			}
+			"recoil_distance"			"350"
+			"recoil_height"				"75"
+			"recoil_duration"			"0.4"
+			"max_slow_debuff_duration"	"5.0"
+			"misfire_time"				"5.0"
+			"slow_move_pct"				"30 40 50"
+			"turn_rate"					"60"
+			"base_power"				"0.2"
+	
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_6"
+	}
+
+
+//=================================================================================================================
+// Ability: Hoodwink: Hunter's Boomerang
+//=================================================================================================================
+"hoodwink_hunters_boomerang"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1000"
+	"AbilityCastPoint"				"0.2"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"175"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"speed"					"900"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"				"150"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"450"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mark_duration"			"7.0"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"slow_pct"				"20"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"spell_amp"				"25"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"status_resistance"		"25"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"spread"				"400"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"min_throw_duration"			"0.5"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"max_throw_duration"			"1.2"
+		}
+	}
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+}
+
+//=================================================================================================================
+// Hoodwink: Decoy
+//=================================================================================================================
+"hoodwink_decoy"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8107"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"12.0"
+			"decoy_detonate_radius"		"250"
+			"decoy_stun_duration"				"1.0"
+			"images_do_damage_percent"	"100"
+			"images_take_damage_percent"	"100"
+			"projectile_speed"	"1200"
+			"movement_speed"				"15"
+			"sharpshooter_damage_pct"			"60"
+
+		}
+	}
+
+}

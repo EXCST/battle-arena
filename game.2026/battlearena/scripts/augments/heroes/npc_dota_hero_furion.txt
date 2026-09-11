@@ -1,0 +1,174 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Nature's Prophet (Furion) hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_furion"
+{
+	// ---- Sprout -------------------------------------------------------------
+	"furion_sprout"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"furion_curse_of_the_forest"
+				{
+					"cd_mana"
+					{
+						"base" "10"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 40/4)
+		"sprout_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"furion_curse_of_the_forest"
+				{
+					"damage_per_tree"
+					{
+						"base" "3.5"
+						"step"		"0.4"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider sprout damage (was 25)
+		"sprout_damage_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap"	"6"
+			"bundle"
+			{
+				"vision_range"
+				{
+					"base" "30"
+					"mode" "ADD"
+				}
+			}
+			"bundle_abilities"
+			{
+				"furion_curse_of_the_forest"
+				{
+					"radius"
+					{
+						"base" "30"
+						"mode" "ADD"
+					}
+					"range"
+					{
+						"base" "25"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Teleportation ------------------------------------------------------
+	"furion_teleportation"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"barrier"
+				{
+					"base" "80"
+					"step"		"8"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Force of Nature (custom) -------------------------------------------
+	"furion_force_of_nature"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more treant damage (was 25/5)
+		"treant_damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"perks"
+			{
+				"special_bonus_unique_furion"	"x3"
+			}
+		}
+		// tankier treants (was 200/40)
+		"treant_hp"
+		{
+			"base" "230"
+			"step"		"45"
+			"mode" "ADD"
+			"cap" "8"
+
+			"perks"
+			{
+				"special_bonus_unique_furion"	"x3"
+			}
+			"bundle"
+			{
+				"treant_movespeed"		"25"
+			}
+		}
+	}
+
+	// ---- Wrath of Nature ----------------------------------------------------
+	"furion_wrath_of_nature"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 10/1)
+		"damage"
+		{
+			"base" "12"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more targets (rare, was 1)
+		"max_targets"
+		{
+			"base"				"1" // so 2 per rare upgrade
+			"floor"		"rare"
+			"cap"			"10" // 5 rare upgrades
+		}
+		// more damage percent (rare, was 0.5)
+		"damage_percent_add"
+		{
+			"base"				"0.6"
+			"floor"		"rare"
+			"cap"			"10" // 5 rare upgrades
+		}
+	}
+}

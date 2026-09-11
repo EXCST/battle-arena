@@ -1,0 +1,302 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Venomancer Scepter
+	//=================================================================================================================
+	"venomancer_area_poison"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"592"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityCastRange"				"900"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"		"650"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Venomancer: Venomous Gale
+	//=================================================================================================================
+	"venomancer_venomous_gale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5178"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"7"
+			"strike_damage"			"50 75 90 110 140 150 180"
+			"tick_damage"			"20 40 60 80 100 120 140"
+			"tick_interval"			"1"
+			"movement_slow"			"-50"
+			"radius"				"125"
+			"speed"					"1200"
+			"create_wards"
+			{
+				"value"					"0"
+				"special_bonus_unique_venomancer_gale_plagueward"		"+2"
+			}	
+			"AbilityCooldown"
+			{
+				"value"												"15"
+				"special_bonus_unique_venomancer_3"					"-5"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Venomancer: Poison Sting
+	//=================================================================================================================
+	"venomancer_poison_sting"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5179"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		
+			// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"6.0"
+			"damage"					"12 20 30 40 50 60 70"
+			"movement_speed"
+			{
+				"value"			"-11 -12 -13 -14 -15 -16 -17"
+				"special_bonus_unique_venomancer_2"		"-8"
+			}	
+			"hp_regen_reduction"
+			{
+				"value"				"0"
+				"special_bonus_unique_venomancer_poisonsting_regen_reduction"	"+20"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Venomancer: Plague Ward
+	//=================================================================================================================
+	"venomancer_plague_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5180"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"850"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 40 60 80 100 120 140"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"40.0"
+				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_hp_tooltip"		"70 100 140 180 220 260 300"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_damage_tooltip"	"12 24 36 48 60 85 110"
+				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"04" // For special bonus at level 25
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_hp"		"140 200 280 360 440 520 600"
+			}
+			"05" // For special bonus at level 25
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ward_damage"	"24 48 72 96 120 170 220"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Venomancer: Poison Nova
+	//=================================================================================================================
+	"venomancer_poison_nova"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5181"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		"HasScepterUpgrade"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 250 350 450 550 650 750"		
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// just does damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"					"600"
+				"start_radius"				"255"
+				"duration"					
+				{
+					"value"			"10"
+					"LinkedSpecialBonus"		"special_bonus_unique_venomancer_4"
+				}
+				"damage"					"1.5 1.7 1.9 2.1 2.3 2.5 2.7"
+				"cooldown_scepter"			
+				{
+					"value"				"40"
+					"RequiresScepter"		"1"
+				}
+				"damage_scepter"			
+				{	
+					"value"				"1.9 2.1 2.3 2.5 2.7 2.9"
+					"RequiresScepter"		"1"
+				}
+				"speed"						"500"
+				"base_damage"					"65 100 135 170 205 240 275"
+				"aspd_slow"					
+				{
+					"value"					"0"
+					"special_bonus_unique_venomancer_5"	"+100"
+				}
+		}
+	}
+
+	"venomancer_noxious_plague"
+	{
+		"ID"			"1105"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Venomancer.PoisonNova"
+		"FightRecapLevel"				"1"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.15"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+
+		"AbilityValues"
+		{
+			"debuff_duration"			"5"
+			"impact_damage"				"250 400 550 700 850 1000 1150"
+			"health_damage"
+			{
+				"value"							"2 2.2 2.4 2.6 2.8 3 3.2"
+				"special_bonus_unique_venomancer_4" "1.5"
+			}
+			"debuff_radius"				
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movement_slow_max"			"50"
+			"attack_slow"
+			{
+				"value"					"0"
+				"special_bonus_unique_venomancer_5"	"+200"
+			}
+
+			"projectile_speed"			"1200"		
+		}
+	}
+
+
+}

@@ -1,0 +1,121 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Witch Doctor hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_witch_doctor"
+{
+	// ---- Paralyzing Cask ----------------------------------------------------
+	"witch_doctor_paralyzing_cask"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more bounces (was 1)
+		"bounces_tooltip"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"bounces" "1"
+				"bounce_range" "25"
+			}
+		}
+		// more damage (was 40/4)
+		"base_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more bounce bonus (was 7/2)
+		"bounce_bonus_damage"
+		{
+			"base"				"9"
+			"step"			"2.5"
+			"cap" "8"
+		}
+	}
+
+	// ---- Voodoo Restoration -------------------------------------------------
+	"witch_doctor_voodoo_restoration"
+	{
+		// wider restoration (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more heal (was 15/3)
+		"heal"
+		{
+			"base" "18"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Maledict -----------------------------------------------------------
+	"witch_doctor_maledict"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider maledict (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more bonus damage (was 5)
+		"bonus_damage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Death Ward ---------------------------------------------------------
+	"witch_doctor_death_ward"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+
+			"bundle_abilities"
+			{
+				"witch_doctor_voodoo_switcheroo"
+				{
+					"cd_mana"
+					{
+						"base" "10"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 45/3)
+		"damage"
+		{
+			"base" "50"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+}

@@ -1,0 +1,132 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Templar Assassin hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_templar_assassin"
+{
+	// ---- Refraction ---------------------------------------------------------
+	"templar_assassin_refraction"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more instances (rare, was 1)
+		"instances"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+		// more damage (was 25/5)
+		"bonus_damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"shield_per_instance"
+				{
+					"base" "12"
+					"step"		"4"
+				}
+			}
+		}
+	}
+
+	// ---- Meld ---------------------------------------------------------------
+	"templar_assassin_meld"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/8)
+		"bonus_damage"
+		{
+			"base" "45"
+			"step"		"10"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more armor shred (was -2/-0.5)
+		"bonus_armor"
+		{
+			"base" "-2.5"
+			"step"		"-0.6"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Psi Blades ---------------------------------------------------------
+	"templar_assassin_psi_blades"
+	{
+		// more spill (was 7)
+		"attack_spill_pct"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+			"limit"		"135"
+			"limit_base"		"100"
+		}
+		// wider spill (was 10)
+		"attack_spill_width"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Psionic Trap -------------------------------------------------------
+	"templar_assassin_psionic_trap"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"trap_max_charge_duration" "-0.5"
+			}
+			"bundle_abilities"
+			{
+				"templar_assassin_trap_teleport"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more trap damage (was 50/10)
+		"trap_bonus_damage"
+		{
+			"base" "60"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider trap (was 30)
+		"trap_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+}

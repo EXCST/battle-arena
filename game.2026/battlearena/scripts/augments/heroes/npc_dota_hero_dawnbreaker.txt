@@ -1,0 +1,156 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Dawnbreaker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_dawnbreaker"
+{
+	// ---- Fire Wreath --------------------------------------------------------
+	"dawnbreaker_fire_wreath"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider swipe (was 20)
+		"swipe_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"smash_radius" "25"
+			}
+		}
+		// more damage (was 25/3)
+		"swipe_damage"
+		{
+			"base" "28"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Celestial Hammer ---------------------------------------------------
+	"dawnbreaker_celestial_hammer"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle"
+			{
+				"projectile_speed" "170"
+			}
+		}
+		// more damage (was 20/2)
+		"hammer_damage"
+		{
+			"base" "22"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"burn_damage"
+				{
+					"base" "18"
+					"step"	"2"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider flare (was 30)
+		"flare_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"projectile_radius" "35"
+				"hammer_aoe_radius" "35"
+			}
+		}
+	}
+
+	// ---- Luminosity ---------------------------------------------------------
+	"dawnbreaker_luminosity"
+	{
+		// more heal % (was 5)
+		"heal_pct"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"allied_healing_pct" "6"
+			}
+		}
+		// more bonus damage (rare, was 20)
+		"bonus_damage"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"floor"		"rare"
+			"cap" "6"
+		}
+	}
+
+	// ---- Solar Guardian -----------------------------------------------------
+	"dawnbreaker_solar_guardian"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+
+			"bundle"
+			{
+				"airtime_scepter_movement_speed" "45"
+			}
+		}
+		// wider landing (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"max_offset_distance" "35"
+				"miss_rate" "6"
+			}
+		}
+		// more damage (was 25/2.5)
+		"base_damage"
+		{
+			"base" "30"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"land_damage"
+				{
+					"base" "35"
+					"step"	"3.5"
+				}
+				"base_heal"
+				{
+					"base" "45"
+					"step"	"2.5"
+				}
+			}
+		}
+	}
+}

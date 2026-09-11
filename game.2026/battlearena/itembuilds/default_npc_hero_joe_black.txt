@@ -1,0 +1,95 @@
+"itembuilds"
+{
+	"author"		"Battle Arena"
+	"hero"			"npc_hero_joe_black"
+	"Title"			"Recommended items"
+	
+	"Items"
+	{
+		"STARTING ITEMS MELEE"
+		{	
+			"item"		"item_quelling_blade"
+			"item"		"item_tango"
+			"item"		"item_null_talisman"
+			"item"		"item_mantle"
+			"item"		"item_faerie_fire"
+			"item"		"item_vampire_claw"
+			"item"		"item_fury_shield"
+		}
+		
+		"STARTING ITEMS RANGED"
+		{
+			"item"		"item_tango"
+			"item"		"item_null_talisman"
+			"item"		"item_mantle"
+			"item"		"item_faerie_fire"
+			"item"		"item_vampire_claw"
+			"item"		"item_fury_shield"
+		}
+		"GANG"
+		{
+			"item"		"item_tango"
+			"item"		"item_magic_wand"
+			"item"		"item_chest_of_midas"
+			"item"		"item_talisman_of_mastery"
+			"item"		"item_soul_stone"
+			"item"		"item_life_catcher"
+		}
+		"MID GAME ITEMS MELEE"
+		{
+	        "item"      "item_arcane_boots"
+			"item"		"item_aether_lens"
+			"item"		"item_cyclone"
+			"item"		"item_rod_of_atos"
+			"item"		"item_orchid"
+			"item"		"item_force_staff"
+			"item"		"item_sheepstick"
+			"item"		"item_tango"
+		}
+		"MID GAME ITEMS RANGED"
+		{
+			"item"		"item_arcane_boots"
+			"item"		"item_aether_lens"
+			"item"		"item_cyclone"
+			"item"		"item_rod_of_atos"
+			"item"		"item_orchid"
+			"item"		"item_force_staff"
+			"item"		"item_sheepstick"
+		}
+		"LATE GAME ITEMS MELEE"
+		{
+	        "item"      "item_octarine_core_2"
+			"item"		"item_refresher"
+			"item"		"item_ethereal_blade_4"
+			"item"		"item_shivas_guard_2"
+			"item"		"item_bloodstone"
+			"item"		"item_dagon_5"
+			"item"		"item_rubick_dagon"
+			"item"		"item_aegis_aa"
+		}
+		"LATE GAME ITEMS RANGED"
+		{
+			"item"		"item_octarine_core_2"
+			"item"		"item_refresher"
+			"item"		"item_ethereal_blade_4"
+			"item"		"item_shivas_guard_2"
+			"item"		"item_bloodstone"
+			"item"		"item_dagon_5"
+			"item"		"item_rubick_dagon"
+			"item"		"item_aegis_aa"
+		}
+		"SITUATIONALLY"
+		{
+			"item"		"item_potion_immune"
+			"item"		"item_advanced_midas"
+			"item"		"item_dark_edge"
+			"item"		"item_storm_edge"
+			"item"		"item_snake_boots"
+			"item"		"item_devour_helm"
+			"item"		"item_polar_spear"
+			"item"		"item_recovery_orb"
+			"item"		"item_static_amulet"
+			"item"		"item_magic_amplifier"
+		}
+	}
+}

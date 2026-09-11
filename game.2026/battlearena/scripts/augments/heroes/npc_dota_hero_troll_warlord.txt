@@ -1,0 +1,183 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Troll Warlord hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_troll_warlord"
+{
+	// ---- Berserker's Rage ---------------------------------------------------
+	"troll_warlord_berserkers_rage"
+	{
+		// more move speed (was 20)
+		"bonus_move_speed"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"maim_slow"
+				{
+					"base" "4"
+					"mode" "MULT"
+					"limit"		"50"
+				}
+				"maim_attack_slow"
+				{
+					"base" "30"
+					"step"	"4"
+				}
+			}
+		}
+		// more maim damage (was 70/5)
+		"maim_damage"
+		{
+			"base" "80"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+
+			}
+		}
+
+		// more ensnare chance (was 3)
+		"ensnare_chance"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "6"
+			"limit"		"100"
+			"bundle"
+			{
+				"maim_chance"
+				{
+					"base" "8"
+					"mode" "MULT"
+					"limit"		"100"
+				}
+			}
+		}
+	}
+
+	// ---- Switch Stance ------------------------------------------------------
+	"troll_warlord_switch_stance"
+	{
+		// faster attack time (rare, was -0.1)
+		"base_attack_time"
+		{
+			"base"	"-0.12"
+			"floor"	"rare"
+			"cap"	"4"
+		}
+		// more armor per interval (was 0.5)
+		"armor_per_interval"
+		{
+			"base"	"0.6"
+			"cap" "6"
+		}
+	}
+
+	// ---- Whirling Axes (ranged) ---------------------------------------------
+	"troll_warlord_whirling_axes_ranged"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"troll_warlord_whirling_axes_melee"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 25/3)
+		"axe_damage"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"troll_warlord_whirling_axes_melee"
+				{
+					"damage"
+					{
+						"base" "30"
+						"step"		"4"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider spread (was 4)
+		"axe_spread"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"axe_width" "6"
+			}
+			"bundle_abilities"
+			{
+				"troll_warlord_whirling_axes_melee"
+				{
+					"max_range" "35"
+					"hit_radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Fervor -------------------------------------------------------------
+	"troll_warlord_fervor"
+	{
+		// more attack speed (was 5/2)
+		"attack_speed"
+		{
+			"base" "6"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Battle Trance ------------------------------------------------------
+	"troll_warlord_battle_trance"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more lifesteal (was 8)
+		"lifesteal"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "6"
+
+			"bundle"
+			{
+				"attack_speed"
+				{
+					"base" "35"
+					"step"		"25"
+				}
+			}
+		}
+	}
+}

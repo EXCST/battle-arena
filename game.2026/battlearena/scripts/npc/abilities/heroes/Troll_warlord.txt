@@ -1,0 +1,337 @@
+"DOTAAbilities"
+{
+//=================================================================================================================
+	// Troll Warlord: Berserker's Rage
+	//=================================================================================================================
+	"troll_warlord_berserkers_rage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5508"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"				"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"20 25 30 35 40 45 50"
+				"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_2"
+
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"3 4 5 6 7 8 9"
+				"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord"
+
+			}
+			"04"
+			{	
+				"var_type"				"FIELD_INTEGER"
+				"bonus_range"			"350"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"base_attack_time"		"1.5"
+			}	
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ensnare_chance"			"9"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"ensnare_duration"			"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+
+	//=================================================================================================================
+	// Troll Warlord: Whirling Axes (Throw)
+	//=================================================================================================================
+	"troll_warlord_whirling_axes_ranged"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5509"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_WHIRLING_AXES_RANGED"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"950"
+		"AbilityCastPoint"				"0.2"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"axe_width"					"100"
+			"axe_speed"					"1500.0"
+			"axe_range"					"950.0"
+			"axe_damage"				
+			{ 
+				"value"						"100 160 220 280 340 400 460"
+				"special_bonus_unique_troll_warlord_3"		"+90"
+			}
+			"axe_slow_duration"			
+			{
+				"value"						"3.0 3.75 4.5 5.25 5.3 5.5 6.0"
+				"special_bonus_unique_troll_warlord_whirling_axes_debuff_duration"				"+2"
+			}
+			"movement_speed"			"30"
+			"axe_spread"				"70"
+			"axe_count"					"64"
+			"AbilityCooldown"
+			{
+				"value"							"14"
+				"special_bonus_scepter"			"-5"
+			}
+			"AbilityManacost"
+			{
+				"value"							"60"
+				"special_bonus_scepter"			"-30"
+			}
+			"pierces_magic_immunity"
+			{
+				"value"											"0"
+				"special_bonus_unique_troll_warlord_6"			"+1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Troll Warlord: Whirling Axes Spin
+	//=================================================================================================================
+	"troll_warlord_whirling_axes_melee"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5510"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"					"100 160 220 280 340 400 460"
+				"special_bonus_unique_troll_warlord_3"		"+90"
+			}
+			"hit_radius"				"100"
+			"max_range"					"450.0"
+			"axe_movement_speed"		"1250"
+			"blind_duration"			
+			{
+				"value"						"4"
+				"special_bonus_unique_troll_warlord_whirling_axes_debuff_duration"				"+2"
+			}
+			"blind_pct"					"15 20 25 30 35 40 45"
+			"whirl_duration"			"3.0"
+			"AbilityCooldown"
+			{
+				"value"							"12"
+				"special_bonus_scepter"			"-5"
+			}
+			"AbilityManacost"
+			{
+				"value"							"50"
+				"special_bonus_scepter"			"-25"
+			}
+			"pierces_magic_immunity"
+			{
+				"value"											"0"
+				"special_bonus_unique_troll_warlord_6"			"+1"
+			}
+		}
+	}
+
+//=================================================================================================================
+// Troll Warlord: Fervor
+//=================================================================================================================
+"fervor_aa"
+{
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"troll_warlord_fervor"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"ScriptFile"	                "abilities/hero/troll_warlord/fervor/fervor_aa"
+	
+	"MaxLevel"						"7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"attack_speed"			"15 20 25 30 32 34 40"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"				"5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"3"
+		}
+	}
+}
+
+//=================================================================================================================
+	//  Troll Warlord: Battle Trance
+	//=================================================================================================================
+	"troll_warlord_battle_trance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5512"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		 "MaxLevel"                      "7"
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.0 0.0 0.0"
+		"AbilityCastRange"				"525"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"trance_duration"		"6"	
+			"AbilityCooldown"
+			{
+				"value"			"70"
+				"special_bonus_unique_troll_warlord_7"		"-15"
+			}
+			"lifesteal"			"40 45 50 55 60 65 75"
+			"attack_speed"			"50 90 120 180 250 350 400"
+			"movement_speed"
+			{
+				"value"		"25 30 35"
+				"special_bonus_unique_troll_warlord_battle_trance_movespeed"		"+15"
+			}
+			"range"				"900"
+		}
+	}
+//=================================================================================================================
+// Troll Warlord: Rampage (shard upgrade)
+//=================================================================================================================
+"troll_warlord_rampage"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+	"AbilityCastGestureSlot"		"DEFAULT"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"55"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"195"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"attack_speed"				"70"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"status_resistance"				"25"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"				"5"
+		}
+	}
+}
+//=================================================================================================================
+	// Troll Warlord Scepter
+	//=================================================================================================================
+	"troll_warlord_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7865"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_WHIRLING_AXES_RANGED"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range"			"1200"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"				"3.0"
+			}
+		}
+	}
+}

@@ -1,0 +1,150 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lone Druid hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_lone_druid"
+{
+	// ---- Spirit Bear --------------------------------------------------------
+	"lone_druid_spirit_bear"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// tankier bear (was 650/100)
+		"bear_hp"
+		{
+			"base" 		"700"
+			"step"		"120"
+			"mode" 		"ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Entangle -----------------------------------------------------------
+	"lone_druid_entangle"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// wider entangle (was 30)
+		"active_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 30/3)
+		"damage"
+		{
+			"base" "35"
+			"step"	"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Spirit Link --------------------------------------------------------
+	"lone_druid_spirit_link"
+	{
+		// more move speed (was 20)
+		"bonus_movement_speed_druid"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"bonus_movement_speed_bear" "25"
+			}
+		}
+		// more lifesteal (was 15)
+		"lifesteal_percent"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Savage Roar --------------------------------------------------------
+	"lone_druid_savage_roar"
+	{
+		// more slow (was -10)
+		"bonus_speed"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"shard_movement_speed_pct" "12"
+				"shard_attack_speed"
+				{
+					"base" "35"
+					"step"		"4"
+					"mode" "ADD"
+				}
+			}
+			"bundle_abilities"
+			{
+				"lone_druid_savage_roar_bear"
+				{
+					"bonus_speed" "-12"
+				}
+			}
+		}
+		// wider roar (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shard_radius" "120"
+				"shard_duration" "1"
+			}
+			"bundle_abilities"
+			{
+				"lone_druid_savage_roar_bear"
+				{
+					"radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- True Form ----------------------------------------------------------
+	"lone_druid_true_form"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more hp (was 450/80)
+		"bonus_hp"
+		{
+			"base" 		"500"
+			"step"		"90"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 30/3)
+		"bonus_attack_damage"
+		{
+			"base" "35"
+			"step"	"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

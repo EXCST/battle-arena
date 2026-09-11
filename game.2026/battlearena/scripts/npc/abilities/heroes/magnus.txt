@@ -1,0 +1,422 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Magnataur: Horn Toss ( shard ability )
+	//=================================================================================================================
+	"magnataur_horn_toss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"649"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"		"450"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"		"325"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"air_duration"		"0.6"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"air_height"		"300"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration"		"1.25"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"pull_offset"		"75"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"destination_offset"		"175"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"pull_angle"				"230"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"horn_toss_slow_pct"		"100"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Magnataur: Shockwave
+	//=================================================================================================================
+	"magnataur_shockwave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5518"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1150"
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"7"
+		"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 95 100 105 110 115 120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"shock_speed"				"1050"
+			"shock_width"				"150"
+			"shock_damage"				
+			{
+				"value"			"125 210 285 380 450 475 555"				
+				"special_bonus_unique_magnus"	"+125"
+			}
+			"pull_duration"				"0.2"
+			"movement_slow"				"20"
+			"slow_duration"				"2"
+			"pull_distance"		"150"
+			"basic_slow_duration"		
+			{
+				"value"					"0.9"
+				"LinkedSpecialBonus"	"special_bonus_unique_magnus_6"
+			}
+			"scepter_width"		
+			{
+				"value" 				"250"
+				"RequiresScepter"		"1"
+			}
+			"scepter_range"		
+			{
+				"value"					"1400"
+				"RequiresScepter"		"1"
+			}
+			"scepter_duration"	
+			{
+				"value" 				"5"
+				"RequiresScepter"		"1"
+			}
+			"scepter_erupt_time"		
+			{
+				"value" 				"1.5"
+				"RequiresScepter"		"1"
+			}
+			"scepter_erupt_damage_pct"
+			{
+				"value" 				"75"
+				"RequiresScepter"		"1"	
+			}
+			"scepter_slow_pct"		
+			{
+				"value" 				"75"
+				"RequiresScepter"		"1"
+			}
+			"scepter_armor_pct"		
+			{
+				"value" 				"75"
+				"RequiresScepter"		"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	
+	//=================================================================================================================
+	// Magnataur: Greater Shockwave (scepter ability)
+	//=================================================================================================================
+	"magnataur_greater_shockwave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"538"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"length"		"1200"
+			}
+		}
+	}
+	
+
+	//=================================================================================================================
+	// Magnataur: Empower
+	//=================================================================================================================
+	"magnataur_empower"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5519"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Magnataur.Empower.Cast"
+		//"HasShardUpgrade"				"1"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"45 55 65 75"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Easy to spam 
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"				
+			{
+				"value"								"800"
+				//"special_bonus_shard"				"+99999"
+			}
+			"should_self_cast"
+			{
+				"value"								"0"
+				//"special_bonus_shard"				"+1"
+			}
+			"empower_duration"
+			{
+				"value"		"35"
+				"special_bonus_unique_magnus_4"	"+10"
+			}
+			"bonus_damage_pct"
+			{
+				"value"							"12 20 28 36 42 46 52"
+				"special_bonus_unique_magnus_2"	"+10"
+			}
+			"cleave_damage_pct"
+			{
+				"value"						"10 20 30 40 50 60 70"
+				"special_bonus_unique_magnus_2"	"+10"
+			}			
+			"cleave_starting_width"
+			{
+				"value"			"150"
+				"affected_by_aoe_increase"	"1"
+			}			
+			"cleave_ending_width"
+			{
+				"value"			"360"
+				"affected_by_aoe_increase"	"1"
+
+			}			
+			"cleave_distance"			
+			{
+				"value"		"650"
+				"affected_by_aoe_increase"	"1"
+			}
+			"secondary_cleave_distance"	
+			{
+				"value"			"0"
+				//"special_bonus_shard"	"+400"
+			}
+			"self_multiplier"		"50"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Magnataur: Skewer
+	//=================================================================================================================
+	"magnataur_skewer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5520"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13.0 12.5 12.0 11.5 11.0 10.5 10.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_speed"					"1050"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"					"750 900 1050 1150 1200 1300 1400"
+				"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_pct"				"40"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_radius"				"165"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"				"2.5"
+			}			
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_damage"			"125 195 250 320 380 420 500"
+			}			
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tree_radius"				"200"
+			}			
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tool_attack_slow"				"25 45 65 86 105 125 145"
+			}	
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"skewer_cooldown"				"6"
+				"RequiresScepter"	"1"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"skewer_manacost"				"40"
+				"RequiresScepter"	"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Magnataur: Reverse Polarity
+	//=================================================================================================================
+	"magnataur_reverse_polarity"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5521"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"200 250 300 350 400 450 500"
+		"AbilityCastRange"				"410"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"pull_radius"					"410"
+			"polarity_damage"				"175 275 375 475 575 675 800"
+			"hero_stun_duration"
+			{
+				"value"					"2.0 2.3 2.6 2.9 3.2 3.5 3.8"
+				"special_bonus_unique_magnus_5"	"+1"
+			}
+			"pull_duration"			"0.0 0.0 0.0"
+			"strength_buff_duration"
+			{
+				"value"					"0"
+				"special_bonus_unique_magnus_reverse_polarity_strength"			"+15"
+			}
+			"strength_per_stack"
+			{
+				"value"					"0"
+				"special_bonus_unique_magnus_reverse_polarity_strength"			"+12"
+			}
+		}
+	}
+}

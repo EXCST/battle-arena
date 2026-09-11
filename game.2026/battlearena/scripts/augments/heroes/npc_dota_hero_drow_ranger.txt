@@ -1,0 +1,103 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Drow Ranger hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_drow_ranger"
+{
+	// ---- Frost Arrows -------------------------------------------------------
+	"drow_ranger_frost_arrows"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"damage"
+				{
+					"base" "18"
+					"step"		"3.5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// more burst damage (was 10/2)
+		"shard_burst_damage_per_stack"
+		{
+			"base" "12"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"shard_burst_radius"
+				{
+					"base" "30"
+					"mode" "MULT"
+
+					"limit"			"1050"
+					"limit_base"		"650"
+				}
+			}
+		}
+	}
+
+	// ---- Wave of Silence ----------------------------------------------------
+	"drow_ranger_wave_of_silence"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider wave (was 45)
+		"wave_width"
+		{
+			"base" "55"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Multishot ----------------------------------------------------------
+	"drow_ranger_multishot"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more arrow damage (was 30)
+		"arrow_damage_pct"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Deadeye Instinct ---------------------------------------------------
+	"drow_ranger_deadeye_instinct"
+	{
+		// more chance (was 2)
+		"chance"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more agi damage (was 2.75)
+		"agi_damage"
+		{
+			"base" "3"
+			"mode" "MULT"
+
+			"limit_base"	"60"
+			"limit" "120"
+		}
+	}
+}

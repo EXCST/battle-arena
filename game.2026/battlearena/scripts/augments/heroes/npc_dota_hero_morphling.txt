@@ -1,0 +1,112 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Morphling hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_morphling"
+{
+	// ---- Waveform -----------------------------------------------------------
+	"morphling_waveform"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider wave (was 50)
+		"width"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Adaptive Strike (agi) ----------------------------------------------
+	"morphling_adaptive_strike_agi"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more base damage (was 25/4)
+		"damage_base"
+		{
+			"base" "30"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more max damage (was 0.3)
+		"damage_max"
+		{
+			"base" "0.35"
+			"mode" "ADD"
+			"cap"	"5"
+		}
+	}
+
+	// ---- Morph (agi) --------------------------------------------------------
+	"morphling_morph_agi"
+	{
+		// less mana cost (was -5)
+		"mana_cost"
+		{
+			"base" "-6"
+			"mode" "ADD"
+			"cap" "1"
+			"bundle_abilities"
+			{
+				"morphling_morph_str"
+				{
+					"mana_cost" "-6"
+				}
+			}
+		}
+	}
+
+	// ---- Replicate ----------------------------------------------------------
+	"morphling_replicate"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle"
+			{
+				"scepter_illusion_outgoing"
+				{
+					"base" "25"
+					"mode" "ADD"
+				}
+			}
+		}
+		// longer replicate (was 3)
+		"duration"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"scepter_illusion_incoming"
+				{
+					"base" "-12"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

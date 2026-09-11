@@ -1,0 +1,130 @@
+/* Prettified by Source 2 Viewer 19.2.0.0 - https://valveresourceformat.github.io */
+
+.OrbGauges_Root
+{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+#OG
+{
+	padding-top: 5px;
+	align: center center;
+	margin-top: -76px;
+	z-index: -100;
+	transition-property: transform;
+	transition-duration: 0.1s;
+}
+
+.AnyHeroDead
+{
+	transform: translateY(25px);
+}
+
+.AltPressed #OG
+{
+	transform: translateY(55px);
+}
+
+#OG_Bars
+{
+	margin-top: -2px;
+}
+
+.OrbGauge
+{
+	padding: 3px;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#17141b), to(#1e232c));
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 3;
+	border-radius: 4px;
+	width: 150px;
+	height: 23px;
+}
+
+.OrbGauge > Label
+{
+	align: center center;
+	color: white;
+	text-shadow: black 0 1px 1px 2;
+	font-size: 16px;
+	margin-top: -1px;
+}
+
+.OrbGauge > Panel
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#2c282f), to(#3e414c));
+}
+
+#OrbGauge_Common > Panel
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#2c282f), to(#3e414c));
+}
+
+#OG_Fill
+{
+	height: 100%;
+	transition-property: width;
+	transition-duration: 0.1s;
+}
+
+#OrbGauge_Common
+{
+	margin-top: 24px;
+	horizontal-align: center;
+	width: 200px;
+	tooltip-position: bottom;
+}
+
+#OrbGauge_Common #OG_Fill
+{
+	background-color: #eeeeee;
+}
+
+#OrbGauge_Rare
+{
+	margin-right: 213px;
+	horizontal-align: center;
+	tooltip-position: left;
+}
+
+#OrbGauge_Rare #OG_Fill
+{
+	background-color: #2093ff;
+	transform: rotateZ(180deg);
+}
+
+#OrbGauge_Epic
+{
+	margin-left: 213px;
+	horizontal-align: center;
+	tooltip-position: right;
+}
+
+#OrbGauge_Epic #OG_Fill
+{
+	background-color: #ee01ca;
+}
+
+.KillLimit
+{
+	background-image: url("s2r://panorama/images/custom_game/kill_limit_png.vtex");
+	background-size: 100%;
+	align: center top;
+	padding: 1px 2px;
+	width: 61px;
+	img-shadow: black 0 0 4px 2;
+	tooltip-position: bottom;
+}
+
+.KillLimit > Label
+{
+	text-align: center;
+	width: 100%;
+	font-size: 19px;
+	color: white;
+}
+

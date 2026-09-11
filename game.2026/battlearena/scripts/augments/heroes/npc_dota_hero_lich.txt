@@ -1,0 +1,154 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lich hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_lich"
+{
+	// ---- Frost Nova ---------------------------------------------------------
+	"lich_frost_nova"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider nova (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 30/3)
+		"aoe_damage"
+		{
+			"base" "35"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"damage"
+				{
+					"base" "25"
+					"step"		"4"
+				}
+			}
+		}
+	}
+
+	// ---- Frost Shield -------------------------------------------------------
+	"lich_frost_shield"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"lich_ice_spire"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage reduction (was 6)
+		"damage_reduction"
+		{
+			"base" "7"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				"lich_ice_spire"
+				{
+					"added_health"	"5"
+				}
+			}
+		}
+		// more damage (was 20/2)
+		"damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider shield (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"lich_ice_spire"
+				{
+					"aura_radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Sinister Gaze ------------------------------------------------------
+	"lich_sinister_gaze"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more mana drain (was 2)
+		"mana_drain"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"aoe_scepter" "35"
+			}
+		}
+	}
+
+	// ---- Chain Frost --------------------------------------------------------
+	"lich_chain_frost"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 50/4)
+		"damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider jump range (was 25)
+		"jump_range"
+		{
+			"base"			"30"
+			"mode" 		"ADD"
+			"cap" 	"8"
+
+			"bundle"
+			{
+				"projectile_speed" "130"
+			}
+		}
+	}
+}

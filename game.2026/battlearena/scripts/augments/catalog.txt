@@ -1,0 +1,599 @@
+﻿"AugmentCatalog"
+{
+	// Battle Arena — global boons offered alongside ability cards.
+
+	// IMPLEMENTATION (key "impl"):
+	//   "modifier"  — backed by a modifier class (modifier_aug_<name> in lib/augments/boons/)
+	//   "special"   — computed by the boon engine modifier (ability_augment_carrier)
+
+	// OPTIONAL FIELDS:
+	//   floor / roof        orb tiers that may offer this boon (common/rare/epic)
+	//   mode                ADD (default) / MULT (growth toward "limit")
+	//   cap                 max picks
+	//   unlock_at           only after N game seconds
+	//   off / off_for_universal   disable globally / for universal heroes
+	//   skip_clones / skip_illusions   don't apply to clones / illusions
+	//   style               DOTA_UNIT_CAP_MELEE_ATTACK / DOTA_UNIT_CAP_RANGED_ATTACK
+	//   mod_path / mod_kind modifier path (default lib/augments/boons/) and motion type
+
+	// STATS ("stats" block): per-pick values; "flat_" prefix = not scaled by picks.
+	//   limit / limit_base: multiplicative growth target / starting base
+	//   perks: hero talents affecting the calculation ("x1.3" or "+5")
+
+	"aug_manaburn"
+	{
+		"impl"						"special"
+		"floor"						"common"
+
+		"stats"
+		{
+			"flat_burned_as_damage"	"1"
+			"mana_burned"				"14" // per-upgrade
+
+			"flat_mana_burned_illusion_pct"	"20"
+		}
+	}
+	"aug_all_attributes"
+	{
+		"impl"				"special"
+		"floor"		"common"
+		"roof"		"rare"
+
+		"stats"
+		{
+			"attributes"		"7"
+		}
+	}
+	// aug_primary_attribute / aug_secondary_attributes (disabled in the current rotation):
+	// {
+	// 	"floor"				"common"
+	// 	"skip_clones"		"1"
+	// 	"stats"				{ "attributes" "7" }
+	// 	"off_for_universal"	"1"
+	// }
+	"aug_armor"
+	{
+		"impl"				"special"
+		"floor"		"common"
+		"roof"		"rare"
+
+		"stats"
+		{
+			"armor"		"5"
+		}
+	}
+	"aug_magic_resistance"
+	{
+		"impl"				"special"
+		"floor"		"common"
+		"mode"		"MULT"
+
+		"stats"
+		{
+			"magic_resistance"		"6"
+		}
+	}
+	"aug_attack_speed"
+	{
+		"impl"				"special"
+		"floor"		"common"
+		"roof"		"rare"
+
+		"stats"
+		{
+			"attack_speed"		"20"
+		}
+	}
+	"aug_spell_amp"
+	{
+		"impl"						"special"
+		"floor"				"common"
+		"mode"					"MULT"
+		"limit"		"80"
+
+		"stats"
+		{
+			"spell_amp"		"5"
+		}
+	}
+	"aug_movement_speed"
+	{
+		"impl"						"special"
+		"floor"		"common"
+		"stats"
+		{
+			"movement_speed"		"25"
+		}
+	}
+	"aug_status_resistance"
+	{
+		"impl"						"special"
+		"floor"		"common"
+		"mode"		"MULT"
+		"stats"
+		{
+			"status_resistance"		"6"
+		}
+	}
+	"aug_physical_shield"
+	{
+		"floor"		"common"
+		"skip_illusions"				"1"
+		"stats"
+		{
+			"shield_capacity"		"75"
+			"shield_capacity_per_level"	"10"
+
+			// do not scale with upgrades
+			"flat_combat_cd"				"8"
+			"flat_regeneration_rate"		"20"	// 20% per second
+			"flat_tickrate"				"0.25"
+			"flat_illusion_multiplier"		"200"
+		}
+	}
+	"aug_magical_shield"
+	{
+		"floor"		"common"
+		"skip_illusions"				"1"
+		"stats"
+		{
+			"shield_capacity"		"75"
+			"shield_capacity_per_level"	"10"
+
+			// do not scale with upgrades
+			"flat_combat_cd"				"8"
+			"flat_regeneration_rate"		"20"	// 20% per second
+			"flat_tickrate"				"0.25"
+			"flat_illusion_multiplier"		"200"
+		}
+	}
+	// ----------------------------------------------------
+	// Generic Rares
+	// ----------------------------------------------------
+	"aug_universal_shield"
+	{
+		"floor"		"rare"
+		"skip_illusions"				"1"
+		"stats"
+		{
+			"shield_capacity"				"75"
+			"shield_capacity_per_level"		"10"
+			// do not scale with upgrades
+			"flat_combat_cd"				"8"
+			"flat_regeneration_rate"		"20"	// 20% per second
+			"flat_tickrate"				"0.25"
+			"flat_illusion_multiplier"		"200"
+		}
+	}
+	"aug_status_res_on_disable"
+	{
+		"impl"						"special"
+		"floor"		"rare"
+		"skip_illusions"				"1"
+		"off"					"1"
+
+		"cap"		"4"
+
+		"stats"
+		{
+			"status_res_per_stack"			"2.5"
+
+			"flat_stack_duration"			"5" // seconds, independent
+		}
+	}
+	"aug_base_attack_damage_pct"
+	{
+		"impl"						"special"
+		"floor"							"rare"
+		"cap"								"16"
+
+		"stats"
+		{
+			"base_attack_damage_pct"		"6.25"
+		}
+	}
+	"aug_armor_shred"
+	{
+		"impl"						"special"
+		"floor"						"rare"
+
+		"cap"				"16"
+
+		"stats"
+		{
+			"flat_duration"			"7"
+			"armor_shred"				"1.5" // per-upgrade
+			"armor_shred_per_level"		"0.1"
+		}
+	}
+	"aug_cleave"
+	{
+		"impl"						"special"
+		"floor"					"rare"
+		"off"					"1"
+
+		"skip_illusions"				"1"
+
+		"style"				"DOTA_UNIT_CAP_MELEE_ATTACK"
+
+		"stats"
+		{
+			"flat_cleave_distance"		"650"
+			"flat_cleave_width"		"350"
+
+			"cleave_damage"				"10" // per-upgrade
+		}
+	}
+	"aug_splash"
+	{
+		"impl"						"special"
+		"floor"					"rare"
+		"off"					"1"
+
+		"skip_illusions"				"1"
+
+		"style"				"DOTA_UNIT_CAP_RANGED_ATTACK"
+
+		"stats"
+		{
+			"flat_splash_radius"		"350"
+
+			"splash_pct"				"10" // per-upgrade
+		}
+	}
+	"aug_attack_projectile_speed"
+	{
+		"impl"						"special"
+		"floor"						"rare"
+
+		"cap"			"10"
+
+		"style"				"DOTA_UNIT_CAP_RANGED_ATTACK"
+
+		"stats"
+		{
+			"projectile_speed"			"175"
+		}
+	}
+	"aug_universal_lifesteal"
+	{
+		"impl"						"special"
+		"floor"		"epic"
+		"cap"			"12"
+		"off"					"1"
+		"stats"
+		{
+			"lifesteal"		"3" // per upgrade, any damage instance
+		}
+	}
+	"aug_heal_amp"
+	{
+		"impl"						"special"
+		"floor"		"rare"
+		"cap"		"20"
+		"stats"
+		{
+			"heal_amp"		"5"
+		}
+	}
+	"aug_magic_resistance_reduction"
+	{
+		"skip_illusions"				"1"
+		"floor"		"rare"
+		"cap"		"10"
+		"off"					"1"
+		"stats"
+		{
+			"flat_duration"					"5"
+			// NOTE: reduction is int, any float here will get rounded
+			"magic_resistance_reduction"		"3" // per upgrade
+		}
+	}
+	// ----------------------------------------------------
+	// Generic Epics
+	// ----------------------------------------------------
+	"aug_burning_aura"
+	{
+		"floor"						"epic"
+
+		"skip_illusions"				"1"
+		"unlock_at"						"600"
+		// "skip_clones"					"1"
+
+		"stats"
+		{
+			"flat_burn_radius"			"650"
+			"flat_burn_interval"		"1"
+			"burn_stat_pct"				"2.5" // %
+
+			"burn_damage"				"35" // per-upgrade
+		}
+	}
+	"aug_critical_strike"
+	{
+		"impl"						"special"
+		"floor"						"epic"
+
+		"stats"
+		{
+			"flat_crit_chance"			"22"
+			"flat_crit_damage_base"	"100"
+			"crit_damage_bonus"			"25" // per-upgrade
+		}
+	}
+	"aug_all_attributes_per_level"
+	{
+		"impl"						"special"
+		"floor"			"epic"
+		"stats"
+		{
+			"attributes_gain"		"0.2"
+		}
+	}
+	"aug_primary_attribute_per_level"
+	{
+		"impl"						"special"
+		"floor"			"epic"
+		"stats"
+		{
+			"attribute_gain"		"0.5"
+		}
+
+		"off_for_universal"	"1"
+	}
+	"aug_secondary_attributes_per_level"
+	{
+		"impl"						"special"
+		"floor"			"epic"
+		"stats"
+		{
+			"attributes_gain"		"0.5"
+		}
+
+		"off_for_universal"	"1"
+	}
+	"aug_reach"
+	{
+		"impl"						"special"
+		"floor"		"epic"
+		"stats"
+		{
+			"cast_range"				"30"
+			"range_increase_melee"		"15"
+			"range_increase_ranged"		"20"
+		}
+	}
+	"aug_auto_rune"
+	{
+		"impl"						"special"
+		"floor"				"epic"
+		"skip_illusions"		"1"
+		"cap"				"4"
+		"stats"
+		{
+			"interval"			"5"
+			"rune_duration"		"2.5"
+		}
+	}
+	"aug_item_cdr"
+	{
+		"impl"						"special"
+		"floor"		"epic"
+		"cap"		"8"
+		"mode"		"MULT"
+		"stats"
+		{
+			"cooldown_reduction"		"3"
+		}
+	}
+
+	// ----------------------------------------------------
+	// Disabled (any floor)
+	// ----------------------------------------------------
+	"aug_flying_movement"
+	{
+		"floor"						"epic"
+		"off"		"1"
+
+		"cap"						"1"
+
+		"stats"
+		{}
+	}
+	"aug_magic_attack_damage"
+	{
+		"off"			"1"
+		"floor"						"common"
+
+		"stats"
+		{
+			"magic_attack_damage"		"12"
+		}
+	}
+	"aug_primary_attribute_increase"
+	{
+		"off"			"1"
+
+		"floor"						"epic"
+
+		"skip_clones"		"1"
+		"skip_illusions"	"1"
+
+		"stats"
+		{
+			"attribute_increase"		"15"
+		}
+	}
+	"aug_secondary_attribute_increase"
+	{
+		"off"			"1"
+
+		"floor"						"epic"
+
+		"skip_clones"		"1"
+		"skip_illusions"	"1"
+
+		"stats"
+		{
+			"attribute_increase"		"15"
+		}
+	}
+	"aug_common_stat_boost"
+	{
+		"off"		"1"
+
+		"floor"		"epic"
+		"stats"
+		{
+			"common_generic_stat_boost"		"1"
+		}
+	}
+	"aug_rare_stat_boost"
+	{
+		"off"		"1"
+
+		"floor"		"epic"
+		"stats"
+		{
+			"rare_generic_stat_boost"		"60"
+		}
+	}
+	"aug_evasion"
+	{
+		"off"		"1"
+
+		"floor"		"common"
+		"mode"		"MULT"
+		"stats"
+		{
+			"evasion"		"10"
+		}
+	}
+	"aug_health_regen"
+	{
+		"off"		"1"
+
+		"floor"		"common"
+		"stats"
+		{
+			"health_regen"		"10"
+		}
+	}
+	"aug_mana_regen"
+	{
+		"off"		"1"
+
+		"floor"		"common"
+		"stats"
+		{
+			"mana_regen"		"4"
+		}
+	}
+	"aug_vision_radius"
+	{
+		"off"			"1"
+
+		"floor"		"common"
+
+		"stats"
+		{
+			"day_vision"	"180"
+			"night_vision"	"80"
+		}
+	}
+		"aug_health_percentage"
+	{
+		"off"		"1"
+
+		"floor"		"rare"
+		"stats"
+		{
+			"health_percentage"		"8"
+		}
+	}
+	"aug_damage"
+	{
+		"off"		"1" // rotated in favor of base attack damage %
+
+		"floor"		"rare"
+		"stats"
+		{
+			"damage"		"30"
+		}
+	}
+	"aug_gpm"
+	{
+		"off"		"1"
+
+		"floor"		"rare"
+		"stats"
+		{
+			"gpm"		"180"
+		}
+	}
+	"aug_base_attack_time"
+	{
+		"off"		"1"
+
+		"floor"		"rare"
+		"cap"		"4"
+		"stats"
+		{
+			"base_attack_time"		"-0.1"
+		}
+	}
+	"aug_health_and_mana_on_kill"
+	{
+		"off"			"1"
+		"floor"		"rare"
+
+		"skip_clones"		"1"
+		"skip_illusions"	"1"
+
+		"stats"
+		{
+			// flat heath and mana
+			"health_gained"		"220"
+			"mana_gained"		"110"
+		}
+	}
+	"aug_lifesteal"
+	{
+		"off"		"1"
+		"floor"		"rare"
+		"stats"
+		{
+			"lifesteal"		"8"
+		}
+	}
+	"aug_spell_lifesteal"
+	{
+		"off"		"1"
+		"floor"		"rare"
+		"stats"
+		{
+			"spell_lifesteal"		"6"
+		}
+	}
+	"aug_cast_range"
+	{
+		"off"		"1"
+
+		"floor"		"epic"
+		"stats"
+		{
+			"cast_range"		"125"
+		}
+	}
+	"aug_attack_range"
+	{
+		"off"		"1"
+
+		"floor"		"epic"
+		"stats"
+		{
+			"range_increase_melee"		"60"
+			"range_increase_ranged"		"80"
+		}
+	}
+}

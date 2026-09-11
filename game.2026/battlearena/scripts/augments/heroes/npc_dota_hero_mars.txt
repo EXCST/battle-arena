@@ -1,0 +1,141 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Mars hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_mars"
+{
+	// ---- Spear --------------------------------------------------------------
+	"mars_spear"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "7"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"shard_dps"
+				{
+					"base" "18"
+					"step"		"2.5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider spear (was 30)
+		"spear_width"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"shard_trail_radius" "35"
+			}
+		}
+	}
+
+	// ---- God's Rebuke -------------------------------------------------------
+	"mars_gods_rebuke"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more crit mult (was 15)
+		"crit_mult"
+		{
+			"base" 		"18"
+			"mode" 		"ADD"
+			"cap" "8"
+		}
+		// wider rebuke (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"angle" "5"
+			}
+		}
+	}
+
+	// ---- Bulwark ------------------------------------------------------------
+	"mars_bulwark"
+	{
+		// more frontal reduction (rare, was 2.5)
+		"physical_damage_reduction"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"floor"		"rare"
+			"cap" "4"
+		}
+		// more side reduction (rare, was 2)
+		"physical_damage_reduction_side"
+		{
+			"base" 			"2.5"
+			"mode" 			"ADD"
+			"floor"		"rare"
+			"cap" 		"4"
+		}
+		// less speed penalty (was -9)
+		"redirect_speed_penatly"
+		{
+			"base" 		"-11"
+			"mode" 		"ADD"
+			"cap" 	"2"
+		}
+	}
+
+	// ---- Arena of Blood -----------------------------------------------------
+	"mars_arena_of_blood"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// longer arena (was 0.5)
+		"duration"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// more spear damage (was 50/10)
+		"spear_damage"
+		{
+			"base" "55"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"mars_bulwark"
+				{
+					"scepter_bonus_damage"
+					{
+						"base" "35"
+						"step"		"7"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+}

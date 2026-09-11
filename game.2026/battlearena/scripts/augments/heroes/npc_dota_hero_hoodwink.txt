@@ -1,0 +1,156 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Hoodwink hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_hoodwink"
+{
+	// ---- Acorn Shot ---------------------------------------------------------
+	"hoodwink_acorn_shot"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 55/5)
+		"acorn_shot_damage"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more bounces (was 2)
+		"bounce_count"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// wider bounce range (was 30)
+		"bounce_range"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Bushwhack ----------------------------------------------------------
+	"hoodwink_bushwhack"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"hoodwink_hunters_boomerang"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider trap (was 30)
+		"trap_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"hoodwink_hunters_boomerang"
+				{
+					"radius" "35"
+				}
+			}
+		}
+		// more damage (was 55/4)
+		"total_damage"
+		{
+			"base" "60"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"hoodwink_hunters_boomerang"
+				{
+					"damage" "40"
+					"spell_amp"
+					{
+						"base"		"4"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Scurry -------------------------------------------------------------
+	"hoodwink_scurry"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more move speed (was 20)
+		"movement_speed_pct"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "3"
+			"bundle"
+			{
+				"evasion" "12"
+				"radius" "120"
+			}
+		}
+	}
+
+	// ---- Sharpshooter -------------------------------------------------------
+	"hoodwink_sharpshooter"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"hoodwink_decoy"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 75/7)
+		"max_damage"
+		{
+			"base" "85"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// faster charge (was -0.5)
+		"max_charge_time"
+		{
+			"base" "-0.6"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+}

@@ -1,0 +1,118 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Shadowsong hero upgrades
+// Shadowsong overrides npc_dota_hero_meepo, so upgrades live
+// in this file (GetUnitName returns npc_dota_hero_meepo).
+// ============================================================
+
+"npc_dota_hero_meepo"
+{
+	// ---- Magic Fire ---------------------------------------------------------
+	"shadowsong_magic_fire"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more manaburn (base 100-250)
+		"manaburn"
+		{
+			"base" "30"
+			"step" "4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer debuff (rare)
+		"debuff_duration"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+		// more status resist debuff (rare)
+		"status_resist_debuff"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Absorption ---------------------------------------------------------
+	"shadowsong_absorption"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (base 35-65)
+		"damage"
+		{
+			"base" "10"
+			"step" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer duration (rare)
+		"duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+
+	// ---- Death Aura ---------------------------------------------------------
+	"angel_arena_death_aura"
+	{
+		// more hp regen (base 8-15)
+		"hp_regen"
+		{
+			"base" "2"
+			"step" "0.5"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more speed (base 5-12)
+		"bonus_speed"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// wider aura (rare)
+		"aura_radius"
+		{
+			"base" "150"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Dark Reflection (ultimate) -----------------------------------------
+	"shadowsong_dark_reflection"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"floor" "rare"
+			"cap" "3"
+		}
+		// longer stun (epic)
+		"stun_duration"
+		{
+			"base" "0.2"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+}

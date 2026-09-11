@@ -1,0 +1,115 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Anti-Mage hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_antimage"
+{
+	// ---- Mana Break (persecutor passive) ------------------------------------
+	"antimage_persectur"
+	{
+		// higher mana threshold to slow (was 10)
+		"mana_threshold"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// longer slow
+		"slow_duration"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Mana Break ---------------------------------------------------------
+	"antimage_mana_break"
+	{
+		// more % damage per burn (was 5)
+		"percent_damage_per_burn"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"illusion_percentage" "6"
+			}
+		}
+		// more mana per hit (was 30/5)
+		"mana_per_hit"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Blink --------------------------------------------------------------
+	"antimage_blink"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// NEW: bigger blink range
+		"blink_range"
+		{
+			"base" "75"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "6"
+		}
+	}
+
+	// ---- Counterspell -------------------------------------------------------
+	"antimage_counterspell"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more magic resist (was 6)
+		"magic_resistance"
+		{
+			"base" "7"
+			"mode" "MULT"
+
+			"limit"			"100"
+			"limit_base"		"40"
+		}
+	}
+
+	// ---- Mana Void ----------------------------------------------------------
+	"antimage_mana_void"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// bigger void radius (was 35)
+		"mana_void_aoe_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// NEW: mana void damages stun longer (epic)
+		"stun_duration"
+		{
+			"base" "0.1"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+}

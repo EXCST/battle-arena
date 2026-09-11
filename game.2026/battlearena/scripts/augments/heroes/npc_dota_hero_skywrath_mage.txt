@@ -1,0 +1,106 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Skywrath Mage hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_skywrath_mage"
+{
+	// ---- Arcane Bolt --------------------------------------------------------
+	"skywrath_mage_arcane_bolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"bolt_speed" "80"
+			}
+		}
+
+		// more damage (was 25/2)
+		"bolt_damage"
+		{
+			"base" "30"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Concussive Shot ----------------------------------------------------
+	"skywrath_mage_concussive_shot"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle"
+			{
+				"speed" "60"
+			}
+		}
+		// wider slow (was 60)
+		"slow_radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 55/3.5)
+		"damage"
+		{
+			"base" "60"
+			"step"		"4.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Ancient Seal -------------------------------------------------------
+	"skywrath_mage_ancient_seal"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more resist debuff (was -3)
+		"resist_debuff"
+		{
+			"base" "-4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Mystic Flare -------------------------------------------------------
+	"skywrath_mage_mystic_flare"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider flare (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 90/6)
+		"damage"
+		{
+			"base" "100"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

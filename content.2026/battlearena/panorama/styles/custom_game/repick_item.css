@@ -1,0 +1,181 @@
+.Root {
+	horizontal-align: center;
+	vertical-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#RepickItemMain {
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: #111111fa;
+	width: 70%;
+	height: 80%;
+	border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	border: 1px solid #141516ff;
+	box-shadow: fill #ffff0000 4px 4px 4px 4px;
+	flow-children: down;
+}
+
+.Header {
+	width: 100%;
+	height: 48px;
+	flow-children: right;
+	background-color: #1b1c1eff;
+	border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+}
+
+#RepickItemTitle {
+	color: #fffffffa;
+	font-size: 26px;
+	font-weight: semi-bold;
+	text-transform: uppercase;
+	font-family: Radiance;
+	margin-left: 14px;
+	vertical-align: center;
+	width: 100%;
+}
+
+.CloseButton {
+	horizontal-align: right;
+	vertical-align: center;
+	width: 40px;
+	height: 40px;
+	margin-right: 8px;
+	border-radius: 2px 2px 2px 2px / 2px 2px 2px 2px;
+	background-color: #2a2b2eff;
+}
+
+.CloseButton Label {
+	color: #ffffffaa;
+	font-size: 20px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.CloseButton:hover {
+	background-color: #c0392bff;
+}
+
+.GridHolder {
+	width: 100%;
+	height: 74%;
+	overflow: clip scroll;
+}
+
+.Grid {
+	width: 100%;
+	height: fit-children;
+	flow-children: right-wrap;
+	padding: 8px 8px 8px 8px;
+}
+
+.HeroCell {
+	width: 96px;
+	height: 80px;
+	margin: 4px 4px 4px 4px;
+	border: 2px solid #141516ff;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	background-color: #1a1b1dff;
+	flow-children: down;
+}
+
+.HeroCell:hover {
+	border: 2px solid #8a8a8aff;
+	brightness: 1.2;
+}
+
+.HeroCellSelected {
+	border: 2px solid #ffd700ff;
+	brightness: 1.3;
+	box-shadow: fill #ffd70020 0px 0px 4px 2px;
+}
+
+.HeroCellPicked {
+	saturation: 0.0;
+	brightness: 0.45;
+	border: 2px solid #3a3a3aff;
+}
+
+.HeroCellPicked:hover {
+	border: 2px solid #3a3a3aff;
+	brightness: 0.45;
+}
+
+.HeroCellPortrait {
+	width: 100%;
+	height: 60px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.HeroCellName {
+	width: 100%;
+	height: 18px;
+	color: #ddddddff;
+	font-size: 13px;
+	text-overflow: shrink;
+	text-align: center;
+	vertical-align: center;
+}
+
+.HeroCellPicked .HeroCellName {
+	color: #777777ff;
+}
+
+.Footer {
+	width: 100%;
+	height: 64px;
+	background-color: #1b1c1eff;
+	border-radius: 0px 0px 4px 4px / 0px 0px 4px 4px;
+}
+
+#RepickItemHint {
+	width: 100%;
+	height: 100%;
+	color: #aaaaaaff;
+	font-size: 16px;
+	vertical-align: center;
+	margin-left: 14px;
+	text-overflow: shrink;
+}
+
+.RepickButton {
+	horizontal-align: right;
+	vertical-align: center;
+	width: 260px;
+	height: 44px;
+	margin-right: 14px;
+	border-radius: 3px 3px 3px 3px / 3px 3px 3px 3px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.RepickButton Label {
+	horizontal-align: center;
+	vertical-align: center;
+	font-size: 18px;
+	font-weight: semi-bold;
+	color: #f2f2f2ff;
+	text-shadow: rgba(0, 0, 0, 0.9) 0px 1px 3px 2;
+}
+
+.CanPick {
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#045713ff), to(#04470aff));
+}
+
+.CanPick:hover {
+	brightness: 1.6;
+}
+
+.CanPick:active {
+	brightness: 1.7;
+	sound: "ui_topmenu_activate";
+}
+
+.CantPick {
+	background-color: #2a2b2eff;
+}
+
+.CantPick Label {
+	color: #777777ff;
+}

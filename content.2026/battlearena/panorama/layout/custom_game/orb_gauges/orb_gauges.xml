@@ -1,0 +1,28 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/layout/custom_game/orb_gauges/orb_gauges.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/utils.js" />
+		<include src="s2r://panorama/layout/custom_game/orb_gauges/orb_gauges.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="OrbGauge">
+			<Panel class="OrbGauge">
+				<Panel>
+					<Panel id="OG_Fill" />
+				</Panel>
+				<Label text="{s:current}/{s:maximum}" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="OrbGauges_Root" hittest="false">
+		<Panel id="OG">
+			<Panel id="OG_Bars" />
+			<Panel class="KillLimit" hittest="true" onactivate="PingKillLimit()" onmouseover="DOTAShowTextTooltip(&apos;#kill_limit_hint&apos;)" onmouseout="DOTAHideTextTooltip()">
+				<Label id="KillLimit_Text" text="{s:kill_limit}" html="true" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

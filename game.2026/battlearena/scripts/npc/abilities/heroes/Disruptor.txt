@@ -1,0 +1,255 @@
+﻿"DOTAAbilities"
+{
+"disruptor_thunder_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5458"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Disruptor.ThunderStrike.Target"
+                "MaxLevel" "7"
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_THUNDER_STRIKE"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 150 180 210 240 270 300"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"
+			{
+				"value"						"800"
+				"special_bonus_shard"		"+1000"
+			}
+			"radius"						
+			{
+				"value" 					"240"
+				"special_bonus_unique_disruptor_3" "+100"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"strikes"
+			{
+				"value"						"4 5 6 7 8 9 10"
+				"special_bonus_shard"		"+2"
+			}
+
+			"strike_interval"				"1.2"
+			"strike_damage"					"50 70 90 110 150 200 300"
+			"strike_damage_bonus"
+			{
+				"value"						"0"
+				"special_bonus_unique_disruptor_consecutive_strike_damage"			"+50"
+			}
+			"slow_duration"
+			{
+				"value"						"0.1"
+				"special_bonus_unique_disruptor" ".4"
+			}
+
+			"slow_amount"					"100"
+			"shard_ground_delay"			"5"
+		}
+	}
+
+//=================================================================================================================
+// Disruptor: Glimpse
+//=================================================================================================================
+"disruptor_glimpse"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5459"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------	
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145 160 185 200"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 800 900 1000 1200 1400 1500"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"backtrack_time"			"4.0"
+			"cast_range"				"600 800 900 1000 1200 1400 1500"
+			"silence_duration"			"0"
+			"AbilityCooldown"
+			{
+				"value"									"20"
+				"special_bonus_unique_disruptor_4"		"-12"
+			}
+			"min_damage"				"50"
+			"max_damage"				
+			{
+				"value"											"150 200 250 300 350 400 450"
+				"special_bonus_unique_disruptor_9"				"250"
+			}
+			"max_distance"					"1400"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+
+//=================================================================================================================
+// Disruptor: Kinetic Field
+//=================================================================================================================
+	"disruptor_kinetic_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5460"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Disruptor.KineticField"
+                "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_KINETIC_FIELD"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900 1100 1300 1500 1700 1900 2100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"					
+				{
+					"value"			"350"
+					"affected_by_aoe_increase"	"1"
+				}
+				"formation_time"			"1"
+				"duration"					
+				{
+					"value"				"2.6 3.0 3.4 3.8 4.2 4.6 5.0"
+					"LinkedSpecialBonus"		"special_bonus_unique_disruptor_5"
+				}
+				"damage_per_second"			"0"
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_disruptor_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6812"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"1"
+				"ad_linked_abilities"			"disruptor_kinetic_field"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+//=================================================================================================================
+// Disruptor: Static Storm
+//=================================================================================================================
+	"disruptor_static_storm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5461"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Disruptor.StaticStorm.Cast"
+                "MaxLevel" "7"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_STATIC_STORM"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 175 225 275 325 375 425"
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800 900 1000 1100 1200 1300 1400"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"					
+				{
+					"value"		"500"
+					"LinkedSpecialBonus"		"special_bonus_unique_disruptor_8"
+					"affected_by_aoe_increase"	"1"
+				}
+				"pulses"					
+				{
+					"value"			"20"
+					"LinkedSpecialBonus"			"special_bonus_unique_disruptor_7"
+					"LinkedSpecialBonusField"		"value2"
+				}
+				"damage_max"				"300 375 450 525 600 675 750"
+				"duration"					
+				{
+					"value"					"6.0"
+					"LinkedSpecialBonus"		"special_bonus_unique_disruptor_7"
+				}
+		}
+	}
+}

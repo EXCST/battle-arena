@@ -1,0 +1,112 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Pugna hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_pugna"
+{
+	// ---- Nether Blast -------------------------------------------------------
+	"pugna_nether_blast"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// faster blast (rare, was -0.175)
+		"delay"
+		{
+			"base" "-0.2"
+			"mode" "ADD"
+			"cap" "4"
+			"floor" "rare"
+		}
+		// wider blast (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 45/4.5)
+		"blast_damage"
+		{
+			"base" "50"
+			"step"		"5.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Decrepify ----------------------------------------------------------
+	"pugna_decrepify"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more ally heal amp (was 10)
+		"bonus_heal_amp_pct_allies"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more spell damage (was -5)
+		"bonus_spell_damage_pct"
+		{
+			"base" "-6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Nether Ward --------------------------------------------------------
+	"pugna_nether_ward"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more mana multiplier (was 1)
+		"mana_multiplier"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Life Drain ---------------------------------------------------------
+	"pugna_life_drain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more drain (was 50/7)
+		"health_drain"
+		{
+			"base" "55"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"ally_healing"
+				{
+					"base" "55"
+					"step"		"8"
+				}
+			}
+		}
+	}
+}

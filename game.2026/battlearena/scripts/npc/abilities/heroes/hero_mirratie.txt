@@ -1,0 +1,172 @@
+"DOTAAbilities"
+{
+	"mirratie_snagshot"
+	{
+		"MaxLevel"						"7"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/mirratie_snagshot"
+		"ScriptFile"					"heroes/hero_mirratie/snagshot"
+		"AbilityCastRange"				"500 650 800 950 1100 1250 1500"
+		"AbilityCooldown"				"10"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityManaCost"				"50"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.15 0.1"
+
+		// ⚠️ Переписано с нативной базы meepo_earthbind на ability_lua
+		// (нативная база с кастомной секцией не работала в этой сборке).
+		// CreateLinearProjectile + OnProjectileHit в heroes/hero_mirratie/snagshot.lua
+		"AbilityValues"
+		{
+			"duration"				"2.0 2.25 2.5 2.75 3.0 3.25 3.5"
+			"radius"				"180 220 260 300 340 380 420"
+			"speed"					"857"
+			"tooltip_range"			"500 650 800 950 1100 1250 1500"
+		}
+
+		"precache"
+		{
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
+			"particle"  "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf"
+		}
+	}
+
+	"mirratie_smoke_out"
+	{
+		"MaxLevel"						"7"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/mirratie_smoke_out"
+		"ScriptFile"					"heroes/hero_mirratie/smoke_out"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.3 0.2"
+		"AbilityCastRange"				"700 750 800 850 900 950 1000"
+		"AbilityCooldown"				"14"
+		"AbilityManaCost"				"105"
+
+		// ⚠️ Переведено с datadriven RunScript Target POINT (не работает в этой
+		// сборке — паттерн stargazer) на ability_lua. Облако — частица + тикер
+		// (паттерн TravalerHelpers:CreateZone), дебафф — Lua-модификатор.
+		"AbilityValues"
+		{
+			"radius"				"275 300 325 350 375 400 425"
+			"duration"				"6"
+			"move_slow_pct"			"-10 -15 -20 -25 -30 -35 -40"
+			"miss_chance_pct"		"10 15 20 25 30 35 40"
+		}
+
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_riki.vsndevts"
+			"particle"					"particles/arena/units/heroes/hero_mirratie/smoke_out_bomb.vpcf"
+		}
+	}
+
+	"mirratie_sixth_sense"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/mirratie_sixth_sense"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"HasInnateModifiers"			"1"
+		"AbilityCastRange"				"940"
+
+		// Перепорт из BS (2026-08-13): аура 940 на врагов (PROVIDES_FOW_POSITION)
+		// + додж через Lua (INCOMING_DAMAGE_PERCENTAGE). Всё визуальное убрано:
+		// BLIND, EVASION_CONSTANT, backtrack-частица — давали засветы при атаке.
+		// Слепота: VisionDayRange=100 в npc_heroes_custom.txt.
+		// AbilitySpecial → AbilityValues (обязательная конвенция: иначе все 0).
+		// SetFirstLevel (BS kv.lua) → SetLevel(1) в on_npc_spawned.lua.
+		// Додж (BS INCOMING_DAMAGE_MODIFIERS) → Lua-модификатор dodge.
+		"AbilityValues"
+		{
+			"radius"				"940"
+			"bonus_evasion"			"0 10 15 20 25 30 35"
+			"dodge_chance_pct"		"0 5 7.5 10 12.5 15 18"
+		}
+
+		"Modifiers"
+		{
+			"modifier_mirratie_sixth_sense"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Aura"          	"modifier_mirratie_sixth_sense_visible"
+				"Aura_Radius"   	"%radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_ALL"
+				"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"		"%bonus_evasion"
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_BLIND"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+
+			"modifier_mirratie_sixth_sense_visible"
+			{
+				"IsHidden"			"1"
+				"IsPurgable"		"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION" "1"
+				}
+			}
+		}
+	}
+
+	"mirratie_impaling_shot"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/mirratie_impaling_shot"
+		"ScriptFile"					"heroes/hero_mirratie/impaling_shot"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"HasScepterUpgrade"				"1"
+
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.35 0.3"
+		"AbilityCastRange"				"1000 1200 1400 1600 1800 2000 2200"
+		"AbilityCooldown"				"15"
+		"AbilityManaCost"				"105"
+		"MaxLevel"						"7"
+		"AbilityChannelTime"			"2"
+		"AbilityDamage"					"200 300 400 500 600 700 800"
+
+		"AbilityUnitDamageSubType"		"DAMAGE_SUBTYPE_AIR"
+
+		// ⚠️ Конвертировано из AbilitySpecial (numbered + var_type) — в этой
+		// сборке GetSpecialValueFor возвращает 0, значения читаются через
+		// AbilityKV:Get (lib/ability_kv.lua).
+		"AbilityValues"
+		{
+			"channel_time"			"2.0 1.8 1.6 1.4 1.2 1.0 0.8"
+			"cast_range"			"1000 1200 1400 1600 1800 2000 2200"
+			"impale_range"			"600"
+			"impale_effect_pct"		"100"
+			"stun_duration"			"2.0"
+			"cast_range_scepter"	"3000"
+			"stun_duration_scepter"	"4.0"
+			"damage_scepter"		"1000 1300 1600 1900 2200 2500 2800"
+			"projectile_speed"		"1500"
+			"impale_width"			"70"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_mirratie/impaling_shot.vpcf"
+			"particle"  "particles/arena/units/heroes/hero_mirratie/impaling_shot_impale.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+		}
+	}
+}

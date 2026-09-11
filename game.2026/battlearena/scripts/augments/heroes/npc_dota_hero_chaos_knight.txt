@@ -1,0 +1,124 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Chaos Knight hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_chaos_knight"
+{
+	// ---- Chaos Bolt ---------------------------------------------------------
+	"chaos_knight_chaos_bolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 40/4)
+		"damage_max"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"damage_min"
+				{
+					"base" "45"
+					"step"		"5"
+					"mode" "ADD"
+				}
+			}
+		}
+		// faster bolt (was 100)
+		"chaos_bolt_speed"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "7"
+		}
+	}
+
+	// ---- Reality Rift -------------------------------------------------------
+	"chaos_knight_reality_rift"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more armor shred (was 1.5)
+		"armor_reduction"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Chaos Strike -------------------------------------------------------
+	"chaos_knight_chaos_strike"
+	{
+		// more chance (was 2)
+		"chance"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more crit (rare, was 10)
+		"crit_max"
+		{
+			"base" "12"
+			"floor"	"rare"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more lifesteal (was 5)
+		"lifesteal"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Phantasm -----------------------------------------------------------
+	"chaos_knight_phantasm"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more illusion outgoing (was 8)
+		"outgoing_damage"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"outgoing_damage_tooltip" "10"
+			}
+		}
+		// less incoming (was -20)
+		"incoming_damage"
+		{
+			"base" "-25"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"incoming_damage_tooltip"
+				{
+					"base" "-25"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

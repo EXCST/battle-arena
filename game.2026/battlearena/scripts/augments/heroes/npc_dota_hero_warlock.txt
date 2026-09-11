@@ -1,0 +1,188 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Warlock hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_warlock"
+{
+	// ---- Fatal Bonds --------------------------------------------------------
+	"warlock_fatal_bonds"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider search (was 50)
+		"search_aoe"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				// shard imp explode ability
+				"warlock_imp_explode"
+				{
+					"explosion_radius"	"35"
+				}
+			}
+		}
+		// more damage share (was 2)
+		"damage_share_percentage"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "6"
+
+			"bundle_abilities"
+			{
+				// shard imp explode ability
+				"warlock_imp_explode"
+				{
+					"explosion_dmg"
+					{
+						"base" 		"35" // flat
+						"step"		"4"
+						"mode" 		"ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Shadow Word --------------------------------------------------------
+	"warlock_shadow_word"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 20/3)
+		"damage"
+		{
+			"base" 		"25"
+			"step"		"4"
+			"mode" 		"ADD"
+			"cap" "10"
+		}
+		// wider spell (was 20)
+		"spell_aoe"
+		{
+			"base" 		"25"
+			"mode" 		"ADD"
+			"cap"		"5"
+		}
+	}
+
+	// ---- Upheaval -----------------------------------------------------------
+	"warlock_upheaval"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider upheaval (was 60)
+		"aoe"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more dps (was 25/3)
+		"damage_per_second"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"max_damage"
+				{
+					"base" 		"35"
+					"step"		"5"
+					"mode" 		"ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Rain of Chaos ------------------------------------------------------
+	"warlock_rain_of_chaos"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// tankier golem (was 750/80)
+		"golem_hp"
+		{
+			"base" "800"
+			"step"	"100"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"golem_hp_scepter"
+				{
+					"base" 		"550"
+					"step"		"70"
+					"mode" 		"ADD"
+				}
+				"bonus_slow_resistance" "2.5"
+				"golem_armor"			"4"
+				"tooltip_golem_armor"	"4"
+			}
+			"bundle_abilities"
+			{
+				"warlock_golem_flaming_fists"
+				{
+					"radius" "35"
+				}
+			}
+		}
+		// stronger golem (was 50/20)
+		"golem_dmg"
+		{
+			"base" "60"
+			"step"		"25"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"golem_dmg_scepter"
+				{
+					"base" 		"45"
+					"step"		"20"
+					"mode" 		"ADD"
+				}
+				"golem_movement_speed"		"12"
+			}
+			"bundle_abilities"
+			{
+				"warlock_golem_flaming_fists"
+				{
+					"damage" "15"
+				}
+				"warlock_golem_permanent_immolation"
+				{
+					"aura_damage"
+					{
+						"base" 		"12"
+						"step"		"2.5"
+						"mode" 		"ADD"
+					}
+				}
+			}
+		}
+	}
+}

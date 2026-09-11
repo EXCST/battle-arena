@@ -1,0 +1,131 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Clockwerk hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_rattletrap"
+{
+	// ---- Battery Assault ----------------------------------------------------
+	"rattletrap_battery_assault"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "7"
+		}
+		// more damage (was 15/2)
+		"damage"
+		{
+			"base" "18"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider assault (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Power Cogs ---------------------------------------------------------
+	"rattletrap_power_cogs"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle_abilities"
+			{
+				"rattletrap_jetpack"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"rattletrap_jetpack"
+				{
+					"bonus_speed" "6"
+				}
+			}
+
+			"bundle"
+			{
+				"mana_burn"
+				{
+					"base" "70"
+					"step"	"18"
+				}
+			}
+		}
+	}
+
+	// ---- Rocket Flare -------------------------------------------------------
+	"rattletrap_rocket_flare"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+
+			"cap"		"8"
+
+			"bundle"
+			{
+				"speed"			"280"
+			}
+		}
+		// more damage (was 20/2)
+		"damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Hookshot -----------------------------------------------------------
+	"rattletrap_hookshot"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 60/6)
+		"damage"
+		{
+			"base" "65"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider stun (was 30)
+		"stun_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+}

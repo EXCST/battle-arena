@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/layout/custom_game/beta_notice.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/beta_notice.js" />
+	</scripts>
+	<Panel class="BetaNotice" hittest="false">
+		<Panel id="BetaNoticePanel" visible="false" hittest="true">
+			<Panel class="BetaNotice__Overlay" />
+			<Panel class="BetaNotice__Window">
+				<Panel class="BetaNotice__TitleRow">
+					<Label class="BetaNotice__Title" id="BetaNoticeTitle1" />
+					<Label class="BetaNotice__Fun" id="BetaNoticeFun" />
+					<Label class="BetaNotice__Title" id="BetaNoticeTitle2" />
+				</Panel>
+				<Label class="BetaNotice__Subtitle" id="BetaNoticeSubtitle" />
+				<Label class="BetaNotice__Text" id="BetaNoticeText1" />
+				<Label class="BetaNotice__Text" id="BetaNoticeText2" />
+				<Label class="BetaNotice__Thanks" id="BetaNoticeThanks" />
+				<Button class="BetaNotice__Dismiss" id="BetaNoticeDismiss" onactivate="BetaNoticeHide()">
+					<Label id="BetaNoticeContinue" />
+				</Button>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

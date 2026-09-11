@@ -1,0 +1,110 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Spike hero upgrades
+// Spike overrides npc_dota_hero_bloodseeker, so upgrades live
+// in this file (GetUnitName returns npc_dota_hero_bloodseeker).
+// ============================================================
+
+"npc_dota_hero_bloodseeker"
+{
+	// ---- Dash ---------------------------------------------------------------
+	"spike_dash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (base 100-160)
+		"damage"
+		{
+			"base" "25"
+			"step" "4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Heal ---------------------------------------------------------------
+	"spike_heal"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal per sec (base 1.0)
+		"heal_per_sec"
+		{
+			"base" "0.25"
+			"step" "0.1"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more status resist (rare)
+		"status_resist"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+		// longer active (rare)
+		"active_duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+
+	// ---- Shell --------------------------------------------------------------
+	"angel_arena_shell"
+	{
+		// more return damage (base 10-16)
+		"return_damage"
+		{
+			"base" "3"
+			"step" "0.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Conclusion (ultimate) ----------------------------------------------
+	"spike_conclusion"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// longer duration (rare)
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+		// more hero damage (epic)
+		"damage_by_hero"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+		// more creep damage (epic)
+		"damage_by_creep"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+}

@@ -1,0 +1,134 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Ancient Apparition hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_ancient_apparition"
+{
+	// ---- Cold Feet ----------------------------------------------------------
+	"ancient_apparition_cold_feet"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"30"
+		}
+		// more dps (was 10/2)
+		"damage_per_second"
+		{
+			"base" "12"
+			"step" "2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// break distance stays rare-only (was 25)
+		"break_distance"
+		{
+			"floor"	"rare"
+			"base" 		"30"
+			"mode"		"ADD"
+			"cap"		"8"
+		}
+	}
+
+	// ---- Ice Vortex ---------------------------------------------------------
+	"ancient_apparition_ice_vortex"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider vortex (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"vision_aoe" "35"
+			}
+		}
+		// more dps (was 10/1)
+		"damage_per_second"
+		{
+			"base" "12"
+			"step" "1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// NEW: longer vortex duration
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Chilling Touch -----------------------------------------------------
+	"ancient_apparition_chilling_touch"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage per charge (was 20/2)
+		"damage"
+		{
+			"base" "22"
+			"step" "2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more attack range
+		"attack_range_bonus"
+		{
+			"base"			"12"
+			"cap"		"5"
+		}
+		// NEW: more charges (rare)
+		"charge_count"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+
+	// ---- Ice Blast ----------------------------------------------------------
+	"ancient_apparition_ice_blast"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"30"
+		}
+		// more shatter dps (was 20/2)
+		"damage_per_second"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// NEW: longer frostbite duration (epic only)
+		"duration"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+}

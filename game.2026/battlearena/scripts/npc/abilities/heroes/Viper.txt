@@ -1,0 +1,223 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Viper: Poison Attack
+	//=================================================================================================================
+	"viper_poison_attack"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5218"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"15" // 30
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"						"2"
+				"damage"						
+				{
+					"value"					"10 15 20 25 30 35 40"
+					"special_bonus_unique_viper_7"	"+25%"
+				}
+				"movement_speed"			
+				{
+					"value"					"3 4 5 6 7 8 9"
+					"special_bonus_unique_viper_7"	"+25%"
+				}
+				"magic_resistance"			
+				{
+					"value"			"2 3 4 5 6 7 8"
+					"special_bonus_unique_viper_4"	"+8"
+				}
+				"max_stacks"			"5"
+				"bonus_range"			"40 50 60 70 80 90 100"
+				"shard_armor_reduction"
+				{
+					"value"				"1"
+					"RequiresShard"		"1"
+				}
+				"shard_building_dmg_pct"
+				{
+					"value"				"40"
+					"RequiresShard"		"1"
+				}
+				"shard_bonus_max_stacks"
+				{
+					"value"				"3"
+					"RequiresShard"		"1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Viper: Nethertoxin
+	//=================================================================================================================
+	"viper_nethertoxin"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5219"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+                "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"900"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70"
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"min_damage"			
+				{
+					"value"		"20 30 35 40 50 60 70"
+					"LinkedSpecialBonus"	"special_bonus_unique_viper_3"
+				}
+				"max_damage"
+				{
+					"value"			"50 75 100 125 150 175 200"
+					"LinkedSpecialBonus"	"special_bonus_unique_viper_3"
+				}
+				"max_duration"			"4"
+				"radius"		
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"			"6.5 7 7.5 8"
+				"projectile_speed"	"2000"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Viper: Corrosive Skin
+	//=================================================================================================================
+	"viper_corrosive_skin"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5220"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"							"7"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"10"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"4.0"
+			"bonus_attack_speed"		"10 15 20 25 45 60 70"
+			"bonus_magic_resistance"	
+			{
+				"value"								"10 12 15 18 20 23 26"
+				"special_bonus_unique_viper_6"		"+12"
+			}
+			"damage"
+			{
+				"value"					"10 20 30 40 50 60 70"
+				"special_bonus_unique_viper_1"	"+13"
+			}
+			"max_range_tooltip"					"1400"
+			"effect_multiplier_distance"
+			{
+				"value"						"500"
+				"RequiresScepter"		"1"
+			}
+			"effect_multiplier"
+			{
+				"value"						"2"
+				"RequiresScepter"		"1"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Viper: Viper Strike
+	//=================================================================================================================
+	"viper_viper_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5221"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		"HasScepterUpgrade"			"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"5"
+
+			"damage"
+			{
+				"value"				"60 140 185 280 320 450 540"
+				"special_bonus_unique_viper_2"	"+80"
+			}
+			"bonus_movement_speed"	"-65"
+			"bonus_attack_speed"	"-45 -65 -85 -105 -125 -150 -175"
+			"AbilityCooldown"
+			{
+				"value"				"35"
+				"special_bonus_unique_viper_8"		"-50%"
+			}
+			"AbilityManaCost"
+			{
+				"value"				"125 175 250 380 450 550 750"
+				"special_bonus_unique_viper_8"		"-50%"
+			}
+			"projectile_speed"	"1200"
+			"max_charges"			"2"
+			"charge_restore_time"	"30.0"
+
+		}
+	}
+}

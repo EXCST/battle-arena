@@ -1,0 +1,221 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Keeper of the Light hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_keeper_of_the_light"
+{
+	// ---- Illuminate (custom) ------------------------------------------------
+	"keeper_of_the_light_illuminate"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"max_channel_time"
+				{
+					"base" "-0.21"
+					"mode" "MULT"
+
+					"limit"			"0"
+					"limit_base"		"3"
+				}
+			}
+			"bundle_abilities"
+			{
+				"keeper_of_the_light_spirit_form_illuminate"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+					"max_channel_time"
+					{
+						"base" "-0.21"
+						"mode" "MULT"
+
+						"limit"			"0"
+						"limit_base"		"3"
+					}
+				}
+				"keeper_of_the_light_will_o_wisp"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 75/5)
+		"total_damage"
+		{
+			"base" "85"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"keeper_of_the_light_spirit_form_illuminate"
+				{
+					"total_damage"
+					{
+						"base" "85"
+						"step"		"7"
+						"mode" "ADD"
+					}
+				}
+				"keeper_of_the_light_will_o_wisp"
+				{
+					"wisp_damage"
+					{
+						"base" "25"
+						"step"		"2.5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider illuminate (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"channel_vision_radius" "35"
+				"vision_radius" "35"
+			}
+			"bundle_abilities"
+			{
+				"keeper_of_the_light_spirit_form_illuminate"
+				{
+					"radius" "35"
+					"channel_vision_radius" "35"
+					"vision_radius" "35"
+				}
+				"keeper_of_the_light_will_o_wisp"
+				{
+					"radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Blinding Light -----------------------------------------------------
+	"keeper_of_the_light_blinding_light"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 50/5)
+		"damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider blind (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"knockback_distance" "35"
+				"duration" "0.7"
+				"miss_rate" "4"
+			}
+		}
+	}
+
+	// ---- Chakra Magic -------------------------------------------------------
+	"keeper_of_the_light_chakra_magic"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"mana_restore" "300"
+			}
+		}
+	}
+
+	// ---- Spirit Form --------------------------------------------------------
+	"keeper_of_the_light_spirit_form"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle"
+			{
+				"duration"
+				{
+					"base" "3.5"
+					"mode" "ADD"
+				}
+			}
+			"bundle_abilities"
+			{
+				"keeper_of_the_light_radiant_bind"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+					"duration"
+					{
+						"base" "1"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// more cast range (was 25)
+		"cast_range"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"keeper_of_the_light_radiant_bind"
+				{
+					"slow"
+					{
+						"base" "2.5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// more illuminate heal
+		"illuminate_heal"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"movement_speed" "6"
+			}
+		}
+	}
+}

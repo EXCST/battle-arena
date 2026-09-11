@@ -1,0 +1,828 @@
+/* Prettified by Source 2 Viewer 19.2.0.0 - https://valveresourceformat.github.io */
+
+.Augments_Root
+{
+	flow-children: down;
+	align: right top;
+	margin-top: 150px;
+	transform: translateX(100px);
+	opacity: 0;
+	transition-property: transform, opacity;
+	transition-duration: 0.15s;
+}
+
+.HUDFlipped .Augments_Root
+{
+	align: left top;
+	transform: translateX(-100px);
+}
+
+.Augments_Root.Show
+{
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+.BShopOpen_Custom .Augments_Root
+{
+	transform: translateX(100px);
+	opacity: 0;
+}
+
+.BShopOpen_Custom .HUDFlipped .Augments_Root
+{
+	transform: translateX(-100px);
+	opacity: 0;
+}
+
+#Hud:not(.BShopOpen_Custom) .Augments_Root.Show.AbilityCast
+{
+	opacity: 0.5;
+}
+
+.Augments_Controls
+{
+	flow-children: right;
+	horizontal-align: right;
+}
+
+.HUDFlipped .Augments_Controls
+{
+	flow-children: left;
+	horizontal-align: left;
+}
+
+.AugLaterBtn
+{
+	height: 40px;
+	flow-children: right;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#17141b), to(#1e232c));
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 3;
+}
+
+.HUDFlipped .AugLaterBtn
+{
+	flow-children: left;
+}
+
+.AugLaterBtn > Label
+{
+	align: center center;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: titleFont;
+	color: white;
+	letter-spacing: 1px;
+	margin: 1px 4px 0px 7px;
+}
+
+.AugLaterArrow
+{
+	width: 20px;
+	height: 16px;
+	background-image: url("s2r://panorama/images/control_icons/arrow_solid_right_png.vtex");
+	background-size: 100%;
+	margin: 0 0 0 7px;
+	vertical-align: center;
+	transition: transform 0.1s ease-in-out 0s;
+}
+
+.HUDFlipped .AugLaterArrow
+{
+	margin: 0 7px 0 0;
+}
+
+.BHideAugs .AugLaterArrow,.HUDFlipped .AugLaterArrow
+{
+	transform: rotateY(180deg);
+}
+
+.HUDFlipped .BHideAugs .AugLaterArrow
+{
+	transform: rotateY(0deg);
+}
+
+.Augments_Content
+{
+	flow-children: down;
+	width: 405px;
+	margin-top: 5px;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	padding: 5px 0 0 5px;
+}
+
+.HUDFlipped .Augments_Content
+{
+	padding: 5px 5px 0 0;
+}
+
+.BHideAugs .Augments_Content
+{
+	transform: translateX(100%);
+}
+
+.HUDFlipped .BHideAugs .Augments_Content
+{
+	transform: translateX(-100%);
+}
+
+.AugHeaderRoot
+{
+	width: 100%;
+	height: 50px;
+	box-shadow: black 0 0 3px 1px;
+	margin-top: 10px;
+}
+
+.AugTier_1 .AugHeaderRoot,
+.AugTier_2 .AugHeaderRoot,
+.AugTier_4 .AugHeaderRoot
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/augment_bg_header.vtex");
+	background-size: 100% 100%;
+	background-img-opacity: 1;
+}
+
+.AugHeader
+{
+	align: center center;
+	text-shadow: black 0 2px 0 2;
+	text-transform: uppercase;
+	padding-bottom: -1px;
+	font-size: 28px;
+	font-weight: semi-bold;
+}
+
+.AugTier_1 .AugHeader
+{
+	color: white;
+}
+
+.AugTier_2 .AugHeader
+{
+	color: #5fd3ff;
+}
+
+.AugTier_4 .AugHeader
+{
+	color: #ff00ff;
+}
+
+#AugReroll
+{
+	align: right center;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#342700), to(#2c2a26));
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 3;
+	min-width: 125px;
+	border: 2px solid white;
+	border-brush: gradient(linear, 0% 0%, 70% 0%, from(#dbc200), to(#af8700));
+	tooltip-position: left;
+}
+
+.HUDFlipped #AugReroll
+{
+	align: left center;
+}
+
+#AugReroll:hover
+{
+	brightness: 1.5;
+}
+
+#AugReroll:active
+{
+	brightness: 0.7;
+}
+
+#AugReroll > Panel
+{
+	flow-children: right;
+	align: center center;
+	padding: 7px 8px;
+}
+
+.AugRerollIcon
+{
+	width: 28px;
+	height: 31px;
+	background-image: url("s2r://panorama/images/custom_game/augment_picker/dice_icon_png.vtex");
+	background-size: 100%;
+	background-img-opacity: 0;
+	img-shadow: black 0 1px 3px 0;
+	vertical-align: center;
+	margin: 0 5px;
+}
+
+.AugRerollIcon Panel
+{
+	width: 100%;
+	height: 100%;
+	opacity-mask: url("s2r://panorama/images/custom_game/augment_picker/dice_icon_png.vtex");
+	background-color: gradient(linear, 0% 0%, 70% 0%, from(#faef00), to(#c99c00));
+}
+
+#AugReroll:active .AugRerollIcon
+{
+	pre-transform-scale2d: 0.9;
+}
+
+#AugReroll Label
+{
+	vertical-align: center;
+	color: white;
+	text-shadow: black 0 1px 0 2;
+}
+
+#Augments_Cards
+{
+	flow-children: down;
+	width: 100%;
+	padding: 0 0 10px 0px;
+}
+
+.AugCard
+{
+	flow-children: down;
+	width: 100%;
+	margin-top: 10px;
+	transition: transform 2.1s ease-in-out 0s;
+	transform: translateX(100%);
+}
+
+.AugCardWrap
+{
+	width: 100%;
+}
+
+.HUDFlipped .AugCard
+{
+	transform: translateX(-100%);
+}
+
+.AugCard:hover .AugCardBody,.AugCard:hover #AugSubValues
+{
+	brightness: 1.3;
+}
+
+.AugCard:active .AugCardBody,.AugCard:active #AugSubValues
+{
+	brightness: 0.7;
+}
+
+.AugCardBody
+{
+	width: 100%;
+	box-shadow: black 0 0 3px 1px;
+}
+
+.AugTier_1 .AugCardBody,
+.AugTier_2 .AugCardBody,
+.AugTier_4 .AugCardBody
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/augment_bg_header.vtex");
+	background-size: 100% 100%;
+	background-img-opacity: 0.85;
+}
+
+.AugCardMain
+{
+	flow-children: right;
+	width: 100%;
+	padding: 8px;
+}
+
+#AugFavBtn
+{
+	width: 26px;
+	height: 26px;
+	horizontal-align: right;
+	margin: 4px;
+}
+
+.HUDFlipped #AugFavBtn
+{
+	margin-right: 17px;
+}
+
+#AugFavBtn:active
+{
+	pre-transform-scale2d: 0.9;
+}
+
+#AugFavBtn > Panel
+{
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+
+.StarBorder,.StarColor
+{
+	transition: background-image 0.1s ease-in-out 0s;
+}
+
+.StarColor
+{
+	opacity: 0.25;
+	transition: opacity 0.1s ease-in-out 0s, brightness 0.1s ease-in-out 0s;
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_off_png.vtex");
+	brightness: 1.3;
+}
+
+#AugFavBtn:hover .StarColor,.BFavorite #AugFavBtn .StarColor
+{
+	opacity: 1;
+	brightness: 1.5;
+}
+
+.StarBorder
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_border_png.vtex");
+}
+
+.BFavorite #AugFavBtn .StarColor
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_8_png.vtex");
+}
+
+.AugStep
+{
+	min-width: 24px;
+	horizontal-align: right;
+	margin: 34px 3px 0 0;
+	background-image: url("s2r://panorama/images/hud/reborn/arrow_icon_psd.vtex");
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	font-size: 16px;
+	padding-top: 20px;
+	text-align: center;
+	font-family: monospaceNumbersFont;
+	color: white;
+	wash-color: #00efff;
+	img-shadow: black 0 0 32px 2;
+	text-shadow: rgba(0, 0, 0, 0.336) 0px 0px 3px 4;
+	visibility: collapse;
+}
+
+.BHasStep .AugStep
+{
+	visibility: visible;
+}
+
+.AugFavOverlay
+{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: gradient( linear, -10% 56%, 80% -90%, from(rgba(253, 228, 1, 0.23)), color-stop(0.2, rgba(253, 175, 1, 0.12)), to(transparent) );
+	border: 2px solid white;
+	border-brush: gradient(linear, 0% 0%, 33% 150%, from(#fdf901), to(#fd7601));
+	visibility: collapse;
+}
+
+.BFavorite .AugFavOverlay
+{
+	visibility: visible;
+}
+
+#AugIcon
+{
+	width: 60px;
+	height: 60px;
+	box-shadow: rgb(0, 0, 0) 0px 0px 4px 0px;
+}
+
+.AugIconShadow
+{
+	width: 100%;
+	height: 100%;
+	box-shadow: inset rgb(0, 0, 0) 0px 0px 7px 0px;
+}
+
+.AugIconBorder
+{
+	width: 100%;
+	height: 100%;
+	border: 2px solid white;
+}
+
+.AugTier_1 .AugIconBorder
+{
+	border-brush: gradient(linear, 0% 100%, 100% 100%, from(#818499), to(#151619));
+}
+
+.AugTier_2 .AugIconBorder
+{
+	border-brush: gradient(linear, 0% 100%, 100% 100%, from(#1c699a), to(#151619));
+}
+
+.AugTier_4 .AugIconBorder
+{
+	border-brush: gradient(linear, 0% 100%, 100% 100%, from(#9f42bb), to(#151619));
+}
+
+.AugIconTier
+{
+	width: 23px;
+	height: 23px;
+	horizontal-align: right;
+	background-image: url("s2r://panorama/images/custom_game/collection/cosmetics/item_equipped_png.vtex");
+	background-size: 21px;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	visibility: collapse;
+	wash-color: #00a5ff;
+	brightness: 2.2;
+}
+
+.AugCard.MinTier_2 .AugIconTier,.AugCard.MinTier_4 .AugIconTier
+{
+	visibility: visible;
+}
+
+.MinTier_4 .AugIconTier
+{
+	wash-color: #cb37bd;
+}
+
+.AugTextBlock
+{
+	flow-children: down;
+	margin-left: 8px;
+}
+
+.AugAbilityName
+{
+	text-transform: uppercase;
+	font-size: 21px;
+	color: white;
+	text-shadow: black 0 1px 0 2;
+}
+
+.AugDesc
+{
+	color: #d3d3d3;
+	font-weight: lighter;
+	font-size: 17px;
+	text-shadow: rgba(0, 0, 0, 0.336) 0px 0px 3px 4;
+	margin-top: 2px;
+}
+
+.AugCounter
+{
+	visibility: collapse;
+	margin-top: 5px;
+	color: #e8e8e8;
+	text-shadow: black 0 1px 0 2;
+}
+
+.BMaxed .AugCounter
+{
+	visibility: visible;
+}
+
+#AugLevelsRoot
+{
+	flow-children: right-wrap;
+	max-width: 150px;
+	visibility: collapse;
+	margin-top: 5px;
+	padding-left: -3px;
+}
+
+.BMaxed #AugLevelsRoot
+{
+	visibility: visible;
+}
+
+.AugLevelDot
+{
+	width: 10px;
+	height: 5px;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(rgb(17, 17, 17)), to(black));
+	border: 1px solid #8d8d8d;
+	margin-left: 5px;
+}
+
+.BLevelOwned
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#e7d291), to(#7c6c3e));
+	border: 1px solid #f3d011;
+}
+
+.AugTier_1 .BLevelFromAug
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(rgb(65, 65, 65)), to(#616161));
+	border: 1px solid #b2b2b2;
+	box-shadow: #b0b0b0 0 0 5px 0;
+}
+
+.AugTier_2 .BLevelFromAug
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(rgb(32, 25, 103)), to(#00aecb));
+	border: 1px solid #242a86;
+	box-shadow: #00d2d2 0 0 5px 0;
+}
+
+.AugTier_4 .BLevelFromAug
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(rgb(110, 67, 99)), to(#9b3289));
+	border: 1px solid #55004e;
+	box-shadow: #ff4df4 0 0 5px 0;
+}
+
+.AugLevels
+{
+	width: 200px;
+	margin-top: 3px;
+	color: #e8e8e8;
+	text-shadow: black 0 1px 0 2;
+}
+
+.AugLevelsArrow
+{
+	width: 21px;
+	height: 20px;
+	background-image: url("s2r://panorama/images/control_icons/arrow_solid_right_png.vtex");
+	background-size: 13px 10px;
+	background-position: 55% 47%;
+	background-repeat: no-repeat;
+	wash-color: #e8e8e8;
+}
+
+.AugLevelsValue
+{
+	color: #e4ba25;
+}
+
+#AugSubValues
+{
+	flow-children: down;
+	visibility: collapse;
+	box-shadow: black 0 0 3px 0;
+	width: 100%;
+	padding: 3px 6px 6px 6px;
+	margin: 0 0 0 15px;
+	z-index: -1;
+}
+
+.HUDFlipped #AugSubValues
+{
+	margin: 0 15px 0 0;
+}
+
+.AugTier_1 #AugSubValues
+{
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#4f515f), to(#151619));
+}
+
+.AugTier_2 #AugSubValues
+{
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#2d4863), to(#11151c));
+}
+
+.AugTier_4 #AugSubValues
+{
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#54395f), to(#180919));
+}
+
+.BHasSubValues #AugSubValues
+{
+	visibility: visible;
+}
+
+.AugSubValue
+{
+	flow-children: right;
+	margin-top: 3px;
+}
+
+.AugSubValue Label
+{
+	font-size: 14px;
+	margin-left: 4px;
+	background-repeat: no-repeat;
+	background-position: 0px 0%;
+	vertical-align: center;
+	color: #d7d7d7;
+}
+
+.AugSubValue Image
+{
+	width: 15px;
+	height: 15px;
+	vertical-align: center;
+	wash-color: #d7d7d7;
+}
+
+#LinkedAbilityIcon
+{
+	width: 24px;
+	height: 24px;
+	margin-left: 4px;
+	visibility: collapse;
+	vertical-align: center;
+	box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 1px 1px;
+}
+
+.BLinkedAbility #LinkedAbilityIcon
+{
+	visibility: visible;
+}
+
+
+
+
+
+
+
+.TextSub_1
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#4680ad), to(#c4d2ad));
+	font-weight: semi-bold;
+}
+
+.TextSub_2
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#df9724), to(#fee1b8));
+	font-weight: semi-bold;
+}
+
+
+
+
+
+
+
+
+
+.AP_ContentBox
+{
+	width: 100%;
+	height: 50px;
+}
+
+.AP_Content
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/augment_bg_common_png.vtex");
+	background-size: 100%;
+	width: 100%;
+	height: 45px;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	border-left: 3px solid white;
+	border-brush: gradient( linear, 0% 100%, 0% 0%, from(#16181a), color-stop(0.1, #16181a), color-stop(0.25, #44484c), color-stop(0.5, #44484c), color-stop(0.75, #44484c), color-stop(0.9, rgba(114, 118, 123, 0.8)), to(rgba(114, 118, 123, 0.8)) );
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	flow-children: right;
+	background-color: black;
+	background-img-opacity: 0.2;
+	padding-top: 2px;
+	box-shadow: rgba(0, 0, 0, 0.6) 0 1px 2px 1;
+}
+
+.HUDFlipped .AP_Content
+{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.AP_TimerBackground
+{
+	width: 100%;
+	height: 15px;
+	background-color: #3a3a3a;
+	vertical-align: bottom;
+	border-bottom-left-radius: 9px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0 1px 2px 1;
+	transition-duration: 0.1s;
+	transition-property: transform;
+	transform: translateY(-15px);
+}
+
+.HUDFlipped .AP_TimerBackground
+{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 9px;
+}
+
+.BAutoPickFavs .AP_TimerBackground
+{
+	transform: translateY(0px);
+}
+
+#AP_Timer
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(rgba(255, 114, 38, 0.8)), to(rgba(235, 190, 44, 0.8)));
+	animation-name: test-opacity;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes 'test-opacity'
+{
+	0%
+	{
+		opacity-brush: gradient( linear, 0% 0%, 100% 0%, from(white), color-stop(1, white), color-stop(1, transparent), to(transparent) );
+	}
+	
+	100%
+	{
+		opacity-brush: gradient( linear, 0% 0%, 100% 0%, from(white), color-stop(0, white), color-stop(0, transparent), to(transparent) );
+	}
+	
+}
+
+#AP_Toggle
+{
+	vertical-align: center;
+	margin: 0 7px 0 10px;
+	tooltip-position: left;
+}
+
+.HUDFlipped #AP_Toggle
+{
+	tooltip-position: right;
+}
+
+#AP_Toggle Label
+{
+	color: rgb(163, 169, 175);
+	text-transform: uppercase;
+	font-size: 15px;
+	line-height: 16px;
+	height: 34px;
+	width: 131px;
+	text-overflow: shrink;
+	vertical-align: center;
+	margin-left: 13px;
+	text-shadow: rgba(0, 0, 0, 0.7) 0 1px 0 2;
+}
+
+#AP_Toggle:hover Label,#AP_Toggle:selected Label
+{
+	color: rgb(196, 204, 212);
+}
+
+.AP_Button
+{
+	height: 35px;
+	width: 35px;
+	border-radius: 50px;
+	background-color: gradient(linear, 0% 100%, 0% 0%, from(rgb(79, 40, 18)), to(rgb(84, 74, 47)));
+	border: 2px solid white;
+	border-brush: gradient(linear, 0% 100%, 0% 0%, from(rgba(17, 1, 0, 0.77)), to(rgba(255, 236, 216, 0.1)));
+	vertical-align: center;
+	box-shadow: black 0 0 3px 1px;
+}
+
+.AP_Button:hover
+{
+	brightness: 1.3;
+}
+
+.AP_Button:active
+{
+	brightness: 0.7;
+}
+
+.AP_Button Label
+{
+	color: #ffefb9;
+	font-size: 16px;
+	font-weight: semi-bold;
+	align: center center;
+	text-align: center;
+	height: 19px;
+	text-overflow: shrink;
+	width: 100%;
+	text-shadow: rgba(0, 0, 0, 0.7) 0 1px 0 2;
+}
+
+.AP_Current
+{
+	color: #ffd02e;
+	vertical-align: center;
+	font-weight: semi-bold;
+	padding: 0 9px 0 8px;
+	text-shadow: rgba(0, 0, 0, 0.7) 0 1px 0 2;
+	width: fit-children;
+	text-align: center;
+}
+
+.AP_Star
+{
+	width: 26px;
+	height: 26px;
+	align: right center;
+	margin-right: 5px;
+}
+

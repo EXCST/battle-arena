@@ -1,0 +1,661 @@
+/* Prettified by Source 2 Viewer 19.2.0.0 - https://valveresourceformat.github.io */
+
+.Augments_Root
+{
+	width: 100%;
+	height: 100%;
+}
+
+#AugBook
+{
+	transform: translateY(20px);
+	opacity: 0;
+	transition-property: opacity, transform;
+	transition-duration: 0.15s;
+	vertical-align: bottom;
+	width: 440px;
+}
+
+.npc_dota_hero_invoker #AugBook
+{
+	width: 540px;
+}
+
+#AugBook.BottomView
+{
+	transform: translateY(-20px);
+}
+
+#AugBook.BottomView
+{
+	vertical-align: top;
+}
+
+#AugBook.ShowAugBook
+{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+#AugBook_Data
+{
+	flow-children: down;
+}
+
+.BottomView #AugBook_Data
+{
+	flow-children: up;
+}
+
+#AB_List
+{
+	flow-children: down;
+	horizontal-align: center;
+	padding: 2px;
+	vertical-align: bottom;
+	background-color: #19181c;
+	box-shadow: rgba(0, 0, 0, 1) 0px 0px 4px 0px;
+	width: 100%;
+}
+
+#AB_Header
+{
+	width: 100%;
+	height: 30px;
+	background-color: #252129;
+}
+
+#AB_Header Label
+{
+	text-transform: uppercase;
+	color: #949296;
+	align: center center;
+	text-align: center;
+	margin-top: 1px;
+}
+
+#AB_Buttons
+{
+	flow-children: down;
+	horizontal-align: center;
+}
+
+#AB_Buttons > Panel
+{
+	flow-children: right;
+	padding-right: 6px;
+	margin: 5px 0;
+	horizontal-align: center;
+}
+
+.AugCard
+{
+	margin-left: 6px;
+	transition-property: brightness, transform;
+	transition-duration: 0.15s;
+	visibility: collapse;
+}
+
+.AugCard.BAbilityHasAugs
+{
+	visibility: visible;
+}
+
+.AugCard:hover DOTAAbilityImage
+{
+	brightness: 2;
+}
+
+.PressScaleAnimation
+{
+	transition-property: brightness, transform;
+	transition-duration: 0.15s;
+}
+
+.AugCard:active .PressScaleAnimation
+{
+	brightness: 0.3;
+	transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.AugCard Label
+{
+	background-color: #252129;
+	border: 2px solid rgba(0, 0, 0, 0.85);
+	color: #c7c7c7;
+	text-align: center;
+	horizontal-align: center;
+	width: 34px;
+	height: 25px;
+	border-radius: 2px;
+	text-overflow: shrink;
+}
+
+.AugCard.Active Label
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#d0ac2f), to(#ffe200));
+}
+
+.AugCard DOTAAbilityImage
+{
+	height: 55px;
+	width: 55px;
+	margin-top: 9px;
+}
+
+.AbiltiyBorder
+{
+	height: 55px;
+	width: 55px;
+	vertical-align: bottom;
+	background-image: url("s2r://panorama/images/hud/reborn/ability_bevel_psd.vtex");
+	background-size: 100%;
+}
+
+.AugCard.Active .AbiltiyBorder
+{
+	wash-color: gold;
+	brightness: 4;
+}
+
+.AB_List
+{
+	flow-children: down;
+	padding: 12px 0 12px 12px;
+	opacity: 0;
+	height: 0px;
+	width: 100%;
+	max-height: 660px;
+}
+
+.LinesApplied_2 .AB_List
+{
+	max-height: 600px;
+}
+
+.AB_List.Show
+{
+	opacity: 1;
+	height: fit-children;
+}
+
+.AB_ListHeader
+{
+	flow-children: right;
+}
+
+.AugLineHeader
+{
+	color: #e6e6e6;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-left: 5px;
+}
+
+.FavoriteOverlay
+{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: gradient( linear, -10% 56%, 80% -90%, from(rgba(253, 228, 1, 0.23)), color-stop(0.2, rgba(253, 175, 1, 0.12)), to(transparent) );
+	visibility: collapse;
+}
+
+.BFavorite .FavoriteOverlay
+{
+	visibility: visible;
+}
+
+#AugLines
+{
+	flow-children: down;
+	margin-top: 4px;
+	overflow: clip scroll;
+	padding-top: 0px;
+	width: 100%;
+	padding-right: 12px;
+}
+
+.AugLine
+{
+	flow-children: right;
+	width: 100%;
+}
+
+#LinkedAbilityIcon
+{
+	width: 22px;
+	height: 22px;
+	margin-right: 3px;
+	visibility: collapse;
+}
+
+.BLinkedAbility #LinkedAbilityIcon
+{
+	visibility: visible;
+}
+
+.TotalAugs
+{
+	min-width: 30px;
+	height: 100%;
+	text-align: center;
+	font-size: 20px;
+	color: #e6e6e6;
+}
+
+.AugCountBox
+{
+	min-width: 30px;
+	height: 27px;
+	background-color: rgb(21, 22, 26);
+	border: 1px solid #757b85;
+	border-radius: 3px;
+	padding: 2px 4px;
+	vertical-align: center;
+}
+
+.BFullAug .AugCountBox
+{
+	border: 1px solid #fba211;
+	box-shadow: 0 0 1px 0 #fba211;
+}
+
+.BFullAug .AugCountBox Label
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#fba211), to(#fff27b));
+}
+
+.AugCountBox Panel
+{
+	align: center center;
+	flow-children: right;
+}
+
+.AugCountBox Label
+{
+	text-align: center;
+	font-size: 17px;
+	color: #e6e6e6;
+	font-family: monospaceNumbersFont;
+}
+
+.AugCountLimit
+{
+	visibility: collapse;
+	margin-left: -2px;
+}
+
+.BMaxed .AugCountLimit
+{
+	visibility: visible;
+}
+
+.BLinked .AugCountBox
+{
+	visibility: collapse;
+}
+
+.AugTree
+{
+	visibility: collapse;
+	height: 22px;
+	width: 30px;
+	background-image: url("s2r://panorama/images/custom_game/augments/augment_tree_png.vtex");
+	background-size: 100%;
+	wash-color: #b4bbd6;
+}
+
+.LastAugLine .AugTree
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/augment_tree_end_png.vtex");
+}
+
+.BLinked .AugTree
+{
+	visibility: visible;
+}
+
+.AugName
+{
+	color: #6e87a8;
+	text-transform: uppercase;
+	vertical-align: center;
+	color: #ffffff;
+	text-shadow: rgba(0, 0, 0, 0.336) 0px 0px 10px 5;
+	font-weight: lighter;
+	margin-left: 5px;
+	max-width: 280px;
+	text-overflow: clip;
+}
+
+.BLinked .AugName
+{
+	margin-left: 0px;
+}
+
+#AugList_generic .AugName,#AugList_generic .AugValue
+{
+	font-size: 16px;
+	margin-top: 4px;
+	margin-bottom: 3px;
+}
+
+.AugValue
+{
+	color: #474e59;
+	margin: 0 3px;
+	vertical-align: center;
+	color: #858585;
+	text-shadow: rgba(0, 0, 0, 0.336) 0px 0px 10px 5;
+	font-weight: semi-bold;
+	text-overflow: shrink;
+}
+
+.BHasAugs .AugValue
+{
+	color: white;
+}
+
+#AugList_generic .AugTierBox:not(.BShowAll) .AugLinesBox:not(.BHasAugs)
+{
+	visibility: collapse;
+	margin: 0;
+}
+
+#AugList_generic .AugValue
+{
+	visibility: collapse;
+}
+
+#AugList_generic .AugLinesBox
+{
+	padding: 0;
+}
+
+#AugBookBtn
+{
+	width: 58px;
+	height: 58px;
+	vertical-align: bottom;
+	margin: 0 1px 26px 0;
+	visibility: collapse;
+	background-image: url("s2r://panorama/images/custom_game/augments_icon_png.vtex");
+	background-size: 100%;
+	saturation: 0;
+	wash-color: #b4b4b4;
+	contrast: 1.3;
+	transition-property: wash-color, saturation, brightness, contrast;
+	transition-duration: 0.15s;
+}
+
+#AugBookBtn.Visible,.IsLocalPlayerSpectating #AugBookBtn
+{
+	visibility: visible;
+}
+
+#AugBookBtn:hover,.ShowAugBook #AugBookBtn
+{
+	saturation: 1;
+	wash-color: transparent;
+	contrast: 1;
+}
+
+.ShowAugBook #AugBookBtn:hover
+{
+	brightness: 1.25;
+}
+
+#AugBookBtn:active,.ShowAugBook #AugBookBtn:active
+{
+	brightness: 0.4;
+}
+
+#FavBtn
+{
+	width: 21px;
+	height: 21px;
+	horizontal-align: right;
+	margin: 5px;
+}
+
+#FavBtn:active
+{
+	pre-transform-scale2d: 0.9;
+}
+
+#FavBtn > Panel
+{
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+
+.StarBorder,.StarColor
+{
+	transition: background-image 0.1s ease-in-out 0s;
+}
+
+.StarColor
+{
+	opacity: 0.25;
+	transition: opacity 0.1s ease-in-out 0s, brightness 0.1s ease-in-out 0s;
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_off_png.vtex");
+	brightness: 1.3;
+}
+
+#FavBtn:hover .StarColor,.BFavorite #FavBtn .StarColor
+{
+	opacity: 1;
+	brightness: 1.5;
+}
+
+.StarBorder
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_border_png.vtex");
+}
+
+.BFavorite #FavBtn .StarColor
+{
+	background-image: url("s2r://panorama/images/custom_game/augments/fav_star_8_png.vtex");
+}
+
+#AugBook_Lists
+{
+	width: 100%;
+	margin-bottom: 136px;
+	background-color: #19171c;
+	box-shadow: rgba(0, 0, 0, 1) 0px 0px 4px 0px;
+}
+
+.LinesApplied_2 #AugBook_Lists
+{
+	margin-bottom: 200px;
+}
+
+.BottomView #AugBook_Lists
+{
+	margin-bottom: 0px;
+	margin-top: 136px;
+}
+
+.LinesApplied_2.BottomView #AugBook_Lists,.LinesApplied_2.BottomView #AugList_Detail
+{
+	margin-bottom: 0px;
+	margin-top: 200px;
+}
+
+.BottomView #AB_List
+{
+	vertical-align: top;
+}
+
+.AugLinesBox
+{
+	width: 100%;
+}
+
+.AugLinesBox
+{
+	width: 100%;
+	margin-top: 5px;
+	transition: background-image 0.05s ease-in-out 0s;
+}
+
+.AugLinesBox.MinTier_1
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(rgb(79, 79, 79)), to(rgb(17, 17, 17)));
+	border: 1px solid #d8ddff;
+}
+
+.BFavorite.AugLinesBox.MinTier_1
+{
+	border-color: white;
+	border-brush: gradient(linear, 0% 0%, 90% 0%, from(#d8ddff), to(#fda000));
+}
+
+.AugLinesBox.MinTier_2
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(rgb(47, 64, 79)), to(rgb(17, 17, 17)));
+	border: 1px solid #2dafff;
+}
+
+.BFavorite.AugLinesBox.MinTier_2
+{
+	border-color: white;
+	border-brush: gradient(linear, 0% 0%, 90% 0%, from(#2dafff), to(#fda000));
+}
+
+.AugLinesBox.MinTier_4
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(rgb(66, 41, 79)), to(rgb(17, 17, 17)));
+	border: 1px solid #d95aff;
+}
+
+.BFavorite.AugLinesBox.MinTier_4
+{
+	border-color: white;
+	border-brush: gradient(linear, 0% 0%, 90% 0%, from(#d95aff), to(#fda000));
+}
+
+.AL_Content
+{
+	flow-children: down;
+	vertical-align: center;
+	width: 100%;
+	margin: 10px 26px 10px 10px;
+}
+
+#AugList_generic .AL_Content
+{
+	margin: 0 26px 0 6px;
+}
+
+#AL_Main,#AL_Linked
+{
+	width: 100%;
+	flow-children: down;
+}
+
+#AugList_generic #AugLines
+{
+	padding-top: -10px;
+}
+
+.AugTierBox
+{
+	width: 100%;
+	flow-children: down;
+	margin-top: 15px;
+}
+
+#ATB_Header
+{
+	width: 100%;
+	flow-children: right;
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#4f515f), to(#151619));
+	border-brush: gradient(linear, 0% 100%, 0% 0%, from(#8e8e8e), to(#f2f2f2));
+	padding: 5px;
+	border: 1px solid white;
+}
+
+#ATB_Header:hover
+{
+	brightness: 1.5;
+}
+
+#ATB_Tier_2 #ATB_Header
+{
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#2d4863), to(#11151c));
+	border-brush: gradient(linear, 0% 100%, 0% 0%, from(#2848cb), to(#7a9cd6));
+}
+
+#ATB_Tier_4 #ATB_Header
+{
+	background-color: gradient(linear, 0% 100%, 100% 100%, from(#54395f), to(#180919));
+	border-brush: gradient(linear, 0% 100%, 0% 0%, from(#be1fcb), to(#cc72d6));
+}
+
+.ATB_Title
+{
+	text-transform: uppercase;
+	color: gradient(linear, 0% 100%, 0% 0%, from(#d6d6d6), to(white));
+	text-shadow: rgb(0, 0, 0) 0 0 4px 3;
+}
+
+#ATB_Tier_2 .ATB_Title
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#5654d6), to(#a5b7ff));
+}
+
+#ATB_Tier_4 .ATB_Title
+{
+	color: gradient(linear, 0% 100%, 0% 0%, from(#b532d6), to(#ffa8f6));
+}
+
+.ATB_Minimize
+{
+	height: 100%;
+	width: height-percentage(100%);
+	align: right center;
+	background-image: url("s2r://panorama/images/custom_game/single_arrow_left_png_png.vtex");
+	background-size: 10px 20px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	transform: rotateZ(-90deg);
+	wash-color: #29c527;
+}
+
+.BShowAll .ATB_Minimize
+{
+	transform: rotateZ(90deg);
+	wash-color: #d42318;
+}
+
+#ATB_List
+{
+	flow-children: down;
+	width: 100%;
+}
+
+#AugIconImg
+{
+	width: 40px;
+	height: 40px;
+	visibility: collapse;
+	margin: 4px 3px;
+	vertical-align: center;
+}
+
+#AugIconImg > Panel
+{
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from(black), color-stop(0.04, rgba(0, 0, 0, 0.9)), color-stop(0.08, transparent), color-stop(0.92, transparent), color-stop(0.96, rgba(0, 0, 0, 0.9)), to(black) ), gradient( linear, 0% 0%, 0% 100%, from(black), color-stop(0.04, rgba(0, 0, 0, 0.9)), color-stop(0.08, transparent), color-stop(0.92, transparent), color-stop(0.96, rgba(0, 0, 0, 0.9)), to(black) ), gradient( radial, 50% 50%, 0% 0%, 60% 60%, from(transparent), color-stop(0.8, transparent), to(rgba(0, 0, 0, 0.87)) );
+}
+
+#AugList_generic #AugIconImg
+{
+	visibility: visible;
+}
+

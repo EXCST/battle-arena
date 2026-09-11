@@ -1,0 +1,228 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Obsidian Destroyer: Arcane Orb
+	//=================================================================================================================
+	"obsidian_destroyer_arcane_orb"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5391"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_ObsidianDestroyer.ArcaneOrb"
+		
+		"AbilityCastRange"				"450"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"AbilityCooldown"				"6 5 4 3 2 1 0"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"mana_pool_damage_pct"	
+			{
+				"value"										"13 14 15 16 17 17.5 18"
+				"special_bonus_unique_outworld_devourer"	"+2"
+			}
+			"mana_cost_percentage"							"20"
+			"bounce_radius"
+			{
+				"value"										"0"			
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	//=================================================================================================================
+	// Obsidian Destroyer: Astral Imprisonment
+	//=================================================================================================================
+	"obsidian_destroyer_astral_imprisonment"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5392"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+        // "MaxLevel"						"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.25"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5" // applies multiple modifiers
+
+		"AbilityValues"
+		{
+		  "prison_duration"                                   "1.5 2.0 2.5 3.0 3.5 4.0 4.5"
+		  "damage"                                            "120 200 280 360 450 600 700"
+		  "mana_capacity_steal"
+		  {
+			"value"                                           "16 18 20 22 23 24 25"
+			"special_bonus_shard"                             "+5"
+		  }
+		  "mana_capacity_duration"                            "30 40 50 60 62 64 66"
+		  "allied_movement_speed_pct"
+		  {
+			"value"                                           "0"
+			"special_bonus_shard"                             "+70"
+		  }
+		  "damage_radius"                                     "0"
+		  "AbilityCastRange"
+		  {
+			"value"                                           "650"
+			"special_bonus_unique_outworld_devourer_astral_castrange"  "+100"
+		  }
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+
+
+	//=================================================================================================================
+	// Obsidian Destroyer: Essence Aura
+	//=================================================================================================================
+	"obsidian_destroyer_essence_aura"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilitySound"					"Hero_ObsidianDestroyer.EssenceAura"
+        "MaxLevel" "7"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"1200"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_mana"	    "150 250 350 450 550 650 750"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"restore_amount"	"10 15 20 25 30 35 40"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"restore_chance"		"40"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"intelligence_bonus"	"4"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"intelligence_duration"	"30"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Obsidian Destroyer: Equilibrium (Essence Flux)
+	//=================================================================================================================
+	"obsidian_destroyer_equilibrium"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"		
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"HasScepterUpgrade"				"1"
+        "MaxLevel" "7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.75"
+						
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"proc_chance"	"30"
+			"mana_restore"	"25 35 45 55 56 57 58"
+			"mana_capacity_steal" 	"5"
+			"mana_capacity_duration"	"30 40 50 60 70 80 90"
+			"shard_bonus_mana"			"300"
+			"shard_mana_duration"		"10"
+
+			"scepter_barrier_threshold"	"20"
+			"scepter_barrier_duration"	"15"
+			"scepter_barrier_cooldown"	"60"
+			"scepter_max_mana_barrier_pct"	"25"
+		
+		}
+	}
+
+	//=================================================================================================================
+	// Obsidian Destroyer: Sanity's Eclipse
+	//=================================================================================================================
+	"obsidian_destroyer_sanity_eclipse"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5394"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.25 0.25 0.25"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_ObsidianDestroyer.SanityEclipse"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"160 145 130 115 100 85 70"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 325 450 600 700 800"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"base_damage"				"200 300 400 500 600 700 800"
+				"radius"					
+				{
+					"value"			"400 500 600 700 800 900 1000"
+					"affected_by_aoe_increase"	"1"
+				}
+				"cast_range"					"700"
+				"damage_multiplier"
+				{
+					"value"					"0.4"
+					"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer_4"
+					"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				}
+				"illusion_bonus_damage"	"200"
+				"debuff_duration"	"7"
+				"percentage_damage"	"100"
+				"percentage_heal"	"150"
+		}
+	}
+}

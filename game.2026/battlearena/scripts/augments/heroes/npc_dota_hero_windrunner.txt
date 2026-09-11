@@ -1,0 +1,110 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Windranger hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_windrunner"
+{
+	// ---- Shackleshot --------------------------------------------------------
+	"windrunner_shackleshot"
+	{
+		// wider angle (was 7)
+		"shackle_angle"
+		{
+			"base" "9"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// longer shackle distance (was 100)
+		"shackle_distance"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Powershot ----------------------------------------------------------
+	"windrunner_powershot"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 60/3)
+		"powershot_damage"
+		{
+			"base" "65"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider arrow (was 20)
+		"arrow_width"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"vision_radius" "25"
+			}
+		}
+	}
+
+	// ---- Windrun ------------------------------------------------------------
+	"windrunner_windrun"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "6"
+			"bundle_abilities"
+			{
+				"windrunner_gale_force"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more move speed (was 4)
+		"movespeed_bonus_pct"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"windrunner_gale_force"
+				{
+					"wind_strength" "45"
+				}
+			}
+		}
+	}
+
+	// ---- Focus Fire ---------------------------------------------------------
+	"windrunner_focusfire"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// less damage reduction (was 2)
+		"focusfire_damage_reduction"
+		{
+			"base" 		"3"
+			"mode" 		"ADD"
+			"cap" "6"
+		}
+	}
+}

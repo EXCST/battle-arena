@@ -1,0 +1,128 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Spectre hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_spectre"
+{
+	// ---- Spectral Dagger ----------------------------------------------------
+	"spectre_spectral_dagger"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/5)
+		"damage"
+		{
+			"base" "45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider dagger (was 40)
+		"dagger_radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"speed"		"170"
+			}
+		}
+	}
+
+	// ---- Shadow Step --------------------------------------------------------
+	"spectre_shadow_step"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+
+			"cap"		"6"
+
+			"bundle"
+			{
+				"duration"		"1"
+			}
+		}
+
+		// less incoming (was -10)
+		"tooltip_illusion_total_damage_incoming"
+		{
+			"base"			"-12"
+			"cap" 	"5"
+
+			"bundle"
+			{
+				"illusion_damage_incoming"	"-12"
+			}
+		}
+
+		// more outgoing (was 10)
+		"tooltip_illusion_outgoing_damage"
+		{
+			"base"			"12"
+			"cap" "5"
+
+			"bundle"
+			{
+				"illusion_outgoing_damage"			"12"
+			}
+		}
+	}
+
+	// ---- Dispersion ---------------------------------------------------------
+	"spectre_dispersion"
+	{
+		// wider dispersion (was 30)
+		"max_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Haunt --------------------------------------------------------------
+	"spectre_haunt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more outgoing (was 8)
+		"illusion_damage_outgoing"
+		{
+			"base" "10"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"tooltip_outgoing" "10"
+			}
+		}
+		// less incoming (was -10)
+		"illusion_damage_incoming"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tooltip_illusion_total_damage_incoming"
+				{
+					"base"			"-12"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

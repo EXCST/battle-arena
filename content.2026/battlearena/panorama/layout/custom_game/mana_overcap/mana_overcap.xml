@@ -1,0 +1,12 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/mana_overcap.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/mana_pool.js" />
+	</scripts>
+	<Panel class="ManaOvercapRoot" hittest="false">
+		<Label id="ManaOvercapLabel" class="ManaOvercapText" text="--/--" hittest="false" />
+	</Panel>
+</root>

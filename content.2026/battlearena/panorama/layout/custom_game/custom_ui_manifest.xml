@@ -1,0 +1,24 @@
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/utils.js" />
+		<include src="file://{resources}/scripts/custom_game/gold_storage.js" />
+		<include src="file://{resources}/scripts/custom_game/notifications.js" />
+		<include src="file://{resources}/layout/custom_game/scripts/custom_tables.js" />
+	</scripts>
+	<Panel>
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/duel_ui.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/duel_boss_bar/duel_boss_bar.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/shop_scroll_fix.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/repick_menu.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/repick_item.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/beta_notice.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/item_precache.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/augment_picker/augment_picker.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/orb_gauges/orb_gauges.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/augment_book/augment_book.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/shop_extender.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/mana_overcap/mana_overcap.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/topbar_custom_icons/topbar_custom_icons.xml" />
+		<CustomUIElement type="PregameStrategy" layoutfile="file://{resources}/layout/custom_game/custom_pick/custom_pick.xml" />
+	</Panel>
+</root>

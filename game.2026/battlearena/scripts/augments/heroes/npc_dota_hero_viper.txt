@@ -1,0 +1,152 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Viper hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_viper"
+{
+	// ---- Poison Attack ------------------------------------------------------
+	"viper_poison_attack"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 3/1)
+		"damage"
+		{
+			"base"				"4"
+			"step"			"1.5"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_viper_7"	"x1.15"
+			}
+			"mode" "ADD"
+		}
+		// more stacks (was 1)
+		"max_stacks"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Nethertoxin --------------------------------------------------------
+	"viper_nethertoxin"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"viper_nose_dive"
+				{
+					"cd_mana" "8"
+				}
+			}
+		}
+		// more damage (was 20/3)
+		"max_damage"
+		{
+			"base" "25"
+			"step"	"4"
+			"cap" "8"
+
+			"mode" "ADD"
+			"bundle"
+			{
+				"min_damage"
+				{
+					"base"		"8"
+					"step"	"1.5"
+				}
+			}
+		}
+		// wider toxin (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"viper_nose_dive"
+				{
+					"radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Corrosive Skin -----------------------------------------------------
+	"viper_corrosive_skin"
+	{
+		// longer skin (epic, was 0.25)
+		"duration"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"cap" "8"
+			"floor" "epic"
+		}
+		// more magic resist (was 3)
+		"bonus_magic_resistance"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "6"
+
+			"limit"			"50"
+			"limit_base"		"25"
+		}
+		// more attack speed (was 25/10)
+		"bonus_attack_speed"
+		{
+			"base" "30"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more damage (was 15/1)
+		"damage"
+		{
+			"base" "18"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Viper Strike -------------------------------------------------------
+	"viper_viper_strike"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// longer strike (rare, was 0.5)
+		"duration"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"cap" "4"
+			"floor" "rare"
+		}
+		// more damage (was 35/5)
+		"damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

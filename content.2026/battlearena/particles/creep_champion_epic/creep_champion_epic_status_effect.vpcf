@@ -1,0 +1,55 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf65:version{48e806a9-c210-4cd8-811a-38b5ef63b195} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_nInitialParticles = 1
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = -1.0
+			}
+			m_nOutputField = 16
+		},
+		{
+			_class = "C_INIT_StatusEffect"
+			m_specularColor = [ 255, 80, 0 ]
+			m_rimLightColor = [ 255, 130, 40 ]
+			m_flColorWarpIntensity = 0.0
+			m_flSpecularScale = 50.0
+			m_flSpecularExponent = 3.0
+			m_flRimLightScale = 12.0
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_AlphaDecay"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderStatusEffect"
+			m_pTextureColorWarp = resource:"materials/models/heroes/statuseffects/colorwarp_epic.vtex"
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/creep_champion_epic/creep_champion_epic.vpcf"
+		},
+	]
+}

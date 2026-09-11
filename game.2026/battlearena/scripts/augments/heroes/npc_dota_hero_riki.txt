@@ -1,0 +1,111 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Riki hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_riki"
+{
+	// ---- Smoke Screen -------------------------------------------------------
+	"riki_smoke_screen"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more miss rate (was 5)
+		"miss_rate"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Blink Strike -------------------------------------------------------
+	"riki_blink_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4)
+		"bonus_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer slow (was 0.2)
+		"slow"
+		{
+			"base" "0.25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Tricks of the Trade ------------------------------------------------
+	"riki_tricks_of_the_trade"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider tricks (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more attack damage (was 35/5)
+		"attack_damage"
+		{
+			"base" 		"40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Cloak and Dagger ---------------------------------------------------
+	"riki_backstab"
+	{
+		// faster fade (was -0.2)
+		"fade_delay"
+		{
+			"base" "-0.25"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"0"
+			"limit_base"		"2"
+		}
+	}
+
+	// ---- Innate: Backstab ---------------------------------------------------
+	"riki_innate_backstab"
+	{
+		// more damage multiplier (was 0.15)
+		"damage_multiplier"
+		{
+			"base" "0.2"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider angle (was 10)
+		"backstab_angle"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+}

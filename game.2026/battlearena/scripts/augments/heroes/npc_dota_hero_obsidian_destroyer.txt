@@ -1,0 +1,103 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Outworld Destroyer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_obsidian_destroyer"
+{
+	// ---- Arcane Orb ---------------------------------------------------------
+	"obsidian_destroyer_arcane_orb"
+	{
+		// more mana pool damage (was 0.25)
+		"mana_pool_damage_pct"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// less mana cost (was -1)
+		"mana_cost_percentage"
+		{
+			"base" "-1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Astral Imprisonment ------------------------------------------------
+	"obsidian_destroyer_astral_imprisonment"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 35/4)
+		"damage"
+		{
+			"base" "40"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more mana steal (was 3)
+		"mana_capacity_steal"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Objurgation --------------------------------------------------------
+	"obsidian_destroyer_objurgation"
+	{
+		// more barrier (was 50/20)
+		"barrier_flat"
+		{
+			"base" "60"
+			"step"		"25"
+			"cap" "8"
+
+			"bundle"
+			{
+				"mana_to_barrier"		"1"
+			}
+		}
+
+		// more bonus mana (was 50/30)
+		"bonus_mana"
+		{
+			"base" "60"
+			"step"		"35"
+			"cap" "6"
+		}
+	}
+
+	// ---- Sanity Eclipse -----------------------------------------------------
+	"obsidian_destroyer_sanity_eclipse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap"		"4"
+		}
+		// wider eclipse (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more base damage (was 30/4)
+		"base_damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

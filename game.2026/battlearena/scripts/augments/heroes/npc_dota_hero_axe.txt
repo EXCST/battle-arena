@@ -1,0 +1,113 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Axe hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_axe"
+{
+	// ---- Berserker's Call ---------------------------------------------------
+	"axe_berserkers_call"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider taunt (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more bonus armor while taunted (was 3/0.3)
+		"bonus_armor"
+		{
+			"base" "4"
+			"step"		"0.4"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle_abilities"
+			{
+				"axe_battle_hunger"
+				{
+					"scepter_armor_change" "0.6"
+				}
+			}
+		}
+	}
+
+	// ---- Battle Hunger ------------------------------------------------------
+	"axe_battle_hunger"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more dps (was 10/1)
+		"damage_per_second"
+		{
+			"base" "12"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Counter Helix ------------------------------------------------------
+	"axe_counter_helix"
+	{
+		// more helix damage (was 35)
+		"damage"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider helix (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// NEW: triggers more often (rare only)
+		"trigger_chance"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "5"
+		}
+	}
+
+	// ---- Culling Blade ------------------------------------------------------
+	"axe_culling_blade"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more cull damage (was 25)
+		"damage"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// NEW: lower kill threshold (epic only)
+		"kill_threshold"
+		{
+			"base" "-50"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+	}
+}

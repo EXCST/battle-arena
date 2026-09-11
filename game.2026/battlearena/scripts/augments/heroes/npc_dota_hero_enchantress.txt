@@ -1,0 +1,149 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Enchantress hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_enchantress"
+{
+	// ---- Impetus ------------------------------------------------------------
+	"enchantress_impetus"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"enchantress_bunny_hop"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more distance damage (was 5/0.1)
+		"distance_damage_pct"
+		{
+			"base" "6"
+			"step"	"0.15"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more distance cap (was 350)
+		"distance_cap"
+		{
+			"base" "400"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"enchantress_bunny_hop"
+				{
+					"hop_distance" "90"
+				}
+			}
+		}
+	}
+
+	// ---- Enchant ------------------------------------------------------------
+	"enchantress_enchant"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"enchantress_little_friends"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more creep hp (was 400/200)
+		"enchant_health"
+		{
+			"base" 		"450"
+			"step"		"220"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more creep damage (was 30/5)
+		"enchant_damage"
+		{
+			"base" 			"35"
+			"step"			"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"enchantress_little_friends"
+				{
+					"bonus_attack_speed" "60"
+				}
+			}
+		}
+		// more max creeps (rare, was 0.5)
+		"max_creeps"
+		{
+			"base"			"0.5"
+			"floor"	"rare"
+			"cap"		"6"
+		}
+	}
+
+	// ---- Nature's Attendants -------------------------------------------------
+	"enchantress_natures_attendants"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal (was 20/7)
+		"heal"
+		{
+			"base" "25"
+			"step"	"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider heal (was 50)
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more wisps
+		"wisp_count"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Untouchable --------------------------------------------------------
+	"enchantress_untouchable"
+	{
+		// more attack slow (was -40/-20)
+		"slow_attack_speed"
+		{
+			"base" "-45"
+			"step"	"-25"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

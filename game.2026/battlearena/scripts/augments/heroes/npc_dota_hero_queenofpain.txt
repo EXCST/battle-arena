@@ -1,0 +1,125 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Queen of Pain hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_queenofpain"
+{
+	// ---- Shadow Strike ------------------------------------------------------
+	"queenofpain_shadow_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 25/4)
+		"strike_damage"
+		{
+			"base" "30"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"duration_damage" "12"
+				"duration_heal" "6"
+			}
+		}
+		// faster ticks (was -0.16)
+		"damage_interval"
+		{
+			"base" "-0.18"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"0.2"
+			"limit_base"		"2.0"
+		}
+	}
+
+	// ---- Blink --------------------------------------------------------------
+	"queenofpain_blink"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+		}
+		// wider shard aoe (was 25)
+		"shard_aoe"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more shard damage (was 40/4)
+		"shard_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Scream of Pain -----------------------------------------------------
+	"queenofpain_scream_of_pain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider scream (was 30)
+		"area_of_effect"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 45/4)
+		"damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Sonic Wave ---------------------------------------------------------
+	"queenofpain_sonic_wave"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap"	"10"
+		}
+		// more damage (was 50/4)
+		"damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider final aoe (was 20)
+		"final_aoe"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"knockback_distance" "35"
+				"starting_aoe" "12"
+			}
+		}
+	}
+}

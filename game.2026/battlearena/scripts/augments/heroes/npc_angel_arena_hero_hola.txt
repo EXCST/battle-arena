@@ -1,0 +1,93 @@
+﻿"npc_angel_arena_hero_hola"
+{
+	"hola_stunhammer"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+		}
+
+		"bolt_damage"
+		{
+			"base" "80"
+			"step"		"8"
+		}
+
+		"bounce_count"
+		{
+			"base"			"0.25"
+			"floor"	"epic"
+			"cap" 	"8"
+		}
+	}
+
+	"hola_grace"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+		}
+
+		"heal"
+		{
+			"base"		"250"
+
+			"bundle"
+			{
+				"hp_regen"			"30"
+			}
+		}
+
+		"heal_duration"
+		{
+			"base"		"1"
+			"cap" 	"5"
+		}
+	}
+
+	"hola_stomp"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+		}
+
+		"radius"
+		{
+			"base"		"30"
+			"cap"	"4"
+		}
+
+		"damage"
+		{
+			"base"		"80"
+			"step"		"8"
+
+			"bundle"
+			{
+				"heal"		"150"
+			}
+		}
+	}
+
+	"hola_rescue"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+
+			"cap"		"4"
+		}
+
+		"duration"
+		{
+			"base"		"0.2"
+
+			"cap"		"10"
+		}
+	}
+}

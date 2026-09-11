@@ -1,0 +1,127 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Tidehunter hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_tidehunter"
+{
+	// ---- Gush ---------------------------------------------------------------
+	"tidehunter_gush"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 45/4.5)
+		"gush_damage"
+		{
+			"base" "50"
+			"step"		"5.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more armor shred (was 2.5/0.5)
+		"negative_armor"
+		{
+			"base" "3"
+			"step"		"0.6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Kraken Shell -------------------------------------------------------
+	"tidehunter_kraken_shell"
+	{
+		// more damage reduction (was 20/5)
+		"damage_reduction"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Anchor Smash -------------------------------------------------------
+	"tidehunter_anchor_smash"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 25/5)
+		"attack_damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Ravage -------------------------------------------------------------
+	"tidehunter_ravage"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"tidehunter_dead_in_the_water"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 100/10)
+		"damage"
+		{
+			"base" "110"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"tidehunter_dead_in_the_water"
+				{
+					"damage"
+					{
+						"base" "55"
+						"step"		"6"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider ravage (was 50)
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"speed" "33"
+			}
+			"bundle_abilities"
+			{
+				"tidehunter_dead_in_the_water"
+				{
+					"attacks_to_destroy" "1"
+					"chain_length" "-25"
+				}
+			}
+		}
+	}
+}

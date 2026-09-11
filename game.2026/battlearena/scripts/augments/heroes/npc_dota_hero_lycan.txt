@@ -1,0 +1,132 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lycan hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_lycan"
+{
+	// ---- Summon Wolves ------------------------------------------------------
+	"lycan_summon_wolves"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// stronger wolves (was 10/2)
+		"wolf_damage"
+		{
+			"base" "12"
+			"step"	"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// tankier wolves (was 150/30)
+		"wolf_hp"
+		{
+			"base" "180"
+			"step"	"40"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Howl ---------------------------------------------------------------
+	"lycan_howl"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"		"20"
+		}
+		// more damage reduction (was 3)
+		"attack_damage_reduction"
+		{
+			"base" "3.5"
+			"mode" "MULT"
+			"cap" "6"
+
+			"limit"		"55"
+			"multiplicative_base"		"40"
+		}
+		// more armor
+		"armor"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// longer howl (was 0.5)
+		"howl_duration"
+		{
+			"base"		"0.6"
+			"cap"	"8"
+		}
+	}
+
+	// ---- Feral Impulse ------------------------------------------------------
+	"lycan_feral_impulse"
+	{
+		// more damage (was 6)
+		"bonus_damage"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more regen (was 10)
+		"bonus_hp_regen"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Shapeshift ---------------------------------------------------------
+	"lycan_shapeshift"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"lycan_wolf_bite"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more speed (was 15)
+		"speed"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more crit chance (was 3)
+		"crit_chance"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more crit mult (rare, was 11)
+		"crit_multiplier"
+		{
+			"base" "13"
+			"mode" "ADD"
+			"floor"	"rare"
+			"cap" "6"
+		}
+	}
+}

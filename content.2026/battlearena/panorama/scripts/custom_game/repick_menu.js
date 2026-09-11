@@ -1,0 +1,231 @@
+"use strict";
+
+let g_hero_data = undefined;
+let g_tick = undefined;
+let g_bCanPick = undefined;
+
+const RootPanel = $.GetContextPanel();
+const CustomRoot = $("#CustomRoot");
+const MainRepickMenu = $("#MainRepickMenu");
+let PreviewPanel = $("#Preview");
+const PreviewHolder = $("#PreviewHolder");
+const HeroName = $("#HeroName");
+const HeroBlockHolder = $("#HeroBlockHolder");
+let HeroesPanel = $("#HeroBlock");
+const HeroAbilities = $("#HeroAbilities");
+
+const AttStrengthLabel = $("#AttStrengthLabel");
+const AttAgilityLabel = $("#AttAgilityLabel");
+const AttIntellectLabel = $("#AttIntellectLabel");
+const MovespeedLabel = $("#MovespeedLabel");
+const DamageLabel = $("#DamageLabel");
+const BaseAttackTimeLabel = $("#BaseAttackTimeLabel");
+const ArmorLabel = $("#ArmorLabel");
+const HealthStatus = $("#HealthStatus");
+const HealthRegen = $("#HealthRegen");
+const ManaStatus = $("#ManaStatus");
+const ManaRegen = $("#ManaRegen");
+
+const StrAttrImage = $("#AttStrengthImage");
+const AgiAttrImage = $("#AttAgilityImage");
+const IntAttrImage = $("#AttIntellectImage");
+
+const PickButton = $("#PickButton");
+const PickButtonLabel = $("#PickButtonLabel");
+
+let CurrentMainAttributePanel = undefined;
+let CurrentSelectedPanel = undefined;
+let SelectedHeroName = undefined;
+
+var PickState = {
+    CAN_PICK: 1,
+    ALREADY_PICKED: -1,
+};
+
+function CanPick(heroName) {
+    if (g_hero_data[heroName]["picked"] == 1) return PickState.ALREADY_PICKED;
+    return PickState.CAN_PICK;
+}
+
+function ActivatePickButton() {
+    if (g_bCanPick == true) return;
+    PickButton.RemoveClass("CantPickButton");
+    PickButton.AddClass("CanPickButton");
+    PickButtonLabel.text = $.Localize("#AA_REPICK_MENU_PICK_GOD");
+    g_bCanPick = true;
+}
+
+function DeactivePickButton(nReason) {
+    var text = "unknown";
+    switch (nReason) {
+        case PickState.CAN_PICK: text = "<invalid_state>"; break;
+        case PickState.ALREADY_PICKED: text = "#AA_REPICK_MENU_ALREADY_PICKED"; break;
+    }
+    PickButtonLabel.text = $.Localize(text);
+    PickButton.RemoveClass("CanPickButton");
+    PickButton.AddClass("CantPickButton");
+    g_bCanPick = false;
+}
+
+function Tick() {
+    if (SelectedHeroName != undefined) {
+        var canPick = CanPick(SelectedHeroName);
+        if (canPick == PickState.CAN_PICK) ActivatePickButton();
+        else DeactivePickButton(canPick);
+    }
+    g_tick = $.Schedule(1.0, Tick);
+}
+
+function CancelTick() {
+    if (g_tick != undefined) {
+        $.CancelScheduled(g_tick, {});
+        g_tick = undefined;
+    }
+}
+
+function UpdateHeroesInterface() {
+    CurrentMainAttributePanel = undefined;
+    CurrentSelectedPanel = undefined;
+    SelectedHeroName = undefined;
+    HeroesPanel.RemoveAndDeleteChildren();
+    HeroesPanel = $.CreatePanel("Panel", HeroBlockHolder, "HeroBlock");
+    let firstHero = undefined;
+    for (let hero_name in g_hero_data) {
+        $.CreatePanelWithProperties("DOTAHeroMovie", HeroesPanel, hero_name, {
+            class: "HeroPortrait",
+            heroname: hero_name,
+            onactivate: `SelectHero("${hero_name}")`,
+            hittest: "true",
+        });
+        if (firstHero === undefined) firstHero = hero_name;
+    }
+    if (firstHero === undefined) return;
+    SelectHero(firstHero);
+}
+
+function OnOpen() {
+    if (CustomRoot.visible) return;
+    UpdateHeroesInterface();
+    CustomRoot.hittest = true;
+    CustomRoot.visible = true;
+    CustomRoot.enable = true;
+    CustomRoot.style.visibility = "visible";
+    Tick();
+}
+
+function OnClose() {
+    CustomRoot.hittest = false;
+    CustomRoot.visible = false;
+    CustomRoot.enable = false;
+    CustomRoot.style.visibility = "collapse";
+    CancelTick();
+}
+
+function GetHeroID(heroName) {
+    if (CurrentSelectedPanel && CurrentSelectedPanel.GetChild(0)) return CurrentSelectedPanel.GetChild(0).heroid;
+    return 0;
+}
+
+function SetAbilities(abilityTable, heroName) {
+    HeroAbilities.RemoveAndDeleteChildren();
+    for (const [_, ability_name] of Object.entries(abilityTable)) {
+        $.CreatePanelWithProperties("DOTAAbilityImage", HeroAbilities, ability_name, {
+            class: "AbilityImage",
+            abilityname: ability_name,
+            hittest: "true",
+            onmouseover: `DOTAShowAbilityTooltip(${ability_name})`,
+            onmouseout: "DOTAHideAbilityTooltip()",
+        });
+    }
+    const heroID = GetHeroID(heroName);
+    $.CreatePanelWithProperties("DOTAHudTalentDisplay", HeroAbilities, "TalentTree", {
+        class: "AbilityImage",
+        heroname: heroName,
+        onmouseover: `DOTAHUDShowHeroStatBranchTooltip(${heroID})`,
+        onmouseout: "DOTAHUDHideStatBranchTooltip()",
+    });
+    let tree_parts = HeroAbilities.FindChildrenWithClassTraverse("StatBranchPip");
+    tree_parts.forEach((panel) => {
+        panel.style.width = "0px";
+        panel.style.height = "0px";
+    });
+}
+
+function SelectHero(heroName) {
+    if (PreviewPanel) {
+        PreviewPanel.visible = false;
+        PreviewPanel.DeleteAsync(0);
+    }
+    PreviewPanel = $.CreatePanelWithProperties("DOTAScenePanel", PreviewHolder, "Preview", {
+        unit: heroName,
+        particleonly: "false",
+        hittest: "true",
+    });
+    if (CurrentSelectedPanel) CurrentSelectedPanel.RemoveClass("HeroPortraitSelected");
+    CurrentSelectedPanel = HeroesPanel.FindChildTraverse(heroName);
+    CurrentSelectedPanel.AddClass("HeroPortraitSelected");
+
+    var hero_info = g_hero_data[heroName];
+    HeroName.text = $.Localize(heroName);
+    SetAbilities(hero_info["abilities"], heroName);
+
+    AttStrengthLabel.SetDialogVariable("base_str", hero_info["str"]);
+    AttStrengthLabel.SetDialogVariable("str_per_level", hero_info["str_gain"].toPrecision(2));
+    AttAgilityLabel.SetDialogVariable("base_agi", hero_info["agi"]);
+    AttAgilityLabel.SetDialogVariable("agi_per_level", hero_info["agi_gain"].toPrecision(2));
+    AttIntellectLabel.SetDialogVariable("base_int", hero_info["int"]);
+    AttIntellectLabel.SetDialogVariable("int_per_level", hero_info["int_gain"].toPrecision(2));
+
+    DamageLabel.text = hero_info["dmg_min"] + " - " + hero_info["dmg_max"];
+    BaseAttackTimeLabel.text = hero_info["bat"].toPrecision(2);
+    MovespeedLabel.text = hero_info["movespeed"];
+    ArmorLabel.text = hero_info["armor"].toPrecision(1);
+    HealthStatus.text = hero_info["hp"].toFixed(0);
+    ManaStatus.text = hero_info["mp"].toFixed(0);
+    HealthRegen.text = " + " + hero_info["hp_reg"].toFixed(1);
+    ManaRegen.text = " + " + hero_info["mp_reg"].toFixed(1);
+
+    var curAttr = hero_info["base_att"];
+    if (CurrentMainAttributePanel) CurrentMainAttributePanel.RemoveClass("MainAttributeImage");
+    switch (curAttr) {
+        case Attributes.DOTA_ATTRIBUTE_STRENGTH: CurrentMainAttributePanel = StrAttrImage; break;
+        case Attributes.DOTA_ATTRIBUTE_AGILITY: CurrentMainAttributePanel = AgiAttrImage; break;
+        case Attributes.DOTA_ATTRIBUTE_INTELLECT: CurrentMainAttributePanel = IntAttrImage; break;
+    }
+    if (CurrentMainAttributePanel) CurrentMainAttributePanel.AddClass("MainAttributeImage");
+
+    SelectedHeroName = heroName;
+    PickButton.visible = true;
+    Game.EmitSound("ui_select_md");
+    CancelTick();
+    Tick();
+}
+
+function FillHeroesData(data) {
+    g_hero_data = data;
+    if (CustomRoot && CustomRoot.visible) UpdateHeroesInterface();
+}
+
+function PickHero() {
+    var canPick = CanPick(SelectedHeroName) == PickState.CAN_PICK;
+    if (!canPick) return;
+    OnHeroPicked(SelectedHeroName);
+    GameEvents.SendCustomGameEventToServer("aa_repick_menu_start_repick", {
+        hero_name: SelectedHeroName,
+    });
+}
+
+function OnHeroPicked(heroName, val) {
+    if (g_hero_data[heroName] != undefined) g_hero_data[heroName]["picked"] = val;
+}
+
+(function () {
+    OnClose();
+    GameEvents.Subscribe("aa_repick_menu_set_data", FillHeroesData);
+    GameEvents.Subscribe("aa_repick_menu_open", function (data) { OnOpen(); });
+    GameEvents.Subscribe("aa_repick_menu_close", function (data) { OnClose(); });
+    GameEvents.Subscribe("aa_repick_menu_set_hero_picked", function (data) {
+        OnHeroPicked(data["hero_name"], data["picked"]);
+    });
+    GameEvents.SendCustomGameEventToServer("aa_repick_menu_retrive_data", {});
+})();

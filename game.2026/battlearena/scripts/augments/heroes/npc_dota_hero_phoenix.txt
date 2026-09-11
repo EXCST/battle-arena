@@ -1,0 +1,205 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Phoenix hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_phoenix"
+{
+	// ---- Icarus Dive --------------------------------------------------------
+	"phoenix_icarus_dive"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"hp_cost_perc"
+				{
+					"base" "-3"
+					"mode" "MULT"
+
+					"limit"			"0"
+					"limit_base"		"15"
+				}
+			}
+		}
+		// more dps (was 25/3)
+		"damage_per_second"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer dash (was 100)
+		"dash_length"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"dash_width" "25"
+				"hit_radius" "25"
+				"burn_duration" "0.25"
+			}
+		}
+	}
+
+	// ---- Fire Spirits -------------------------------------------------------
+	"phoenix_fire_spirits"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle"
+			{
+				"hp_cost_perc"
+				{
+					"base" "-4"
+					"mode" "MULT"
+
+					"limit"			"0"
+					"limit_base"		"20"
+				}
+			}
+		}
+		// wider spirits (was 50)
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle_abilities"
+			{
+				"phoenix_launch_fire_spirit"
+				{
+					"radius" "60"
+				}
+			}
+		}
+		// more dps (was 25/3)
+		"damage_per_second"
+		{
+			"base" "30"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"attackspeed_slow"
+				{
+					"base"	"-45"
+					"step"	"-25"
+				}
+			}
+			"bundle_abilities"
+			{
+				"phoenix_launch_fire_spirit"
+				{
+					"damage_per_second"
+					{
+						"base" "25"
+						"step"		"3"
+					}
+
+					"attackspeed_slow"
+					{
+						"base"	"-45"
+						"step"	"-25"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Sun Ray ------------------------------------------------------------
+	"phoenix_sun_ray"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"hp_cost_perc_per_second"
+				{
+					"base" "-1.2"
+					"mode" "MULT"
+
+					"limit"			"0"
+					"limit_base"		"6"
+				}
+			}
+		}
+		// more hp % damage (was 1.0)
+		"hp_perc_damage"
+		{
+			"base" "1.2"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"15"
+			"limit_base"		"7.75"
+			"bundle"
+			{
+				"base_damage"
+				{
+					"base" "6"
+					"step"	"1.5"
+					"mode" "ADD"
+				}
+				"hp_perc_heal" "0.35"
+				"base_heal"
+				{
+					"base" "6"
+					"step"	"0.7"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider ray (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Supernova ----------------------------------------------------------
+	"phoenix_supernova"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// wider nova (was 30)
+		"aura_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"max_hero_attacks" "2"
+				"max_hero_attacks_scepter" "2"
+			}
+		}
+		// more dps (was 50/5)
+		"damage_per_sec"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

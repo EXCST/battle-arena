@@ -1,0 +1,147 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Disruptor hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_disruptor"
+{
+	// ---- Thunder Strike -----------------------------------------------------
+	"disruptor_thunder_strike"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider strike (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 15/2)
+		"strike_damage"
+		{
+			"base" "17"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more strikes (rare, was 0.5)
+		"strikes"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"cap" "4"
+			"floor" "rare"
+			"bundle"
+			{
+				"strike_interval"
+				{
+					"base" "-0.22"
+					"mode" "MULT"
+
+					"limit"			"0.71"
+					"limit_base"		"2"
+				}
+			}
+		}
+	}
+
+	// ---- Glimpse ------------------------------------------------------------
+	"disruptor_glimpse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more distance damage (was 5/0.5)
+		"damage_to_distance_pct"
+		{
+			"base" "6"
+			"step"	"0.6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"max_damage"
+				{
+					"base" "70"
+					"step"	"7"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Kinetic Field ------------------------------------------------------
+	"disruptor_kinetic_field"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				"disruptor_kinetic_fence"
+				{
+					"cd_mana"
+					{
+						"base" "6"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider field (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle_abilities"
+			{
+				"disruptor_kinetic_fence"
+				{
+					"wall_width"
+					{
+						"base" "70"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Static Storm -------------------------------------------------------
+	"disruptor_static_storm"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 25/2)
+		"damage_max"
+		{
+			"base" "30"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more pulses
+		"pulses"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+}

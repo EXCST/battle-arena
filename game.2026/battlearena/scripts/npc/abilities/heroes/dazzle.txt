@@ -1,0 +1,289 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Dazzle: Poison Touch
+	//=================================================================================================================
+	"dazzle_poison_touch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5233"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+        
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500 550 600 650 700 750 800" // 600
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15 14 13 12 11 10 10" // 10
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100" // 75
+				
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Can apply multiple modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"start_radius"				"200"
+			"end_radius"				"300"
+			"end_distance"				"500"
+			"targets"					"4 5 6 7 8 9 10"
+			"damage"
+			{	
+				"value"			"30 40 50 60 70 80 90"
+				"special_bonus_unique_dazzle_3"	"+40"
+			}
+			"slow"
+			{	
+				"value"							"-20 -22 -25 -27 -30 -32 -35"
+				"special_bonus_unique_dazzle_1"	"-32"
+			}
+			"projectile_speed"	"1300"
+			"duration"		"3.5"
+			"bonus_damage"			"0"
+			"bonus_slow"			"-2 -2.5 -3 -3.5 -3.8 -4.0 -4.5"
+			"hex_duration"
+			{	
+				"value"						"0"
+				"special_bonus_shard"			"+2"
+			}
+			"attack_range_bonus"		
+			{
+				"value"							"0"
+				"special_bonus_unique_dazzle_poison_touch_attack_range_bonus"			"+350"
+			}	
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+
+//=================================================================================================================
+// Dazzle: Shallow Grave
+//=================================================================================================================
+"dazzle_shallow_grave"
+{
+	"MaxLevel"						"7"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"25"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+	
+	"AbilityDuration"				"4.8 5.0 5.2 5.4 5.6 5.8 6.0"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{	
+			"var_type"			"FIELD_FLOAT"
+			"duration"		    "4.0 4.3 4.7 5.0 5.3 5.7 6.0"
+		}
+		"02"	// used to place the halo in the particles at the right height so that it hits the ground right when the effect expires
+		{
+			"var_type"			"FIELD_FLOAT"
+			"fx_halo_height"	"190 240 300 350"
+		}
+	}
+}
+//=================================================================================================================
+	// Dazzle: Shadow Wave
+	//=================================================================================================================
+	"dazzle_shadow_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5235"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Dazzle.Shadow_Wave"
+		"HasScepterUpgrade"				"1"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+			
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"
+			{
+				"value"				"800"
+				"special_bonus_unique_dazzle_shadow_wave_cast_range" "+150"
+			}
+
+			"bounce_radius"			
+			{
+				"value"		"475"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage_radius"			
+			{
+				"value"		"185"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_targets"			"3 4 5 6 7 8 9"
+			"tooltip_max_targets_inc_dazzle"	"4 5 6 7 8 9 10"
+			"damage"
+			{
+				"value"					"100 150 200 250 300 500 700"
+				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_2"
+			}
+			
+			"scepter_heal_pct"			"150"
+			"scepter_cd_increase"		"2"
+		}
+
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Dazzle: Weave
+	//=================================================================================================================
+	"dazzle_weave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5236"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"575"
+			}
+			"02"
+			{	
+				"var_type"					"FIELD_INTEGER"
+				"vision"					"800"
+			}
+			"03"
+			{	
+				"var_type"					"FIELD_FLOAT"
+				"armor_per_second"			"1.25"
+				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_4"
+			}
+			"04"
+			{	
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"24.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Dazzle: Bad Juju
+	//=================================================================================================================
+	"dazzle_bad_juju"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"7304"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"		
+		"AbilityCooldown"				"15"
+		"AbilityManaCost"				"50 75 100"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"armor_reduction"			
+			{
+				"value"			"1 2 3 4 5 6 7"
+				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_4"
+			}
+			"duration"					"10"
+			"radius"					"1200"
+			"heal_damage"				"50"
+		}
+	}
+	//=================================================================================================================
+	// Dazzle: Bad Juju
+	//=================================================================================================================
+	"dazzle_good_juju"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"933"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastRange"				"250"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"cooldown_reduction"		"2"
+				"item_cooldown_reduction"		
+				{
+					"value"		"30"
+					"RequiresScepter"	"1"
+				}
+				"scepter_mana_cost"			"250"
+				"scepter_cooldown"			"160"
+		}
+	}
+	
+}

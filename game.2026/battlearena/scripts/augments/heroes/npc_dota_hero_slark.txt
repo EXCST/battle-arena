@@ -1,0 +1,144 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Slark hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_slark"
+{
+	// ---- Dark Pact ----------------------------------------------------------
+	"slark_dark_pact"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"delay" "-0.25"
+			}
+		}
+		// wider pact (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"self_damage_pct" "-7"
+			}
+		}
+		// more damage (was 60/6)
+		"total_damage"
+		{
+			"base" "65"
+			"step"		"7"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Pounce -------------------------------------------------------------
+	"slark_pounce"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer leash (was 1)
+		"leash_duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "3"
+		}
+		// tighter leash (was -50)
+		"leash_radius"
+		{
+			"base" "-60"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more essence stacks
+		"essence_stacks"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Saltwater Shiv -----------------------------------------------------
+	"slark_saltwater_shiv"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more regen steal (was 1)
+		"regen_steal"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"ms_steal" "1.5"
+			}
+		}
+	}
+
+	// ---- Essence Shift ------------------------------------------------------
+	"slark_essence_shift"
+	{
+		// more agi gain (epic, was 0.75)
+		"agi_gain"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "6"
+		}
+	}
+
+	// ---- Shadow Dance -------------------------------------------------------
+	"slark_shadow_dance"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"slark_depth_shroud"
+				{
+					"cd_mana"
+					{
+						"base" "4"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+
+		// more regen (was 25/6)
+		"bonus_regen"
+		{
+			"base" "30"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"bonus_movement_speed" "6"
+			}
+		}
+	}
+}

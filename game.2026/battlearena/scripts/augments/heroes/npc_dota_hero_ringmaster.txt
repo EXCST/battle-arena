@@ -1,0 +1,129 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Ringmaster hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_ringmaster"
+{
+	// ---- Tame the Beasts ----------------------------------------------------
+	"ringmaster_tame_the_beasts"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 25/3)
+		"damage_min"
+		{
+			"base" "30"
+			"step"	"4"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"damage_max"
+				{
+					"base"	"45"
+					"step"	"4"
+				}
+			}
+		}
+		// wider beasts (was 25)
+		"start_width"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"end_width"
+				{
+					"base"	"30"
+				}
+			}
+		}
+	}
+
+	// ---- The Box ------------------------------------------------------------
+	"ringmaster_the_box"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+		}
+		// longer invis (was 0.3)
+		"invis_duration"
+		{
+			"base" "0.4"
+			"mode" "ADD"
+			"cap"	"5"
+		}
+		// wider leash (was 30)
+		"leash_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Impalement ---------------------------------------------------------
+	"ringmaster_impalement"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 45/5)
+		"damage_impact"
+		{
+			"base" "50"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Wheel --------------------------------------------------------------
+	"ringmaster_wheel"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider wheel (was 35)
+		"mesmerize_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 45/4)
+		"aura_damage"
+		{
+			"base" "50"
+			"step"	"5"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"explosion_damage"
+				{
+					"base"	"110"
+					"step"	"8"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,289 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Brewmaster hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_brewmaster"
+{
+	// ---- Thunder Clap -------------------------------------------------------
+	"brewmaster_thunder_clap"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"duration" "0.6"
+			}
+		}
+		// wider clap (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"movement_slow" "6"
+				"attack_speed_slow" "18"
+			}
+		}
+		// more damage (was 35/4)
+		"damage"
+		{
+			"base" "40"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Cinder Brew --------------------------------------------------------
+	"brewmaster_cinder_brew"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more ignite damage (was 40/5)
+		"total_ignite_damage"
+		{
+			"base" "45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_brewmaster_5"	"x1.3"
+			}
+		}
+		// wider cinder (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"barrel_width" "9"
+			}
+		}
+	}
+
+	// ---- Drunken Brawler ----------------------------------------------------
+	"brewmaster_drunken_brawler"
+	{
+		// more armor (was 1)
+		"armor"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"magic_resist"
+				{
+					"base" "1"
+					"mode" "MULT"
+
+					"limit"			"80"
+					"limit_base"		"20"
+				}
+			}
+			"bundle_abilities"
+			{
+				"brewmaster_earth_hurl_boulder"
+				{
+					"damage" "90"
+					"speed" "90"
+				}
+			}
+		}
+		// more crit chance (rare, was 3)
+		"crit_chance"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"floor"	"rare"
+			"cap" "6"
+			"bundle"
+			{
+				"crit_multiplier" "12"
+				"attack_speed" "12"
+			}
+			"bundle_abilities"
+			{
+				"brewmaster_fire_permanent_immolation"
+				{
+					"damage" "40"
+					"radius"
+					{
+						"base" "45"
+						"mode" "MULT"
+
+						"limit"			"620"
+						"limit_base"		"220"
+					}
+				}
+			}
+		}
+		// more dodge (was 7)
+		"dodge_chance"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"bonus_move_speed" "8"
+			}
+			"bundle_abilities"
+			{
+				"brewmaster_storm_dispel_magic"
+				{
+					"damage" "450"
+					"radius"
+					{
+						"base" "45"
+						"mode" "MULT"
+
+						"limit"			"1000"
+						"limit_base"		"600"
+					}
+				}
+				"brewmaster_storm_wind_walk"
+				{
+					"bonus_damage" "150"
+					"bonus_movement_speeed" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Primal Split -------------------------------------------------------
+	"brewmaster_primal_split"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				"brewmaster_primal_companion"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_earth_hurl_boulder"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_void_astral_pull"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_storm_dispel_magic"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_storm_cyclone"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_storm_wind_walk"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"brewmaster_primal_companion"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// tankier brewlings (was 500/100)
+		"brewling_added_health"
+		{
+			"base"		"550"
+			"step"	"110"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"tooltip_earth_brewling_hp"
+				{
+					"base"		"550"
+					"step"	"110"
+					"mode" "ADD"
+				}
+				"tooltip_storm_brewling_hp"
+				{
+					"base"		"550"
+					"step"	"110"
+					"mode" "ADD"
+				}
+				"tooltip_fire_brewling_hp"
+				{
+					"base"		"550"
+					"step"	"110"
+					"mode" "ADD"
+				}
+			}
+		}
+		// stronger brewlings (was 20/5)
+		"tooltip_storm_brewling_damage"
+		{
+			"base"		"25"
+			"step"	"6"
+			"cap" "6"
+
+			"bundle"
+			{
+				"tooltip_earth_brewling_damage"
+				{
+					"base"		"25"
+					"step"	"6"
+					"mode" "ADD"
+				}
+				"tooltip_fire_brewling_damage"
+				{
+					"base"		"25"
+					"step"	"6"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

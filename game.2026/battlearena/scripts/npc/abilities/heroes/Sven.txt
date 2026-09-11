@@ -1,0 +1,210 @@
+﻿"DOTAAbilities"
+{
+"sven_storm_bolt"
+{
+	"MaxLevel"						"7"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"13.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"100 175 250 325 380 425 540"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bolt_speed"			"1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bolt_stun_duration"	"2.0"
+			"LinkedSpecialBonus"		"special_bonus_unique_sven_4"
+		}
+		"03"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"bolt_aoe"			"255"
+		}
+		"04"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"vision_radius"		"225"
+		}
+		"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cast_range_bonus_scepter"		"350"		
+				"RequiresScepter"			"1"
+			}
+		
+	}
+}
+
+//=================================================================================================================
+// Ability: Great Cleave
+//=================================================================================================================
+	"sven_great_cleave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5095"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	// "MaxLevel"						"7"
+				
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cleave_starting_width"
+			{
+				"value"			"150"
+				// intentionally omitted affected_by_aoe_increase here because it warps the cleave box too much
+			}
+			"cleave_ending_width"
+			{
+				"value"			"360"
+				"affected_by_aoe_increase"	"1"
+			}
+			"cleave_distance"
+			{
+				"value"			"700"
+				"affected_by_aoe_increase"	"1"
+			}
+			"great_cleave_damage"
+			{
+				"value"				"40 70 80 90 100 110 120"
+				"LinkedSpecialBonus"	"special_bonus_unique_sven_8"
+			}
+			"strength_bonus"		"5 9 13 17 21 25 29"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+//=================================================================================================================
+// Ability: Warcry
+//=================================================================================================================
+	"sven_warcry"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5096"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"AbilitySound"					"Hero_Sven.WarCry"
+        "HasShardUpgrade"               "1"
+                "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30 35 40 45"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"movespeed"			
+				{
+					"value"		"10 14 18 22 26 30 34"
+					"LinkedSpecialBonus"		"special_bonus_unique_sven_6"
+				}
+				"bonus_armor"		
+				{
+					"value"		"6 9 12 15 18 21 24"		
+					"LinkedSpecialBonus"		"special_bonus_unique_sven_7"
+				}
+				"radius"		
+				{
+					"value"			"700"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"		
+				{
+					"value"			"10"
+					"LinkedSpecialBonus"		"special_bonus_unique_sven_5"
+				}
+				"shard_passive_armor"	
+				{
+					"value"		"6"
+					"RequiresShard"			"1"
+				}
+				"shard_radius"			
+				{
+					"value"	"1200"
+					"RequiresShard"			"1"
+				}
+		}
+	}
+
+//=================================================================================================================
+// Ability: God's Strength
+//=================================================================================================================
+	"sven_gods_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Sven.GodsStrength"
+		"MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+ 		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_4"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"100"
+		"AbilityDuration"				"35.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"gods_strength_damage"
+			{
+				"value"		"120 160 200 240 280 320 360"	
+				"special_bonus_unique_sven_2"		"+50"	
+			}
+			"bonus_slow_resistance"
+			{
+				"value"		"30"	
+				"special_bonus_unique_sven_gods_strength_slow_resist"		"+20"	
+			}
+		}	
+    }
+
+}

@@ -1,0 +1,273 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Ability: Phantom Lancer's Spirit Lance
+	//=================================================================================================================
+	"phantom_lancer_spirit_lance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5065"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+        "MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 130 135 140 170 190 250"		
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"lance_damage"
+			{
+				"value"				"90 150 200 220 275 350 400"
+				"special_bonus_unique_phantom_lancer_lance_damage"		"+50"
+			}
+			"lance_speed"				"1000"
+			"duration"					"4.25"
+			"movement_speed_pct"		"-10 -20 -30 -40 -45 -50 -55"
+			"illusion_duration"			"4"
+			"illusion_damage_out_pct"	"-80"
+			"tooltip_illusion_damage"	"20"
+			"illusion_damage_in_pct"	"300"
+			"tooltip_illusion_total_damage_in_pct"	"400"
+			"fake_lance_distance"		"675"
+			"shard_bounce_radius"
+			{
+				"value"						"750"
+				"RequiresShard"				"1"
+			}
+			"shard_bonus_illusion_damage"
+			{
+				"value"						"40"
+				"RequiresShard"				"1"
+			}
+			"shard_total_hits"
+			{
+				"value"						"2"
+				"RequiresShard"				"1"
+			}
+		}	
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Lancer's Doppelwalk
+	//=================================================================================================================
+	"phantom_lancer_doppelwalk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5066"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+			
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_1_damage_out_pct"	"-100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_1_damage_in_pct"	"0"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_2_damage_out_pct"	"-80"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_2_damage_in_pct"	"500"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"target_aoe"	"325"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"search_radius"	"900"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"delay"			"1"
+			}			
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"illusion_duration"			"3 3.5 4 4.5 5 5.5 6"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"illusion_extended_duration"			"2"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Lancer's Juxtapose
+	//=================================================================================================================
+	"phantom_lancer_juxtapose"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5067"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+			
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_illusions"			"6"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer_3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"proc_chance_pct"		"30 35 40 45 50 55 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"illusion_proc_chance_pct"		"8"
+			}			
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_duration"			"8"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_damage_out_pct"	"-70"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_illusion_damage"	"30"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer_6"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_damage_in_pct"	"225"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tooltip_total_illusion_damage_in_pct"	"325"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"illusion_from_illusion_duration"	"8"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"scepter_bonus_duration"	"10"
+				"RequiresScepter"			"1"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_bonus_illusions"	"2"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Lancer's Phantom Rush / Phantom Edge
+	//=================================================================================================================
+	"phantom_lancer_phantom_edge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5068"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 12 10 8 6 5 4"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"min_distance"		"300"
+				"max_distance"				
+				{
+					"value"				"850"
+					"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer"
+				}
+				"bonus_speed"		"800"
+				"bonus_agility"		"6 12 18 24 32 42 50"
+				"agility_duration"		
+				{
+					"value"			"2"
+					"special_bonus_unique_phantom_lancer_2"		"+2.5"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+}

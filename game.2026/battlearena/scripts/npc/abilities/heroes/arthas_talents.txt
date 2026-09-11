@@ -1,0 +1,142 @@
+"DOTAAbilities"
+{
+// ============================================================
+// ARTHAS — дерево талантов (4 тира x 2, AbilityTalentStart 10)
+// Тиры: 10 = Ability10/11, 15 = Ability12/13, 20 = Ability14/15, 25 = Ability16/17
+// Все эффекты читаются из Lua:
+//   - стат-таланты (урон/HP/КД/AS): modifier_arthas_talent_stats
+//     (HasTalent на лету, значения хардкодом — AbilityKV:Get(talent, "value") = 0)
+//   - флаг-таланты ульты (шанс/урон/броня/стан): HasTalent в
+//     modifier_arthas_vsolyanova_active (OnAttackLanded / проперти-методы)
+// Движковый авто-аттач "modifier_<имя таланта>" для кастомных имён НЕ работает
+// (проверено 2026-08-10 на stegius), поэтому KV-модификаторов здесь НЕТ.
+// ============================================================
+
+"arthas_special_bonus_attack_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"40"
+		}
+	}
+}
+
+"arthas_special_bonus_health"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"300"
+		}
+	}
+}
+
+"arthas_special_bonus_vsolyanova_chance"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"10"
+		}
+	}
+}
+
+"arthas_special_bonus_cooldown"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"20"
+		}
+	}
+}
+
+"arthas_special_bonus_attack_speed"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"50"
+		}
+	}
+}
+
+"arthas_special_bonus_vsolyanova_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"150"
+		}
+	}
+}
+
+"arthas_special_bonus_vsolyanova_armor"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"30"
+		}
+	}
+}
+
+"arthas_special_bonus_vsolyanova_stun"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"50"
+		}
+	}
+}
+}

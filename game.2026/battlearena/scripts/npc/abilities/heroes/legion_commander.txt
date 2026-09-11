@@ -1,0 +1,220 @@
+﻿"DOTAAbilities"
+{
+"legion_commander_overwhelming_odds"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5595"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+				"damage"				"60 80 100 120 160 200 220"
+				"damage_per_unit"		"20 30 40 50 60 70 80"
+				"damage_per_hero"		
+				{
+					"value"				"40 50 70 90 100 110 120"
+					"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_4"
+				}
+				"illusion_dmg_pct"		
+				{
+					"value"				"25"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"bonus_speed_creeps"		"3"
+				"bonus_speed_heroes"		"9"
+				"duration"				"7.0"
+				"radius"				
+				{
+					"value"		"400"
+					"LinkedSpecialBonus"	"special_bonus_unique_legion_commander_2"
+				}
+				"armor_per_creep"	
+				{
+					"value" 				"0.5"
+					"RequiresShard"				"1"
+				}
+				"armor_per_hero"	
+				{
+					"value" 				"4"
+					"RequiresShard"  		"1"
+				}
+				"shard_duration"	
+				{	
+					"value" 				"15"
+					"RequiresShard"		"1"
+				}
+				"strength_damage"		
+				{
+					"value"				"0.8"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Legion Commander: Press the Attack
+	//=================================================================================================================
+	"legion_commander_press_the_attack"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5596"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.05"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0 15.5 15.0 14.5 14.0 13.5 13.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
+
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed"			"60 80 100 120 140 150 160"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen"				"15 30 50 80 110 150 170" // "50 70 90 120 160 180 200"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Legion Commander: Moment of Courage
+	//=================================================================================================================
+	"legion_commander_moment_of_courage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5597"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_LegionCommander.Courage"
+		"MaxLevel"						"7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.5 1.2 1.0 0.8 0.5 0.3 0.15"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"trigger_chance"			
+			{
+				"value"				"20"
+				"LinkedSpecialBonus"        "special_bonus_unique_legion_commander_3"																	
+			}
+			"buff_duration"				"1.0"
+			"hp_leech_percent"			
+			{
+				"value"		"25 30 35 40 45 50 60"
+				"special_bonus_unique_legion_commander_7" "+50"
+			}
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Legion Commander: Duel
+	//=================================================================================================================
+	"legion_commander_duel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5598"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+	
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"180"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"60"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"				"4.0 4.5 4.75 5.0 5.5 6.0 6.5"
+				"duration_scepter"		
+				{
+					"value"			"4.75 5.5 6.25 6.75 7.0 7.5 8.0"
+					"RequiresScepter"	"1"
+				}
+				"reward_damage"			
+				{
+					"value"			"25 36 47 58 70 80 90"
+					"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
+				}
+				"victory_range"			"600"
+				"scepter_damage_reduction_pct"			
+				{
+					"value"				"50"
+					"RequiresScepter"						"1"
+				}
+				"scepter_cooldown_reduction"			
+				{
+					"value"			"20.0"
+					"RequiresScepter"						"1"
+				}
+				"AbilityCooldown"	"50"				
+		}
+	}
+}

@@ -1,0 +1,109 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Doom hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_doom_bringer"
+{
+	// ---- Devour (custom) ----------------------------------------------------
+	"doom_bringer_devour"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more gold (was 80/20)
+		"bonus_gold"
+		{
+			"base" "90"
+			"step"		"25"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Scorched Earth -----------------------------------------------------
+	"doom_bringer_scorched_earth"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more dps (was 20/2)
+		"damage_per_second"
+		{
+			"base" "22"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider scorch (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"bonus_movement_speed_pct" "5"
+			}
+		}
+	}
+
+	// ---- Infernal Blade -----------------------------------------------------
+	"doom_bringer_infernal_blade"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more burn (was 20/2)
+		"burn_damage"
+		{
+			"base" "25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer burn (was 1.0)
+		"burn_duration"
+		{
+			"base" "1.2"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Doom ---------------------------------------------------------------
+	"doom_bringer_doom"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"25"
+		}
+		// more damage (was 14/1)
+		"damage"
+		{
+			"base" "16"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer doom (rare, was 0.5)
+		"duration"
+		{
+			"base"		"0.6"
+			"floor"	"rare"
+			"cap"	"8"
+		}
+	}
+}

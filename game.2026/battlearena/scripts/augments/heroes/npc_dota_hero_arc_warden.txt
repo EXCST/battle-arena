@@ -1,0 +1,111 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Arc Warden hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_arc_warden"
+{
+	// ---- Flux ---------------------------------------------------------------
+	"arc_warden_flux"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"move_speed_slow_pct"
+				{
+					"base"		"5"
+					"mode" "MULT"
+
+					"limit"			"80"
+					"limit_base"		"55"
+				}
+			}
+		}
+		// more dps (was 15/2)
+		"damage_per_second"
+		{
+			"base" "17"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Magnetic Field -----------------------------------------------------
+	"arc_warden_magnetic_field"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider field (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more attack speed (was 25/4)
+		"attack_speed_bonus"
+		{
+			"base" "28"
+			"step"	"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Spark Wraith -------------------------------------------------------
+	"arc_warden_spark_wraith"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// faster wraiths (was 55)
+		"wraith_speed_base"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// more damage (was 35/3)
+		"spark_damage_base"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_arc_warden"		"x1.5"
+			}
+		}
+	}
+
+	// ---- Tempest Double -----------------------------------------------------
+	"arc_warden_tempest_double"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// longer double duration (was 1, rare)
+		"duration"
+		{
+			"base"			"1.5" // 3s per rare upgrade
+			"floor"	"rare"
+			"cap"		"6"
+		}
+	}
+}

@@ -1,0 +1,99 @@
+﻿"npc_angel_arena_hero_joe_black"
+{
+	"joe_black_face_of_death"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			
+			"limit"		"70"
+		}
+
+		"damage"
+		{
+			"base"			"80"
+			"step"		"8"
+		}
+
+		"heal_percent"
+		{
+			"base"			"10"
+		}
+	}
+
+	"joe_black_protection"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+		}
+
+		"damage_reduction"
+		{
+			"base"			"5"
+			"mode" "MULT"
+			"cap" "10"
+
+			"limit"		"100"
+		}
+
+		"duration"
+		{
+			"base"			"0.5"
+
+			"floor"	"rare"
+
+			"cap"		"6"
+		}
+	}
+
+	"joe_black_sleep"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			
+			"limit"		"60"
+		}
+
+		"health_drain_const"
+		{
+			"base"		"80"
+			"step"		"8"
+		}
+
+		"mana_drain_const"
+		{
+			"base"		"100"
+			"step"		"10"
+		}
+	}
+
+	"joe_black_song"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+
+			"limit"		"50"
+
+			"floor"	"epic"
+		}
+
+		"radius"
+		{
+			"base"			"50"
+			"cap"		"4"
+		}
+
+		"finish_damage"
+		{
+			"base"			"150"
+			"step"		"15"
+		}
+	}
+}

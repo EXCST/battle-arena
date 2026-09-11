@@ -1,0 +1,127 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Dazzle hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_dazzle"
+{
+	// ---- Poison Touch -------------------------------------------------------
+	"dazzle_poison_touch"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 15/2)
+		"damage"
+		{
+			"base" "18"
+			"step"	"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider start radius (was 35)
+		"start_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"end_radius" "40"
+			}
+		}
+	}
+
+	// ---- Shallow Grave ------------------------------------------------------
+	"dazzle_shallow_grave"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap"	"3"
+		}
+		// more heal amplify (was 5)
+		"heal_amplify"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Shadow Wave --------------------------------------------------------
+	"dazzle_shadow_wave"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more bounces (was 1)
+		"tooltip_max_targets_inc_dazzle"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"max_targets" "1"
+				"bounce_radius" "35"
+				"damage_radius" "35"
+			}
+		}
+		// more damage (was 30/4)
+		"damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Nothl Projection ---------------------------------------------------
+	"dazzle_nothl_projection"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+
+			"bundle"
+			{
+				"shallow_grave_heal"
+				{
+					"base" 		"120"
+					"step"		"45"
+				}
+			}
+		}
+	}
+
+	// ---- Innate: Weave ------------------------------------------------------
+	"dazzle_innate_weave"
+	{
+		// more armor change (was 0.2/0.1)
+		"armor_change"
+		{
+			"base" 		"0.25"
+			"step"		"0.1"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer weave (was 3)
+		"duration"
+		{
+			"base" "3.5"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+}

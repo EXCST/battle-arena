@@ -1,0 +1,151 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Kunkka hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_kunkka"
+{
+	// ---- Torrent ------------------------------------------------------------
+	"kunkka_torrent"
+	{
+		"cd_mana"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"kunkka_tidal_wave"
+				{
+					"cd_mana"
+					{
+						"base" "4"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 60/5)
+		"torrent_damage"
+		{
+			"base" "65"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_kunkka_7"		"x1.2"
+			}
+
+			"bundle_abilities"
+			{
+				"kunkka_tidal_wave"
+				{
+					"damage" "40"
+				}
+			}
+		}
+		// wider torrent (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"kunkka_tidal_wave"
+				{
+					"radius" "25"
+				}
+			}
+		}
+	}
+
+	// ---- Tidebringer --------------------------------------------------------
+	"kunkka_tidebringer"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer cleave (was 100)
+		"cleave_distance"
+		{
+			"base" "120"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"cleave_ending_width" "90"
+				"cleave_starting_width" "35"
+			}
+		}
+		// more damage (was 30/4)
+		"damage_bonus"
+		{
+			"base" 		"35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"cleave_damage"		"6"
+			}
+		}
+	}
+
+	// ---- X Marks the Spot ---------------------------------------------------
+	"kunkka_x_marks_the_spot"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// longer x (was 0.75)
+		"duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"allied_duration" "2"
+			}
+		}
+	}
+
+	// ---- Ghostship ----------------------------------------------------------
+	"kunkka_ghostship"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 60/5)
+		"damage"
+		{
+			"base" "65"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider ship (was 25)
+		"ghostship_width"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"movespeed_bonus" "6"
+			}
+		}
+	}
+}

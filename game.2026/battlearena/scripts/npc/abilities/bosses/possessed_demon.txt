@@ -1,0 +1,392 @@
+﻿"DOTAAbilities"
+{
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Ring of Fire -----------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_ring_fire"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_magma_trails"
+	"ScriptFile"					"creeps/boss/possessed/possessed_ring_fire"
+
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"waves"					"2"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"segments"				"8"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"base_radius"			"350"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius_step"			"400"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"segment_aoe"			"250"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"explosion_delay"		"2.4"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"wave_gap"				"2.8"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"0.75"
+		}
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_flat"			"1500"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"6"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Infernal Chains ---------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_infernal_chains"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_curse"
+	"ScriptFile"					"creeps/boss/possessed/possessed_infernal_chains"
+
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"18.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_flat"			"2000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"8"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"pull_duration"			"1.5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"projectile_speed"		"900"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Doom Leap ---------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_doom_leap"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_devil_stomp"
+	"ScriptFile"					"creeps/boss/possessed/possessed_doom_leap"
+
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1100"
+	"AbilityCastPoint"				"0.3"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_flat"			"3000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"10"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aoe"					"300"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"0.5"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mark_time"				"1.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"leap_duration"			"0.7"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Mark of the Damned ------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_mark_of_damned"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_hellshield"
+	"ScriptFile"					"creeps/boss/possessed/possessed_mark_of_damned"
+
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"900"
+	"AbilityCastPoint"				"0.3"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"22.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_flat"			"3500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_pct"			"12"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"splash_radius"			"400"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"splash_pct"			"50"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"mark_duration"			"3.0"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Hell Aura ---------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_hell_aura"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_magma_trails"
+	"ScriptFile"					"creeps/boss/possessed/possessed_hell_aura"
+
+	"MaxLevel"						"1"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_radius"			"300"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_flat"				"300"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_pct"				"3.0"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_radius_per_hero"	"100"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_flat_per_hero"	"100"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_pct_per_hero"		"1.0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"aura_detection_radius"	"600"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Annihilation ------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_annihilation"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"custom/possessed_fury"
+	"ScriptFile"					"creeps/boss/possessed/possessed_annihilation"
+
+	"MaxLevel"						"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.1"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_multiplier"		"130"
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------- Possessed Kraken -----------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
+"possessed_kraken"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass"				"tidehunter_kraken_shell"
+	"MaxLevel"				"1"
+	"AbilityTextureName"	"custom/possessed_kraken"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+
+	"AbilityValues"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_reduction"		"0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage_cleanse"		"400"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_reset_interval"	"6.0"
+		}
+	}
+}
+
+}

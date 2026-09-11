@@ -1,0 +1,146 @@
+﻿// ============================================================
+// BATTLE ARENA hero augments
+// Own balance, own schema.
+//
+// FIELDS:
+//   base            per-pick value (rolled +-25% at pick time)
+//   step            extra per additional stack (arithmetic progression)
+//   mode            ADD (default) / MULT (growth toward ability base)
+//   cap             hard cap on picks
+//   floor/roof      lowest/highest orb tier that can offer this
+//   unlock_at       only available after N game seconds
+//   bundle          also augments other stats of the SAME ability
+//   bundle_abilities also augments stats of ANOTHER ability
+//   perks           hero talents affecting the calculation ("x1.3" or "+5")
+//
+// SPECIAL NAMES:
+//   cd_mana         cooldown + manacost (use MULT)
+//   damage          = #AbilityDamage
+//   duration        = AbilityDuration
+// ============================================================
+
+
+"npc_dota_hero_abaddon"
+{
+	// ---- Death Coil ---------------------------------------------------------
+	"abaddon_death_coil"
+	{
+		// less cooldown + manacost per stack
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "5"
+		}
+
+		// self-damage gets lower (was -10)
+		"self_damage"
+		{
+			"base" "-12"
+			"mode" "ADD"
+			"cap" "4"
+		}
+
+		// more heal/damage per stack (was 30/4)
+		"damage_heal"
+		{
+			"base" "35"
+			"step" "5"
+			"mode" "ADD"
+			"cap" "12"
+		}
+
+		// faster missile (was 130)
+		"missile_speed"
+		{
+			"base" "150"
+			"mode" "ADD"
+			"cap" "5"
+		}
+
+		// NEW: longer cast range (late game)
+		"cast_range"
+		{
+			"base" "75"
+			"mode" "ADD"
+			"floor" "rare"
+			"unlock_at" "900"
+			"cap" "4"
+		}
+	}
+
+	// ---- Aphotic Shield -----------------------------------------------------
+	"abaddon_aphotic_shield"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+
+		// more absorb per stack (was 45/3)
+		"damage_absorb"
+		{
+			"base" "50"
+			"step" "4"
+			"mode" "ADD"
+			"cap" "12"
+		}
+
+		// wider explosion radius
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// NEW: shield lasts longer (rare only)
+		"duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Frostmourne --------------------------------------------------------
+	"abaddon_frostmourne"
+	{
+		// stronger move slow (was 5)
+		"curse_slow"
+		{
+			"base" "7"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// more attack speed slow (was 15)
+		"curse_attack_speed"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "6"
+		}
+
+		// more dps per stack (was 6/1)
+		"curse_dps"
+		{
+			"base" "8"
+			"step" "1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+
+		// NEW: curse lasts longer (rare only)
+		"curse_duration"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "5"
+		}
+	}
+}

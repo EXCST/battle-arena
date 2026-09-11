@@ -1,0 +1,189 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Alchemist hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_alchemist"
+{
+	// ---- Acid Spray ---------------------------------------------------------
+	"alchemist_acid_spray"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider spray
+		"radius"
+		{
+			"base" "55"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more acid damage (was 20/2)
+		"damage"
+		{
+			"base" "22"
+			"step" "2.5"
+			"mode" "ADD"
+			"cap" "12"
+		}
+		// more armor shred (was 2/0.2)
+		"armor_reduction"
+		{
+			"base" "2.5"
+			"step" "0.25"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Unstable Concoction ------------------------------------------------
+	"alchemist_unstable_concoction"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+			"bundle"
+			{
+				"move_speed" "5"
+			}
+		}
+		// more max damage (was 85/5)
+		"max_damage"
+		{
+			"base" "95"
+			"step" "6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"alchemist_unstable_concoction_throw"
+				{
+					"max_damage" "95"
+				}
+			}
+		}
+		// bigger explosion
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"alchemist_unstable_concoction_throw"
+				{
+					"midair_explosion_radius" "40"
+				}
+			}
+		}
+		// NEW: longer stun (epic only)
+		"stun_duration"
+		{
+			"base" "0.1"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"alchemist_unstable_concoction_throw"
+				{
+					"stun_duration" "0.1"
+				}
+			}
+		}
+	}
+
+	// ---- Corrosive Weaponry -------------------------------------------------
+	"alchemist_corrosive_weaponry"
+	{
+		// more slow per stack (was 2)
+		"slow_per_stack"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "3"
+			"bundle"
+			{
+				"attack_damage_per_stack" "3"
+			}
+		}
+		// NEW: longer debuff duration (rare)
+		"duration"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "4"
+		}
+	}
+
+	// ---- Chemical Rage ------------------------------------------------------
+	"alchemist_chemical_rage"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"alchemist_berserk_potion"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more regen (was 20/5)
+		"bonus_health_regen"
+		{
+			"base" "22"
+			"step" "5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"bonus_movespeed" "7"
+			}
+			"bundle_abilities"
+			{
+				"alchemist_berserk_potion"
+				{
+					"hp_regen" "22"
+					"move_speed" "5"
+				}
+			}
+		}
+
+		// faster attacks (epic, keep as AAF)
+		"base_attack_time"
+		{
+			"base"		"-0.03" // so -0.1 per epic
+			"floor"		"epic"
+			"cap"	"8"
+		}
+	}
+
+	// ---- Goblin's Greed -----------------------------------------------------
+	"alchemist_goblins_greed"
+	{
+		// more gold cap (was 2, linked 1)
+		"bonus_gold_cap"
+		{
+			"base"		"3"
+
+			"bundle"
+			{
+				"bonus_bonus_gold"		"1"
+			}
+		}
+	}
+}

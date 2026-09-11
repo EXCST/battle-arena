@@ -1,0 +1,258 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Windrunner: Gale Force (shard)
+	//=================================================================================================================
+	"windrunner_gale_force"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"652"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"1500"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"			"3"
+			"wind_strength"		"240"
+			"radius"			"1000"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+
+	//=================================================================================================================
+	// Windrunner: Shackleshot
+	//=================================================================================================================
+	"windrunner_shackleshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5130"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.15"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120 130 140 150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fail_stun_duration"	"0.7 0.8 0.9 1.0 1.1 1.2 1.3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.5 2.25 3.0 3.75 3.9 4.2 4.5"
+				"LinkedSpecialBonus"	"special_bonus_unique_windranger_6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"shackle_distance"		"575"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"arrow_speed"			"1515"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"shackle_count"			"1"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"shackle_angle"			"23"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Windrunner: Powershot
+	//=================================================================================================================
+	"windrunner_powershot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5131"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2600"
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9"
+		"AbilityChannelTime"			"1.0"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120 160 170 180"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"powershot_damage"		"150 225 300 375 425 520 600"
+				"damage_reduction"		
+				{
+					"value"				"20"
+					"special_bonus_unique_windranger_3"		"-10"
+					"CalculateSpellDamageTooltip"	"0"
+					"DamageTypeTooltip"	"DAMAGE_TYPE_NONE"
+				}
+				"arrow_width"			"125"
+				"arrow_range"			"2600"
+				"arrow_speed"			"3000.0 3000.0 3000.0 3000.0"
+				"tree_width"			"75"
+				"vision_radius"			"400"
+				"vision_duration"		"3.34"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Windrunner: Windrun
+	//=================================================================================================================
+	"windrunner_windrun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5132"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+		"AbilityDuration"				"3.5 3.7 4.3 4.7 5.5 5.7 6"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.1"	// Mostly about dodging all attacks
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movespeed_bonus_pct"	"35"		
+			"evasion_pct_tooltip"	"100"
+			"enemy_movespeed_bonus_pct"	
+			{
+				"value"		"-8 -16 -24 -28 -32 -38 -42"
+			}
+			"radius"					
+			{	
+				"value"			"300"
+				"special_bonus_unique_windranger"	"+225"
+			}
+			"scepter_movespeed_bonus_pct"			
+			{
+				"RequiresScepter" "1"
+				"value"			"-50"
+			}
+			"scepter_blind"				
+			{
+				"value"		"40"
+				"RequiresScepter"		"1"
+			}
+			"cannot_be_dispelled"
+			{
+				"value"						"0"
+				"special_bonus_unique_windranger_windrun_undispellable"			"+1"
+			}
+			"duration"					"3.5 3.7 4.3 4.7 5.5 5.7 6"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+		
+	//=================================================================================================================
+	// Windrunner: Focus Fire
+	//=================================================================================================================
+	"windrunner_focusfire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5133"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityDuration"				"20.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 100 125 140 180 210 250"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bonus_attack_speed"			"450"
+				"focusfire_damage_reduction"	
+				{
+					"value"						"-40 -30 -20 -10 0 10 20"
+					"LinkedSpecialBonus"		"special_bonus_unique_windranger_8"
+				}
+				"focusfire_fire_on_the_move"	"1"
+		}
+	}
+	
+	
+}

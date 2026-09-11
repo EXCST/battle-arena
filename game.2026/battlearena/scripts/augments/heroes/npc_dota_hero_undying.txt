@@ -1,0 +1,127 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Undying hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_undying"
+{
+	// ---- Decay --------------------------------------------------------------
+	"undying_decay"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 40/4)
+		"decay_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider decay (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more str steal (was 2)
+		"str_steal"
+		{
+			"base" 		"2.5"
+			"mode" 		"ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Soul Rip -----------------------------------------------------------
+	"undying_soul_rip"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage per unit (was 12/2)
+		"damage_per_unit"
+		{
+			"base" "15"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"tombstone_heal" "2.5"
+			}
+		}
+		// more max units (was 2)
+		"max_units"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"radius" "70"
+			}
+		}
+	}
+
+	// ---- Tombstone ----------------------------------------------------------
+	"undying_tombstone"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 20/3)
+		"base_damage"
+		{
+			"base" "25"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+
+		// faster zombies (rare, was -0.05)
+		"proc_interval"
+		{
+			"base"			"-0.06"
+			"floor"	"rare"
+
+			"cap"		"8"
+		}
+	}
+
+	// ---- Flesh Golem --------------------------------------------------------
+	"undying_flesh_golem"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage amp (was 5)
+		"damage_amp"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more str percentage (was 5)
+		"str_percentage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

@@ -1,0 +1,120 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Zeus hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_zuus"
+{
+	// ---- Arc Lightning ------------------------------------------------------
+	"zuus_arc_lightning"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 25/2)
+		"arc_damage"
+		{
+			"base" "30"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider arc (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Lightning Bolt -----------------------------------------------------
+	"zuus_lightning_bolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle_abilities"
+			{
+				"zuus_cloud"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 30/5)
+		"damage"
+		{
+			"base" "35"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Heavenly Jump ------------------------------------------------------
+	"zuus_heavenly_jump"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer hop (was 130)
+		"hop_distance"
+		{
+			"base" "150"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"range" "75"
+			}
+		}
+		// more damage (was 25/5)
+		"damage"
+		{
+			"base" "30"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more targets (was 3)
+		"targets"
+		{
+			"base" "3"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Thundergod's Wrath -------------------------------------------------
+	"zuus_thundergods_wrath"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap"	"6"
+		}
+		// more damage (was 35/3)
+		"damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+}

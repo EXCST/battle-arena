@@ -1,0 +1,103 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Fireblade hero upgrades
+// Fireblade replaces Faceless Void (npc_dota_hero_faceless_void),
+// so upgrades live in this file. Reworked from scratch.
+// ============================================================
+
+"npc_dota_hero_faceless_void"
+{
+	// ---- Fiery Stream -------------------------------------------------------
+	"fireblade_fiery_stream"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (base 100-520)
+		"damage"
+		{
+			"base" "40"
+			"step" "6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more slow (base 20)
+		"slow"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// longer slow (rare)
+		"slow_duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+
+	// ---- Burn Offering ------------------------------------------------------
+	"fireblade_burn_offering"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (base 100-575)
+		"damage"
+		{
+			"base" "40"
+			"step" "6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Scorched Blades ----------------------------------------------------
+	"fireblade_scorched_blades"
+	{
+		// more damage (base 20-100)
+		"damage"
+		{
+			"base" "15"
+			"step" "3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Firestrip (ultimate) -----------------------------------------------
+	"fireblade_firestrip"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"floor" "rare"
+			"cap" "3"
+		}
+		// more damage (base 300-1050, epic only)
+		"damage"
+		{
+			"base" "80"
+			"step" "10"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "5"
+		}
+		// longer buff (rare)
+		"buff_duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+}

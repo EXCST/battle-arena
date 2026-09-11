@@ -1,0 +1,141 @@
+"DOTAAbilities"
+{
+// ============================================================
+// STEGIUS — дерево талантов (4 тира x 2, AbilityTalentStart 10)
+// Тиры: 10 = Ability10/11, 15 = Ability12/13, 20 = Ability14/15, 25 = Ability16/17
+// Все эффекты читаются из Lua (desolating_touch / brightness_of_desolate):
+//   - стат-таланты: единый модификатор modifier_stegius_talent_stats
+//     (HasTalent на лету, значения через AbilityKV:Get(talent, "value"))
+//   - флаг-таланты: CDOTA_BaseNPC:HasTalent — значение не используется
+// Движковый авто-аттач "modifier_<имя таланта>" для кастомных имён НЕ работает
+// (проверено 2026-08-10), поэтому KV-модификаторов здесь НЕТ.
+// ============================================================
+
+"stegius_special_bonus_attack_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"40"
+		}
+	}
+}
+
+"stegius_special_bonus_health"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"300"
+		}
+	}
+}
+
+"stegius_special_bonus_touch_armor"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1"
+		}
+	}
+}
+
+"stegius_special_bonus_wave_cooldown"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"20"
+		}
+	}
+}
+
+"stegius_special_bonus_rage_attack_speed"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"50"
+		}
+	}
+}
+
+"stegius_special_bonus_brightness_armor"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"2"
+		}
+	}
+}
+
+"stegius_special_bonus_touch_boss_limit"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"20"
+		}
+	}
+}
+
+"stegius_special_bonus_brightness_creep_damage"
+{
+	"BaseClass"						"special_bonus_base"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"AbilitySpecial"
+	{
+		"value"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"2"
+		}
+	}
+}
+}

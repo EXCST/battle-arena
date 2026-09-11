@@ -1,0 +1,140 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Magnus hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_magnataur"
+{
+	// ---- Shockwave ----------------------------------------------------------
+	"magnataur_shockwave"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 25/4)
+		"shock_damage"
+		{
+			"base" "30"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider shock (was 20)
+		"shock_width"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Empower ------------------------------------------------------------
+	"magnataur_empower"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage (was 6)
+		"bonus_damage_pct"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more cleave (was 6)
+		"cleave_damage_pct"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap"		"5"
+		}
+	}
+
+	// ---- Skewer -------------------------------------------------------------
+	"magnataur_skewer"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"magnataur_horn_toss"
+				{
+					"cd_mana"
+					{
+						"base" "14"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider skewer (was 35)
+		"skewer_radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"magnataur_horn_toss"
+				{
+					"radius" "30"
+				}
+			}
+		}
+		// more damage (was 50/4)
+		"skewer_damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tree_hit_damage" "10"
+				"cliff_hit_damage" "40"
+			}
+			"bundle_abilities"
+			{
+				"magnataur_horn_toss"
+				{
+					"damage" "90"
+				}
+			}
+		}
+	}
+
+	// ---- Reverse Polarity ---------------------------------------------------
+	"magnataur_reverse_polarity"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider pull (was 30)
+		"pull_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// more damage (was 55/5)
+		"polarity_damage"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

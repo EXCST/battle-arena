@@ -1,0 +1,204 @@
+"DOTAAbilities"
+{
+
+	"ba_duel_beast_onslaught"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/beast/beast_onslaught"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"1.3"
+		"AbilityCooldown" 			"6"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_onslaught_release"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_beast_rocks"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/beast/beast_rocks"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.7"
+		"AbilityCooldown" 			"5"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_rock_throw"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_beast_roar"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/beast/beast_roar"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.7"
+		"AbilityCooldown" 			"6"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_uproar"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_beast_stomp"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/beast/beast_stomp"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.6"
+		"AbilityCooldown" 			"5"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_trample"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_beast_phase"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/beast/beast_phase"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0"
+		"AbilityCooldown" 			"30"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_trample"
+		"MaxLevel" 					"1"
+	}
+
+	// ===================== Воин Пустоши (npc_ba_duel_boss_02) =====================
+	// Порт кита «bone_warrior»: elite_040/041/042/120 + bone_warrior_phase_summon.
+
+	"ba_duel_skull_wave"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/skull_warrior/skull_wave"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"1.57"
+		"AbilityCooldown" 			"5"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"magnataur_shockwave"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_skull_leap"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/skull_warrior/skull_leap"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.6"
+		"AbilityCooldown" 			"5"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"spirit_breaker_charge_of_darkness"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_skull_arena"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/skull_warrior/skull_arena"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"1.3"
+		"AbilityCooldown" 			"15"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"mars_arena_of_blood"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_skull_smash"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/skull_warrior/skull_smash"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.6"
+		"AbilityCooldown" 			"3"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"centaur_hoof_stomp"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_skull_phase"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/skull_warrior/skull_phase"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0"
+		"AbilityCooldown" 			"12"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"tidehunter_ravage"
+		"MaxLevel" 					"1"
+	}
+
+	// ===================== Deadeye / Меткий глаз (npc_ba_duel_boss_03) — kit v3 =====================
+	// Дистанционный дуэльный босс: модель ванильного Снайпера + сет Blacksail Cannoneer.
+	// Шрапнель / контуждающая граната / гранёный крюк (escape+когсы) / фаза-барраж.
+	// Числа кита — в Lua (creeps/duel_bosses/deadeye/), конвенция beast/skull.
+
+	"ba_duel_deadeye_shrapnel"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/deadeye/deadeye_shrapnel"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.9"
+		"AbilityCastRange" 			"3000"
+		"AbilityCooldown" 			"10"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"sniper_shrapnel"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_deadeye_grenade"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/deadeye/deadeye_grenade"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.8"
+		"AbilityCastRange" 			"3000"
+		"AbilityCooldown" 			"12"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"primal_beast_rock_throw"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_deadeye_hookshot"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/deadeye/deadeye_hookshot"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0.35"
+		"AbilityCastRange" 			"600"
+		"AbilityCooldown" 			"7"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"rattletrap_hookshot"
+		"MaxLevel" 					"1"
+	}
+
+	// Интринзик когса «Гранёного крюка»: 5 атак до смерти + дренаж маны.
+	"deadeye_cog_passive"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"abilities/deadeye_cog_passive"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityTextureName" 		"generic_hidden"
+		"MaxLevel" 					"1"
+	}
+
+	"ba_duel_deadeye_phase"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"creeps/duel_bosses/deadeye/deadeye_phase"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint" 			"0"
+		"AbilityCooldown" 			"30"
+		"AbilityManaCost" 			"0"
+		"AbilityTextureName" 		"sniper_take_aim"
+		"MaxLevel" 					"1"
+	}
+
+	// Интринзик-«фрейм» дуэльного босса: поствура-метр + threat-агро.
+	// Слот есть у ВСЕХ дуэльных боссов (npc_ba_duel_boss_XX).
+	"duel_boss_frame"
+	{
+		"BaseClass" 				"ability_lua"
+		"ScriptFile" 				"abilities/duel_boss_frame"
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityTextureName" 		"generic_hidden"
+		"MaxLevel" 					"1"
+	}
+
+}

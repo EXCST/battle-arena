@@ -1,0 +1,82 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Silencer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_silencer"
+{
+	// ---- Curse of the Silent ------------------------------------------------
+	"silencer_curse_of_the_silent"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 12/2)
+		"damage"
+		{
+			"base" "15"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider curse (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Glaives of Wisdom --------------------------------------------------
+	"silencer_glaives_of_wisdom"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more int damage (was 1)
+		"intellect_damage_pct"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Last Word ----------------------------------------------------------
+	"silencer_last_word"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more int multiplier (was 0.1)
+		"int_multiplier"
+		{
+			"base" "0.12"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Global Silence -----------------------------------------------------
+	"silencer_global_silence"
+	{
+	}
+}

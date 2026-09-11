@@ -1,0 +1,136 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Centaur Warrunner hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_centaur"
+{
+	// ---- Hoof Stomp ---------------------------------------------------------
+	"centaur_hoof_stomp"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider stomp (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 50/4)
+		"stomp_damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Double Edge --------------------------------------------------------
+	"centaur_double_edge"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more edge damage (was 45/4)
+		"edge_damage"
+		{
+			"base" "50"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider edge (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more strength damage (rare, was 10)
+		"strength_damage"
+		{
+			"base"			"12"
+			"floor"	"rare"
+			"cap"		"8"
+		}
+	}
+
+	// ---- Return -------------------------------------------------------------
+	"centaur_return"
+	{
+		// more return damage (was 15/5)
+		"return_damage"
+		{
+			"base" "18"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Stampede -----------------------------------------------------------
+	"centaur_stampede"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"centaur_mount"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+				"centaur_work_horse"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// longer stampede (was 0.7)
+		"duration"
+		{
+			"base" "0.8"
+			"mode" "ADD"
+			"cap"	"10"
+
+			"bundle_abilities"
+			{
+				"centaur_mount"
+				{
+					"duration"
+					{
+						"base" "0.8"
+						"mode" "ADD"
+					}
+				}
+				"centaur_work_horse"
+				{
+					"duration"
+					{
+						"base" "0.8"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+}

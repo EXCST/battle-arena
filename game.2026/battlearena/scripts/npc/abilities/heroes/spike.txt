@@ -1,0 +1,290 @@
+"DOTAAbilities"
+{
+"spike_dash"
+{
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityTextureName"	"custom/spike_dash"
+	"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"	
+	
+	"MaxLevel"				"4"
+	
+	"AbilityCastRange"		"700"
+	"AbilityCooldown"		"8.0 7.5 7.0 6.5"
+	"AbilityDuration"		"0.0"
+	"AbilityCastPoint"		"0.1"
+	"AbilityManaCost"		"20 30 40 50"
+	"AbilityDamage"			"100 120 140 160"
+	
+	"precache"
+	{
+		"soundfile"			"sounds/items/deso_target.vsnd"
+		"particle"			"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"range_tooltip"		"700"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"					"abilities/hero/spike/dash"
+			"Function"						"OnSpellStart"
+			"Target"						"POINT"
+			"Damage"						"%AbilityDamage"
+			"ModifierName"					"modifier_spike_dash_active"
+		}
+		"ApplyMotionController"
+		{
+		    "Target" 						"CASTER"
+		    "ScriptFile"    				"abilities/hero/spike/dash"
+		    "HorizontalControlFunction" 	"MotionHorizontal"
+		    "VerticalControlFunction" 		"MotionVertical"         
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"					"modifier_spike_dash_active"
+			"Target"						"CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName"					"Item_Desolator.Target"
+			"Target"						"CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName"					"Item_Desolator.Target"
+			"Target"						"CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName"					"Item_Desolator.Target"
+			"Target"						"CASTER"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_spike_dash_active"
+		{
+			"IsHidden"				"0"
+			"Passive"				"0"
+			"IsBuff"				"1"
+			"EffectName"			"particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+			"EffectAttachType"		"attach_origin"
+		}
+	}
+	
+}
+
+"spike_heal"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"BaseClass"					    "ability_lua"
+	"ScriptFile"					"abilities/hero/spike/spike_heal"
+	"AbilityTextureName"			"custom/angel_arena_heal_ward"
+	"MaxLevel"						"4"
+	
+	"AbilityCooldown"				"26 25 24 23"
+	"AbilityCastPoint"				"0.1"
+	"AbilityManaCost"				"100 110 120 130"
+	
+	"precache"
+	{
+		"soundfile"					"soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts"
+		"particle"					"particles/world_shrine/dire_shrine_active_flash.vpcf"
+		"particle"					"particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_eztzhok.vpcf"
+	}
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"heal_per_sec"
+		{
+			"value"			"1.0"
+		}
+		"status_resist"
+		{
+			"value"			"10 12 14 16"
+		}
+		"multiplier"
+		{
+			"value"			"200"
+		}
+		"active_duration"
+		{
+			"value"			"3"
+		}
+		"thresshold_pct"
+		{
+			"value"			"25"
+		}
+		"passive_duration"
+		{
+			"value"			"0.5"
+		}
+	}
+}
+
+
+"angel_arena_shell"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityTextureName"			"custom/angel_arena_shell"
+	
+	"ScriptFile"					"abilities/hero/spike/shell"
+	
+	"MaxLevel" 						"4"
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+	{
+		"return_damage"
+		{
+			"value"					"10 12 14 16"
+		}
+	}
+}
+
+"spike_conclusion"
+{
+	"BaseClass"				"ability_datadriven"
+	"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"	"custom/spike_conclusion"
+	
+	"MaxLevel"				"3"
+	"AbilityCooldown"		"75.0"
+	"AbilityDuration"		"4.0"
+	"AbilityCastPoint"		"0.0"
+	"AbilityManaCost"		"150 200 250"
+	
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+		"particle"			"particles/units/heroes/hero_ursa/ursa_enrage_buff_b.vpcf"
+	}
+	
+	"AbilityValues"
+	{
+		"duration"			"4.0"
+		"total_cooldown"	"150 120 90"
+		"damage_by_creep"	"2"
+		"damage_by_hero"	"15"
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"abilities/hero/spike/conclusion"
+			"Function"		"OnSpellStart"
+		}
+		"FireSound"
+		{
+			"Target"		"CASTER"
+			"EffectName"	"Hero_Ursa.Enrage"
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName"  "modifier_spike_conclusion_active"
+			"Target"		"CASTER"
+			"Duration"		"%duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_spike_conclusion_active"
+		{
+			"IsHidden"				"0"
+			"Passive"				"0"
+			"IsBuff"				"1"
+			"EffectName"			"particles/units/heroes/hero_ursa/ursa_enrage_buff_b.vpcf"
+			"EffectAttachType"		"attach_origin"
+			
+			"OnAbilityExecuted"
+			{
+				"DelayedAction"
+				{
+					"Delay" "0.01"
+					"Action"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"abilities/hero/spike/conclusion"
+							"Function"			"Active_CooldownIncrease"
+							"Multipler"			"%total_cooldown"
+						}
+					}
+				}
+			}
+				
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/hero/spike/conclusion"
+					"Function"		"Active_OnDestroy"
+				}
+			}
+			
+		}
+		
+		"modifier_spike_special_bonus_attack_passive"
+		{
+			"IsHidden"				"1"
+			"Passive"				"1"
+			"IsBuff"				"1"
+			
+			"OnKill"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/hero/spike/talent_bonus_attack"
+					"Function"		"OnKill"
+				}
+			}
+		}
+		
+		"modifier_spike_special_bonus_attack"
+		{
+			"IsHidden"			"0"
+			"Passive"			"0"
+			"IsBuff"			"1"
+			
+			"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"1"
+			}
+		}
+	
+	}
+}
+
+}
+
+
+
+
+
+
+

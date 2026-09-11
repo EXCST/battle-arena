@@ -1,0 +1,179 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Timbersaw (Shredder) hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_shredder"
+{
+	// ---- Whirling Death -----------------------------------------------------
+	"shredder_whirling_death"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"shredder_flamethrower"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider whirl (was 50)
+		"whirling_radius"
+		{
+			"base" "55"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle_abilities"
+			{
+				"shredder_flamethrower"
+				{
+					"width" "30"
+					"length" "30"
+				}
+			}
+		}
+		// more damage (was 50/3)
+		"whirling_damage"
+		{
+			"base" "55"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"shredder_flamethrower"
+				{
+					"damage_per_second"
+					{
+						"base" "40"
+						"step"		"1.5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Timber Chain -------------------------------------------------------
+	"shredder_timber_chain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider chain (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"chain_radius" "35"
+			}
+		}
+		// more damage (was 50/4)
+		"damage"
+		{
+			"base" "55"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Reactive Armor -----------------------------------------------------
+	"shredder_reactive_armor"
+	{
+		// more armor per stack (was 0.6/0.1)
+		"bonus_armor"
+		{
+			"base" "0.8"
+			"step"	"0.15"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"cd_mana"
+				{
+					"base" "10"
+					"mode" "MULT"
+				}
+			}
+		}
+
+		// more hp regen (was 3/1)
+		"bonus_hp_regen"
+		{
+			"base" "4"
+			"step"	"1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"radius"
+				{
+					"base" "30"
+					"mode" "MULT"
+
+					"limit"		"900"
+					"limit_base"	"600"
+				}
+				"explosion_radius"
+				{
+					"base" "30"
+					"mode" "MULT"
+
+					"limit"		"900"
+					"limit_base"	"600"
+				}
+			}
+		}
+	}
+
+	// ---- Chakram ------------------------------------------------------------
+	"shredder_chakram"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider chakram (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 55/4)
+		"pass_damage"
+		{
+			"base" "60"
+			"step"	"5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage_per_second"
+				{
+					"base" "25"
+					"step"		"4"
+					"mode" "ADD"
+				}
+				"speed" "30"
+			}
+		}
+	}
+}

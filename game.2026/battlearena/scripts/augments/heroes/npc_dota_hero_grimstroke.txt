@@ -1,0 +1,151 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Grimstroke hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_grimstroke"
+{
+	// ---- Dark Artistry ------------------------------------------------------
+	"grimstroke_dark_artistry"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"bonus_damage_per_target"
+				{
+					"base" "8"
+					"step"	"1"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider end radius (was 30)
+		"end_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"start_radius" "35"
+			}
+		}
+	}
+
+	// ---- Ink Creature -------------------------------------------------------
+	"grimstroke_ink_creature"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"grimstroke_dark_portrait"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more destroy attacks (epic, was 0.25)
+		"destroy_attacks"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+		// more dps (was 15/1.5)
+		"damage_per_second"
+		{
+			"base" "18"
+			"step"		"2"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"pop_damage"
+				{
+					"base" "45"
+					"step"		"5"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Spirit Walk --------------------------------------------------------
+	"grimstroke_spirit_walk"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// wider walk (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more damage (was 50/5)
+		"max_damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage_per_tick"
+				{
+					"base"		"2.5"
+					"step"	"0.25"
+				}
+				"tick_dps_tooltip"
+				{
+					"base"		"12"
+					"step"	"1.5"
+				}
+			}
+		}
+	}
+
+	// ---- Soul Chain ---------------------------------------------------------
+	"grimstroke_soul_chain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"	"80"
+		}
+		// longer chain (was 1)
+		"chain_duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

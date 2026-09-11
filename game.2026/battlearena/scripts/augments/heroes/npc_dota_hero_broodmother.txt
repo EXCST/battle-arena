@@ -1,0 +1,155 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Broodmother hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_broodmother"
+{
+	// ---- Insatiable Hunger --------------------------------------------------
+	"broodmother_insatiable_hunger"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more bonus damage (was 5)
+		"bonus_damage"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more lifesteal (was 15)
+		"lifesteal_pct"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Spin Web -----------------------------------------------------------
+	"broodmother_spin_web"
+	{
+		// more web movespeed (was 7)
+		"bonus_movespeed"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// NEW: more webs charges (rare)
+		"web_count"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "3"
+		}
+	}
+
+	// ---- Incapacitating Bite ------------------------------------------------
+	"broodmother_incapacitating_bite"
+	{
+		// more miss chance (was 5, max 2)
+		"miss_chance"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "2"
+		}
+		// more damage (was 25/4)
+		"attack_damage"
+		{
+			"base" "30"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more enemy slow (was -5)
+		"bonus_movespeed"
+		{
+			"base" "-6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Spawn Spiderlings --------------------------------------------------
+	"broodmother_spawn_spiderlings"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"broodmother_sticky_snare"
+				{
+					"cd_mana"
+					{
+						"base" "6"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more spider damage (was 30/2)
+		"damage"
+		{
+			"base" "35"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"damage_bonus"
+				{
+					"base"			"25"
+					"step"		"2.5"
+				}
+			}
+			"bundle_abilities"
+			{
+				"broodmother_sticky_snare"
+				{
+					"damage_per_second" "12"
+				}
+				"broodmother_buff_spiderling_lua"
+				{
+					"buff_damage" "4"
+				}
+			}
+		}
+		// tankier spiderlings (was 70/10)
+		"tooltip_spiderling_hp"
+		{
+			"base" "80"
+			"step"		"12"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"hp_bonus"
+				{
+					"base"		"80"
+					"step"		"12"
+				}
+			}
+			"bundle_abilities"
+			{
+				"broodmother_buff_spiderling_lua"
+				{
+					"buff_hp" "12"
+				}
+			}
+		}
+		"lifetime_extention_limit"
+		{
+			"base"		"1"
+		}
+	}
+}

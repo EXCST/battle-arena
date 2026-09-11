@@ -1,0 +1,325 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Earth Spirit: Boulder Smash
+	//=================================================================================================================
+	"earth_spirit_boulder_smash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5608"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_EarthSpirit.BoulderSmash.Target"
+	        // "MaxLevel"						"7"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"150"
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22.0 18.0 14.0 10.0 9.0 8.0 7.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				"180"	// NOTE: This radius must match the radius for geomagnetic grip
+				"rock_search_aoe"				"200"
+				"rock_damage"			
+				{
+					"value"			"120 180 240 300 425 650 850"
+					"special_bonus_unique_earth_spirit_6"	"+125"
+				}	
+			    "damage_pct" "10"	
+				"move_slow"				"50"
+				"duration"			"1.25 2.5 3.25 4"
+				"speed"					"900"
+				"unit_distance"			
+				{
+					"value"		"500.0 600.0 700.0 800.0"
+					"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_7"
+				}
+				"rock_distance"			
+				{
+					"value"		"2000.0"
+					"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_7"
+				}			
+				"remnant_smash_radius_tooltip"			"200"
+				"creep_multiplier"		"1.25"
+		}
+	}
+
+
+	//=================================================================================================================
+	// Earth Spirit: Rolling Boulder
+	//=================================================================================================================
+	"earth_spirit_rolling_boulder"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5609"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_EarthSpirit.RollingBoulder.Cast"
+                "MaxLevel" "7"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0 9.0 8.0 7.0 6.0 5.0 4.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				
+				{
+					"value"		"160"
+					"affected_by_aoe_increase"	"1"		
+				}
+				"speed"					"1000"
+				"rock_speed"			"1600"
+				"distance"				
+				{
+					"value"		"750.0"
+					"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_4"
+				}
+				"rock_distance_multiplier"	"2.0"
+				"delay"					"0.5"
+				"damage"				
+				{
+					"value"		"75 125 175 225 300 375 450"
+					"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit"
+				}
+				"stun_duration"			
+				{
+					"value"		"0.3 0.5 0.7 0.9 1 1.1 1.2"
+					"LinkedSpecialBonus"	"special_bonus_unique_earth_spirit_3"
+				}
+				"rock_bonus_duration"	"0.3 0.5 0.7 0.9 1 1.1 1.2"
+				"damage_str"			"100"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	
+	//=================================================================================================================
+	// Earth Spirit: Geomagnetic Grip
+	//=================================================================================================================
+	"earth_spirit_geomagnetic_grip"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5610"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_EarthSpirit.GeomagneticGrip.Target"
+		"HasShardUpgrade"				"1"
+	        // "MaxLevel"						"7"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.1"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				"180"	// NOTE: This radius must match the radius for boulder smash
+				"rock_damage"			"50 100 150 200 300 400 500"
+				"damage_pct" "5"
+				"duration"			"2 2.5 3 3.5"
+				"pull_units_per_second_heroes"		"600"
+				"pull_units_per_second"		"900"
+				"speed"					"800"
+				"total_pull_distance"		"1400"
+				"AbilityCooldown"		
+				{
+					"value"		"13"
+					"special_bonus_unique_earth_spirit_5"	"-2"
+				}
+		}
+	}
+
+	//=================================================================================================================
+	// Earth Spirit: Stone Caller
+	//=================================================================================================================
+	"earth_spirit_stone_caller"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5611"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"MaxLevel"						"21"
+		"AbilitySound"					"Hero_EarthSpirit.StoneRemnant.Impact"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_ES_STONE_CALLER"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"1100"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+
+		"AbilityChargeRestoreTime"		"18"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				"60.0"
+			"polarization_distance"
+			{
+				"value"			"0"
+				
+			}
+			"vision_radius"				
+			{
+				"value"							"0"
+			}		
+			"AbilityCharges"
+			{
+				"value"							"7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27"
+			}
+			"rolling_offset_distance"			"150"
+			"hero_level_increment"				"5"
+		}
+	}
+
+	//=================================================================================================================
+	// Earth Spirit: Petrify ( Enchant Remnant scepter ability )
+	//=================================================================================================================
+	"earth_spirit_petrify"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5648"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		"HasScepterUpgrade"			"1"
+
+		"MaxLevel" "1"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"		"3"
+				"damage"	"300"
+				"aoe"		"300"
+				"ally_cast_range"	"500"
+		}
+	}
+
+	//=================================================================================================================
+	// Earth Spirit: Magnetize
+	//=================================================================================================================
+	"earth_spirit_magnetize"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5612"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		// "MaxLevel"						"7"
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.2"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200 250 300 400 500"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"cast_radius"			"500"
+			"damage_per_second"	
+			{
+				"value"									"85 140 195 250 305 360 415"
+				"special_bonus_unique_earth_spirit_8"	"+20"
+			}		
+			"damage_pct" "3"
+			"damage_duration"
+			{
+				"value"			"6.0"
+				"special_bonus_unique_earth_spirit_6"	"+2"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
+			"rock_search_radius"			"400"
+			"rock_explosion_radius"			"600"
+			"damage_interval"			"1.0"
+			"rock_explosion_delay"			"8.0"
+			"silence_duration"			"5.0"
+			"slow_duration"			"2.0"
+		}
+	}
+}

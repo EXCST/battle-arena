@@ -1,0 +1,102 @@
+﻿"npc_angel_arena_hero_satan"
+{
+	"satan_breath"
+	{
+		"cd_mana"
+		{
+			"base" "4"
+			"mode" "MULT"
+		}
+
+		"flame_count"
+		{
+			"base"			"2"
+			"floor"	"rare"
+			"cap"		"10"
+		}
+
+		"damage"
+		{
+			"base"			"25"
+			"step"		"3"
+		}
+
+		"damage_from_str"
+		{
+			"base"			"0.5"
+			"cap"		"5"
+		}
+	}
+
+	"satan_might"
+	{
+		"chance"
+		{
+			"base"			"1.5"
+			"cap"		"5"
+		}
+
+		"radius"
+		{
+			"base"			"30"
+		}
+	}
+
+	"satan_bloody_trade"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+
+			"cap" "5"
+		}
+
+		"duration"
+		{
+			"base"			"0.25"
+			"floor"	"epic"
+			"cap"		"8"
+		}
+
+		"damage_from_health_lost_pct"
+		{
+			"base"			"5"
+			"mode" "MULT"
+			"limit"	"200"
+			"multiplicative_base"	"110"
+		}
+	}
+
+	"satan_overpain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"limit"	"50"
+		}
+
+		"duration"
+		{
+			"base"			"0.2"
+			"cap" 	"10"
+		}
+
+		"hp_regen"
+		{
+			"base"			"0.5"
+			"cap" 	"10"
+		}
+	}
+
+	"satan_curse"
+	{
+		"cd_mana"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"floor"	"epic"
+		}
+	}
+}

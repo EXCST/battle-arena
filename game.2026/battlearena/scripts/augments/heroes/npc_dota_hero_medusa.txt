@@ -1,0 +1,146 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Medusa hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_medusa"
+{
+	// ---- Split Shot ---------------------------------------------------------
+	"medusa_split_shot"
+	{
+		// more damage modifier (was 5)
+		"damage_modifier"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"damage_modifier_tooltip" "6"
+			}
+		}
+		// more arrows (rare, was 0.5)
+		"arrow_count"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"floor" "rare"
+			"cap" "6"
+		}
+	}
+
+	// ---- Mystic Snake -------------------------------------------------------
+	"medusa_mystic_snake"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"medusa_cold_blooded"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 40/4)
+		"snake_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more mana steal (rare, was 0.5)
+		"snake_mana_steal"
+		{
+			"base"			"0.6"
+			"floor"	"rare"
+			"cap" "6"
+		}
+		// more jumps (was 1)
+		"snake_jumps"
+		{
+			"base"			"1"
+			"cap"		"4"
+
+			"bundle"
+			{
+				"radius" "50"
+			}
+		}
+	}
+
+	// ---- Gorgon Grasp -------------------------------------------------------
+	"medusa_gorgon_grasp"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more volleys (rare, was 0.5)
+		"volley_count"
+		{
+			"base"	"0.5"
+			"mode" "ADD"
+			"cap"	"4"
+			"floor" "rare"
+		}
+		// more damage (was 35/5)
+		"damage"
+		{
+			"base" "40"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"damage_pers"
+				{
+					"base" "25"
+					"step"		"4"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+
+	// ---- Stone Gaze ---------------------------------------------------------
+	"medusa_stone_gaze"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider gaze (was 60)
+		"radius"
+		{
+			"base" "70"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle"
+			{
+				"speed_boost"	"12"
+			}
+		}
+		// more bonus physical damage (was 10)
+		"bonus_physical_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+}

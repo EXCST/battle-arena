@@ -1,0 +1,151 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Venomancer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_venomancer"
+{
+	// ---- Venomous Gale ------------------------------------------------------
+	"venomancer_venomous_gale"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+
+			"bundle"
+			{
+				"tick_interval"		"-0.25"
+			}
+		}
+		// more damage (was 40/4)
+		"strike_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"tick_damage"
+				{
+					"base"			"28"
+					"step"		"4"
+				}
+			}
+		}
+		// wider gale (was 20)
+		"radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Poison Sting -------------------------------------------------------
+	"venomancer_poison_sting"
+	{
+		// more damage (was 10/2)
+		"damage"
+		{
+			"base" "12"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Snakebite ----------------------------------------------------------
+	"venomancer_snakebite"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 25/3)
+		"base_damage"
+		{
+			"base"		"30"
+			"step"	"4"
+			"cap" "8"
+
+			"bundle"
+			{
+				"tick_damage"
+				{
+					"base"		"12"
+					"step"	"2.5"
+				}
+			}
+		}
+	}
+
+	// ---- Plague Ward --------------------------------------------------------
+	"venomancer_plague_ward"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// tankier wards (was 70/30)
+		"ward_hp_custom"
+		{
+			"base"			"80"
+			"step"		"35"
+			"cap" "8"
+
+			"perks"
+			{
+				"special_bonus_unique_venomancer"	"x2.5"
+			}
+
+			"mode" "ADD"
+		}
+		// stronger wards (was 10/7)
+		"ward_damage_custom"
+		{
+			"base"			"12"
+			"step"		"8"
+			"cap" "8"
+
+			"perks"
+			{
+				"special_bonus_unique_venomancer"	"x2.5"
+			}
+
+			"mode" "ADD"
+		}
+	}
+
+	// ---- Noxious Plague -----------------------------------------------------
+	"venomancer_noxious_plague"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider plague (was 40)
+		"debuff_radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 55/5)
+		"impact_damage"
+		{
+			"base" "60"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

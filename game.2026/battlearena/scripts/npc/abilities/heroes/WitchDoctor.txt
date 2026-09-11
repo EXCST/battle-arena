@@ -1,0 +1,437 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Witch Doctor: Paralyzing Cask
+	//=================================================================================================================
+	"witch_doctor_paralyzing_cask"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5138"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"                      "7"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140 180 220 260"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Can have multiple bounces
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"hero_duration"			"1.0"
+				"creep_duration"		"5"
+				"base_damage"			"75 100 125 150 210 260 320"
+				"bounce_range"			"575"
+				"bounces"				
+				{ 
+					"value"					"4 5 6 7 8 9 10"
+					"special_bonus_unique_witch_doctor_3"			"+2"
+				}
+				"speed"					"1000"
+				"bounce_delay"			"0.3"
+				"bounce_bonus_damage"			"20 30 40 50 60 70 80"
+				"creep_damage_pct"		"200"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+// Witch Doctor: Voodoo Restoration
+//=================================================================================================================
+	"witch_doctor_voodoo_restoration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5139"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"AbilitySound"					"Hero_WitchDoctor.Voodoo_Restoration"
+        "MaxLevel" "7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"35 40 45 50 75 100 125"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"mana_per_second"			
+				{
+					"value"	"8 12 16 20 24 28 32"
+					"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_4"
+					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+					"LinkedSpecialBonusField"	"value"
+				}
+				"radius"					
+				{
+					"value"			"500 550 600 650 700 750 800"
+					"affected_by_aoe_increase"	"1"
+				}
+				"heal"						
+				{
+					"value"			"20 40 60 80 100 120 160"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+				}
+				"heal_interval"				"0.33 0.33 0.33 0.33 0.33 0.33 0.33"
+				"enemy_damage_pct"				"100"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Maledict
+	//=================================================================================================================
+	"witch_doctor_maledict"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5140"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_WitchDoctor.Maledict_Cast"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"575"
+		"AbilityCastPoint"				"0.35 0.35 0.35 0.35"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityDuration"				"12.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"20 25 30 35 50 75 100"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"105 110 115 120 125 130 135"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"
+				{
+					"value"			"180"
+					"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_6"
+					"affected_by_aoe_increase"	"1"
+				}
+				"bonus_damage"				
+				{
+					"value"			"15 17 19 21 24 27 30"
+					"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_7"
+				}
+				"bonus_damage_threshold"	"100"
+				"ticks"
+				{
+					"value"		"3"
+					"LinkedSpecialBonusField"		"value2"
+				}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_5"
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Death Ward
+	//=================================================================================================================
+	"witch_doctor_death_ward"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5141"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NOT_ATTACK_IMMUNE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_WitchDoctor.Death_WardBuild"
+
+		"HasScepterUpgrade"			"1"
+
+		"AbilityDraftUltShardAbility"		"witch_doctor_voodoo_switcheroo"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.35 0.35 0.35"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60.0"
+		"AbilityChannelTime"			"8.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 200 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"					
+				{
+					"value"		"60 110 160 200 250 300 350"
+					"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_5"
+					"CalculateSpellDamageTooltip"	"0"
+				}
+				"attack_range_tooltip"		
+				{
+					"value"		"700"
+					"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_1"
+				}
+				"bounce_radius"				
+				{
+					"value"		"650 650 650"
+					"RequiresScepter"		"1"
+					"affected_by_aoe_increase"	"1"
+				}
+				"scepter_lifesteal"			
+				{
+					"value"		"10"
+					"RequiresScepter"		"1"
+				}
+				"bonus_accuracy"			"50"
+		}
+	}
+	
+	//=================================================================================================================
+	// Witch Doctor: Voodoo Switcheroo (Shard Ability)
+	//=================================================================================================================
+	"witch_doctor_voodoo_switcheroo"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"632"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"MaxLevel"						"1"
+		"IsGrantedByShard"				"1"
+	
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"		"2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_speed_reduction"		"30"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5998"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"100"
+				"ad_linked_abilities"			"witch_doctor_death_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6298"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.5"
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6524"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6995"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0.75" 					
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER" 
+				"value2"				"25"					
+				"ad_linked_abilities"			"witch_doctor_voodoo_restoration"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6996"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"60"
+				"ad_linked_abilities"			"witch_doctor_death_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"417"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"75"
+				"ad_linked_abilities"			"witch_doctor_maledict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"555"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"20"
+				"ad_linked_abilities"			"witch_doctor_maledict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+}

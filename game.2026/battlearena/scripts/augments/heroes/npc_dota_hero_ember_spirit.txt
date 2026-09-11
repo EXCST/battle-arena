@@ -1,0 +1,159 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Ember Spirit hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_ember_spirit"
+{
+	// ---- Searing Chains -----------------------------------------------------
+	"ember_spirit_searing_chains"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+		}
+		// more dps (was 20/3)
+		"damage_per_second"
+		{
+			"base" "22"
+			"step"		"3.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more targets (was 1)
+		"unit_count"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"radius" "35"
+			}
+		}
+	}
+
+	// ---- Sleight of Fist ----------------------------------------------------
+	"ember_spirit_sleight_of_fist"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"	"70"
+		}
+		// wider sleight (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more hero damage (was 20/5)
+		"bonus_hero_damage"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Flame Guard --------------------------------------------------------
+	"ember_spirit_flame_guard"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"absorb_amount"
+				{
+					"base" "110"
+					"step"		"8"
+					"mode" "ADD"
+				}
+			}
+		}
+		// wider guard (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"duration" "2.5"
+			}
+		}
+		// more dps (was 15/2)
+		"damage_per_second"
+		{
+			"base" "18"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_ember_spirit_3"	"x2"
+			}
+		}
+	}
+
+	// ---- Fire Remnant -------------------------------------------------------
+	"ember_spirit_fire_remnant"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"ember_spirit_activate_fire_remnant"
+				{
+					"cd_mana" "6"
+				}
+			}
+		}
+		// more damage (was 40/2)
+		"damage"
+		{
+			"base" "45"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle_abilities"
+			{
+				"ember_spirit_activate_fire_remnant"
+				{
+					"damage"
+					{
+						"base" "45"
+						"step"		"3"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// wider remnant (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"ember_spirit_activate_fire_remnant"
+				{
+					"radius" "30"
+				}
+			}
+		}
+	}
+}

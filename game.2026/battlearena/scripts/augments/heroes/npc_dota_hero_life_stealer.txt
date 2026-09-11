@@ -1,0 +1,94 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Lifestealer hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_life_stealer"
+{
+	// ---- Rage ---------------------------------------------------------------
+	"life_stealer_rage"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+	}
+
+	// ---- Open Wounds --------------------------------------------------------
+	"life_stealer_open_wounds"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal (was 10)
+		"heal_percent"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Ghoul Frenzy -------------------------------------------------------
+	"life_stealer_ghoul_frenzy"
+	{
+		// more attack speed (was 25/5)
+		"attack_speed_bonus"
+		{
+			"base" "30"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Infest -------------------------------------------------------------
+	"life_stealer_infest"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// wider infest (was 50)
+		"radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more damage (was 80/8)
+		"damage"
+		{
+			"base" "90"
+			"step"	"10"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more move speed
+		"bonus_movement_speed"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more health (was 200/40)
+		"bonus_health"
+		{
+			"base"			"250"
+			"step"		"50"
+			"cap" "8"
+			"perks"
+			{
+				"special_bonus_unique_lifestealer_infest_target_bonus"	"x1.15"
+			}
+			"mode" "ADD"
+		}
+	}
+}

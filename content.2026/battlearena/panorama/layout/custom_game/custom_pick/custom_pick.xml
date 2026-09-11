@@ -1,0 +1,82 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/layout/custom_game/custom_pick/custom_pick.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/layout/custom_game/scripts/util.vjs_c" />
+		<include src="s2r://panorama/layout/custom_game/scripts/icon_change.vjs_c" />
+		<include src="s2r://panorama/layout/custom_game/custom_pick/custom_pick.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="hero_portrait">
+			<Panel class="hero_portrait" />
+		</snippet>
+	</snippets>
+	<Panel class="MainPick" hittest="true">
+		<Panel id="BGScene_1" class="selection_background" hittest="false">
+			<Panel class="selection_background_gradient" />
+		</Panel>
+		<Panel class="custom_pick_general">
+			<Panel class="pick_timer" id="pick_timer_panel_main">
+				<DOTAParticleScenePanel class="pick_timer_particle" particleName="particles/agh_aura_ti10_2.vpcf" particleOnly="true" cameraOrigin="0 0 165" lookAt="0 0 0" fov="64" squarePixels="true" startActive="true" />
+				<Label class="pick_timer_label" text="" id="pick_timer" />
+				<Label class="PhaseLabel" id="PhaseLabel" text="#pick_ban_phase" />
+			</Panel>
+			<Panel class="lobby_players" id="lobby_players" />
+			<Panel class="HeroesAndTalentsWindows">
+				<Panel class="HeroTabButtons">
+					<Panel class="HeroTabButton HeroTabSelected" id="HeroTabDefault" onactivate="SelectHeroTab(&apos;default&apos;);">
+						<Label class="HeroTabButtonLabel" text="#hero_tab_default" />
+					</Panel>
+					<Panel class="HeroTabButton" id="HeroTabCustom" onactivate="SelectHeroTab(&apos;custom&apos;);">
+						<Label class="HeroTabButtonLabel" text="#hero_tab_custom" />
+					</Panel>
+				</Panel>
+				<Panel class="HeroPickRow">
+					<Panel class="hero_pick" id="hero_pick">
+						<Panel class="hero_attribute_info" id="InfoStr">
+							<Panel class="hero_icon_str" id="IconStr" />
+							<Panel class="hero_attribute_row" id="StrengthSelector" />
+						</Panel>
+						<Panel class="hero_attribute_info" id="InfoAgi">
+							<Panel class="hero_icon_agi" id="IconAgi" />
+							<Panel class="hero_attribute_row" id="AgilitySelector" />
+						</Panel>
+						<Panel class="hero_attribute_info" id="InfoInt">
+							<Panel class="hero_icon_int" id="IconInt" />
+							<Panel class="hero_attribute_row" id="IntellectSelector" />
+						</Panel>
+						<Panel class="hero_attribute_info" id="InfoAll">
+							<Panel class="hero_icon_all" id="IconAll" />
+							<Panel class="hero_attribute_row" id="AllSelector" />
+						</Panel>
+						<Panel class="hero_attribute_info" id="InfoCustom">
+							<Panel class="hero_icon_custom" id="IconCustom" />
+							<Panel class="hero_attribute_row" id="CustomHeroSelector" />
+						</Panel>
+					</Panel>
+					<Panel class="hero_chosen" id="hero_chosen">
+						<Panel id="HeroContainerModel" />
+						<Panel id="HeroContainerAbilities" />
+						<Panel class="PickButtons">
+							<Panel id="BanHero" class="BanHero BanHero_hidden">
+								<Panel class="Button_Text_Label" id="BanButton_Text_Label">
+									<Label class="ButtonText_Pick" id="BanButtonText_Pick" text="#pick_ban_hero" />
+								</Panel>
+							</Panel>
+							<Panel class="ChoseHero" id="ChoseHero">
+								<Panel class="Button_Text_Label" id="Button_Text_Label">
+									<Label class="ButtonText_Pick" id="ButtonText_Pick" text="#pick_chose_hero" />
+									<Label class="InfoText" id="InfoText" />
+								</Panel>
+							</Panel>
+							<Panel id="SelectRandomHero" class="SelectRandomHero_hidden">
+								<Panel class="IconDice" />
+							</Panel>
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

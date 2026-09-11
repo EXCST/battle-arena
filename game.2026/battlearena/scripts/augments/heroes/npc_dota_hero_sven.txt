@@ -1,0 +1,137 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Sven hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_sven"
+{
+	// ---- Storm Bolt ---------------------------------------------------------
+	"sven_storm_bolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "8"
+		}
+		// wider bolt (was 30)
+		"bolt_aoe"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"vision_radius" "35"
+			}
+		}
+		// more damage (was 40/5)
+		"damage"
+		{
+			"base" "45"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"bolt_speed"
+				{
+					"base" "100"
+					"mode" "MULT"
+
+					"limit"			"2000"
+					"limit_base"		"1000"
+				}
+			}
+		}
+	}
+
+	// ---- Great Cleave -------------------------------------------------------
+	"sven_great_cleave"
+	{
+		// longer cleave (was 35)
+		"cleave_distance"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"cleave_starting_width" "12"
+				"cleave_ending_width" "18"
+			}
+		}
+		// more cleave damage (was 10)
+		"great_cleave_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"cleave_damage_percent"	"12"
+				"cleave_damage_percent_creep"	"5"
+			}
+		}
+	}
+
+	// ---- Warcry -------------------------------------------------------------
+	"sven_warcry"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more movespeed (was 4)
+		"movespeed"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more armor (was 3/0.5)
+		"bonus_armor"
+		{
+			"base" "3.5"
+			"step"		"0.6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more barrier (was 100/10)
+		"base_barrier_amount"
+		{
+			"base" "120"
+			"step"	"15"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- God's Strength -----------------------------------------------------
+	"sven_gods_strength"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 10)
+		"gods_strength_damage"
+		{
+			"base" "12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more slow resistance (was 3)
+		"bonus_slow_resistance"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap"	"4"
+		}
+	}
+}

@@ -1,0 +1,150 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Tusk hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_tusk"
+{
+	// ---- Ice Shards ---------------------------------------------------------
+	"tusk_ice_shards"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 30/2)
+		"shard_damage"
+		{
+			"base" "35"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"aghs_shard_damage" "12"
+			}
+		}
+		// faster shards (was 200)
+		"shard_speed"
+		{
+			"base" "230"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"aghs_shard_move_slow" "12"
+			}
+		}
+	}
+
+	// ---- Snowball -----------------------------------------------------------
+	"tusk_snowball"
+	{
+		// more damage (was 30/4)
+		"snowball_damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"snowball_damage_bonus" "25"
+			}
+		}
+		// faster snowball (was 65)
+		"snowball_speed"
+		{
+			"base" "80"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"snowball_grab_radius" "35"
+			}
+		}
+	}
+
+	// ---- Tag Team -----------------------------------------------------------
+	"tusk_tag_team"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+
+			"bundle_abilities"
+			{
+				"tusk_drinking_buddies"
+				{
+					"cd_mana" "10"
+				}
+			}
+		}
+		// more bonus damage (was 12/2)
+		"bonus_damage"
+		{
+			"base" "15"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle_abilities"
+			{
+				"tusk_drinking_buddies"
+				{
+					"attackdamage_bonus" "30"
+				}
+			}
+		}
+		// wider tag team (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap"	"10"
+			"bundle"
+			{
+				"attack_speed_slow" "18"
+			}
+			"bundle_abilities"
+			{
+				"tusk_drinking_buddies"
+				{
+					"movespeed_bonus" "18"
+				}
+			}
+		}
+	}
+
+	// ---- Walrus Punch -------------------------------------------------------
+	"tusk_walrus_punch"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more crit (rare, was 15)
+		"crit_multiplier"
+		{
+			"base" "18"
+			"mode" "ADD"
+			"cap" "6"
+
+			"floor"	"rare"
+
+			"bundle_abilities"
+			{
+				"tusk_walrus_kick"
+				{
+					"damage" "65"
+				}
+			}
+		}
+	}
+}

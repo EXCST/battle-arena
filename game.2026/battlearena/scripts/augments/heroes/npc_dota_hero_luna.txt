@@ -1,0 +1,129 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Luna hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_luna"
+{
+	// ---- Lucent Beam --------------------------------------------------------
+	"luna_lucent_beam"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more damage (was 35/4)
+		"beam_damage"
+		{
+			"base" "40"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Lunar Orbit --------------------------------------------------------
+	"luna_lunar_orbit"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider orbit (was 25)
+		"rotating_glaives_movement_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"rotating_glaives_hit_radius" "30"
+			}
+		}
+		// more collision damage (was 5)
+		"rotating_glaives_collision_damage"
+		{
+			"base"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Moon Glaive --------------------------------------------------------
+	"luna_moon_glaive"
+	{
+		// longer bounce range (was 50)
+		"range"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more bounces
+		"bounces"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// less damage reduction (was -6)
+		"damage_reduction_percent"
+		{
+			"base" "-7"
+			"mode" "ADD"
+			"cap" "3"
+		}
+	}
+
+	// ---- Eclipse ------------------------------------------------------------
+	"luna_eclipse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more beams (was 2)
+		"beams"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider eclipse (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Lunar Blessing -----------------------------------------------------
+	"luna_lunar_blessing"
+	{
+		// more bonus damage (was 7/2)
+		"bonus_damage"
+		{
+			"base"	"8"
+			"step"	"2.5"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"self_bonus_damage"
+				{
+					"base"	"16"
+					"step"	"5"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

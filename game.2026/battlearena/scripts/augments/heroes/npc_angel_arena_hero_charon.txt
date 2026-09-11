@@ -1,0 +1,108 @@
+﻿"npc_angel_arena_hero_charon"
+{
+	"charon_soul_drain"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+		}
+
+		"manaburn"
+		{
+			"base" 		"15"
+			"step"		"2"
+
+			"perks"
+			{
+				"special_bonus_unique_charon_soul_drain_channel_time"	"x1.3"
+			}
+
+			"bundle"
+			{
+				"damage"
+				{
+					"base"		"30"
+					"step"	"4"
+					"perks"
+					{
+						"special_bonus_unique_charon_soul_drain_channel_time"	"x1.3"
+					}
+				}
+			}
+		}
+
+		"manaburn_pct"
+		{
+			"base"			"1"
+			"cap" 	"5"
+			"perks"
+			{
+				"special_bonus_unique_charon_soul_drain_channel_time"	"x1.3"
+			}
+		}
+	}
+	"charon_last_word"
+	{
+		"radius"
+		{
+			"base"			"70"
+			"cap"		"5"
+		}
+		"slow_per_lost_mana"
+		{
+			"base"			"0.15"
+			"cap"		"5"
+		}
+	}
+	"charon_overload"
+	{
+		"cd_mana"
+		{
+			"base" 	"8"
+			"cap"	"5"
+			"mode"	 "MULT"
+		}
+		"damage_flat"
+		{
+			"base"		"75"
+			"step"	"4"
+		}
+		"damage_for_mana_pct"
+		{
+			"base"		"1"
+			"step"	"0.1"
+		}
+		"projectile_speed"
+		{
+			"base"		"150"
+		}
+	}
+	"charon_collapse"
+	{
+		"cd_mana"
+		{
+			"base" 	"8"
+			"cap"	"12"
+			"mode"	 "MULT"
+		}
+		"manaburn_min"
+		{
+			"base"		"3"
+			"step"	"0.3"
+
+			"bundle"
+			{
+				"manaburn_max"
+				{
+					"base" "6"
+					"step"	"0.9"
+				}
+			}
+		}
+		"damage_per_mana_burn"
+		{
+			"base"		"0.06"
+		}
+	}
+}

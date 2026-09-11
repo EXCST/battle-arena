@@ -1,0 +1,411 @@
+﻿"DOTAAbilities"
+{
+	"travaler_kraken"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"tidehunter_kraken_shell"
+		"MaxLevel"				"1"
+		"AbilityTextureName"	"custom/travaler_kraken"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_reduction"		"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_cleanse"		"350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_reset_interval"	"6.0"
+			}
+		}
+	}
+	
+	"travaler_manaburn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_manaburn"
+		"ScriptFile"					"creeps/boss/travaler/travaler_manaburn"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_per_burn"		"80"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_hit"			"300"
+			}
+		}
+	}
+	
+	"travaler_stun"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_stun"
+		"ScriptFile"					"creeps/boss/travaler/travaler_stun"
+		
+		"AbilityCastPoint"				"0.2"
+		
+		"AbilityCooldown"				"12.0"
+		
+		"AbilityValues"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius_1"				"240"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius_2"				"340"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius_3"				"440"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"telegraph_1"			"1.2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"telegraph_2"			"1.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"telegraph_3"			"1.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"wave_gap"				"0.5"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.25"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_flat"			"400"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_pct"			"12"
+			}
+		}
+	}
+	
+	"travaler_rift_wall"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_rift_wall"
+		"ScriptFile"					"creeps/boss/travaler/travaler_rift_wall"
+		
+		"AbilityCastPoint"				"0.3"
+		
+		"AbilityCooldown"				"11.0"
+		
+		"AbilityValues"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"segments"				"8"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"grid_step"				"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"center_offset"			"600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"aoe"					"220"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"					"1.2"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"step"					"0.1"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.5"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_flat"			"1000"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_pct"			"15"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"crack_radius"			"220"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"crack_duration"		"3.0"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"crack_tick"			"0.5"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"crack_pct"				"2"
+			}
+		}
+	}
+	
+	"travaler_shift"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"custom/travaler_shift"
+		"ScriptFile"					"creeps/boss/travaler/travaler_shift"
+		
+		"AbilityCastPoint"				"0.3"
+		
+		"AbilityCooldown"				"45.0"
+		
+		"AbilityValues"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"waves_min"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"waves_max"				"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"interval"				"5.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"2500"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_dist"				"400"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"teleport_dist"			"3000"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"					"1.5"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_pct"			"8"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"slow_duration"			"2.0"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mark_radius"			"250"
+			}
+		}
+	}
+	
+	"travaler_fury"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"custom/travaler_fury"
+		"MaxLevel"						"1"
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			//less 75% hp: aura-килл иллюзий + баффы атаки
+			//less 50%: сопротивление
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack"			"800"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_aspeed"			"250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_bat"				"0.4"
+			}
+			//less 30%
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_reducion"		"-45"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_travaler_fury_passive"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"ThinkInterval"  "0.5"
+
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"creeps/boss/travaler/travaler.lua"
+						"Function"				"CheckHealth"
+						"modifier_70"			"modifier_travaler_fury_70_pct"
+						"modifier_50"			"modifier_travaler_fury_50_pct"
+						"modifier_25"			"modifier_travaler_fury_25_pct"
+					}
+				}
+			}
+			
+			"modifier_travaler_fury_70_pct"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
+				
+				"Aura" 					"modifier_travaler_anti_illusion_aura"
+				"Aura_Radius" 			"1400"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+				
+			}
+			
+			"modifier_travaler_anti_illusion_aura"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
+				
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"creeps/boss/travaler/travaler.lua"
+						"Function"				"CheckIlussion"
+					}
+				}
+				
+			}
+			
+			"modifier_travaler_fury_50_pct"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_attack"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_aspeed"
+					"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%bonus_bat"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			
+			"modifier_travaler_fury_25_pct"
+			{
+				"Passive"	"0"
+				"IsHidden"	"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "%damage_reducion"
+				}
+			}
+			
+		}
+	}
+}

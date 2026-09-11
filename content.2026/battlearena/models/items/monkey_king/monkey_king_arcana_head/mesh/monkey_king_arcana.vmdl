@@ -1,0 +1,612 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod0"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod0.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod1"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod11.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod0_style1"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod0_style12.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod1_style1"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod1_style13.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod0_style2"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod0_style24.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod1_style2"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod1_style25.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod0_style3"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod0_style36.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "monkey_king_arcana_lod1_style3"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana_monkey_king_arcana_lod1_style37.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "_dummy"
+						filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/monkey_king_arcana__dummy8.dmx"
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "arcana"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "_dummy"
+								meshes = 
+								[
+									"_dummy",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "monkey_king_arcana"
+								meshes = 
+								[
+									"monkey_king_arcana_lod0",
+									"monkey_king_arcana_lod1",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "monkey_king_arcana_style1"
+								meshes = 
+								[
+									"monkey_king_arcana_lod0_style1",
+									"monkey_king_arcana_lod1_style1",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "monkey_king_arcana_style2"
+								meshes = 
+								[
+									"monkey_king_arcana_lod0_style2",
+									"monkey_king_arcana_lod1_style2",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "monkey_king_arcana_style3"
+								meshes = 
+								[
+									"monkey_king_arcana_lod0_style3",
+									"monkey_king_arcana_lod1_style3",
+								]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						mesh_references = 
+						[
+							{
+								mesh_name = "monkey_king_arcana_lod0"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod0_style1"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod0_style2"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod0_style3"
+							},
+							{
+								mesh_name = "_dummy"
+							},
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 1.0
+						mesh_references = 
+						[
+							{
+								mesh_name = "monkey_king_arcana_lod1"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod1_style1"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod1_style2"
+							},
+							{
+								mesh_name = "monkey_king_arcana_lod1_style3"
+							},
+							{
+								mesh_name = "_dummy"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_crownfx"
+						ignore_rotation = false
+						parent_bone = "head"
+						relative_origin = [ 0.000001, 0.0, 26.306381 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "mka_idle"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mka_idle.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "bind_pose"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/bind_pose.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "mk_arcana_debut_default"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mk_arcana_debut_default.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_LOADOUT"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "mk_arcana_debut_water"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mk_arcana_debut_water.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_LOADOUT"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "mk_arcana_debut_underworld"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mk_arcana_debut_underworld.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_LOADOUT"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "mk_arcana_debut_fire"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mk_arcana_debut_fire.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_LOADOUT"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "mvp_screen"
+						source_filename = "models/items/monkey_king/monkey_king_arcana_head/mesh/mvp_screen.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_LOADOUT"
+						activity_weight = 1
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "head"
+						origin = [ 3.482154, -0.000008, 176.571243 ]
+						angles = [ -0.000009, -0.000004, 0.000006 ]
+						do_not_discard = true
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "ear_L"
+								origin = [ 1.117713, 9.760098, 4.600647 ]
+								angles = [ 5.927918, -14.200529, -67.79805 ]
+								do_not_discard = true
+							},
+							{
+								_class = "Bone"
+								name = "ear_R"
+								origin = [ 1.117718, -9.760418, 4.600235 ]
+								angles = [ -5.01963, -168.023026, 112.414047 ]
+								do_not_discard = true
+							},
+							{
+								_class = "Bone"
+								name = "feather_L_base"
+								origin = [ -8.577392, 1.648435, 25.097641 ]
+								angles = [ -78.385834, 90.0, 74.172287 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "feather_L_R0C0"
+										origin = [ 5.86525, 0.000332, 0.000034 ]
+										angles = [ 6.767622, -0.000001, 0.000003 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "feather_L_R0C1"
+												origin = [ 18.002548, 0.00042, 0.000294 ]
+												angles = [ 20.253506, 0.000002, -0.000001 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "feather_L_R0C2"
+														origin = [ 18.002914, 0.000496, 0.001289 ]
+														angles = [ 21.574621, -0.000003, 0.000007 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "feather_L_R0C3"
+																origin = [ 18.002914, 0.000591, 0.002609 ]
+																angles = [ 16.177904, -0.000009, 0.000008 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "feather_L_R0C4"
+																		origin = [ 18.002762, 0.00069, 0.003738 ]
+																		angles = [ 29.058735, -0.000001, -0.000003 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "feather_L_R0C5"
+																				origin = [ 18.001053, 0.000771, 0.005066 ]
+																				angles = [ 37.992142, -2.00021, -0.000004 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "feather_L_R0C6"
+																						origin = [ 17.997734, 0.00095, 0.00531 ]
+																						angles = [ -5.878503, 6.701692, -0.000008 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "feather_L_R0C7"
+																								origin = [ 17.998634, 0.001484, 0.0065 ]
+																								angles = [ 10.189048, -0.000016, -0.000013 ]
+																								do_not_discard = true
+																								children = 
+																								[
+																									{
+																										_class = "Bone"
+																										name = "feather_L_R0C8"
+																										origin = [ 17.997627, 0.001713, 0.007095 ]
+																										angles = [ 22.978369, 0.000006, 0.0 ]
+																										do_not_discard = true
+																										children = 
+																										[
+																											{
+																												_class = "Bone"
+																												name = "feather_L_R0C9"
+																												origin = [ 13.076355, 0.001957, 0.006226 ]
+																												angles = [ 0.000009, -90.000008, 0.000003 ]
+																												do_not_discard = true
+																											},
+																										]
+																									},
+																								]
+																							},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "feather_R_base"
+								origin = [ -8.577387, -1.261681, 25.097565 ]
+								angles = [ -78.385986, -90.0, -74.17205 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "feather_R_R1C0"
+										origin = [ 5.865189, -0.000317, 0.000037 ]
+										angles = [ 6.767617, -0.000005, -0.000002 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "feather_R_R1C1"
+												origin = [ 18.00238, -0.000401, 0.000292 ]
+												angles = [ 20.253504, 0.0, -0.000004 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "feather_R_R1C2"
+														origin = [ 18.002853, -0.000481, 0.001274 ]
+														angles = [ 21.574621, 0.000012, -0.000002 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "feather_R_R1C3"
+																origin = [ 18.002991, -0.000614, 0.002716 ]
+																angles = [ 16.177898, -0.000003, -0.000007 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "feather_R_R1C4"
+																		origin = [ 18.002808, -0.000698, 0.003922 ]
+																		angles = [ 29.058725, 0.000016, 0.000017 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "feather_R_R1C5"
+																				origin = [ 18.001064, -0.000809, 0.005371 ]
+																				angles = [ 37.992142, 1.999993, -0.00001 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "feather_R_R1C6"
+																						origin = [ 17.997711, -0.000931, 0.005188 ]
+																						angles = [ -5.878491, -6.701995, -0.000009 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "feather_R_R1C7"
+																								origin = [ 17.998543, -0.001434, 0.006302 ]
+																								angles = [ 10.189058, 0.000007, 0.000019 ]
+																								do_not_discard = true
+																								children = 
+																								[
+																									{
+																										_class = "Bone"
+																										name = "feather_R_R1C8"
+																										origin = [ 17.997643, -0.001644, 0.006775 ]
+																										angles = [ 22.978376, -0.000003, -0.000006 ]
+																										do_not_discard = true
+																										children = 
+																										[
+																											{
+																												_class = "Bone"
+																												name = "feather_R_R1C9"
+																												origin = [ 13.076584, -0.001881, 0.005844 ]
+																												angles = [ 0.000003, -89.999992, 0.000017 ]
+																												do_not_discard = true
+																											},
+																										]
+																									},
+																								]
+																							},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "mka_hiair_C_cloth_01"
+								origin = [ 19.091368, -0.023066, -7.604523 ]
+								angles = [ 63.202511, -0.0, -179.999954 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "mka_hiair_C_cloth_02"
+										origin = [ 3.119293, 0.0, -0.000854 ]
+										angles = [ 0.000009, 0.0, -0.0 ]
+										do_not_discard = true
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "mka_hair_cloth_L_low_01"
+								origin = [ 12.936471, 8.30991, 0.904541 ]
+								angles = [ 28.053839, 118.802223, 104.497643 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "mka_hair_cloth_L_low_02"
+										origin = [ 5.330544, 0.001389, -0.000189 ]
+										angles = [ 0.000004, 0.000006, 0.000007 ]
+										do_not_discard = true
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "mka_hair_cloth_L_high_01"
+								origin = [ 8.805345, 8.309902, 8.357452 ]
+								angles = [ -23.526485, 129.674164, 95.139427 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "mka_hair_cloth_L_high_02"
+										origin = [ 12.302711, 0.001297, -0.000002 ]
+										angles = [ -0.000006, -0.000004, 0.000001 ]
+										do_not_discard = true
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "mka_hair_cloth_R_high_01"
+								origin = [ 8.80538, -8.309893, 8.357742 ]
+								angles = [ -23.5851, -128.928299, -73.810448 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "mka_hair_cloth_R_high_02"
+										origin = [ 12.302727, -0.001221, 0.000473 ]
+										angles = [ -0.00001, 0.000011, 0.000004 ]
+										do_not_discard = true
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "mka_hair_cloth_R_low_01"
+								origin = [ 12.936421, -8.3099, 0.904633 ]
+								angles = [ 27.933077, -118.173607, -131.047028 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "mka_hair_cloth_R_low_02"
+										origin = [ 5.330605, -0.000977, -0.000671 ]
+										angles = [ 0.000009, -0.000005, -0.000011 ]
+										do_not_discard = true
+									},
+								]
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

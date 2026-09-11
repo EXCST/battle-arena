@@ -1,0 +1,169 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Jakiro hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_jakiro"
+{
+	// ---- Dual Breath --------------------------------------------------------
+	"jakiro_dual_breath"
+	{
+		"cd_mana"
+		{
+			"base" "12"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more burn (was 15/3)
+		"burn_damage"
+		{
+			"base"	"18"
+			"step"		"3.5"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_jakiro_2"	"x2"
+			}
+		}
+		// wider end radius (was 25)
+		"end_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"start_radius" "20"
+			}
+		}
+	}
+
+	// ---- Ice Path -----------------------------------------------------------
+	"jakiro_ice_path"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"limit" "30"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider path (was 25)
+		"path_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Liquid Fire --------------------------------------------------------
+	"jakiro_liquid_fire"
+	{
+		"cd_mana"
+		{
+			"base" "18"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"jakiro_liquid_ice"
+				{
+					"cd_mana"
+					{
+						"base" "18"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// wider splash (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"jakiro_liquid_ice"
+				{
+					"movement_slow" "4"
+				}
+			}
+		}
+		// more attack slow (was -35/-15)
+		"slow_attack_speed_pct"
+		{
+			"base" "-40"
+			"step"	"-18"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				"jakiro_liquid_ice"
+				{
+					"bonus_instance_damage_from_other_abilities"
+					{
+						"base"	"18"
+						"step"	"2.5"
+					}
+				}
+			}
+		}
+		// more damage (was 20/5)
+		"damage"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle_abilities"
+			{
+				"jakiro_liquid_ice"
+				{
+					"damage"
+					{
+						"base" "25"
+						"step"		"6"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Macropyre ----------------------------------------------------------
+	"jakiro_macropyre"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage (was 25/2)
+		"damage"
+		{
+			"base" "30"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer macropyre (rare, was 1)
+		"duration"
+		{
+			"base"			"1.5"
+			"floor"	"rare"
+			"cap"		"4"
+		}
+	}
+}

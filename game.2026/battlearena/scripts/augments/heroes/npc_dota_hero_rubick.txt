@@ -1,0 +1,110 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Rubick hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_rubick"
+{
+	// ---- Telekinesis --------------------------------------------------------
+	"rubick_telekinesis"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "8"
+		}
+		// wider telekinesis (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"max_land_distance" "40"
+			}
+			"bundle_abilities"
+			{
+				"rubick_telekinesis_land"
+				{
+					"radius" "35"
+				}
+			}
+		}
+	}
+
+	// ---- Fade Bolt ----------------------------------------------------------
+	"rubick_fade_bolt"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 20/5)
+		"damage"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// less jump reduction (was -2)
+		"jump_damage_reduction_pct"
+		{
+			"base" "-2.5"
+			"mode" "ADD"
+			"cap" "3"
+		}
+		// more damage reduction (was 3)
+		"damage_reduction"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// wider bolt (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Arcane Supremacy ---------------------------------------------------
+	"rubick_arcane_supremacy"
+	{
+		// more cast range (was 20)
+		"cast_range"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more spell amp (was 3.5)
+		"spell_amp"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Spell Steal --------------------------------------------------------
+	"rubick_spell_steal"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"stolen_debuff_amp" "6"
+			}
+		}
+	}
+}

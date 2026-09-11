@@ -1,0 +1,112 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Phantom Assassin hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_phantom_assassin"
+{
+	// ---- Blur ---------------------------------------------------------------
+	"phantom_assassin_blur"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle"
+			{
+				"active_movespeed_bonus" "4"
+			}
+		}
+	}
+
+	// ---- Stifling Dagger ----------------------------------------------------
+	"phantom_assassin_stifling_dagger"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// longer slow (was 0.4)
+		"duration"
+		{
+			"base" "0.5"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"move_slow" "-12"
+			}
+		}
+		// more damage (was 20/5)
+		"base_damage"
+		{
+			"base" "25"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Phantom Strike -----------------------------------------------------
+	"phantom_assassin_phantom_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more attack speed (was 25)
+		"bonus_attack_speed"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// longer buff (was 0.3)
+		"duration"
+		{
+			"base" "0.4"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Immaterial ---------------------------------------------------------
+	"phantom_assassin_immaterial"
+	{
+		// more evasion (was 3.5)
+		"evasion"
+		{
+			"base" "4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Coup de Grace ------------------------------------------------------
+	"phantom_assassin_coup_de_grace"
+	{
+		// more crit chance (was 1)
+		"crit_chance"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"dagger_crit_chance" "2.5"
+			}
+		}
+		// more crit bonus (was 10)
+		"crit_bonus"
+		{
+			"base" 		"12"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

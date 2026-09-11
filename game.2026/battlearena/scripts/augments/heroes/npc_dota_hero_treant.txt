@@ -1,0 +1,177 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Treant Protector hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_treant"
+{
+	// ---- Nature's Grasp -----------------------------------------------------
+	"treant_natures_grasp"
+	{
+		"cd_mana"
+		{
+			"base" "9"
+			"mode" "MULT"
+			"cap" "10"
+		}
+		// more dps (was 20/3.5)
+		"damage_per_second"
+		{
+			"base" "22"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer latch range (was 25)
+		"latch_range"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"latch_vision" "30"
+			}
+		}
+	}
+
+	// ---- Leech Seed ---------------------------------------------------------
+	"treant_leech_seed"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap"	"10"
+			"bundle_abilities"
+			{
+				"treant_natures_guise"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more leech (was 20/4)
+		"leech_damage"
+		{
+			"base" "25"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"flat_heal"
+				{
+					"base" "25"
+					"step"		"5"
+				}
+				"leech_heal" "6"
+			}
+			"bundle_abilities"
+			{
+				"treant_natures_guise"
+				{
+					"movement_bonus" "10"
+				}
+			}
+		}
+		// wider seed (was 35)
+		"radius"
+		{
+			"base" "40"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"projectile_speed" "30"
+			}
+			"bundle_abilities"
+			{
+				"treant_natures_guise"
+				{
+					"radius" "25"
+				}
+			}
+		}
+	}
+
+	// ---- Living Armor -------------------------------------------------------
+	"treant_living_armor"
+	{
+		"cd_mana"
+		{
+			"base" "15"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more heal (was 8/0.8)
+		"heal_per_second"
+		{
+			"base" "10"
+			"step"		"1"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// more block (was 15/5)
+		"damage_block_base"
+		{
+			"base" "18"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Overgrowth ---------------------------------------------------------
+	"treant_overgrowth"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+
+			"bundle"
+			{
+				"bloom_duration" "1"
+			}
+		}
+		// wider overgrowth (was 25)
+		"radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+
+			"bundle_abilities"
+			{
+				"treant_eyes_in_the_forest"
+				{
+					"AbilityCastRange" "60"
+					"vision_aoe" "60"
+				}
+			}
+			"bundle"
+			{
+				"splash_radius" "40"
+			}
+		}
+		// more damage (was 30/4)
+		"damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"splash_pct" "12"
+			}
+		}
+	}
+}

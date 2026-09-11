@@ -1,0 +1,121 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Marci hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_marci"
+{
+	// ---- Grapple ------------------------------------------------------------
+	"marci_grapple"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 70/7)
+		"impact_damage"
+		{
+			"base" "80"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer throw (was 25)
+		"throw_distance_behind"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"landing_radius" "30"
+				"movement_slow_pct" "6"
+			}
+		}
+	}
+
+	// ---- Companion Run ------------------------------------------------------
+	"marci_companion_run"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "10"
+			"bundle"
+			{
+				"ally_movespeed_pct" "7"
+			}
+		}
+		// wider landing (was 30)
+		"landing_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"max_jump_distance" "35"
+			}
+		}
+		// more damage (was 70/7)
+		"impact_damage"
+		{
+			"base" "80"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Bodyguard ----------------------------------------------------------
+	"marci_bodyguard"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more lifesteal (was 4)
+		"lifesteal_pct"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"bonus_damage" "6"
+			}
+		}
+	}
+
+	// ---- Unleash ------------------------------------------------------------
+	"marci_unleash"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"limit"		"75"
+		}
+		// faster flurries (was -0.2)
+		"time_between_flurries"
+		{
+			"base" "-0.25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more pulse damage (was 50/5)
+		"pulse_damage"
+		{
+			"base" "55"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+}

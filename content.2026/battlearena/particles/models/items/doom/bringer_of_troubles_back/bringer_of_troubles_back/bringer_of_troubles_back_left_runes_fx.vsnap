@@ -1,0 +1,26 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	stream_data = 
+	{
+		num_values = 4
+		streams = 
+		[
+			{
+				name = "position"
+				type = "position_3d"
+				values = 
+				[
+					[ -103.263527, 74.861908, 248.626099 ],
+					[ -119.502167, 80.3564, 230.983307 ],
+					[ -128.170303, 82.934364, 219.698151 ],
+					[ -143.116638, 87.189133, 198.971146 ],
+				]
+			},
+			{
+				name = "skinning"
+				type = "bone_index_and_weight"
+				values = [  ]
+			},
+		]
+	}
+}

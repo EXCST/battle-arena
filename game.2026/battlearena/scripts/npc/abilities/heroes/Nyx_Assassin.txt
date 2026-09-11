@@ -1,0 +1,275 @@
+﻿"DOTAAbilities"
+{
+//=================================================================================================================
+	// Nyx Assassin: Impale
+	//=================================================================================================================
+	"nyx_assassin_impale"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5462"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_NyxAssassin.Impale"
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"19 18 17 16 15 14 13"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130 140 150 160"
+		
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"width"				
+				{
+					"value"			"140"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"			
+				{
+					"value"				"1.1 1.4 1.7 2.0 2.2 2.4 2.6"
+					"LinkedSpecialBonus"	"special_bonus_unique_nyx_4"
+				}
+				"length"			"750"
+				"speed"				"1600"
+				"impale_damage"			
+				{
+					"value"			"150 210 270 320 450 600 800"
+					"LinkedSpecialBonus"	"special_bonus_unique_nyx_2"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Nyx Assassin: Mana Burn
+	//=================================================================================================================
+	"nyx_assassin_mana_burn"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5463"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		// "MaxLevel"						"7"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"	
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12 11 10 9 8 7 6"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"float_multiplier"		
+			{
+				"value"		"3.5" // 4
+				"special_bonus_unique_nyx_5"			"+0.5"
+			}
+			"aoe"
+			{
+				"value"		"0"
+				"special_bonus_unique_nyx"		"+300"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Nyx Assassin: Spiked Carapce
+	//=================================================================================================================
+	"nyx_assassin_spiked_carapace"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5464"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14"
+		"AbilityCastPoint"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"reflect_duration"			
+			{
+				"value"			"2.25"
+				"special_bonus_unique_nyx_carapace_reflect_duration"			"+0.5"
+			}
+			"stun_duration"
+			{
+				"value"					"1.0 1.2 1.6 1.8 1.9 2.0 2.2"
+				"special_bonus_unique_nyx_6"	"+0.6"
+			}
+			"damage_reflect_pct"				"100"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+
+	//=================================================================================================================
+	// Nyx Assassin: Vendetta
+	//=================================================================================================================
+	"nyx_assassin_vendetta"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5465"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+        "MaxLevel"						"7"
+
+		"AbilityDraftUltScepterAbility"		"nyx_assassin_burrow"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"160 210 260 320 450 560 650"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			
+			"duration"				"40"
+			"fade_time"				"0.0"
+			"movement_speed"		"16 18 20 22 24 26 28"
+			"bonus_damage"			"300 400 500 600 700 800 900" // "100 175 225 300 325 400 450"
+			"health_regen_rate_scepter"		"4"
+			"mana_regen_rate_scepter"		"4"
+			"break_duration"		"4.0"
+			"shard_debuff_duration"	
+			{
+				"value" 			"4.0"
+				"RequiresShard"		"1"
+			}
+			"shard_magic_resist_reduction"	
+			{
+				"value" 			"20"
+				"RequiresShard"		"1"
+			}
+			"shard_movement_speed_bonus"	
+			{
+				"value" 			"25"
+				"RequiresShard"		"1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Nyx Assassin: Burrow ( scepter ability )
+	//=================================================================================================================
+	"nyx_assassin_burrow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5666"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"1.5"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"health_regen_rate"		"1"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"mana_regen_rate"		"1"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_reduction"			"35"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"impale_bonus_cast_range"			"1225"
+			}			
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"mana_burn_bonus_cast_range"			"1050"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"impale_cooldown_reduction"			"7.0"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"carapace_radius"			"400"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Nyx Assassin: Unburrow
+	//=================================================================================================================
+	"nyx_assassin_unburrow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5673"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+	}
+}

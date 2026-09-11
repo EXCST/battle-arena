@@ -1,0 +1,147 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Oracle hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_oracle"
+{
+	// ---- Fortune's End ------------------------------------------------------
+	"oracle_fortunes_end"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"oracle_rain_of_destiny"
+				{
+					"cd_mana"
+					{
+						"base" "7"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"oracle_rain_of_destiny"
+				{
+					"damage"
+					{
+						"base"		"12"
+						"step"		"2.5"
+					}
+				}
+			}
+		}
+		// wider bolt (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"oracle_rain_of_destiny"
+				{
+					"radius" "40"
+				}
+			}
+
+			"bundle"
+			{
+				"bolt_speed"		"140"
+			}
+		}
+	}
+
+	// ---- Fate's Edict -------------------------------------------------------
+	"oracle_fates_edict"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+	}
+
+	// ---- Purifying Flames ---------------------------------------------------
+	"oracle_purifying_flames"
+	{
+		"cd_mana"
+		{
+			"base" "7"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 30/4)
+		"damage"
+		{
+			"base" "35"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// more heal per second (was 7/5)
+		"heal_per_second"
+		{
+			"base" "9"
+			"step"		"6"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"total_heal_tooltip" "70"
+			}
+			"bundle_abilities"
+			{
+				"oracle_rain_of_destiny"
+				{
+					"heal_amp" "4"
+				}
+			}
+		}
+		// longer flames (was 1.5)
+		"duration"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"oracle_rain_of_destiny"
+				{
+					"duration" "2"
+				}
+			}
+		}
+	}
+
+	// ---- False Promise ------------------------------------------------------
+	"oracle_false_promise"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "8"
+		}
+		// more heal amp (was 15)
+		"heal_amp_pct"
+		{
+			"base" "18"
+			"cap" "5"
+		}
+	}
+}

@@ -1,0 +1,246 @@
+"DOTAAbilities"
+{
+"lina_dragon_slave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5040"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Lina.DragonSlave"
+	
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1075"
+		"AbilityCastPoint"				"0.45"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityDuration"				"0.6875 0.6875 0.6875 0.6875"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145"
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+
+			"dragon_slave_damage"		"125 200 275 350 425 550 700"
+			"damage_pct" "3"
+			"dragon_slave_burn"			"10 20 30 40 50 60 75"
+			"dragon_slave_burn_duration"	"2"
+			"dragon_slave_speed"		"1200"
+			"dragon_slave_width_initial"	
+			{
+				"value"		"275"
+				"affected_by_aoe_increase"	"1"
+			}
+			"dragon_slave_width_end"		
+			{
+				"value"			"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"dragon_slave_distance"			"1075"
+
+			"AbilityCooldown"				
+			{ 
+				"value"						"11 10 9 8 7 6 5"
+				"special_bonus_unique_lina_1"		"-3.5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+//=================================================================================================================
+// Ability: Lina Light Strike Array
+//=================================================================================================================
+	"lina_light_strike_array"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5041"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Ability.LightStrikeArray"
+        "MaxLevel" "7"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.45 0.45 0.45 0.45"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 11 9 7 6.5 6 5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 115 130 145"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"light_strike_array_aoe"	
+				{
+					"value" "250"
+					"affected_by_aoe_increase"	"1"
+				}
+				"light_strike_array_delay_time"	"0.5"
+				"light_strike_array_stun_duration"	"1.3 1.6 1.9 2.2 2.3 2.4 2.5"
+				"light_strike_array_damage"	
+				{
+					"value"			"110 160 210 260 400 500 600"
+					"LinkedSpecialBonus"		"special_bonus_unique_lina_3"
+				}
+				"damage_pct" "5"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+//=================================================================================================================
+// Ability: lina fire shield
+//=================================================================================================================
+	"lina_fire_shield"
+{
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	// "MaxLevel"						"7"
+	"AbilityTextureName"			"custom/lina_fire_shield-1"
+	"ScriptFile"	                "abilities/hero/lina/lina_fire_shield/lina_fire_shield"
+
+	"MaxLevel" "7"
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0"
+	"AbilityManaCost"				"125"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 19 18 17 16 15 14"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"2.5"
+			"LinkedSpecialBonus"	"lina_special_bonus_fire_shield"
+		}
+		"02"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "damage_reduction_pct"	"100"
+        }
+        "03"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "radius"        		"600"
+        }
+	}
+}
+
+"lina_special_bonus_fire_shield"
+{
+	"BaseClass"						"special_bonus_unique_earth_spirit"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"MaxLevel" "7"
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"value"						"1.0"
+		}
+	}
+}
+
+//=================================================================================================================
+// Ability: Lina Laguna Blade
+//=================================================================================================================
+"lina_laguna_blade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5043"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		// "MaxLevel"						"7"
+		
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.45"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"280 320 480 520 650 750 875"
+			
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		"MaxLevel" "7"
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"					"400 525 650 775 900 1025 1150"
+			"damage_pct"				"5.0 6.0 7.0 9.0 11.0 13.0 15.0"			
+			"damage_delay"				"0.25"
+			"AbilityCooldown"
+			{
+				"value"								"60"
+				"special_bonus_unique_lina_6"		"-25"
+			}
+			"pierce_immunity"
+			{
+				"value"								"0"
+				"special_bonus_unique_lina_7"		"+1"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Lina Flame Cloak
+	//=================================================================================================================
+	"lina_flame_cloak"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"944"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25"
+		"AbilityCastPoint"				"0.0"
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"flame_cloak_duration"				"6"
+			"magic_resistance"					"35"
+			"spell_amp"							"30"
+			"visualzdelta"							"100"
+			"zchangespeed"							"350"					
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+
+}

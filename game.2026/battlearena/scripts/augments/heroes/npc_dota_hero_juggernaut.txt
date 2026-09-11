@@ -1,0 +1,121 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Juggernaut hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_juggernaut"
+{
+	// ---- Blade Fury ---------------------------------------------------------
+	"juggernaut_blade_fury"
+	{
+		"cd_mana"
+		{
+			"base" "6"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// wider fury (was 25)
+		"blade_fury_radius"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 20/2)
+		"blade_fury_damage"
+		{
+			"base" 		"25"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Healing Ward -------------------------------------------------------
+	"juggernaut_healing_ward"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more heal (was 0.3)
+		"healing_ward_heal_amount"
+		{
+			"base" "0.4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider aura (was 30)
+		"healing_ward_aura_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Blade Dance --------------------------------------------------------
+	"juggernaut_blade_dance"
+	{
+		// more crit chance (was 2)
+		"blade_dance_crit_chance"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "4"
+		}
+		// more crit mult (rare, was 5)
+		"blade_dance_crit_mult"
+		{
+			"base" "6"
+			"floor"	"rare"
+			"mode" "ADD"
+			"cap" "6"
+		}
+	}
+
+	// ---- Omnislash ----------------------------------------------------------
+	"juggernaut_omni_slash"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"juggernaut_swift_slash"
+				{
+					"cd_mana"
+					{
+						"base" "6"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// longer omni (was 0.2)
+		"duration"
+		{
+			"base" "0.25"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle_abilities"
+			{
+				"juggernaut_swift_slash"
+				{
+					"duration" "0.15"
+				}
+			}
+		}
+		// wider omni (was 20)
+		"omni_slash_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

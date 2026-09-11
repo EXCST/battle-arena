@@ -1,0 +1,194 @@
+﻿"DOTAAbilities"
+{
+"crystal_maiden_crystal_nova"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5126"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		
+		"MaxLevel"						"7"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"				"700" // 800
+			"AbilityCastPoint"				"0.2"
+			"AbilityCooldown"
+			{
+				"value"										"10" // 9
+				"special_bonus_unique_crystal_maiden_5"		"-3"
+			}
+			"AbilityManaCost"				"100 120 140 160 190 210 230"
+			"radius"
+			{
+				"value"										"300" // 325
+				"special_bonus_unique_crystal_maiden_6"		"+125"
+			}
+			"movespeed_slow"				"-20 -25 -27 -30 -34 -38 -40"
+			"attackspeed_slow"				"-20 -25 -27 -30 -34 -38 -40"
+			"duration"						"3.75"
+			"vision_duration"				"5.0"
+			"nova_damage"
+			{
+				"value"									"120 200 280 360 440 520 600"	//"165 230 300 370 440 520 620"
+				"special_bonus_unique_crystal_maiden_2"		"+240"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
+
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Frostbite
+	//=================================================================================================================
+	"crystal_maiden_frostbite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5127"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"						"7"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCastRange"				
+			{
+				"value"								"600"
+				"special_bonus_unique_crystal_maiden_frostbite_castrange" 		"+125"
+			}
+			"AbilityCastPoint"				"0.3"
+			"AbilityCooldown"				"10"
+			"AbilityManaCost"				"115 125 140 150 170 190 210"
+			"damage_per_second"				"120"
+			"creep_damage_per_second"		"250"
+			"duration"
+			{
+				"value"										"1.25 1.5 1.75 2.0 2.5 3.0 3.25"
+				"special_bonus_unique_crystal_maiden_1"		"+1.25"
+			}
+			"creep_duration"
+			{
+				"value"										"10"
+				"special_bonus_unique_crystal_maiden_1"		"+1.25"
+			}
+			"tick_interval"					"0.25"
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+	
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Arcane Aura
+	//=================================================================================================================
+	"crystal_maiden_brilliance_aura"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5128"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"					"7"
+		
+		"AbilityValues"
+		{
+			"base_mana_regen"					
+			{
+				"value"										"2 4 6 8 10 12 14"
+				"special_bonus_unique_crystal_maiden_4" 	"+5"
+			}
+			"proximity_mana_regen_tooltip"					
+			{
+				"value"										"2 4 6 8 10 12 14"
+				"special_bonus_unique_crystal_maiden_4" 	"+5"
+			}
+			"self_mana_regen_tooltip"					
+			{
+				"value"										"2 4 6 8 10 12 14"
+				"special_bonus_unique_crystal_maiden_4" 	"+5"
+			}
+			"self_factor"					"3"
+			"proximity_bonus_factor"		"3"
+			"proximity_bonus_radius"		"1200"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	//=================================================================================================================
+	// Ability: Crystal Maiden's Freezing Field
+	//=================================================================================================================
+	"crystal_maiden_freezing_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5129"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+	
+		"MaxLevel"					"7"
+
+		"HasScepterUpgrade"				"1"
+
+        "HasShardUpgrade"               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.35"	// Primarily about the damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityChannelTime"			"10"
+			"AbilityCastPoint"				"0.3"
+			"AbilityCooldown"				"60"
+			"AbilityDuration"				"10.0"
+			"AbilityManaCost"				"200 300 400 500 600 700 800"
+			"radius"						"835"
+			"explosion_radius"				"300"
+			"bonus_armor"					"15 25 35 45 55 65 75"
+			"explosion_interval"			"0.1"
+			"movespeed_slow"				"-30"
+			"attack_slow"					"-30"
+			"slow_duration"					"1.0"
+			"explosion_min_dist"			"195"
+			"explosion_max_dist"			"785"
+			"damage"
+			{
+				"value"										"120 200 280 360 450 550 650"
+				"special_bonus_unique_crystal_maiden_3"		"+50"
+			}
+			"frostbite_delay" // negative means don't apply.
+			{
+				"value"						"-1"
+				"special_bonus_scepter"		"+3"
+				"RequiresScepter"			"1"
+			}
+			"shard_bonus_explosion"
+			{
+				"shard_bonus_explosion"		"0"
+				"special_bonus_shard"		"+20"
+				"RequiresShard"				"1"
+			}
+			"shard_self_movement_speed_slow_pct"
+			{
+				"value"						"0"
+				"special_bonus_shard"		"-75"
+				"RequiresShard"				"1"
+			}
+			"can_move"
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+1"
+			}
+		}
+	}
+
+
+}

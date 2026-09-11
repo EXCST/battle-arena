@@ -1,0 +1,114 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Ursa hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_ursa"
+{
+	// ---- Earthshock ---------------------------------------------------------
+	"ursa_earthshock"
+	{
+		"cd_mana"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider shock (was 50)
+		"shock_radius"
+		{
+			"base" "60"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// longer hop (was 40)
+		"hop_distance"
+		{
+			"base" "50"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 40/4)
+		"damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Overpower ----------------------------------------------------------
+	"ursa_overpower"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more slow resist (was 6)
+		"slow_resist"
+		{
+			"base" "8"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"max_attacks"	"1"
+			}
+		}
+	}
+
+	// ---- Fury Swipes --------------------------------------------------------
+	"ursa_fury_swipes"
+	{
+		// longer reset time (was 4)
+		"bonus_reset_time"
+		{
+			"base" "5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage per stack (was 4/1)
+		"damage_per_stack"
+		{
+			"base" "5"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- Enrage -------------------------------------------------------------
+	"ursa_enrage"
+	{
+		"cd_mana"
+		{
+			"base" "4"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// more damage reduction (was 0.8)
+		"damage_reduction"
+		{
+			"base" "1"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"100"
+			"limit_base"		"80"
+		}
+		// more status resistance (was 2)
+		"status_resistance"
+		{
+			"base" "2.5"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"100"
+			"limit_base"		"75"
+		}
+	}
+}

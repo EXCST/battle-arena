@@ -1,0 +1,365 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Invoker hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_invoker"
+{
+	// ---- Cold Snap ----------------------------------------------------------
+	"invoker_cold_snap"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "8"
+
+			"bundle"
+			{
+				"duration" "1"
+			}
+			"bundle_abilities"
+			{
+				"invoker_ice_wall"
+				{
+					"cd_mana"
+					{
+						"base" "10"
+						"mode" "MULT"
+					}
+					"duration"
+					{
+						"base" "1"
+						"mode" "ADD"
+					}
+					"wall_width"
+					{
+						"base" "35"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// more freeze damage (was 15/2)
+		"freeze_damage"
+		{
+			"base" "18"
+			"step"		"2.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle_abilities"
+			{
+				"invoker_ice_wall"
+				{
+					"damage_per_second"
+					{
+						"base"	"18"
+						"step"	"2.5"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Tornado ------------------------------------------------------------
+	"invoker_tornado"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+
+			"bundle"
+			{
+				"area_of_effect" "35"
+				"vision_distance" "35"
+			}
+		}
+		// more damage (was 40/3)
+		"base_damage"
+		{
+			"base" "45"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+	}
+
+	// ---- EMP ----------------------------------------------------------------
+	"invoker_emp"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "6"
+		}
+		// wider emp (was 15)
+		"area_of_effect"
+		{
+			"base" "20"
+			"cap"		"5"
+		}
+		// more mana burned
+		"mana_burned"
+		{
+			"base"			"120"
+			"cap" "6"
+		}
+		// more damage per mana
+		"damage_per_mana_pct"
+		{
+			"base"			"4"
+			"cap" "5"
+		}
+	}
+
+	// ---- Chaos Meteor -------------------------------------------------------
+	"invoker_chaos_meteor"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+
+			"cap"			"5"
+
+			"bundle_abilities"
+			{
+				"invoker_deafening_blast"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+					"radius_start"
+					{
+						"base" "30"
+						"mode" "ADD"
+					}
+					"radius_end"
+					{
+						"base" "30"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// more damage (was 35/3.5)
+		"main_damage"
+		{
+			"base" "40"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"burn_dps"
+				{
+					"base"			"6"
+					"step"		"0.6"
+					"mode"		"ADD"
+				}
+			}
+
+			"bundle_abilities"
+			{
+				"invoker_deafening_blast"
+				{
+					"damage"
+					{
+						"base" "45"
+						"step"		"5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Alacrity -----------------------------------------------------------
+	"invoker_alacrity"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+
+			"bundle"
+			{
+				"duration" "1"
+			}
+
+			"bundle_abilities"
+			{
+				"invoker_forge_spirit"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+					"spirit_armor"
+					{
+						"base"	"2.5"
+						"step"	"0.1"
+					}
+					"spirit_hp"
+					{
+						"base"	"280"
+						"step"	"55"
+					}
+				}
+			}
+		}
+		// more damage (was 15/1.5)
+		"bonus_damage"
+		{
+			"base" "18"
+			"step"		"2"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"bonus_attack_speed"
+				{
+					"base"	"18"
+					"step"	"2"
+				}
+			}
+
+			"bundle_abilities"
+			{
+				"invoker_forge_spirit"
+				{
+					"spirit_damage"
+					{
+						"base" "30"
+						"step"		"6"
+						"mode" "ADD"
+					}
+					"armor_per_attack" "0.35"
+				}
+			}
+		}
+	}
+
+	// ---- Sun Strike ---------------------------------------------------------
+	"invoker_sun_strike"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "10"
+
+			"bundle_abilities"
+			{
+				"invoker_ghost_walk"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+					"area_of_effect"
+					{
+						"base" "35"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+		// more damage (was 60/3)
+		"damage"
+		{
+			"base" "65"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle_abilities"
+			{
+				"invoker_ghost_walk"
+				{
+					"health_regen"
+					{
+						"base" "20"
+						"step"		"3"
+						"mode" "ADD"
+					}
+					"mana_regen"
+					{
+						"base" "10"
+						"step"		"1.5"
+						"mode" "ADD"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Quas / Wex / Exort orbs --------------------------------------------
+	"invoker_quas"
+	{
+		// more hp regen (was 3/0.2)
+		"hp_regen_per_instance"
+		{
+			"base"			"3.5"
+			"step"		"0.3"
+			"mode" "ADD"
+			"cap" "10"
+			"perks"
+			{
+				"special_bonus_unique_invoker_13"	"x2"
+			}
+
+			"bundle_abilities"
+			{
+				"invoker_wex"
+				{
+					"move_speed_per_instance"
+					{
+						"base"		"1"
+						"mode" "ADD"
+
+						"perks"
+						{
+							"special_bonus_unique_invoker_13"	"x2"
+						}
+					}
+					"attack_speed_per_instance"
+					{
+						"base"		"3.5"
+						"step"		"0.4"
+						"mode" "ADD"
+
+						"perks"
+						{
+							"special_bonus_unique_invoker_13"	"x2"
+						}
+					}
+				}
+				"invoker_exort"
+				{
+					"bonus_damage_per_instance"
+					{
+						"base"		"7"
+						"step"		"0.7"
+						"mode" "ADD"
+
+						"perks"
+						{
+							"special_bonus_unique_invoker_13"	"x2"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+"itembuilds"
+{
+	"author"		"Battle Arena"
+	"hero"			"npc_dota_hero_arthas"
+	"Title"			"Recommended items"
+	
+	"Items"
+	{
+		"STARTING ITEMS MELEE"
+		{	
+			"item"		"item_quelling_blade"
+			"item"		"item_tango"
+			"item"		"item_bracer"
+			"item"		"item_gauntlets"
+			"item"		"item_faerie_fire"
+			"item"		"item_vampire_claw"
+			"item"		"item_fury_shield"
+		}
+		
+		"STARTING ITEMS RANGED"
+		{
+			"item"		"item_quelling_blade"
+			"item"		"item_tango"
+			"item"		"item_wraith_band"
+			"item"		"item_faerie_fire"
+			"item"		"item_vampire_claw"
+			"item"		"item_fury_shield"
+		}
+		"GANG"
+		{
+			"item"		"item_tango"
+			"item"		"item_magic_wand"
+			"item"		"item_chest_of_midas"
+			"item"		"item_talisman_of_mastery"
+			"item"		"item_life_catcher"
+			"item"		"item_soul_stone"
+		}
+		"MID GAME ITEMS MELEE"
+		{
+	        "item"      "item_power_treads"
+			"item"		"item_armlet"
+			"item"		"item_sange_and_yasha"
+			"item"		"item_echo_sabre"
+			"item"		"item_desolator"
+			"item"		"item_black_king_bar"
+			"item"		"item_blade_mail"
+			"item"		"item_tango"
+		}
+		"MID GAME ITEMS RANGED"
+		{
+			"item"		"item_power_treads"
+			"item"		"item_armlet"
+			"item"		"item_sange_and_yasha"
+			"item"		"item_desolator"
+			"item"		"item_black_king_bar"
+			"item"		"item_hurricane_pike"
+			"item"		"item_maelstrom"
+		}
+		"LATE GAME ITEMS MELEE"
+		{
+	        "item"      "item_assault"
+			"item"		"item_heart"
+			"item"		"item_abyssal_blade_2"
+			"item"		"item_kings_bar"
+			"item"		"item_demons_fury"
+			"item"		"item_double_crit"
+			"item"		"item_spiked_armor"
+			"item"		"item_deaths_mask"
+		}
+		"LATE GAME ITEMS RANGED"
+		{
+			"item"		"item_assault"
+			"item"		"item_heart"
+			"item"		"item_kings_bar"
+			"item"		"item_demons_fury"
+			"item"		"item_double_crit"
+			"item"		"item_deaths_mask"
+			"item"		"item_burning_book"
+		}
+		"SITUATIONALLY"
+		{
+			"item"		"item_potion_immune"
+			"item"		"item_advanced_midas"
+			"item"		"item_dark_edge"
+			"item"		"item_storm_edge"
+			"item"		"item_shivas_guard_2"
+			"item"		"item_manta_3"
+			"item"		"item_snake_boots"
+			"item"		"item_devour_helm"
+			"item"		"item_polar_spear"
+			"item"		"item_heavens_halberd_2"
+			"item"		"item_ethereal_blade_4"
+			"item"		"item_possessed_sword"
+		}
+	}
+}

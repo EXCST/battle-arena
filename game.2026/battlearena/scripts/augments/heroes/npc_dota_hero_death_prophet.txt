@@ -1,0 +1,117 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Death Prophet hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_death_prophet"
+{
+	// ---- Carrion Swarm ------------------------------------------------------
+	"death_prophet_carrion_swarm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/2)
+		"damage"
+		{
+			"base" "45"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider swarm end (was 30)
+		"end_radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"start_radius" "35"
+			}
+		}
+	}
+
+	// ---- Silence ------------------------------------------------------------
+	"death_prophet_silence"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+		}
+		// wider silence (was 30)
+		"radius"
+		{
+			"base" "35"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Spirit Siphon ------------------------------------------------------
+	"death_prophet_spirit_siphon"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 20/3)
+		"damage"
+		{
+			"base" "25"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+		// longer haunt (was 0.75)
+		"haunt_duration"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+		}
+	}
+
+	// ---- Exorcism -----------------------------------------------------------
+	"death_prophet_exorcism"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more spirit damage (was 35/4)
+		"average_damage"
+		{
+			"base" "40"
+			"step"	"5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"scepter_spirit_bonus_damage"
+				{
+					"base" 	"8"
+				}
+				"max_damage"
+				{
+					"base" 	"40"
+					"step"	"5"
+				}
+				"min_damage"
+				{
+					"base" 	"40"
+					"step"	"5"
+				}
+			}
+		}
+	}
+}

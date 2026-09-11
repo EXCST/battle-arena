@@ -1,0 +1,132 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Weaver hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_weaver"
+{
+	// ---- The Swarm ----------------------------------------------------------
+	"weaver_the_swarm"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "8"
+		}
+		// more damage (was 12/2)
+		"damage"
+		{
+			"base" "15"
+			"step" "2.5"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"armor_reduction" "0.15"
+			}
+		}
+		// faster attacks (was -0.1)
+		"attack_rate"
+		{
+			"base" "-0.12"
+			"mode" "MULT"
+			"cap" "5"
+
+			"limit"			"0.3"
+			"limit_base"		"0.75"
+		}
+		// longer swarm (was 2)
+		"duration"
+		{
+			"base" "2.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"count" "2"
+				"spawn_radius" "25"
+			}
+		}
+	}
+
+	// ---- Shukuchi -----------------------------------------------------------
+	"weaver_shukuchi"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 30/3)
+		"damage"
+		{
+			"base" "35"
+			"step" "4"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider shukuchi (was 40)
+		"radius"
+		{
+			"base" "45"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"shukuchi_attack_mark_radius" "45"
+			}
+		}
+		// longer shukuchi (was 0.5)
+		"duration"
+		{
+			"base" "0.6"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"geminate_attack_mark_duration" "2.5"
+			}
+		}
+	}
+
+	// ---- Geminate Attack ----------------------------------------------------
+	"weaver_geminate_attack"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+			"limit"			"75"
+		}
+		// more tooltip attack (epic, was 0.25)
+		"tooltip_attack"
+		{
+			"base" "0.3"
+			"mode" "ADD"
+			"floor" "epic"
+			"cap" "4"
+		}
+		// more bonus damage (was 50/5)
+		"bonus_damage"
+		{
+			"base" "55"
+			"step"	"6"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Time Lapse ---------------------------------------------------------
+	"weaver_time_lapse"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+	}
+}

@@ -1,0 +1,125 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Io (Wisp) hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_wisp"
+{
+	// ---- Tether -------------------------------------------------------------
+	"wisp_tether"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 20/1.5)
+		"damage"
+		{
+			"base" "25"
+			"step"		"2"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"movespeed" "2.5"
+			}
+		}
+		// more heal amp (was 12)
+		"tether_heal_amp"
+		{
+			"base" "15"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Spirits ------------------------------------------------------------
+	"wisp_spirits"
+	{
+		// longer range (was 25)
+		"max_range"
+		{
+			"base" "30"
+			"mode" "ADD"
+			"cap" "5"
+		}
+		// more damage (was 10/1)
+		"hero_damage"
+		{
+			"base" "12"
+			"step"		"1.5"
+			"mode" "ADD"
+			"cap" "10"
+			"bundle"
+			{
+				"creep_damage" {
+					"base"			"8"
+					"step"		"2.5"
+				}
+			}
+		}
+		// wider explode (was 20)
+		"explode_radius"
+		{
+			"base" "25"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"hit_radius" "25"
+				"hero_hit_radius" "25"
+			}
+		}
+	}
+
+	// ---- Overcharge ---------------------------------------------------------
+	"wisp_overcharge"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more attack speed (was 35/10)
+		"bonus_attack_speed"
+		{
+			"base" "40"
+			"step"	"12"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// more hp regen (was 0.1)
+		"hp_regen"
+		{
+			"base" "0.15"
+			"mode" "ADD"
+			"cap" "10"
+
+			"bundle"
+			{
+				"bonus_spell_amp" "4"
+			}
+		}
+	}
+
+	// ---- Relocate -----------------------------------------------------------
+	"wisp_relocate"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// faster cast (was -0.12)
+		"cast_delay"
+		{
+			"base" "-0.15"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+}

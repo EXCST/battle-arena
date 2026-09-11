@@ -1,0 +1,131 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Bounty Hunter hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_bounty_hunter"
+{
+	// ---- Shuriken Toss ------------------------------------------------------
+	"bounty_hunter_shuriken_toss"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 40/4)
+		"bonus_damage"
+		{
+			"base" "45"
+			"step"		"5"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// wider bounce range (was 240)
+		"bounce_aoe"
+		{
+			"base" "260"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"slow_duration" "0.25"
+			}
+		}
+	}
+
+	// ---- Jinada -------------------------------------------------------------
+	"bounty_hunter_jinada"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"gold_steal"
+				{
+					"base"		"45"
+					"step"	"12"
+					"mode" "ADD"
+				}
+			}
+		}
+		// more jinada damage (was 30/3)
+		"bonus_damage"
+		{
+			"base" "35"
+			"step"		"4"
+			"mode" "ADD"
+			"cap" "8"
+		}
+	}
+
+	// ---- Wind Walk ----------------------------------------------------------
+	"bounty_hunter_wind_walk"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "5"
+			"bundle"
+			{
+				"stun_duration" "0.25"
+			}
+			"bundle_abilities"
+			{
+				"bounty_hunter_wind_walk_ally"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+	}
+
+	// ---- Track --------------------------------------------------------------
+	"bounty_hunter_track"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+		}
+		// more damage amp (was 5)
+		"target_damage_amp"
+		{
+			"base" "6"
+			"mode" "ADD"
+			"cap" "8"
+
+			"bundle"
+			{
+				"bonus_move_speed_pct"		"10"
+			}
+		}
+		// more self gold (was 250/25)
+		"bonus_gold_self"
+		{
+			"base" "275"
+			"step"		"30"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"bonus_gold"
+				{
+					"base" "60"
+					"step"		"14"
+					"mode" "ADD"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+﻿// ============================================================
+// BATTLE ARENA вЂ” Visage hero upgrades
+// Reworked from scratch: own balance, own structure.
+// ============================================================
+
+"npc_dota_hero_visage"
+{
+	// ---- Grave Chill --------------------------------------------------------
+	"visage_grave_chill"
+	{
+		"cd_mana"
+		{
+			"base" "10"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more attack speed (was 30/25)
+		"attackspeed_bonus"
+		{
+			"base" "35"
+			"step"	"30"
+			"mode" "ADD"
+			"cap" "6"
+		}
+		// longer chill (was 1.5)
+		"chill_duration"
+		{
+			"base" "2"
+			"mode" "ADD"
+			"cap" "5"
+			"bundle"
+			{
+				"radius" "220"
+			}
+		}
+	}
+
+	// ---- Soul Assumption ----------------------------------------------------
+	"visage_soul_assumption"
+	{
+		"cd_mana"
+		{
+			"base" "5"
+			"mode" "MULT"
+			"cap" "4"
+		}
+		// more damage (was 15/2)
+		"soul_charge_damage"
+		{
+			"base" "18"
+			"step"		"3"
+			"mode" "ADD"
+			"cap" "10"
+		}
+		// longer stack duration (was 1)
+		"stack_duration"
+		{
+			"base" "1.5"
+			"mode" "ADD"
+			"cap" "5"
+		}
+	}
+
+	// ---- Gravekeeper's Cloak ------------------------------------------------
+	"visage_gravekeepers_cloak"
+	{
+		// more layers (was 1)
+		"max_layers"
+		{
+			"base" "1"
+			"mode" "ADD"
+			"cap" "4"
+			"bundle"
+			{
+				"shard_hp_restoration_pct" "6"
+			}
+		}
+		// faster recovery (was -0.17)
+		"recovery_time"
+		{
+			"base" "-0.2"
+			"mode" "MULT"
+			"cap" "10"
+
+			"limit"			"0"
+			"limit_base"		"3"
+		}
+	}
+
+	// ---- Summon Familiars ---------------------------------------------------
+	"visage_summon_familiars"
+	{
+		"cd_mana"
+		{
+			"base" "8"
+			"mode" "MULT"
+			"cap" "3"
+			"bundle_abilities"
+			{
+				"visage_silent_as_the_grave"
+				{
+					"cd_mana"
+					{
+						"base" "8"
+						"mode" "MULT"
+					}
+				}
+			}
+		}
+		// tankier familiars (was 750/350)
+		"familiar_hp"
+		{
+			"base" "800"
+			"step"		"400"
+			"mode" "ADD"
+			"cap" "6"
+			"bundle"
+			{
+				"familiar_armor" "5"
+			}
+		}
+		// stronger familiars (was 25/7)
+		"familiar_attack_damage"
+		{
+			"base" "30"
+			"step"		"8"
+			"mode" "ADD"
+			"cap" "8"
+			"bundle"
+			{
+				"familiar_speed" "12"
+			}
+			"bundle_abilities"
+			{
+				"visage_silent_as_the_grave"
+				{
+					"bonus_damage" "6"
+				}
+			}
+		}
+	}
+}
